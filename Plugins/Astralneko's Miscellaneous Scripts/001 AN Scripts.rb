@@ -93,23 +93,23 @@ def anPlayPlayerAnimation(animname, length=1, frequency=2, vehicle=false)
 		newCharName = pbGetPlayerCharset(meta,charset,nil,true)
 		animation = "" + newCharName + "_" + animname
 		move_route = Array.new
-		move_route.push(PBMoveRoute::TurnDown)
-		move_route.push(PBMoveRoute::Graphic,animation,0,2,0,PBMoveRoute::Wait,frequency) if length >= 1
-		move_route.push(PBMoveRoute::Graphic,animation,0,2,1,PBMoveRoute::Wait,frequency) if length >= 2
-		move_route.push(PBMoveRoute::Graphic,animation,0,2,2,PBMoveRoute::Wait,frequency) if length >= 3
-		move_route.push(PBMoveRoute::Graphic,animation,0,2,3,PBMoveRoute::Wait,frequency) if length >= 4
-		move_route.push(PBMoveRoute::Graphic,animation,0,4,0,PBMoveRoute::Wait,frequency) if length >= 5
-		move_route.push(PBMoveRoute::Graphic,animation,0,4,1,PBMoveRoute::Wait,frequency) if length >= 6
-		move_route.push(PBMoveRoute::Graphic,animation,0,4,2,PBMoveRoute::Wait,frequency) if length >= 7
-		move_route.push(PBMoveRoute::Graphic,animation,0,4,3,PBMoveRoute::Wait,frequency) if length >= 8
-		move_route.push(PBMoveRoute::Graphic,animation,0,6,0,PBMoveRoute::Wait,frequency) if length >= 9
-		move_route.push(PBMoveRoute::Graphic,animation,0,6,1,PBMoveRoute::Wait,frequency) if length >= 10
-		move_route.push(PBMoveRoute::Graphic,animation,0,6,2,PBMoveRoute::Wait,frequency) if length >= 11
-		move_route.push(PBMoveRoute::Graphic,animation,0,6,3,PBMoveRoute::Wait,frequency) if length >= 12
-		move_route.push(PBMoveRoute::Graphic,animation,0,8,0,PBMoveRoute::Wait,frequency) if length >= 13
-		move_route.push(PBMoveRoute::Graphic,animation,0,8,1,PBMoveRoute::Wait,frequency) if length >= 14
-		move_route.push(PBMoveRoute::Graphic,animation,0,8,2,PBMoveRoute::Wait,frequency) if length >= 15
-		move_route.push(PBMoveRoute::Graphic,animation,0,8,3,PBMoveRoute::Wait,frequency) if length >= 16
+		move_route.push(PBMoveRoute::TURN_DOWN)
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,2,0,PBMoveRoute::WAIT,frequency) if length >= 1
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,2,1,PBMoveRoute::WAIT,frequency) if length >= 2
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,2,2,PBMoveRoute::WAIT,frequency) if length >= 3
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,2,3,PBMoveRoute::WAIT,frequency) if length >= 4
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,4,0,PBMoveRoute::WAIT,frequency) if length >= 5
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,4,1,PBMoveRoute::WAIT,frequency) if length >= 6
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,4,2,PBMoveRoute::WAIT,frequency) if length >= 7
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,4,3,PBMoveRoute::WAIT,frequency) if length >= 8
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,6,0,PBMoveRoute::WAIT,frequency) if length >= 9
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,6,1,PBMoveRoute::WAIT,frequency) if length >= 10
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,6,2,PBMoveRoute::WAIT,frequency) if length >= 11
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,6,3,PBMoveRoute::WAIT,frequency) if length >= 12
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,8,0,PBMoveRoute::WAIT,frequency) if length >= 13
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,8,1,PBMoveRoute::WAIT,frequency) if length >= 14
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,8,2,PBMoveRoute::WAIT,frequency) if length >= 15
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,8,3,PBMoveRoute::WAIT,frequency) if length >= 16
 		pbMoveRoute($game_player,move_route)
 	end
 end
@@ -129,23 +129,23 @@ def anPlayPlayerAnimationFromFrame(start_frame, animname, length=1, frequency=2,
 		newCharName = pbGetPlayerCharset(meta,charset,nil,true)
 		animation = "" + newCharName + "_" + animname
 		move_route = Array.new
-		move_route.push(PBMoveRoute::TurnDown)
-		move_route.push(PBMoveRoute::Graphic,animation,0,2,0,PBMoveRoute::Wait,frequency) if length >= 1 && start_frame <= 1
-		move_route.push(PBMoveRoute::Graphic,animation,0,2,1,PBMoveRoute::Wait,frequency) if length >= 2 && start_frame <= 2
-		move_route.push(PBMoveRoute::Graphic,animation,0,2,2,PBMoveRoute::Wait,frequency) if length >= 3 && start_frame <= 3
-		move_route.push(PBMoveRoute::Graphic,animation,0,2,3,PBMoveRoute::Wait,frequency) if length >= 4 && start_frame <= 4
-		move_route.push(PBMoveRoute::Graphic,animation,0,4,0,PBMoveRoute::Wait,frequency) if length >= 5 && start_frame <= 5
-		move_route.push(PBMoveRoute::Graphic,animation,0,4,1,PBMoveRoute::Wait,frequency) if length >= 6 && start_frame <= 6
-		move_route.push(PBMoveRoute::Graphic,animation,0,4,2,PBMoveRoute::Wait,frequency) if length >= 7 && start_frame <= 7
-		move_route.push(PBMoveRoute::Graphic,animation,0,4,3,PBMoveRoute::Wait,frequency) if length >= 8 && start_frame <= 8
-		move_route.push(PBMoveRoute::Graphic,animation,0,6,0,PBMoveRoute::Wait,frequency) if length >= 9 && start_frame <= 9
-		move_route.push(PBMoveRoute::Graphic,animation,0,6,1,PBMoveRoute::Wait,frequency) if length >= 10 && start_frame <= 10
-		move_route.push(PBMoveRoute::Graphic,animation,0,6,2,PBMoveRoute::Wait,frequency) if length >= 11 && start_frame <= 11
-		move_route.push(PBMoveRoute::Graphic,animation,0,6,3,PBMoveRoute::Wait,frequency) if length >= 12 && start_frame <= 12
-		move_route.push(PBMoveRoute::Graphic,animation,0,8,0,PBMoveRoute::Wait,frequency) if length >= 13 && start_frame <= 13
-		move_route.push(PBMoveRoute::Graphic,animation,0,8,1,PBMoveRoute::Wait,frequency) if length >= 14 && start_frame <= 14
-		move_route.push(PBMoveRoute::Graphic,animation,0,8,2,PBMoveRoute::Wait,frequency) if length >= 15 && start_frame <= 15
-		move_route.push(PBMoveRoute::Graphic,animation,0,8,3,PBMoveRoute::Wait,frequency) if length >= 16 && start_frame <= 16
+		move_route.push(PBMoveRoute::TURN_DOWN)
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,2,0,PBMoveRoute::WAIT,frequency) if length >= 1 && start_frame <= 1
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,2,1,PBMoveRoute::WAIT,frequency) if length >= 2 && start_frame <= 2
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,2,2,PBMoveRoute::WAIT,frequency) if length >= 3 && start_frame <= 3
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,2,3,PBMoveRoute::WAIT,frequency) if length >= 4 && start_frame <= 4
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,4,0,PBMoveRoute::WAIT,frequency) if length >= 5 && start_frame <= 5
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,4,1,PBMoveRoute::WAIT,frequency) if length >= 6 && start_frame <= 6
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,4,2,PBMoveRoute::WAIT,frequency) if length >= 7 && start_frame <= 7
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,4,3,PBMoveRoute::WAIT,frequency) if length >= 8 && start_frame <= 8
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,6,0,PBMoveRoute::WAIT,frequency) if length >= 9 && start_frame <= 9
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,6,1,PBMoveRoute::WAIT,frequency) if length >= 10 && start_frame <= 10
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,6,2,PBMoveRoute::WAIT,frequency) if length >= 11 && start_frame <= 11
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,6,3,PBMoveRoute::WAIT,frequency) if length >= 12 && start_frame <= 12
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,8,0,PBMoveRoute::WAIT,frequency) if length >= 13 && start_frame <= 13
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,8,1,PBMoveRoute::WAIT,frequency) if length >= 14 && start_frame <= 14
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,8,2,PBMoveRoute::WAIT,frequency) if length >= 15 && start_frame <= 15
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,8,3,PBMoveRoute::WAIT,frequency) if length >= 16 && start_frame <= 16
 		pbMoveRoute($game_player,move_route)
 	end
 end
@@ -164,23 +164,23 @@ def anReversePlayerAnimation(animname, length=1, frequency=2, vehicle=false)
 		newCharName = pbGetPlayerCharset(meta,charset,nil,true)
 		animation = "" + newCharName + "_" + animname
 		move_route = Array.new
-		move_route.push(PBMoveRoute::TurnDown)
-		move_route.push(PBMoveRoute::Graphic,animation,0,8,3,PBMoveRoute::Wait,frequency) if length >= 16
-		move_route.push(PBMoveRoute::Graphic,animation,0,8,2,PBMoveRoute::Wait,frequency) if length >= 15
-		move_route.push(PBMoveRoute::Graphic,animation,0,8,1,PBMoveRoute::Wait,frequency) if length >= 14
-		move_route.push(PBMoveRoute::Graphic,animation,0,8,0,PBMoveRoute::Wait,frequency) if length >= 13
-		move_route.push(PBMoveRoute::Graphic,animation,0,6,3,PBMoveRoute::Wait,frequency) if length >= 12
-		move_route.push(PBMoveRoute::Graphic,animation,0,6,2,PBMoveRoute::Wait,frequency) if length >= 11
-		move_route.push(PBMoveRoute::Graphic,animation,0,6,1,PBMoveRoute::Wait,frequency) if length >= 10
-		move_route.push(PBMoveRoute::Graphic,animation,0,6,0,PBMoveRoute::Wait,frequency) if length >= 9
-		move_route.push(PBMoveRoute::Graphic,animation,0,4,3,PBMoveRoute::Wait,frequency) if length >= 8
-		move_route.push(PBMoveRoute::Graphic,animation,0,4,2,PBMoveRoute::Wait,frequency) if length >= 7
-		move_route.push(PBMoveRoute::Graphic,animation,0,4,1,PBMoveRoute::Wait,frequency) if length >= 6
-		move_route.push(PBMoveRoute::Graphic,animation,0,4,0,PBMoveRoute::Wait,frequency) if length >= 5
-		move_route.push(PBMoveRoute::Graphic,animation,0,2,3,PBMoveRoute::Wait,frequency) if length >= 4
-		move_route.push(PBMoveRoute::Graphic,animation,0,2,2,PBMoveRoute::Wait,frequency) if length >= 3
-		move_route.push(PBMoveRoute::Graphic,animation,0,2,1,PBMoveRoute::Wait,frequency) if length >= 2
-		move_route.push(PBMoveRoute::Graphic,animation,0,2,0,PBMoveRoute::Wait,frequency) if length >= 1
+		move_route.push(PBMoveRoute::TURN_DOWN)
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,8,3,PBMoveRoute::WAIT,frequency) if length >= 16
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,8,2,PBMoveRoute::WAIT,frequency) if length >= 15
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,8,1,PBMoveRoute::WAIT,frequency) if length >= 14
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,8,0,PBMoveRoute::WAIT,frequency) if length >= 13
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,6,3,PBMoveRoute::WAIT,frequency) if length >= 12
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,6,2,PBMoveRoute::WAIT,frequency) if length >= 11
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,6,1,PBMoveRoute::WAIT,frequency) if length >= 10
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,6,0,PBMoveRoute::WAIT,frequency) if length >= 9
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,4,3,PBMoveRoute::WAIT,frequency) if length >= 8
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,4,2,PBMoveRoute::WAIT,frequency) if length >= 7
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,4,1,PBMoveRoute::WAIT,frequency) if length >= 6
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,4,0,PBMoveRoute::WAIT,frequency) if length >= 5
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,2,3,PBMoveRoute::WAIT,frequency) if length >= 4
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,2,2,PBMoveRoute::WAIT,frequency) if length >= 3
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,2,1,PBMoveRoute::WAIT,frequency) if length >= 2
+		move_route.push(PBMoveRoute::GRAPHIC,animation,0,2,0,PBMoveRoute::WAIT,frequency) if length >= 1
 		pbMoveRoute($game_player,move_route)
 	end
 end
@@ -197,32 +197,33 @@ def anEndPlayerAnimation
 		case $Astralneko_Temp.lastPlayerDirection
 		when 2
 		pbMoveRoute($game_player,[
-			PBMoveRoute::TurnDown,
-			PBMoveRoute::Graphic,newCharName, 
+			PBMoveRoute::TURN_DOWN,
+			PBMoveRoute::GRAPHIC,newCharName, 
 			  0, 2, 0
 		])
 		when 4
 		pbMoveRoute($game_player,[
-			PBMoveRoute::TurnDown,
-			PBMoveRoute::Graphic,newCharName, 
+			PBMoveRoute::TURN_DOWN,
+			PBMoveRoute::GRAPHIC,newCharName, 
 			  0, 4, 0
 		])
 		when 6
 		pbMoveRoute($game_player,[
-			PBMoveRoute::TurnDown,
-			PBMoveRoute::Graphic,newCharName, 
+			PBMoveRoute::TURN_DOWN,
+			PBMoveRoute::GRAPHIC,newCharName, 
 			  0, 6, 0
 		])
 		when 8
 		pbMoveRoute($game_player,[
-			PBMoveRoute::TurnDown,
-			PBMoveRoute::Graphic,newCharName, 
+			PBMoveRoute::TURN_DOWN,
+			PBMoveRoute::GRAPHIC,newCharName, 
 			  0, 8, 0
 		])
 		end
 	end
 end
 
+# Do not use, prefer Arcky's Poké Market
 def anMart(itemlist)
     badges = $player.badge_count
 	

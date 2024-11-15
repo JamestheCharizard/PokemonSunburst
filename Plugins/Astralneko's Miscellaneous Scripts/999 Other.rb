@@ -13,34 +13,39 @@
 #}
 
 # Freeze becomes frostbite
-Events.onEndBattle += proc { |_sender,e|
-	$Trainer.party.each do |pkmn|
-		pkmn.status = :FROSTBITE if pkmn.status == :FREEZE
-	end
-}
+EventHandlers.add(:on_end_battle, :revert_freeze,
+  proc { |_decision, _canLose|
+		$player.party.each do |pkmn|
+			pkmn.status = :FROSTBITE if pkmn.status == :FREEZE
+		end
+  }
+)
 
 # When the player moves to a new map, step them forward if they're coming from Map Glitch maps. (Route 4 North, Alipigra City)
 # Map Glitch: When moving onto certain maps, the map visually glitches and shows a different area for 1 frame for some bizarre reason. Can't figure out why, but this soft fix makes it not happen so
-Events.onMapChange += proc { |_sender,e|
-	oldMapID = e[0]
-	newMapID = $game_map.map_id
-	# Map Glitch only occurs when walking through a map connection.
-	# On load, oldMapID and newMapID are the same.
-	next if oldMapID == newMapID
-	glitchedMaps = [14, # Route 4 North
-					33  # Alipigra City
-	]
-	next if !glitchedMaps.include?(oldMapID)
-	$game_player.move_forward
-}
+EventHandlers.add(:on_enter_map, :map_glitch_hotfix,
+  proc { |oldMapID|
+		newMapID = $game_map.map_id
+		# Map Glitch only occurs when walking through a map connection.
+		# On load, oldMapID and newMapID are the same.
+		next if oldMapID == newMapID
+		glitchedMaps = [14, # Route 4 North
+						        33  # Alipigra City
+		]
+		next if !glitchedMaps.include?(oldMapID)
+		$game_player.move_forward
+	}
+)
 # Note: This soft fix is not perfect. The player will attempt to move forward again if they enter a door on a map glitch map, because this function is called when walking into a door. Map Glitch doesn't occur in that case.
 # I might be able to use the transition flag to tell it not to run on doors. However, it's probably better to just actually find the root of the glitch and patch it.
 
 # Since ebdx PBS files aren't translated, I have to do this
 # This saves me from having to run equivalent code every time
-Events.onStartBattle += proc { |_sender|
-	anLocalizeEBDXMenu($PokemonSystem.language)
-}
+EventHandlers.add(:on_start_battle, :translate_ebdx,
+  proc {
+		anLocalizeEBDXMenu($PokemonSystem.language)
+	}
+)
 def anLocalizeEBDXMenu(language)
 	data = EliteBattle.get_data(:FIGHTMENU, :Metrics, :METRICS)
 	if language == 1 && data[:TYPEGRAPHIC] != "types_es"
@@ -59,7 +64,7 @@ end
 
 def anHasDynamaxBand?
 	if defined?(Settings::DMAX_BANDS)
-		Settings::DMAX_BANDS.each { |item| return true if $PokemonBag.pbHasItem?(item) }
+		Settings::DMAX_BANDS.each { |item| return true if $bag.pbHasItem?(item) }
 	end
 	return false
 end
@@ -86,7 +91,7 @@ def anVivillonFormDeterminer
 		end
 	end
 	# If on an invalid map, use secret ID as a placeholder
-	return $Trainer.secret_ID % 18
+	return $player.secret_ID % 18
 end
 
 #Events.onTrainerPartyLoad += proc { |_sender, trainer|
@@ -113,7 +118,7 @@ end
 # These handlers are used so that it's easy to identify these in translation - seeing as >1000 map IDs already mandate a separate english.dat from common, I consider this to be fine
 # English translated text will likely use exclusively category 3 due to very rare gender agreement otherwise
 def anPlayerPronoun
-	gender = $Trainer.gender
+	gender = $player.gender
 	return [
 		[ # Masculine
 			[ # 0 is used only for non-pronoun things, such as adjective endings
