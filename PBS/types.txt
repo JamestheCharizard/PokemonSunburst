@@ -140,8 +140,3 @@ Name = Glitch
 IconPosition = 20
 Weaknesses = PSYCHIC,FAIRY,CELESTIAL,GLITCH,WATER
 Resistances = ELECTRIC,FLYING,POISON,FIGHTING
-#-------------------------------
-[STELLAR]
-Name = Stellar
-IconPosition = 21
-IsPseudoType = true
