@@ -39,22 +39,6 @@ EventHandlers.add(:on_enter_map, :map_glitch_hotfix,
 # Note: This soft fix is not perfect. The player will attempt to move forward again if they enter a door on a map glitch map, because this function is called when walking into a door. Map Glitch doesn't occur in that case.
 # I might be able to use the transition flag to tell it not to run on doors. However, it's probably better to just actually find the root of the glitch and patch it.
 
-# Since ebdx PBS files aren't translated, I have to do this
-# This saves me from having to run equivalent code every time
-EventHandlers.add(:on_start_battle, :translate_ebdx,
-  proc {
-		anLocalizeEBDXMenu($PokemonSystem.language)
-	}
-)
-def anLocalizeEBDXMenu(language)
-	data = EliteBattle.get_data(:FIGHTMENU, :Metrics, :METRICS)
-	if language == 1 && data[:TYPEGRAPHIC] != "types_es"
-		EliteBattle.add_data(:FIGHTMENU, :METRICS, { "TypeGraphic" => "types_es" })
-	elsif language == 0 && data[:TYPEGRAPHIC] != "types"
-		EliteBattle.add_data(:FIGHTMENU, :METRICS, { "TypeGraphic" => "types" })
-	end
-end
-
 # Remove overworld shadows from all events if applicable. @Maruno fix your gd "shaders" in PE22
 def anToggleAllEventTransparency
 	for event in $game_map.events.values

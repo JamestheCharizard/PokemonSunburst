@@ -1,0 +1,18 @@
+Name      = PokeGacha - Conceptual Plugin
+Version   = 1
+Website   = [N/A]
+Credits   = DerxwnaKapsyla, Vendily, Lucidious89
+Essentials = 20.1
+
+#==============================================================================
+# PokeGacha System - Bringing the worst outcome of microtransactions to life!
+# By: DerxwnaKapsyla, with considerable help from Vendily and Lucidious89
+#===============================================================================
+# Change Log
+#===============================================================================
+# Version 1 - Foundational Recreation (7/2/2023)
+# * Allows for Single Draw
+# * Allows for Ten Draw
+# * Has a flag to allow for Blacklisting certain species
+# * Core functionality
+#===============================================================================

@@ -1,0 +1,59 @@
+To install this script is a one step process.
+Step 1: Drag and drop the folder in this archive into your 
+project's root folder. The "Root" folder is the same folder that
+has "Game.rxproj" in it.
+
+I made this to see if I could, to test what I knew and retained
+about rgss coding. I picked something I was very familiar with
+and attempted to recreate it at a foundational level. This is,
+technically speaking, fully functional, with minimal assembly
+required.
+
+#==============================================================================
+# PokeGacha System - Bringing the worst outcome of microtransactions to life!
+# By: DerxwnaKapsyla, with considerable help from Vendily and Lucidious89
+#===============================================================================
+# This system will allow you to add a gacha system to your project. In its
+# current state, this only allows for a Single Pull, or a Ten Pull. I have
+# no plans at the moment to accept non-standard denominations (5, 20, 300, etc).
+# 
+# The system requires an item to be consumed on every use. By default this is
+# defined as Comet Shards. This can be changed by editing relevant lines. In
+# future versions, this will be a setting that users can change.
+#
+# By default the system uses flags defined on species defined in Pokemon.txt
+# to determine rarity. You could totally find another way to do it, this is just
+# the one I went with.
+#
+# Future versions will allow for more robust "banner" creation, which you can
+# use to make your own rules for the rarity, species to be included, etc.
+# 
+# In its current state, this only works for species defined in Pokemon.txt and
+# Pokemon_Forms.txt. Future versions may include a way to do the system for
+# items as well.
+#
+# There are currently no animations. Future versions should rectify this.
+#
+# This also comes with a system to mass flag species, as well as a system to
+# mass unflag species. They can be called with the following lines in an event's
+# script command:
+#
+# "compile_gacha_flags" # Mass Flag Adder
+# "remove_gacha_flags"  # Mass Flag Remover
+#
+# If you want a species to be blacklisted from the Gacha, for whatever reason,
+# you would add the following flag to that species in Pokemon.txt and
+# Pokemon_Forms.txt:
+#
+# "ExcludeFromRandomSearch"
+#
+# If you somehow make this system pay-to-use with real money I will find you,
+# and I will subject you to 4 Dimensional Chess against an AI that has no idea
+# how to play chess so it keeps making up rules.
+#===============================================================================
+# To call the system in game, you would use this following line in an event's
+# script command:
+#
+# "pgPokeGacha"
+#
+#===============================================================================
