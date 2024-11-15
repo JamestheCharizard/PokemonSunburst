@@ -6,7 +6,11 @@
 
 module Settings
   # The version of your game. It has to adhere to the MAJOR.MINOR.PATCH format.
-  GAME_VERSION = "1.0.0"
+  GAME_VERSION = "0.1.20241114"
+  # MINOR is the number of completed story markers if MAJOR is 0
+  # PATCH is the date if MAJOR is 0
+  # MINOR is the current story marker update if MAJOR is nonzero
+  # PATCH is the patch number if MAJOR is nonzero
 
   # The generation that the battle system follows. Used throughout the battle
   # scripts, and also by some other settings which are used in and out of battle
@@ -27,17 +31,49 @@ module Settings
   # automatically.
   def self.game_credits
     return [
-      _INTL("My Game by:"),
-      "Maruno",
+      _INTL("Pokémon Azure Wave, Rose Flame, and Sacred Sage"),
+      _INTL("A project by Astaryuu"),
       "",
-      _INTL("Also involved were:"),
-      "A. Lee Uss<s>Anne O'Nymus",
-      "Ecksam Pell<s>Jane Doe",
-      "Joe Dan<s>Nick Nayme",
-      "Sue Donnim<s>",
+      _INTL("- Art and Graphic Design -"),
       "",
-      _INTL("Special thanks to:"),
-      "Pizza"
+      _INTL("Pokémon Design"),
+      "Astaryuu<s>StarWolff-Nyota",
+      "The Pokémon Company<s>DJ Err0r Surge",
+      "",
+      _INTL("Important Character Design"),
+      "Astaryuu<s>The Pokémon Company",
+      "",
+      _INTL("Vanilla Trainer Design"),
+      "Astaryuu<s>Kyledove",
+	  "The Pokémon Company",
+      "",
+      _INTL("Overworld Design"),
+      "Astaryuu<s>Jamie the Charizard",
+      "",
+      _INTL("Overworld Tilesets"),
+      "SirMalo<s>PurpleZaffre",
+      "Akizakura16<s>LotusKing",
+      "Magiscarf<s>UltimoSpriter",
+      "The Pokémon Company<s>Astaryuu",
+      "",
+      _INTL("- Art and Graphic Design -"),
+      "",
+      _INTL("Credits in the Jukebox"),
+      "",
+      _INTL("- Storyboarding -"),
+      "",
+      _INTL("Chief Writer"),
+      "Astaryuu",
+      "",
+      _INTL("- Playtesting -"),
+      "",
+      _INTL("Game Balance"),
+      "alex.<s>ManaketeSilver",
+	  "Jamie the Charizard<s>",
+      "",
+      _INTL("Game Balance"),
+      "Jamie the Charizard<s>All-Star May",
+	  "Every beta tester"
     ]
   end
 
@@ -46,7 +82,7 @@ module Settings
   #-----------------------------------------------------------------------------
 
   # The maximum amount of money the player can have.
-  MAX_MONEY            = 999_999
+  MAX_MONEY            = 99_999_999
   # The maximum number of Game Corner coins the player can have.
   MAX_COINS            = 99_999
   # The maximum number of Battle Points the player can have.
@@ -54,7 +90,7 @@ module Settings
   # The maximum amount of soot the player can have.
   MAX_SOOT             = 9_999
   # The maximum length, in characters, that the player's name can be.
-  MAX_PLAYER_NAME_SIZE = 10
+  MAX_PLAYER_NAME_SIZE = 12
   # A set of arrays each containing a trainer type followed by a Game Variable
   # number. If the Variable isn't set to 0, then all trainers with the
   # associated trainer type will be named as whatever is in that Variable.
@@ -107,7 +143,7 @@ module Settings
   # Whether you need at least a certain number of badges to use some hidden
   # moves in the field (true), or whether you need one specific badge to use
   # them (false). The amounts/specific badges are defined below.
-  FIELD_MOVES_COUNT_BADGES = true
+  FIELD_MOVES_COUNT_BADGES = false
   # Depending on FIELD_MOVES_COUNT_BADGES, either the number of badges required
   # to use each hidden move in the field, or the specific badge number required
   # to use each move. Remember that badge 0 is the first badge, badge 1 is the
@@ -115,24 +151,25 @@ module Settings
   #   e.g. To require the second badge, put false and 1.
   #        To require at least 2 badges, put true and 2.
   BADGE_FOR_CUT       = 1
-  BADGE_FOR_FLASH     = 2
-  BADGE_FOR_ROCKSMASH = 3
+  BADGE_FOR_FLASH     = -1 # Not an HM in this game
+  BADGE_FOR_ROCKSMASH = -1 # Not an HM in this game
   BADGE_FOR_SURF      = 4
-  BADGE_FOR_FLY       = 5
-  BADGE_FOR_STRENGTH  = 6
-  BADGE_FOR_DIVE      = 7
-  BADGE_FOR_WATERFALL = 8
+  BADGE_FOR_FLY       = 3
+  BADGE_FOR_STRENGTH  = 2
+  BADGE_FOR_DIVE      = 5
+  BADGE_FOR_WATERFALL = 6
+  BADGE_FOR_ROCKCLIMB = 7
 
   #-----------------------------------------------------------------------------
   # Pokémon
   #-----------------------------------------------------------------------------
 
   # The maximum level Pokémon can reach.
-  MAXIMUM_LEVEL                       = 100
+  MAXIMUM_LEVEL                       = 200
   # The level of newly hatched Pokémon.
   EGG_LEVEL                           = 1
   # The odds of a newly generated Pokémon being shiny (out of 65536).
-  SHINY_POKEMON_CHANCE                = (MECHANICS_GENERATION >= 6) ? 16 : 8
+  SHINY_POKEMON_CHANCE                = 12 # (MECHANICS_GENERATION >= 6) ? 16 : 8
   # Whether super shininess is enabled (uses a different shiny animation).
   SUPER_SHINY                         = (MECHANICS_GENERATION >= 8)
   # Whether Pokémon with the "Legendary", "Mythical" or "Ultra Beast" flags will
@@ -219,7 +256,7 @@ module Settings
   # The maximum number of Pokémon that can be in the party.
   MAX_PARTY_SIZE      = 6
   # The number of boxes in Pokémon storage.
-  NUM_STORAGE_BOXES   = 40
+  NUM_STORAGE_BOXES   = 48
   # Whether putting a Pokémon into Pokémon storage will heal it. If false, they
   # are healed by the Recover All: Entire Party event command (at Poké Centers).
   HEAL_STORED_POKEMON = (MECHANICS_GENERATION <= 7)
@@ -266,18 +303,20 @@ module Settings
       _INTL("Items"),
       _INTL("Medicine"),
       _INTL("Poké Balls"),
-      _INTL("TMs & HMs"),
+      _INTL("TMs & TRs"),
       _INTL("Berries"),
       _INTL("Mail"),
+      _INTL("Crafting"),
       _INTL("Battle Items"),
-      _INTL("Key Items")
+      _INTL("Key Items"),
+      _INTL("Z-Crystals")
     ]
   end
   # The maximum number of slots per pocket (-1 means infinite number).
-  BAG_MAX_POCKET_SIZE  = [-1, -1, -1, -1, -1, -1, -1, -1]
+  BAG_MAX_POCKET_SIZE  = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
   # Whether each pocket in turn auto-sorts itself by the order items are defined
   # in the PBS file items.txt.
-  BAG_POCKET_AUTO_SORT = [false, false, false, true, true, false, false, false]
+  BAG_POCKET_AUTO_SORT = [false, false, false, true, true, false, true, false, false, false]
   # The maximum number of items each slot in the Bag can hold.
   BAG_MAX_PER_SLOT     = 999
 
@@ -295,8 +334,11 @@ module Settings
   # shown in the Area page when viewing that Pokédex list.
   def self.pokedex_names
     return [
-      [_INTL("Kanto Pokédex"), 0],
-      [_INTL("Johto Pokédex"), 1],
+      [_INTL("Verelan Pokédex"), 0],
+      _INTL("Laurimeritan Pokédex"),
+      [_INTL("Hisuian Pokédex"), 3],
+      [_INTL("Paldean Pokédex"), 2],
+      [_INTL("Unovan Pokédex"), 1],
       _INTL("National Pokédex")
     ]
   end
@@ -312,7 +354,7 @@ module Settings
   # An array of numbers, where each number is that of a Dex list (in the same
   # order as above, except the National Dex is -1). All Dex lists included here
   # will begin their numbering at 0 rather than 1 (e.g. Victini in Unova's Dex).
-  DEXES_WITH_OFFSETS                        = []
+  DEXES_WITH_OFFSETS                        = [4]
   # Whether the Pokédex entry of a newly owned species will be shown after it
   # hatches from an egg, after it evolves and after obtaining it from a trade,
   # in addition to after catching it in battle.
@@ -423,8 +465,15 @@ module Settings
   # called messages_FRAGMENT_core.dat and messages_FRAGMENT_game.dat (if they
   # exist).
   LANGUAGES = [
-#    ["English", "english"],
-#    ["Deutsch", "deutsch"]
+    ["English", "english"],
+    ["Español", "spanish"],
+    ["Deutsch", "german"],
+    ["Italiano", "italian"],
+    ["Português", "portuguese"],
+    ["日本語", "japanese"],
+    ["Français", "french"],
+    ["Aymar aru", "aymara"],
+    ["Rokadong", "rokadong"]
   ]
 
   #-----------------------------------------------------------------------------
@@ -446,6 +495,7 @@ module Settings
 
   # Available speech frames. These are graphic files in "Graphics/Windowskins/".
   SPEECH_WINDOWSKINS = [
+	"speech ar 1",
     "speech hgss 1",
     "speech hgss 2",
     "speech hgss 3",
@@ -470,6 +520,7 @@ module Settings
   ]
   # Available menu frames. These are graphic files in "Graphics/Windowskins/".
   MENU_WINDOWSKINS = [
+	"choice azure",
     "choice 1",
     "choice 2",
     "choice 3",

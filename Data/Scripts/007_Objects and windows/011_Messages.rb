@@ -400,7 +400,7 @@ def pbDisposeMessageWindow(msgwindow)
 end
 
 #===============================================================================
-# Main message-displaying function
+# pbMessageDisplay with portrait and header box support
 #===============================================================================
 def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = nil)
   return if !msgwindow
@@ -409,6 +409,8 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
   ret = nil
   commands = nil
   facewindow = nil
+  headerwindow = nil  # To display the header (name)
+  choicewindow = nil  # To display choices
   goldwindow = nil
   coinwindow = nil
   battlepointswindow = nil
@@ -418,10 +420,9 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
   autoresume = false
   text = message.clone
   linecount = (Graphics.height > 400) ? 3 : 2
-  ### Text replacement
-  text.gsub!(/\\sign\[([^\]]*)\]/i) do      # \sign[something] gets turned into
-    next "\\op\\cl\\ts[]\\w[" + $1 + "]"    # \op\cl\ts[]\w[something]
-  end
+ 
+  # Text replacement
+  text.gsub!(/\\sign\[([^\]]*)\]/i) { next "\\op\\cl\\ts[]\\w[" + $1 + "]" }
   text.gsub!(/\\\\/, "\5")
   text.gsub!(/\\1/, "\1")
   if $game_actors
@@ -431,16 +432,20 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
   text.gsub!(/\\pm/i,  _INTL("${1}", $player.money.to_s_formatted)) if $player
   text.gsub!(/\\n/i,   "\n")
   text.gsub!(/\\\[([0-9a-f]{8,8})\]/i) { "<c2=" + $1 + ">" }
-  text.gsub!(/\\pg/i,  "\\b") if $player&.male?
-  text.gsub!(/\\pg/i,  "\\r") if $player&.female?
-  text.gsub!(/\\pog/i, "\\r") if $player&.male?
-  text.gsub!(/\\pog/i, "\\b") if $player&.female?
-  text.gsub!(/\\pg/i,  "")
-  text.gsub!(/\\pog/i, "")
+  text.gsub!(/\\pg/i,"\\b") if $Trainer && $Trainer.male?
+  text.gsub!(/\\pg/i,"\\r") if $Trainer && $Trainer.female?
+  text.gsub!(/\\pg/i,"\\y") if $Trainer && $Trainer.nonbinary?
+  text.gsub!(/\\pog/i,"\\r") if $Trainer && $Trainer.male?
+  text.gsub!(/\\pog/i,"\\b") if $Trainer && $Trainer.female?
+  text.gsub!(/\\pog/i,"\\y") if $Trainer && $Trainer.nonbinary?
+  text.gsub!(/\\pg/i,"")
+  text.gsub!(/\\pog/i,"")
   male_text_tag = shadowc3tag(MessageConfig::MALE_TEXT_MAIN_COLOR, MessageConfig::MALE_TEXT_SHADOW_COLOR)
   female_text_tag = shadowc3tag(MessageConfig::FEMALE_TEXT_MAIN_COLOR, MessageConfig::FEMALE_TEXT_SHADOW_COLOR)
+  nonbinary_text_tag = shadowc3tag(MessageConfig::NB_TEXT_MAIN_COLOR, MessageConfig::NB_TEXT_SHADOW_COLOR)
   text.gsub!(/\\b/i,   male_text_tag)
   text.gsub!(/\\r/i,   female_text_tag)
+  text.gsub!(/\\y/i,   nonbinary_text_tag)
   text.gsub!(/\\[Ww]\[([^\]]*)\]/) do
     w = $1.to_s
     if w == ""
@@ -474,10 +479,11 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
     colortag = getSkinColor(msgwindow.windowskin, 0, isDarkSkin)
   end
   text = colortag + text
-  ### Controls
+ 
+  # Controls
   textchunks = []
   controls = []
-  while text[/(?:\\(f|ff|ts|cl|me|se|wt|wtnp|ch)\[([^\]]*)\]|\\(g|cn|pt|wd|wm|op|cl|wu|\.|\||\!|\^))/i]
+  while text[/(?:\\(f|ff|ts|cl|me|se|wt|wtnp|ch|xn)\[([^\]]*)\]|\\(g|cn|pt|wd|wm|op|cl|wu|\.|\||\!|\^))/i]
     textchunks.push($~.pre_match)
     if $~[1]
       controls.push([$~[1].downcase, $~[2], -1])
@@ -520,10 +526,32 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
       specialCloseSE = param
     when "f"
       facewindow&.dispose
-      facewindow = PictureWindow.new("Graphics/Pictures/#{param}")
+      facewindow = PictureWindow.new("Graphics/Pictures/Portraits/#{param}")
     when "ff"
       facewindow&.dispose
       facewindow = FaceWindowVX.new(param)
+    when "xn"   # Display header (name) with the specified name
+      headerwindow&.dispose
+      headerwindow = Window_AdvancedTextPokemon.new(param)
+      headerwindow.setSkin("Graphics/Windowskins/goldskin")
+      headerwindow.resizeToFit(headerwindow.text, Graphics.width)
+      headerwindow.viewport = msgwindow.viewport
+      headerwindow.z = msgwindow.z - 1  # Ensure header window is below the choice window
+      # Position the header window opposite the portrait window
+      if facewindow && facewindow.x == 0
+        headerwindow.x = Graphics.width - headerwindow.width
+      else
+        headerwindow.x = Graphics.width - headerwindow.width
+      end
+      headerwindow.y = msgwindow.y - headerwindow.height
+      headerwindow.visible = true
+    when "prt"   # Display portrait with the specified filename
+      facewindow&.dispose
+      facewindow = PictureWindow.new("Graphics/Pictures/Portraits/#{param}")
+      facewindow.x = 0
+      facewindow.y = Graphics.height - facewindow.height - msgwindow.height
+      facewindow.viewport = msgwindow.viewport
+      facewindow.z = msgwindow.z - 2  # Ensure face window is below the choice window
     when "ch"
       cmds = param.clone
       cmdvariable = pbCsvPosInt!(cmds)
@@ -532,6 +560,10 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
       while cmds.length > 0
         commands.push(pbCsvField!(cmds))
       end
+      choicewindow = Window_CommandPokemon.new(commands)
+      choicewindow.viewport = msgwindow.viewport
+      choicewindow.z = msgwindow.z + 2  # Ensure choice window is above the header window
+      pbPositionChoiceWindow(choicewindow, msgwindow)
     when "wtnp", "^"
       text = text.sub(/\001\z/, "")   # fix: '$' can match end of line as well
     when "se"
@@ -549,9 +581,9 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
   # Position message window
   pbRepositionMessageWindow(msgwindow, linecount)
   if facewindow
-    pbPositionNearMsgWindow(facewindow, msgwindow, :left)
+    facewindow.y = Graphics.height - facewindow.height - msgwindow.height
     facewindow.viewport = msgwindow.viewport
-    facewindow.z        = msgwindow.z
+    facewindow.z        = msgwindow.z - 2
   end
   atTop = (msgwindow.y == 0)
   # Show text
@@ -571,16 +603,16 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
       case control
       when "f"
         facewindow&.dispose
-        facewindow = PictureWindow.new("Graphics/Pictures/#{param}")
-        pbPositionNearMsgWindow(facewindow, msgwindow, :left)
+        facewindow = PictureWindow.new("Graphics/Pictures/Portraits/#{param}")
+        facewindow.y = Graphics.height - facewindow.height - msgwindow.height
         facewindow.viewport = msgwindow.viewport
-        facewindow.z        = msgwindow.z
+        facewindow.z        = msgwindow.z - 2
       when "ff"
         facewindow&.dispose
         facewindow = FaceWindowVX.new(param)
-        pbPositionNearMsgWindow(facewindow, msgwindow, :left)
+        facewindow.y = Graphics.height - facewindow.height - msgwindow.height
         facewindow.viewport = msgwindow.viewport
-        facewindow.z        = msgwindow.z
+        facewindow.z        = msgwindow.z - 2
       when "g"      # Display gold window
         goldwindow&.dispose
         goldwindow = pbDisplayGoldWindow(msgwindow)
@@ -593,20 +625,20 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
       when "wu"
         atTop = true
         msgwindow.y = 0
-        pbPositionNearMsgWindow(facewindow, msgwindow, :left)
-        if appear_timer_start
-          msgwindow.y = lerp(y_start, y_end, appear_duration, appear_timer_start, System.uptime)
+        if facewindow
+          facewindow.y = Graphics.height - facewindow.height - msgwindow.height
         end
       when "wm"
         atTop = false
         msgwindow.y = (Graphics.height - msgwindow.height) / 2
-        pbPositionNearMsgWindow(facewindow, msgwindow, :left)
+        if facewindow
+          facewindow.y = Graphics.height - facewindow.height - msgwindow.height
+        end
       when "wd"
         atTop = false
         msgwindow.y = Graphics.height - msgwindow.height
-        pbPositionNearMsgWindow(facewindow, msgwindow, :left)
-        if appear_timer_start
-          msgwindow.y = lerp(y_start, y_end, appear_duration, appear_timer_start, System.uptime)
+        if facewindow
+          facewindow.y = Graphics.height - facewindow.height - msgwindow.height
         end
       when "ts"     # Change text speed
         msgwindow.textspeed = (param == "") ? 0 : param.to_i / 80.0
@@ -634,6 +666,8 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
     Graphics.update
     Input.update
     facewindow&.update
+    headerwindow&.update
+    choicewindow&.update
     if autoresume && msgwindow.waitcount == 0
       msgwindow.resume if msgwindow.busy?
       break if !msgwindow.busy?
@@ -662,6 +696,8 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
   coinwindow&.dispose
   battlepointswindow&.dispose
   facewindow&.dispose
+  headerwindow&.dispose  # Dispose of the header window
+  choicewindow&.dispose  # Dispose of the choice window
   if haveSpecialClose
     pbSEPlay(pbStringToAudioFile(specialCloseSE))
     atTop = (msgwindow.y == 0)

@@ -59,7 +59,7 @@ module Settings
   FIXED_DURATION_WEATHER_FROM_ABILITY = (MECHANICS_GENERATION >= 6)
   # Whether X items (X Attack, etc.) raise their stat by 2 stages (true) or 1
   # (false).
-  X_STAT_ITEMS_RAISE_BY_TWO_STAGES    = (MECHANICS_GENERATION >= 7)
+  X_STAT_ITEMS_RAISE_BY_TWO_STAGES    = false #(MECHANICS_GENERATION >= 7)
   # Whether some Poké Balls have catch rate multipliers from Gen 7 (true) or
   # from earlier generations (false).
   NEW_POKE_BALL_CATCH_RATES           = (MECHANICS_GENERATION >= 7)
