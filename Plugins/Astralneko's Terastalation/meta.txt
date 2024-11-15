@@ -1,0 +1,5 @@
+Name = Astralneko's Terastalation
+Version = 1.0.0
+Credits = Astralneko
+Requires = Astralneko's Miscellaneous Scripts,1.1.1
+Link = https://reliccastle.com/resources/867/

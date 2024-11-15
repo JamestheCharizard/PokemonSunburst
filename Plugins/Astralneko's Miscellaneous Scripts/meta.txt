@@ -1,0 +1,4 @@
+Name = Astralneko's Miscellaneous Scripts
+Version = 1.1.1
+Credits = Astralneko
+Link = https://reliccastle.com/resources/867/
