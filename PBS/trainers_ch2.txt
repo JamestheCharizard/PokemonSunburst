@@ -1,0 +1,313 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+# Maracaleza Gym
+#-------------------------------
+[LEADERT_Akita,Akita]
+Items = SUPERPOTION,SUPERPOTION
+LoseText = "Did I just get Daigo'd?"
+Pokemon = CUFFEON,20
+    Shiny = yes
+    IV = 31,31,31,31,31,31
+    Ball = GREATBALL
+Pokemon = GINGARA,20
+    IV = 31,31,31,31,31,31
+    Ball = GREATBALL
+#-------------------------------
+[LEADERT_Akita,Akita,1]
+Items = SUPERPOTION,SUPERPOTION
+LoseText = "Did I just get Daigo'd?"
+Pokemon = CUFFEON,30
+    Shiny = yes
+    IV = 31,31,31,31,31,31
+    Ball = GREATBALL
+Pokemon = RAYONSIERA,30
+    IV = 31,31,31,31,31,31
+    Ball = GREATBALL
+Pokemon = SNEASLER,30
+    IV = 31,31,31,31,31,31
+    Ball = GREATBALL
+#-------------------------------
+[LEADERT_Akita,Akita,2]
+Items = SUPERPOTION,SUPERPOTION
+LoseText = "Did I just get Daigo'd?"
+Pokemon = CUFFEON,40
+    Shiny = yes
+    IV = 31,31,31,31,31,31
+    Ball = GREATBALL
+Pokemon = RAYONSIERA,40
+    IV = 31,31,31,31,31,31
+    Ball = GREATBALL
+Pokemon = SNEASLER,40
+    IV = 31,31,31,31,31,31
+    Ball = GREATBALL
+Pokemon = SERVOLLEY,40
+    IV = 31,31,31,31,31,31
+    Ball = GREATBALL
+#-------------------------------
+[LEADERT_Akita,Akita,3]
+Items = SUPERPOTION,SUPERPOTION
+LoseText = "Did I just get Daigo'd?"
+Pokemon = CUFFEON,50
+    Shiny = yes
+    IV = 31,31,31,31,31,31
+    Ball = GREATBALL
+Pokemon = RAYONSIERA,50
+    IV = 31,31,31,31,31,31
+    Ball = GREATBALL
+Pokemon = SNEASLER,50
+    IV = 31,31,31,31,31,31
+    Ball = GREATBALL
+Pokemon = SERVOLLEY,50
+    IV = 31,31,31,31,31,31
+    Ball = GREATBALL
+Pokemon = RAMANTILL,50
+    IV = 31,31,31,31,31,31
+    Ball = DIVEBALL
+#-------------------------------
+# North Route 4, Fairdune Cave
+#-------------------------------
+[YOUNGSTER,Manuelo]
+LoseText = "But... my shorts!"
+Pokemon = MACAWK,9
+#-------------------------------
+[BUGCATCHER,Landon]
+LoseText = "You're pretty shocking yourself!"
+Pokemon = CATERCELL,8
+Pokemon = WURMPLE,8
+#-------------------------------
+[HIKER,Manolo]
+LoseText = "Just be more careful out there!"
+Pokemon = PEBBLEAK,11
+#-------------------------------
+[FISHERMAN,Arturo]
+LoseText = "A gray fish? Who knew!"
+Pokemon = BASCULIN,9
+    Form = 3
+Pokemon = BASCULIN,9
+    Form = 3
+#-------------------------------
+[TWINS,Luna and Toto]
+LoseText = "Luna & Toto: We're blasting off again!"
+Pokemon = SILCOON,8
+Pokemon = CASCOON,8
+#-------------------------------
+[THEORIST,Matthew]
+LoseText = "Impossible! My IQ is 165!"
+Pokemon = GLIMMET,10
+Pokemon = ASTELL,10
+#-------------------------------
+[WORKER,Samuel]
+LoseText = "Ack! It's like you had a Red Card!"
+Pokemon = CRYSTODE,11
+    Form = 20
+Pokemon = CRYSTODE,11
+    Form = 20
+#-------------------------------
+[POKEMONBREEDER,Ashe]
+LoseText = "My babies!"
+Pokemon = ONSAIL,11
+Pokemon = TOGEPI,12
+Pokemon = LAZEN,11
+#-------------------------------
+# Route 15
+#-------------------------------
+[BLACKBELT,Sean]
+LoseText = "Haaaaaah!"
+Pokemon = BAARAWL,20
+Pokemon = SERVOLLEY,20
+#-------------------------------
+[TEACHER_F,Manuela]
+LoseText = "Not my best!"
+Pokemon = NEKOLEG,12
+Pokemon = ALUMINNOW,12
+Pokemon = MARIHUSH,12
+#-------------------------------
+[RICHBOY,Veal]
+LoseText = "Impossible!"
+Pokemon = MEOWTH,14
+    Form = 1
+    Item = SITRUSBERRY
+Pokemon = CARNIVINE,14
+    Item = SITRUSBERRY
+#-------------------------------
+[LADY,Alicia]
+LoseText = "Beating me in a battle, it seems!"
+Pokemon = MARIHUSH,13
+Pokemon = MARASAGI,14
+#-------------------------------
+[POKEMONRANGER_M,Naito]
+LoseText = "What? C'mon, now I'm Styler-less and Pokémon-less..."
+Pokemon = NEKOLEG,15
+#-------------------------------
+# Rio Bossano City
+#-------------------------------
+[SCIENTIST_F,Fennel]
+LoseText = "Oh, wow..."
+Pokemon = ZORUA,13
+    Form = 1
+    Moves = AERIALACE,SWIFT,CALMMIND,SHADOWSNEAK
+Pokemon = GIRAFARIG,15
+    Moves = STOMP,ASSURANCE,CONFUSION,ODORSLEUTH
+    Item = NORMALIUMZ
+#-------------------------------
+# Rocavideo Town
+#-------------------------------
+[ENGINEER,Mato]
+LoseText = "Oof... You really are strong..."
+Pokemon = BASCULIN,15
+	Form = 1
+#-------------------------------
+[DELINQUENT,Raya]
+LoseText = "Huh. Okay then."
+Pokemon = CLAUSTROA,13
+Pokemon = CRYSTODE,13
+	Form = 23
+#-------------------------------
+[TOURIST_M,Benedito]
+LoseText = "Huh. Okay then."
+Pokemon = PLUSLE,14
+#-------------------------------
+[TOURIST_F,Isabel]
+LoseText = "Huh. Okay then."
+Pokemon = MINUN,14
+#-------------------------------
+[CAMPER_M,Miles]
+LoseText = "Huh. Okay then."
+Pokemon = PEBBLEAK,13
+Pokemon = DUSTOX,13
+Pokemon = CRYSTODE,13
+	Form = 20
+#-------------------------------
+[RIVAL_Sorrel,Sorrel]
+LoseText = "...Dastard."
+Pokemon = NEPETHENA,18
+	Gender = female
+	AbilityIndex = 0
+    Moves = RAZORLEAF,SWORDSDANCE,ATTRACT,AERIALACE
+    IV = 31,31,31,31,31,31
+	EV = 0,80,0,40,80,0
+    Ball = ULTRABALL
+	Item = GRASSIUMZ
+#-------------------------------
+# Rocavideo Gym
+#-------------------------------
+[ENGINEER,Mato,1]
+LoseText = "Gah! Beaten again!"
+Pokemon = BASCULIN,15
+	Form = 1
+Pokemon = TRAPINCH,16
+#-------------------------------
+[POKEMONRANGER_M,Kaito]
+LoseText = "Ugh... Now I have to give him back his Styler..."
+Pokemon = PEBBLEAK,16
+Pokemon = TRAPINCH,15
+#-------------------------------
+[POKEMONFARMER,Tino]
+LoseText = "...ah. Guess not."
+Pokemon = CRYSTODE,17
+	Form = 24
+#-------------------------------
+[POKEMONBREEDER,Seo]
+LoseText = "American boot!"
+Pokemon = CUBONE,17
+#-------------------------------
+[LEADERS_Desiree,Desiree]
+LoseText = "Hmph. You did well, PN."
+Pokemon = GLIGAR,18
+    Moves = BULLDOZE,ACROBATICS,PROTECT,REFLECT
+    Item = YACHEBERRY
+    IV = 31,31,31,31,31,31
+    EV = 0,80,40,120,0,0
+    Ball = GREATBALL
+Pokemon = PEBBLINEER,20
+    Moves = BULLDOZE,ROCKTOMB,TAKEDOWN,ROLLOUT
+    Item = ASSAULTVEST
+    IV = 31,31,31,31,31,31
+    EV = 0,80,0,40,80,40
+    Ball = GREATBALL
+	TeraType = FAIRY
+	TrainerAce = true
+#-------------------------------
+# Lyra Gym
+#-------------------------------
+[LEADERT_Fritz,Fritz]
+Items = SUPERPOTION,SUPERPOTION
+LoseText = "Ah hell, well I guess you're just that good..."
+Pokemon = TOGETIC,20
+    Form = 1
+    IV = 31,31,31,31,31,31
+    Ball = DUSKBALL
+	Item = AIRBALLOON
+Pokemon = UMBREON,20
+    IV = 31,31,31,31,31,31
+    Ball = DUSKBALL
+	TeraType = POISON
+	TrainerAce = true
+#-------------------------------
+[LEADERT_Fritz,Fritz,1]
+Items = SUPERPOTION,SUPERPOTION
+LoseText = "Ah hell, well I guess you're just that good..."
+Pokemon = UMBREON,30
+    IV = 31,31,31,31,31,31
+    Ball = DUSKBALL
+Pokemon = TOGETIC,30
+    Form = 1
+    IV = 31,31,31,31,31,31
+    Ball = DUSKBALL
+	Item = AIRBALLOON
+Pokemon = PIKANDINE,30
+	IV = 31,31,31,31,31,31
+	TeraType = ICE
+	TrainerAce = true
+	Item = RAZORCLAW
+#-------------------------------
+[LEADERT_Fritz,Fritz,2]
+Items = SUPERPOTION,SUPERPOTION
+LoseText = "Ah hell, well I guess you're just that good..."
+Pokemon = UMBREON,40
+    IV = 31,31,31,31,31,31
+    Ball = DUSKBALL
+Pokemon = TOGEKISS,40
+    Form = 1
+    IV = 31,31,31,31,31,31
+    Ball = DUSKBALL
+	Item = AIRBALLOON
+Pokemon = OVERQWIL,40
+    IV = 31,31,31,31,31,31
+    Ball = DUSKBALL
+	Item = BLACKSLUDGE
+Pokemon = PIKANDINE,40
+	IV = 31,31,31,31,31,31
+	TeraType = ICE
+	TrainerAce = true
+	Item = RAZORCLAW
+#-------------------------------
+[LEADERT_Fritz,Fritz,3]
+Items = SUPERPOTION,SUPERPOTION
+LoseText = "Ah hell, well I guess you're just that good..."
+Pokemon = UMBREON,50
+    IV = 31,31,31,31,31,31
+	Moves = DARKPULSE,FAKETEARS,FOULPLAY,TOXIC
+    Ball = DUSKBALL
+Pokemon = TOGEKISS,50
+    Form = 1
+    IV = 31,31,31,31,31,31
+	Moves = DARKPULSE,METRONOME,AIRSLASH,DAZZLINGGLEAM
+    Ball = DUSKBALL
+	Item = AIRBALLOON
+Pokemon = VILLYIAO,50
+    IV = 31,31,31,31,31,31
+	Moves = BEATUP,BRAVEBIRD,SUPERPOWER,CRUSHCLAW
+    Ball = DUSKBALL
+	Item = FIGHTINGGEM
+Pokemon = OVERQWIL,50
+    IV = 31,31,31,31,31,31
+	Moves = DESTINYBOND,BARBBARRAGE,BEATUP,PINMISSILE
+    Ball = DUSKBALL
+	Item = BLACKSLUDGE
+Pokemon = PIKANDINE,50
+	IV = 31,31,31,31,31,31
+	Moves = ICYBLADE,NIGHTSLASH,IRONTAIL,HONECLAWS
+	TeraType = ICE
+	TrainerAce = true
+	Item = RAZORCLAW

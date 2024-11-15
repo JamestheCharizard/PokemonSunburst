@@ -1,0 +1,498 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[AMNIBALL,1]
+FormName = Dark Mode
+#-------------------------------
+[HOPPIP,1]
+FormName = Verelan Form
+Types = WATER,POISON
+Generation = 10
+#-------------------------------
+[SKIPLOOM,1]
+FormName = Verelan Form
+Types = WATER,POISON
+Generation = 10
+#-------------------------------
+[JUMPLUFF,1]
+FormName = Verelan Form
+Types = WATER,POISON
+Generation = 10
+#-------------------------------
+[WOOBAT,1]
+FormName = Verelan Form
+Types = ICE,FLYING
+Generation = 10
+Evolutions = SWOOBAT,Item,ICESTONE
+#-------------------------------
+[SWOOBAT,1]
+FormName = Verelan Form
+Types = ICE,FLYING
+Generation = 10
+#-------------------------------
+[TOGEPI,1]
+Evolutions = TOGETIC,ItemOriginalForm,OVALSTONE,TOGETIC,LevelDarkInParty,2
+#-------------------------------
+[TOGETIC,1]
+FormName = Verelan Form
+Types = DARK,FAIRY
+Abilities = LEVITATE,SERENEGRACE
+HiddenAbility = HUSTLE
+Generation = 10
+#-------------------------------
+[TOGEKISS,1]
+FormName = Verelan Form
+Types = DARK,FAIRY
+Abilities = LEVITATE,SERENEGRACE
+HiddenAbility = HUSTLE
+Generation = 10
+#-------------------------------
+[TEDDIURSA,1]
+#-------------------------------
+[URSARING,1]
+FormName = Verelan Form
+Types = NORMAL,CELESTIAL
+Generation = 10
+Evolutions = URSALUNA,Item,MOONSTONE
+#-------------------------------
+[URSALUNA,1]
+FormName = Verelan Form
+Types = NORMAL,CELESTIAL
+Generation = 10
+#-------------------------------
+[MILCERY,63]
+FormName = Verelan Form
+Types = POISON
+Generation = 10
+Evolutions = ALCREMIE,ItemVerelanAlcremie,
+#-------------------------------
+[ALCREMIE,63]
+FormName = Verelan Form - Strawberry
+Types = POISON,FAIRY
+Generation = 10
+#-------------------------------
+[ALCREMIE,64]
+FormName = Verelan Form - Berry
+Types = POISON,FAIRY
+Generation = 10
+#-------------------------------
+[ALCREMIE,65]
+FormName = Verelan Form - Love
+Types = POISON,FAIRY
+Generation = 10
+#-------------------------------
+[ALCREMIE,66]
+FormName = Verelan Form - Star
+Types = POISON,FAIRY
+Generation = 10
+#-------------------------------
+[ALCREMIE,67]
+FormName = Verelan Form - Clover
+Types = POISON,FAIRY
+Generation = 10
+#-------------------------------
+[ALCREMIE,68]
+FormName = Verelan Form - Flower
+Types = POISON,FAIRY
+Generation = 10
+#-------------------------------
+[ALCREMIE,69]
+FormName = Verelan Form - Ribbon
+Types = POISON,FAIRY
+Generation = 10
+#-------------------------------
+[MAREANIE,1]
+FormName = Verelan Form
+Types = ICE
+BaseStats = 50,43,62,53,52,45
+Generation = 10
+Evolutions = TOXAPEX,None,,CROWNDRA,Level,38
+#-------------------------------
+[VULLABY,1]
+FormName = Verelan Form
+Types = GHOST,GROUND
+Generation = 10
+#-------------------------------
+[MANDIBUZZ,1]
+FormName = Verelan Form
+Types = GHOST,GROUND
+Generation = 10
+#-------------------------------
+[SHUPPET,1]
+FormName = Verelan Form
+Types = STEEL,GHOST
+Generation = 10
+#-------------------------------
+[BANETTE,1]
+FormName = Verelan Form
+Types = STEEL,GHOST
+Generation = 10
+#-------------------------------
+[GOLETT,1]
+FormName = Verelan Form
+Types = ROCK,FAIRY
+Generation = 10
+#-------------------------------
+[GOLURK,1]
+FormName = Verelan Form
+Types = ROCK,FAIRY
+Generation = 10
+#-------------------------------
+[MARIHUSH,1]
+FormName = Battle Stance
+#-------------------------------
+[JOUSHRIMP,1]
+FormName = Spearman Joushrimp
+Types = WATER,DARK
+BaseStats = 43,65,36,40,28,40
+EVs = ATTACK,1
+Evolutions = RAMANTILL,None,,KRILLANCE,Level,20
+#-------------------------------
+[CRYSTODE,20]
+FormName = Normal Body
+Types = ROCK,NORMAL
+WildItemUncommon=NORMALGEM
+#-------------------------------
+[CRYSTODE,21]
+FormName = Fighting Body
+Types = ROCK,FIGHTING
+WildItemUncommon=FIGHTINGGEM
+#-------------------------------
+[CRYSTODE,22]
+FormName = Flying Body
+Types = ROCK,FLYING
+WildItemUncommon=FLYINGGEM
+#-------------------------------
+[CRYSTODE,23]
+FormName = Poison Body
+Types = ROCK,POISON
+WildItemUncommon=POISONGEM
+#-------------------------------
+[CRYSTODE,24]
+FormName = Ground Body
+Types = ROCK,GROUND
+WildItemUncommon=GROUNDGEM
+#-------------------------------
+[CRYSTODE,25]
+FormName = Bug Body
+Types = ROCK,BUG
+WildItemUncommon=BUGGEM
+#-------------------------------
+[CRYSTODE,26]
+FormName = Ghost Body
+Types = ROCK,GHOST
+WildItemUncommon=GHOSTGEM
+#-------------------------------
+[CRYSTODE,27]
+FormName = Steel Body
+Types = ROCK,STEEL
+WildItemUncommon=STEELGEM
+#-------------------------------
+[CRYSTODE,28]
+FormName = ??? Body
+Types = ROCK,QMARKS
+WildItemUncommon=NORMALGEM
+#-------------------------------
+[CRYSTODE,29]
+FormName = Fire Body
+Types = ROCK,FIRE
+WildItemUncommon=FIREGEM
+#-------------------------------
+[CRYSTODE,30]
+FormName = Water Body
+Types = ROCK,WATER
+WildItemUncommon=WATERGEM
+#-------------------------------
+[CRYSTODE,31]
+FormName = Grass Body
+Types = ROCK,GRASS
+WildItemUncommon=GRASSGEM
+#-------------------------------
+[CRYSTODE,32]
+FormName = Electric Body
+Types = ROCK,ELECTRIC
+WildItemUncommon=ELECTRICGEM
+#-------------------------------
+[CRYSTODE,33]
+FormName = Psychic Body
+Types = ROCK,PSYCHIC
+WildItemUncommon=PSYCHICGEM
+#-------------------------------
+[CRYSTODE,34]
+FormName = Ice Body
+Types = ROCK,ICE
+WildItemUncommon=ICEGEM
+#-------------------------------
+[CRYSTODE,35]
+FormName = Dragon Body
+Types = ROCK,DRAGON
+WildItemUncommon=DRAGONGEM
+#-------------------------------
+[CRYSTODE,36]
+FormName = Dark Body
+Types = ROCK,DARK
+WildItemUncommon=DARKGEM
+#-------------------------------
+[CRYSTODE,37]
+FormName = Fairy Body
+Types = ROCK,FAIRY
+WildItemUncommon=FAIRYGEM
+#-------------------------------
+[CRYSTODE,38]
+FormName = Celestial Body
+Types = ROCK,CELESTIAL
+WildItemUncommon=CELESTIALGEM
+#-------------------------------
+[CRYSTODE,39]
+FormName = Glitch Body
+Types = ROCK,GLITCH
+WildItemUncommon=GLITCHGEM
+#-------------------------------
+[QUARTZLEM,20]
+FormName = Normal Body
+Types = ROCK,NORMAL
+WildItemCommon=NORMALGEM
+#-------------------------------
+[QUARTZLEM,21]
+FormName = Fighting Body
+Types = ROCK,FIGHTING
+WildItemCommon=FIGHTINGGEM
+#-------------------------------
+[QUARTZLEM,22]
+FormName = Flying Body
+Types = ROCK,FLYING
+WildItemCommon=FLYINGGEM
+#-------------------------------
+[QUARTZLEM,23]
+FormName = Poison Body
+Types = ROCK,POISON
+WildItemCommon=POISONGEM
+#-------------------------------
+[QUARTZLEM,24]
+FormName = Ground Body
+Types = ROCK,GROUND
+WildItemCommon=GROUNDGEM
+#-------------------------------
+[QUARTZLEM,25]
+FormName = Bug Body
+Types = ROCK,BUG
+WildItemCommon=BUGGEM
+#-------------------------------
+[QUARTZLEM,26]
+FormName = Ghost Body
+Types = ROCK,GHOST
+WildItemCommon=GHOSTGEM
+#-------------------------------
+[QUARTZLEM,27]
+FormName = Steel Body
+Types = ROCK,STEEL
+WildItemCommon=STEELGEM
+#-------------------------------
+[QUARTZLEM,28]
+FormName = ??? Body
+Types = ROCK,QMARKS
+WildItemCommon=NORMALGEM
+#-------------------------------
+[QUARTZLEM,29]
+FormName = Fire Body
+Types = ROCK,FIRE
+WildItemCommon=FIREGEM
+#-------------------------------
+[QUARTZLEM,30]
+FormName = Water Body
+Types = ROCK,WATER
+WildItemCommon=WATERGEM
+#-------------------------------
+[QUARTZLEM,31]
+FormName = Grass Body
+Types = ROCK,GRASS
+WildItemCommon=GRASSGEM
+#-------------------------------
+[QUARTZLEM,32]
+FormName = Electric Body
+Types = ROCK,ELECTRIC
+WildItemCommon=ELECTRICGEM
+#-------------------------------
+[QUARTZLEM,33]
+FormName = Psychic Body
+Types = ROCK,PSYCHIC
+WildItemCommon=PSYCHICGEM
+#-------------------------------
+[QUARTZLEM,34]
+FormName = Ice Body
+Types = ROCK,ICE
+WildItemCommon=ICEGEM
+#-------------------------------
+[QUARTZLEM,35]
+FormName = Dragon Body
+Types = ROCK,DRAGON
+WildItemCommon=DRAGONGEM
+#-------------------------------
+[QUARTZLEM,36]
+FormName = Dark Body
+Types = ROCK,DARK
+WildItemCommon=DARKGEM
+#-------------------------------
+[QUARTZLEM,37]
+FormName = Fairy Body
+Types = ROCK,FAIRY
+WildItemCommon=FAIRYGEM
+#-------------------------------
+[QUARTZLEM,38]
+FormName = Celestial Body
+Types = ROCK,CELESTIAL
+WildItemCommon=CELESTIALGEM
+#-------------------------------
+[QUARTZLEM,39]
+FormName = Glitch Body
+Types = ROCK,GLITCH
+WildItemCommon=GLITCHGEM
+#-------------------------------
+[DYODETZA,20]
+FormName = Normal Body
+Types = ROCK,NORMAL
+WildItemCommon=NORMALGEM
+#-------------------------------
+[DYODETZA,21]
+FormName = Fighting Body
+Types = ROCK,FIGHTING
+WildItemCommon=FIGHTINGGEM
+#-------------------------------
+[DYODETZA,22]
+FormName = Flying Body
+Types = ROCK,FLYING
+WildItemCommon=FLYINGGEM
+#-------------------------------
+[DYODETZA,23]
+FormName = Poison Body
+Types = ROCK,POISON
+WildItemCommon=POISONGEM
+#-------------------------------
+[DYODETZA,24]
+FormName = Ground Body
+Types = ROCK,GROUND
+WildItemCommon=GROUNDGEM
+#-------------------------------
+[DYODETZA,25]
+FormName = Bug Body
+Types = ROCK,BUG
+WildItemCommon=BUGGEM
+#-------------------------------
+[DYODETZA,26]
+FormName = Ghost Body
+Types = ROCK,GHOST
+WildItemCommon=GHOSTGEM
+#-------------------------------
+[DYODETZA,27]
+FormName = Steel Body
+Types = ROCK,STEEL
+WildItemCommon=STEELGEM
+#-------------------------------
+[DYODETZA,28]
+FormName = ??? Body
+Types = ROCK,QMARKS
+WildItemCommon=NORMALGEM
+#-------------------------------
+[DYODETZA,29]
+FormName = Fire Body
+Types = ROCK,FIRE
+WildItemCommon=FIREGEM
+#-------------------------------
+[DYODETZA,30]
+FormName = Water Body
+Types = ROCK,WATER
+WildItemCommon=WATERGEM
+#-------------------------------
+[DYODETZA,31]
+FormName = Grass Body
+Types = ROCK,GRASS
+WildItemCommon=GRASSGEM
+#-------------------------------
+[DYODETZA,32]
+FormName = Electric Body
+Types = ROCK,ELECTRIC
+WildItemCommon=ELECTRICGEM
+#-------------------------------
+[DYODETZA,33]
+FormName = Psychic Body
+Types = ROCK,PSYCHIC
+WildItemCommon=PSYCHICGEM
+#-------------------------------
+[DYODETZA,34]
+FormName = Ice Body
+Types = ROCK,ICE
+WildItemCommon=ICEGEM
+#-------------------------------
+[DYODETZA,35]
+FormName = Dragon Body
+Types = ROCK,DRAGON
+WildItemCommon=DRAGONGEM
+#-------------------------------
+[DYODETZA,36]
+FormName = Dark Body
+Types = ROCK,DARK
+WildItemCommon=DARKGEM
+#-------------------------------
+[DYODETZA,37]
+FormName = Fairy Body
+Types = ROCK,FAIRY
+WildItemCommon=FAIRYGEM
+#-------------------------------
+[DYODETZA,38]
+FormName = Celestial Body
+Types = ROCK,CELESTIAL
+WildItemCommon=CELESTIALGEM
+#-------------------------------
+[DYODETZA,39]
+FormName = Glitch Body
+Types = ROCK,GLITCH
+WildItemCommon=GLITCHGEM
+#-------------------------------
+[ZOKURRA,1]
+FormName = Winter Form
+Types = GRASS,ICE
+Color = Cyan
+Pokedex = Filler text
+#-------------------------------
+[SAKUMARGA,1]
+FormName = Winter Form
+Types = ICE,PSYCHIC
+Color = Cyan
+Pokedex = Filler text
+#-------------------------------
+[FROSABY,1]
+FormName = Summer Form
+Types = ICE,WATER
+Color = Blue
+Pokedex = Filler text
+#-------------------------------
+[YUCONNIT,1]
+FormName = Summer Form
+Types = WATER,PSYCHIC
+Color = Blue
+Pokedex = Filler text
+#-------------------------------
+[COBRALF,1]
+FormName = Weathered Form
+Abilities = STURDY
+Weight = 18.3
+BaseStats = 75,70,95,60,72,108
+Pokedex = Filler text
+#-------------------------------
+[PARTAZURA,1]
+FormName = Hero Form
+BaseStats = 101,175,124,144,88,68
+BaseExp = 315
+Pokedex = Filler text
+#-------------------------------
+[DAROSEIKU,1]
+FormName = Teacher Form
+BaseStats = 168,68,148,88,108,120
+BaseExp = 315
+Pokedex = Filler text
+#-------------------------------
+[BERANTEGON,1]
+FormName = Monster Form
+BaseStats = 124,101,88,68,175,144
+BaseExp = 315
+Pokedex = Filler text
+#-------------------------------

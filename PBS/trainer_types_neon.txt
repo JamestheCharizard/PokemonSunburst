@@ -1,0 +1,464 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+# Battle Frontier
+#-------------------------------
+#-------------------------------
+[FRONTIERBRAIN_Dahlia]
+Name = Arcade Star
+Gender = Female
+BaseMoney = 0
+SkillLevel = 120
+#-------------------------------
+[FRONTIERBRAIN_Kamil]
+Name = Stadium Announcer
+Gender = Male
+BaseMoney = 0
+SkillLevel = 120
+#-------------------------------
+[FRONTIERBRAIN_Trevor]
+Name = Factory Head
+Gender = Male
+BaseMoney = 0
+SkillLevel = 120
+#-------------------------------
+[FRONTIERBRAIN_Arashiko]
+Name = Valley Ranger
+Gender = Female
+BaseMoney = 0
+SkillLevel = 120
+#-------------------------------
+[FRONTIERBRAIN_Monika]
+Name = Dungeon Master
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 120
+#-------------------------------
+[FIGHTINGPIXEL_EASY1]
+Name = Fighting Pixel
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 16
+#-------------------------------
+[FIGHTINGPIXEL_EASY2]
+Name = Fighting Pixel
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 16
+#-------------------------------
+[FIGHTINGPIXEL_EASY3]
+Name = Fighting Pixel
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 16
+#-------------------------------
+[FIGHTINGPIXEL_EASY4]
+Name = Fighting Pixel
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 16
+#-------------------------------
+[FIGHTINGPIXEL_MEDIUM1]
+Name = Fighting Pixel
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 48
+#-------------------------------
+[FIGHTINGPIXEL_MEDIUM2]
+Name = Fighting Pixel
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 48
+#-------------------------------
+[FIGHTINGPIXEL_MEDIUM3]
+Name = Fighting Pixel
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 48
+#-------------------------------
+[FIGHTINGPIXEL_MEDIUM4]
+Name = Fighting Pixel
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 48
+#-------------------------------
+[FIGHTINGPIXEL_HARD1]
+Name = Fighting Pixel
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 72
+#-------------------------------
+[FIGHTINGPIXEL_HARD2]
+Name = Fighting Pixel
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 72
+#-------------------------------
+[FIGHTINGPIXEL_HARD3]
+Name = Fighting Pixel
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 72
+#-------------------------------
+[FIGHTINGPIXEL_HARD4]
+Name = Fighting Pixel
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 72
+273,FIGHTINGPIXEL_EXTREME,Fighting Pixel,0,ARS_Fighting Pixel_Battle Tower,,,Nonbinary,120,
+#-------------------------------
+# Neon Skyline
+#-------------------------------
+#-------------------------------
+[NEONSKYLINE_Red]
+Name = Neon Champion
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Leaf]
+Name = Runner
+Gender = Female
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Blue]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Giovanni]
+Name = Neon Chairman
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Lance]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Steven]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Wallace]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Archie]
+Name = Neon CFO
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Maxie]
+Name = Neon CIO
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Cynthia]
+Name = Neon Champion
+Gender = Female
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Cyrus]
+Name = Neon COO
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Alder]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Benga]
+Name = Neon Challenger
+Gender = Female
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Ghetsis]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Colress]
+Name = Neon CTO
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Iris]
+Name = Neon Champion
+Gender = Female
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Emma]
+Name = Neon Challenger
+Gender = Female
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Diantha]
+Name = Neon Champion
+Gender = Female
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Lysandre]
+Name = Neon CEO
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Hau]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Kukui]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Gladion]
+Name = Neon Challenger
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Lusamine]
+Name = Neon VP
+Gender = Female
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Faba]
+Name = Neon Challenger
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Guzma]
+Name = Neon Challenger
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Mustard]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Peony]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Rose]
+Name = Neon Challenger
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Leon]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Hop]
+Name = Neon Challenger
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Nemona]
+Name = Neon Champion
+Gender = Female
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Geeta]
+Name = Neon Champion
+Gender = Female
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Penny]
+Name = Neon Challenger
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Eri]
+Name = Neon Challenger
+Gender = Female
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Arven]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Clavell]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Turo]
+Name = Neon Developer
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Sada]
+Name = Neon Researcher
+Gender = Female
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Panem]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Anemone]
+Name = Neon Champion
+Gender = Female
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Neka]
+Name = Neon Champion
+Gender = Female
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Sorrel]
+Name = Neon Challenger
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Joseph]
+Name = Neon Challenger
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Moses]
+Name = Neon Challenger
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Netzach]
+Name = Neon Challenger
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Hod]
+Name = Neon Challenger
+Gender = Female
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Yesod]
+Name = Neon Challenger
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Ezuku]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Sabino]
+Name = Neon Challenger
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Luisa]
+Name = Neon Challenger
+Gender = Female
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Kamiko]
+Name = Neon Challenger
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Torigo]
+Name = Neon Challenger
+Gender = Female
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Mackenzie]
+Name = Neon Champion
+Gender = Female
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Anton]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Ilya]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Kerry]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Jasper]
+Name = Neon Challenger
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_James]
+Name = Neon Champion
+Gender = Male
+BaseMoney = 0
+SkillLevel = 300
+#-------------------------------
+[NEONSKYLINE_Starry]
+Name = Neon Challenger
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 300

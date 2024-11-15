@@ -432,12 +432,12 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
   text.gsub!(/\\pm/i,  _INTL("${1}", $player.money.to_s_formatted)) if $player
   text.gsub!(/\\n/i,   "\n")
   text.gsub!(/\\\[([0-9a-f]{8,8})\]/i) { "<c2=" + $1 + ">" }
-  text.gsub!(/\\pg/i,"\\b") if $Trainer && $Trainer.male?
-  text.gsub!(/\\pg/i,"\\r") if $Trainer && $Trainer.female?
-  text.gsub!(/\\pg/i,"\\y") if $Trainer && $Trainer.nonbinary?
-  text.gsub!(/\\pog/i,"\\r") if $Trainer && $Trainer.male?
-  text.gsub!(/\\pog/i,"\\b") if $Trainer && $Trainer.female?
-  text.gsub!(/\\pog/i,"\\y") if $Trainer && $Trainer.nonbinary?
+  text.gsub!(/\\pg/i,"\\b") if $player && $player.male?
+  text.gsub!(/\\pg/i,"\\r") if $player && $player.female?
+  text.gsub!(/\\pg/i,"\\y") if $player && $player.nonbinary?
+  text.gsub!(/\\pog/i,"\\r") if $player && $player.male?
+  text.gsub!(/\\pog/i,"\\b") if $player && $player.female?
+  text.gsub!(/\\pog/i,"\\y") if $player && $player.nonbinary?
   text.gsub!(/\\pg/i,"")
   text.gsub!(/\\pog/i,"")
   male_text_tag = shadowc3tag(MessageConfig::MALE_TEXT_MAIN_COLOR, MessageConfig::MALE_TEXT_SHADOW_COLOR)
@@ -459,11 +459,19 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
   text.gsub!(/\\c\[([0-9]+)\]/i) do
     next getSkinColor(msgwindow.windowskin, $1.to_i, isDarkSkin)
   end
+  # Player pronouns - check Astralneko's Misc
+  loop do
+    last_text = text.clone
+    text.gsub!(/\\ppg\[([0-9]+)\]\[([0-9]+)\]/i) { anPlayerPronoun[$1.to_i][$2.to_i] }
+    break if text == last_text
+  end
+	# Variables
   loop do
     last_text = text.clone
     text.gsub!(/\\v\[([0-9]+)\]/i) { $game_variables[$1.to_i] }
     break if text == last_text
   end
+	# linecount
   loop do
     last_text = text.clone
     text.gsub!(/\\l\[([0-9]+)\]/i) do

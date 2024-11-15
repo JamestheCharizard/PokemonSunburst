@@ -1,0 +1,51 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[FIGHTINGPIXEL_EASY2,Minnie]
+LoseText = "You didn't even let me use my best move!"
+Pokemon = MEOWTH,10
+    Name = MEOWTH
+#-------------------------------
+[PROFESSOR_Turo,Turo]
+LoseText = "I-ιmpossib|e!"
+Pokemon = IRONMOTH,66
+	Ball = MASTERBALL
+	IV = 31,31,31,31,31,31
+	EV = 4,0,0,0,252,252
+	Moves = SLUDGEWAVE,FIERYDANCE,DISCHARGE,AIRSLASH
+Pokemon = IRONBUNDLE,66
+	Ball = MASTERBALL
+	IV = 31,31,31,31,31,31
+	EV = 4,0,252,0,252,0
+	Moves = DRILLPECK,WATERPULSE,FREEZEDRY,SNOWSCAPE
+Pokemon = IRONHANDS,66
+	Ball = MASTERBALL
+	IV = 31,31,31,31,31,31
+	EV = 252,252,0,4,0,0
+	Moves = THUNDERPUNCH,DRAINPUNCH,IRONHEAD,FAKEOUT
+Pokemon = IRONJUGULIS,66
+	Ball = MASTERBALL
+	IV = 31,31,31,31,31,31
+	EV = 4,0,0,252,252,0
+	Moves = AIRSLASH,DARKPULSE,FLAMETHROWER,FLASHCANNON
+Pokemon = IRONTHORNS,66
+	Ball = MASTERBALL
+	IV = 31,31,31,31,31,31
+	EV = 4,252,252,0,0,0
+	Moves = THUNDERPUNCH,BRICKBREAK,STONEEDGE,EARTHQUAKE
+Pokemon = IRONVALIANT,67
+	Ball = MASTERBALL
+	IV = 31,31,31,31,31,31
+	EV = 4,252,0,252,0,0
+	Moves = PSYCHOCUT,BRICKBREAK,SPIRITBREAK,POISONJAB
+    TeraType = POISON
+	TrainerAce = true
+#-------------------------------
+[PROFESSOR_Turo,Turo,1]
+LoseText = "How...How very astounding! To think that you would manage to defy even the original professor's final protections!"
+Pokemon = MIRAIDON,70
+	Ball = MASTERBALL
+	IV = 31,31,31,31,31,31
+	EV = 4,252,0,252,0,0
+	Moves = HYPERBEAM,CHARGE,TAUNT,POWERGEM
+    TeraType = POISON
+	TrainerAce = true

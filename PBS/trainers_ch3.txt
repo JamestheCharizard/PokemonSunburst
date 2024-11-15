@@ -1,0 +1,85 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+# Lyra Gym
+#-------------------------------
+[LEADERT_Fritz,Fritz]
+Items = SUPERPOTION,SUPERPOTION
+LoseText = "Ah hell, well I guess you're just that good..."
+Pokemon = TOGETIC,20
+    Form = 1
+    IV = 31,31,31,31,31,31
+    Ball = DUSKBALL
+	Item = AIRBALLOON
+Pokemon = UMBREON,20
+    IV = 31,31,31,31,31,31
+    Ball = DUSKBALL
+	TeraType = POISON
+	TrainerAce = true
+#-------------------------------
+[LEADERT_Fritz,Fritz,1]
+Items = SUPERPOTION,SUPERPOTION
+LoseText = "Ah hell, well I guess you're just that good..."
+Pokemon = UMBREON,30
+    IV = 31,31,31,31,31,31
+    Ball = DUSKBALL
+Pokemon = TOGETIC,30
+    Form = 1
+    IV = 31,31,31,31,31,31
+    Ball = DUSKBALL
+	Item = AIRBALLOON
+Pokemon = PIKANDINE,30
+	IV = 31,31,31,31,31,31
+	TeraType = ICE
+	TrainerAce = true
+	Item = RAZORCLAW
+#-------------------------------
+[LEADERT_Fritz,Fritz,2]
+Items = SUPERPOTION,SUPERPOTION
+LoseText = "Ah hell, well I guess you're just that good..."
+Pokemon = UMBREON,40
+    IV = 31,31,31,31,31,31
+    Ball = DUSKBALL
+Pokemon = TOGEKISS,40
+    Form = 1
+    IV = 31,31,31,31,31,31
+    Ball = DUSKBALL
+	Item = AIRBALLOON
+Pokemon = OVERQWIL,40
+    IV = 31,31,31,31,31,31
+    Ball = DUSKBALL
+	Item = BLACKSLUDGE
+Pokemon = PIKANDINE,40
+	IV = 31,31,31,31,31,31
+	TeraType = ICE
+	TrainerAce = true
+	Item = RAZORCLAW
+#-------------------------------
+[LEADERT_Fritz,Fritz,3]
+Items = SUPERPOTION,SUPERPOTION
+LoseText = "Ah hell, well I guess you're just that good..."
+Pokemon = UMBREON,50
+    IV = 31,31,31,31,31,31
+	Moves = DARKPULSE,FAKETEARS,FOULPLAY,TOXIC
+    Ball = DUSKBALL
+Pokemon = TOGEKISS,50
+    Form = 1
+    IV = 31,31,31,31,31,31
+	Moves = DARKPULSE,METRONOME,AIRSLASH,DAZZLINGGLEAM
+    Ball = DUSKBALL
+	Item = AIRBALLOON
+Pokemon = VILLYIAO,50
+    IV = 31,31,31,31,31,31
+	Moves = BEATUP,BRAVEBIRD,SUPERPOWER,CRUSHCLAW
+    Ball = DUSKBALL
+	Item = FIGHTINGGEM
+Pokemon = OVERQWIL,50
+    IV = 31,31,31,31,31,31
+	Moves = DESTINYBOND,BARBBARRAGE,BEATUP,PINMISSILE
+    Ball = DUSKBALL
+	Item = BLACKSLUDGE
+Pokemon = PIKANDINE,50
+	IV = 31,31,31,31,31,31
+	Moves = ICYBLADE,NIGHTSLASH,IRONTAIL,HONECLAWS
+	TeraType = ICE
+	TrainerAce = true
+	Item = RAZORCLAW

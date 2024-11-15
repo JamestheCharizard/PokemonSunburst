@@ -1,0 +1,187 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+# Route 5
+#-------------------------------
+[RIVAL_Natsuki,Natsuki]
+LoseText = "Man, you're good..."
+Pokemon = TEMPIXIE,5
+    Name = Nanaya
+    Moves = SCRATCH,GROWL
+    IV = 25,25,25,25,25,25
+#-------------------------------
+[RIVAL_Natsuki,Natsuki,1]
+LoseText = "Man, you're good..."
+Pokemon = ANGEAL,5
+    Name = Tsubaki
+    Moves = POUND,DEFENSECURL
+    IV = 25,25,25,25,25,25
+#-------------------------------
+[RIVAL_Natsuki,Natsuki,2]
+LoseText = "Man, you're good..."
+Pokemon = RADIOSO,5
+    Name = Ragna
+    Moves = TACKLE,LEER
+    IV = 25,25,25,25,25,25
+#-------------------------------
+[YOUNGSTER,Começo]
+LoseText = "Aww, I lost."
+Pokemon = LUNAVY,3
+#-------------------------------
+[LASS,Minnie]
+LoseText = "You didn't even let me use my best move!"
+Pokemon = ONSAIL,4
+#-------------------------------
+[SCHOOLBOY,Monte]
+LoseText = "Oh, come on!"
+Pokemon = EEVEE,3
+    Moves = TACKLE,MUDSLAP,TAILWHIP
+Pokemon = ONSAIL,4
+    Moves = POUND,THUNDERSHOCK,BITE,TAILWHIP
+#-------------------------------
+[LASS,Araña]
+LoseText = "Aw, it'll be okay, my little bug..."
+Pokemon = WURMPLE,6
+#-------------------------------
+[STUDYTEAM,Martin and Rosemary]
+LoseText = "Martin: Dang, we need to study more..."
+Pokemon = ONSAIL,4
+Pokemon = LUNAVY,4
+#-------------------------------
+[CYCLIST_M,Tonio]
+LoseText = "Nice moves, compadre!"
+Pokemon = HOPPIP,7
+    Form = 1
+    Item = MYSTICWATER
+    IV = 25,25,25,25,25,25
+Pokemon = MACAWK,7
+    Item = QUICKCLAW
+    IV = 25,25,25,25,25,25
+#-------------------------------
+# Maracaleza Town
+#-------------------------------
+[TEACHER_F,Bonnie]
+LoseText = "Very interesting!"
+Pokemon = CRYSTODE,6
+    Form = 31
+    Moves = POUND,HARDEN,BIDE
+#-------------------------------
+[RIVAL_Mona,Mona]
+LoseText = "Darn it! I lost!"
+Pokemon = RADIOSO,8
+    Moves = TACKLE,LEER,EMBER
+    Item = ORANBERRY
+    IV = 25,25,25,25,25,25
+Pokemon = ONSAIL,7
+    Moves = POUND,TAILWHIP,FOCUSENERGY
+    IV = 25,25,25,25,25,25
+#-------------------------------
+[RIVAL_Mona,Mona,1]
+LoseText = "Darn it! I lost!"
+Pokemon = TEMPIXIE,8
+    Moves = SCRATCH,GROWL,AQUAJET
+    Item = ORANBERRY
+    IV = 25,25,25,25,25,25
+Pokemon = ONSAIL,7
+    Moves = POUND,TAILWHIP,FOCUSENERGY
+    IV = 25,25,25,25,25,25
+#-------------------------------
+[RIVAL_Mona,Mona,2]
+LoseText = "Darn it! I lost!"
+Pokemon = ANGEAL,8
+    Moves = POUND,DEFENSECURL,LEAFAGE
+    Item = ORANBERRY
+    IV = 25,25,25,25,25,25
+Pokemon = ONSAIL,7
+    Moves = POUND,TAILWHIP,FOCUSENERGY
+    IV = 25,25,25,25,25,25
+#-------------------------------
+[PRESCHOOLER_M,Maxim]
+LoseText = "Oh, come on!"
+Pokemon = LUNAVY,5
+#-------------------------------
+[PRESCHOOLER_F,Sammy]
+LoseText = "Oh, come on!"
+Pokemon = ONSAIL,5
+#-------------------------------
+[STREETTHUG,Carlito]
+LoseText = "No way, Jose!"
+Pokemon = HOPPIP,18
+    Form = 1
+Pokemon = DUSTOX,18
+Pokemon = SKIPLOOM,20
+    Form = 1
+#-------------------------------
+# Starview Lake
+#-------------------------------
+[BUGCATCHER,Ashton]
+LoseText = "Noooo! My Cascoon!"
+Pokemon = CASCOON,7
+#-------------------------------
+[BUGCATCHER,Alton]
+LoseText = "M-my Silcoon..."
+Pokemon = SILCOON,7
+#-------------------------------
+[CAMPER_F,Lana]
+LoseText = "No! K-Kitty!"
+Pokemon = ONSAIL,8
+#-------------------------------
+[FISHERMAN,Vernon]
+LoseText = "Catch of the day ain't good enough for ya?"
+Pokemon = JOUSHRIMP,9
+Pokemon = ALUMINNOW,9
+#-------------------------------
+[BIRDKEEPER,Tobias]
+LoseText = "Darn... You'll be a tough opponent in the Gym..."
+Pokemon = MACAWK,10
+#-------------------------------
+[CAMPER_M,Justin]
+LoseText = "Aw come on... Guess this rock can't do much..."
+Pokemon = CRYSTODE,12
+    Form = 20
+    Moves = DEFENSECURL,POUND
+#-------------------------------
+[FISHERMAN,Jeremy]
+LoseText = "C'mon man..."
+Pokemon = ALUMINNOW,8
+Pokemon = ALUMINNOW,8
+#-------------------------------
+[BIRDKEEPER,Jay]
+LoseText = "Man, Panhali needs to train more..."
+Pokemon = PANHALI,15
+#-------------------------------
+[FISHERMAN,Antelmo]
+LoseText = "...Yer not too shabby."
+Pokemon = ALUMINNOW,8
+Pokemon = ALUMINNOW,9
+Pokemon = ALUMINNOW,10
+#-------------------------------
+# Alipigra Gym
+#-------------------------------
+[BIRDKEEPER,Tobias,1]
+LoseText = "Still not strong enough..."
+Pokemon = MACAWK,10
+Pokemon = MACAWK,11
+#-------------------------------
+[BIRDKEEPER,Andrew]
+LoseText = "Oh, okay then... My flames weren't enough..."
+Pokemon = PAVOFUEGO,11
+#-------------------------------
+[BUGCATCHER,Lawrence]
+LoseText = "Ack, you clipped my wings!"
+Pokemon = BEAUTIFLY,10
+Pokemon = RESPLUMA,10
+#-------------------------------
+[LEADERS_Aria,Aria]
+LoseText = "Well done, PN... Congratulations!"
+Pokemon = WOOBAT,11
+    Form = 1
+    Moves = POWDERSNOW,ENDEAVOR,ATTRACT,AERIALACE
+    IV = 31,31,31,31,31,31
+    EV = 0,80,40,120,0,0
+    Ball = GREATBALL
+Pokemon = MARIHUSH,13
+    Moves = PECK,SANDATTACK,AERIALACE,ASTONISH
+    Item = SITRUSBERRY
+    IV = 31,31,31,31,31,31
+    EV = 0,80,0,40,80,40
+    Ball = GREATBALL

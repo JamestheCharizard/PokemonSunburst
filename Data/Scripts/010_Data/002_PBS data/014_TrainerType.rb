@@ -20,8 +20,9 @@ module GameData
       "Name"        => [:real_name,   "s"],
       "Gender"      => [:gender,      "e", {"Male" => 0, "male" => 0, "M" => 0, "m" => 0, "0" => 0,
                                             "Female" => 1, "female" => 1, "F" => 1, "f" => 1, "1" => 1,
-                                            "Unknown" => 2, "unknown" => 2, "Other" => 2, "other" => 2,
-                                            "Mixed" => 2, "mixed" => 2, "X" => 2, "x" => 2, "2" => 2}],
+                                            "Nonbinary" => 2, "nonbinary" => 2, "N" => 2, "n" => 2, "2" => 2,
+                                            "Unknown" => 3, "unknown" => 3, "Other" => 3, "other" => 3,
+                                            "Mixed" => 3, "mixed" => 3, "X" => 3, "x" => 3, "3" => 3}],
       "BaseMoney"   => [:base_money,  "u"],
       "SkillLevel"  => [:skill_level, "u"],
       "Flags"       => [:flags,       "*s"],
@@ -118,6 +119,7 @@ module GameData
 
     def male?;   return @gender == 0; end
     def female?; return @gender == 1; end
+    def nonbinary?; return @gender == 2; end
 
     def has_flag?(flag)
       return @flags.any? { |f| f.downcase == flag.downcase }

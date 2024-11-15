@@ -1,0 +1,282 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[LEADERS_Aria]
+Name = Gym Leader
+Gender = Female
+BaseMoney = 100
+BattleBGM = ARS_Battle_Gym Leader
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[LEADERS_Desiree]
+Name = Gym Leader
+Gender = Female
+BaseMoney = 100
+BattleBGM = ARS_Battle_Gym Leader
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[LEADERS_Diego]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 100
+BattleBGM = ARS_Battle_Gym Leader
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[LEADERS_Katy]
+Name = Gym Leader
+Gender = Female
+BaseMoney = 100
+BattleBGM = ARS_Battle_Gym Leader
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[LEADERS_Neka]
+Name = Gym Leader
+Gender = Female
+BaseMoney = 100
+BattleBGM = ARS_Battle_Gym Leader
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[LEADERS_Rayann]
+Name = Gym Leader
+Gender = Female
+BaseMoney = 100
+BattleBGM = ARS_Battle_Gym Leader
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[LEADERS_Enrique]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 100
+BattleBGM = ARS_Battle_Gym Leader
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[LEADERS_Arthur]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 100
+BattleBGM = ARS_Battle_Sunset Gym_GameBoy
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[LEADERT_Akita]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 100
+BattleBGM = ARS_Battle_Gym Leader
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[LEADERT_Fritz]
+Name = Gym Leader
+Gender = Female
+BaseMoney = 100
+BattleBGM = ARS_Battle_Gym Leader
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[LEADERT_Sauta]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 100
+BattleBGM = ARS_Battle_Gym Leader
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[LEADERT_Virgo]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 100
+BattleBGM = ARS_Battle_Gym Leader
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[LEADERT_Mateo]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 100
+BattleBGM = ARS_Battle_Gym Leader
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[LEADERT_Amber]
+Name = Gym Leader
+Gender = Female
+BaseMoney = 100
+BattleBGM = ARS_Battle_Gym Leader
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[LEADERT_Vergil]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 100
+BattleBGM = ARS_Battle_Gym Leader
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[LEADERT_Rivola]
+Name = Gym Leader
+Gender = Female
+BaseMoney = 100
+BattleBGM = ARS_Battle_Twilight Gym_Lyrical
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[ELITEFOUR_Palmer]
+Name = Elite Four
+Gender = Male
+BaseMoney = 110
+BattleBGM = ARS_Battle_Adventure's Twilight
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[ELITEFOUR_Bankoro]
+Name = Elite Four
+Gender = Female
+BaseMoney = 110
+BattleBGM = ARS_Battle_Adventure's Twilight
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[ELITEFOUR_Astley]
+Name = Elite Four
+Gender = Nonbinary
+BaseMoney = 110
+BattleBGM = ARS_Battle_Psychic Master Unknown
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[ELITEFOUR_Rusty]
+Name = Elite Four
+Gender = Male
+BaseMoney = 110
+BattleBGM = ARS_Battle_Adventure's Twilight
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[CHAMPION_Anemone]
+Name = Sunset Champion
+Gender = Female
+BaseMoney = 120
+BattleBGM = ARS_Battle_Reach For The Sunset
+VictoryBGM = 35 Victory! Team Plasma
+#-------------------------------
+[POKEMONTRAINER_Aspin]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+#-------------------------------
+[POKEMONTRAINER_Lapice]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+#-------------------------------
+[POKEMONTRAINER_Jasper]
+Name = Pokémon Trainer
+Gender = Nonbinary
+BaseMoney = 60
+#-------------------------------
+[RIVAL_Mona]
+Name = Rival
+Gender = Male
+BaseMoney = 60
+176,RIVAL_Natsuki,Rival,50,ARS_Battle_Natsuki,,,Female,60,
+177,RIVAL_Sorrel,Pokémon Trainer,40,ARS_Battle_Sorrel,,,Nonbinary,60,
+#-------------------------------
+[TEAMXIBAL_Cain]
+Name = Team Xibal
+Gender = Male
+BaseMoney = 60
+#-------------------------------
+[TEAMXIBAL_Abel]
+Name = Team Xibal
+Gender = Male
+BaseMoney = 60
+#-------------------------------
+[TEAMXIBAL_Maria]
+Name = Team Xibal
+Gender = Female
+BaseMoney = 60
+#-------------------------------
+[TEAMXIBAL_Moses]
+Name = Team Xibal
+Gender = Male
+BaseMoney = 60
+#-------------------------------
+[TEAMXIBAL_Joseph]
+Name = Team Xibal
+Gender = Male
+BaseMoney = 60
+#-------------------------------
+[ADVENTURER_Rei]
+Name = Adventurer
+Gender = Male
+BaseMoney = 60
+#-------------------------------
+[ADVENTURER_Akari]
+Name = Adventurer
+Gender = Female
+BaseMoney = 60
+#-------------------------------
+[POKEMONTRAINER_Yellow]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+#-------------------------------
+[RUNNER_Ciel]
+Name = Runner
+Gender = Female
+BaseMoney = 60
+#-------------------------------
+[CHAMPION_Elio]
+Name = Champion
+Gender = Male
+BaseMoney = 100
+#-------------------------------
+[RUNNER_Leaf]
+Name = Runner
+Gender = Female
+BaseMoney = 60
+#-------------------------------
+[PARADELEADER_Panem]
+Name = Parade Leader
+Gender = Male
+BaseMoney = 100
+#-------------------------------
+[PARADELEADER_Circense]
+Name = Parade Leader
+Gender = Female
+BaseMoney = 100
+#-------------------------------
+[PARADELEADER_Rayann]
+Name = Parade Leader
+Gender = Female
+BaseMoney = 100
+#-------------------------------
+[MYSTERIOUSLADY_Tamamo]
+Name = Mysterious Lady
+Gender = Female
+BaseMoney = 100
+SkillLevel = 48
+#-------------------------------
+[PROFESSOR_Razilwood]
+Name = Professor
+Gender = Nonbinary
+BaseMoney = 110
+#-------------------------------
+[PROFESSOR_Sada]
+Name = Professor
+Gender = Female
+BaseMoney = 100
+#-------------------------------
+[PROFESSOR_Turo]
+Name = Professor
+Gender = Male
+BaseMoney = 120
+#-------------------------------
+[PROFESSOR_Fennel]
+Name = Professor
+Gender = Female
+BaseMoney = 75
+SkillLevel = 100
+#-------------------------------
+[IDOL_Nancy]
+Name = Idol
+Gender = Female
+BaseMoney = 200
+#-------------------------------
+[IDOL_Christoph]
+Name = Idol
+Gender = Male
+BaseMoney = 200
+#-------------------------------
+[IDOL_Rivola]
+Name = Idol
+Gender = Female
+BaseMoney = 200

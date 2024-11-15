@@ -56,3 +56,21 @@ GameData::BattleTerrain.register({
   :name      => _INTL("Psychic"),
   :animation => "PsychicTerrain"
 })
+
+GameData::BattleTerrain.register({
+  :id        => :Poison,
+  :name      => _INTL("Irradiated"),
+  :animation => "PoisonTerrain"
+})
+
+GameData::BattleTerrain.register({
+  :id        => :Spirit,
+  :name      => _INTL("Spirit"),
+  :animation => "SpiritTerrain"
+})
+
+GameData::BattleTerrain.register({
+  :id        => :Glitch,
+  :name      => _INTL("Glitch"),
+  :animation => "GlitchTerrain"
+})
