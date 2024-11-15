@@ -10,7 +10,7 @@
 #-------------------------------------------------------------------------------
 # SUPPORT CAN'T BE PROVIDED FOR EDITS MADE TO THIS FILE.
 #===============================================================================
-class PokemonTemp
+class Game_Temp
   attr_accessor :phenomenon   # [x,y,type,timer]
   attr_accessor :phenomenonPossible # bool
   attr_accessor :phenomenonActivated #bool
@@ -61,7 +61,7 @@ class Phenomenon
         terrain_tag = $game_map.terrain_tag(x, y)
         if @types.include?(:PhenomenonGrass) && terrain_tag.id == :Grass
           phenomenon_tiles.push([x, y, :PhenomenonGrass])
-		elsif @types.include?(:PhenomenonDarkGrass) && terrain_tag.id == :DarkGrass
+				elsif @types.include?(:PhenomenonDarkGrass) && terrain_tag.id == :DarkGrass
           phenomenon_tiles.push([x, y, :PhenomenonDarkGrass])
         elsif @types.include?(:PhenomenonWater) && (terrain_tag.id == :Water || terrain_tag.id == :StillWater)
           phenomenon_tiles.push([x, y, :PhenomenonWater])
@@ -106,11 +106,11 @@ class Phenomenon
       if PhenomenonConfig::BattleMusic != "" && FileTest.audio_exist?("Audio/BGM/#{PhenomenonConfig::BattleMusic}")
         $PokemonGlobal.nextBattleBGM = PhenomenonConfig::BattleMusic
       end
-	  wasForcingSingleBattle = $PokemonTemp.forceSingleBattle
-      $PokemonTemp.forceSingleBattle = true
-      $PokemonTemp.phenomenonActivated = true
+	  wasForcingSingleBattle = $game_temp.forceSingleBattle
+      $game_temp.forceSingleBattle = true
+      $game_temp.phenomenonActivated = true
       pbWildBattle(encounter[0], encounter[1])
-	  $PokemonTemp.forceSingleBattle = wasForcingSingleBattle
+	  $game_temp.forceSingleBattle = wasForcingSingleBattle
     end
   end
 
@@ -128,7 +128,7 @@ end
 
 # Cancels the phenomenon
 def pbPhenomenonCancel
-  $PokemonTemp.phenomenon = nil
+  $game_temp.phenomenon = nil
 end
 
 def pbPhenomenonLoadTypes
@@ -137,95 +137,106 @@ def pbPhenomenonLoadTypes
     # Kernel.echo("Testing map #{$game_map.map_id}, against #{key}, with value #{value}...\n")
     types.push(key) if $PokemonEncounters && $PokemonEncounters.map_has_encounter_type?($game_map.map_id, key)
   end
-  $PokemonTemp.phenomenonPossible = types.size > 0 && $Trainer.party.length > 0 # set to false if no encounters for map or trainer has no pokemon
-  $PokemonTemp.phenomenonTypes = types
+  $game_temp.phenomenonPossible = types.size > 0 && $player.party.length > 0 # set to false if no encounters for map or trainer has no pokemon
+  $game_temp.phenomenonTypes = types
 end
 
 def pbPhenomenonInactive?
-  return defined?($PokemonTemp.phenomenon) && $PokemonTemp.phenomenon != nil && !$PokemonTemp.phenomenon.active
+  return defined?($game_temp.phenomenon) && $game_temp.phenomenon != nil && !$game_temp.phenomenon.active
 end
 
 # Returns true if an existing phenomenon has been set up and exists
 def pbPhenomenonActive?
-  return defined?($PokemonTemp.phenomenon) && $PokemonTemp.phenomenon != nil && $PokemonTemp.phenomenon.active
+  return defined?($game_temp.phenomenon) && $game_temp.phenomenon != nil && $game_temp.phenomenon.active
 end
 
 # Returns true if there's a phenomenon and the player is on top of it
 def pbPhenomenonPlayerOn?
-  return pbPhenomenonActive? && ($game_player.x == $PokemonTemp.phenomenon.x && $game_player.y == $PokemonTemp.phenomenon.y)
+  return pbPhenomenonActive? && ($game_player.x == $game_temp.phenomenon.x && $game_player.y == $game_temp.phenomenon.y)
 end
 
 ################################################################################
 # Event handlers
 ################################################################################
-class PokemonTemp
+class Game_Temp
   attr_accessor :phenomenonExp
   attr_accessor :phenomenonTypes
   attr_accessor :phenomenon
 end
 
 # Cancels phenomenon on battle start to stop animation during battle intro
-Events.onStartBattle += proc { |sender, e|
-  $PokemonTemp.phenomenonExp = true if PhenomenonConfig::Pokemon[:expBoost] && pbPhenomenonPlayerOn?
-  pbPhenomenonCancel
-}
+EventHandlers.add(:on_start_battle, :record_party_heart_gauges,
+  proc {
+    $game_temp.phenomenonExp = true if PhenomenonConfig::Pokemon[:expBoost] && pbPhenomenonPlayerOn?
+		pbPhenomenonCancel
+	}
+)
 
-Events.onEndBattle += proc { |sender, e|
-  $PokemonTemp.phenomenonExp = false
-  $PokemonTemp.phenomenonActivated = false
-}
+EventHandlers.add(:on_end_battle, :check_ready_to_purify,
+  proc {
+    $game_temp.phenomenonExp = false
+		$game_temp.phenomenonActivated = false
+	}
+)
 
 # Generate the phenomenon or process the player standing on it
-Events.onStepTaken += proc { |sender, e|
-  if $PokemonTemp.phenomenonPossible
-    if pbPhenomenonPlayerOn?
-      $PokemonTemp.phenomenon.activate!
-    elsif pbPhenomenonInactive?
-      if Graphics.frame_count >= $PokemonTemp.phenomenon.timer
-        $PokemonTemp.phenomenon.generate!
-      end
-    elsif $PokemonTemp.phenomenon == nil && $PokemonTemp.phenomenonTypes.size && (PhenomenonConfig::Switch == -1 || $game_switches[PhenomenonConfig::Switch])
-      $PokemonTemp.phenomenon = Phenomenon.new($PokemonTemp.phenomenonTypes)
-    end
-  end
-}
+EventHandlers.add(:on_step_taken, :pick_up_soot,
+  proc { |event|
+		if $game_temp.phenomenonPossible
+			if pbPhenomenonPlayerOn?
+				$game_temp.phenomenon.activate!
+			elsif pbPhenomenonInactive?
+				if Graphics.frame_count >= $game_temp.phenomenon.timer
+					$game_temp.phenomenon.generate!
+				end
+			elsif $game_temp.phenomenon == nil && $game_temp.phenomenonTypes.size && (PhenomenonConfig::Switch == -1 || $game_switches[PhenomenonConfig::Switch])
+				$game_temp.phenomenon = Phenomenon.new($game_temp.phenomenonTypes)
+			end
+		end
+	}
+)
 
 # Remove any phenomenon events on map change
-Events.onMapChange += proc { |sender, e|
-  pbPhenomenonCancel
-}
+EventHandlers.add(:on_leave_map, :remove_phenomena,
+  proc { |scene, _map_changed|
+		pbPhenomenonCancel
+	}
+)
 
 # Process map available encounters on map change
-Events.onMapSceneChange += proc { |sender, e|
-  pbPhenomenonLoadTypes
-}
+EventHandlers.add(:on_enter_map, :remove_phenomena,
+  proc { |scene, _map_changed|
+		pbPhenomenonLoadTypes
+	}
+)
 
 # Modify the wild encounter based on the settings above
-Events.onWildPokemonCreate += proc { |sender, e|
-  pokemon = e[0]
-  if $PokemonTemp.phenomenonActivated
-    if PhenomenonConfig::Pokemon[:shiny] # 4x the normal shiny chance
-      pokemon.makeShiny if rand(65536) <= Settings::SHINY_POKEMON_CHANCE * 4
-    end
-    if PhenomenonConfig::Pokemon[:ivs] > -1 && rand(PhenomenonConfig::Pokemon[:ivs]) == 0
-      ivs = [:HP, :ATTACK, :SPECIAL_ATTACK, :DEFENSE, :SPECIAL_DEFENSE, :SPEED]
-      ivs.shuffle!
-      ivs[0..1].each do |i|
-        pokemon.iv[i] = 31
-      end
-    end
-    if PhenomenonConfig::Pokemon[:eggMoves] > -1 && rand(PhenomenonConfig::Pokemon[:eggMoves]) == 0
-      moves = GameData::Species.get_species_form(pokemon.species, pokemon.form).egg_moves
-      pokemon.learn_move(moves.random) if moves.length > 0
-    end
-    if PhenomenonConfig::Pokemon[:hiddenAbility] > -1 && rand(PhenomenonConfig::Pokemon[:hiddenAbility]) == 0
-      a = GameData::Species.get(pokemon.species).hidden_abilities
-      if !a.nil? && a.kind_of?(Array)
-        pokemon.ability = a.random
-      end
-    end
-  end
-}
+EventHandlers.add(:on_wild_pokemon_created, :reroll_ivs_in_safari_and_bug_contest,
+  proc { |pokemon|
+		if $game_temp.phenomenonActivated
+			if PhenomenonConfig::Pokemon[:shiny] # 4x the normal shiny chance
+				pokemon.makeShiny if rand(65536) <= Settings::SHINY_POKEMON_CHANCE * 4
+			end
+			if PhenomenonConfig::Pokemon[:ivs] > -1 && rand(PhenomenonConfig::Pokemon[:ivs]) == 0
+				ivs = [:HP, :ATTACK, :SPECIAL_ATTACK, :DEFENSE, :SPECIAL_DEFENSE, :SPEED]
+				ivs.shuffle!
+				ivs[0..1].each do |i|
+					pokemon.iv[i] = 31
+				end
+			end
+			if PhenomenonConfig::Pokemon[:eggMoves] > -1 && rand(PhenomenonConfig::Pokemon[:eggMoves]) == 0
+				moves = GameData::Species.get_species_form(pokemon.species, pokemon.form).egg_moves
+				pokemon.learn_move(moves.random) if moves.length > 0
+			end
+			if PhenomenonConfig::Pokemon[:hiddenAbility] > -1 && rand(PhenomenonConfig::Pokemon[:hiddenAbility]) == 0
+				a = GameData::Species.get(pokemon.species).hidden_abilities
+				if !a.nil? && a.kind_of?(Array)
+					pokemon.ability = a.random
+				end
+			end
+		end
+	}
+)
 
 ################################################################################
 # Class modifiers
@@ -234,8 +245,8 @@ class Spriteset_Map
   alias update_phenomenon update
 
   def update
-    if $PokemonTemp.phenomenonPossible && pbPhenomenonActive? && !$game_temp.in_menu
-      phn = $PokemonTemp.phenomenon
+    if $game_temp.phenomenonPossible && pbPhenomenonActive? && !$game_temp.in_menu
+      phn = $game_temp.phenomenon
       if (PhenomenonConfig::Switch != -1 &&
           !$game_switches[PhenomenonConfig::Switch]) || Graphics.frame_count >= phn.timer
         pbPhenomenonCancel

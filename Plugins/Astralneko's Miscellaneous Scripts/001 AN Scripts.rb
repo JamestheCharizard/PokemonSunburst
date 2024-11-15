@@ -152,7 +152,7 @@ end
 
 def anReversePlayerAnimation(animname, length=1, frequency=2, vehicle=false)
     $Astralneko_Temp.setLastPlayerDir($game_player.direction)
-	meta = GameData::Metadata.get_player($Trainer.character_ID)
+	meta = GameData::Metadata.get_player($player.character_ID)
 	if meta
 		charset = 1                                 # Regular graphic
 		if vehicle
@@ -224,7 +224,7 @@ def anEndPlayerAnimation
 end
 
 def anMart(itemlist)
-    badges = $Trainer.badge_count
+    badges = $player.badge_count
 	
 	buyableItems = []
 	for i in 0...itemlist.length
