@@ -71,6 +71,27 @@ GameData::Habitat.register({
 })
 
 GameData::Habitat.register({
+  :id   => :Jungle,
+  :name => _INTL("Jungle")
+})
+
+GameData::Habitat.register({
+  :id   => :Tundra,
+  :name => _INTL("Tundra")
+})
+
+GameData::Habitat.register({
+  :id   => :Desert,
+  :name => _INTL("Desert")
+})
+
+GameData::Habitat.register({
+  :id   => :Ruins,
+  :name => _INTL("Ruins")
+})
+
+
+GameData::Habitat.register({
   :id   => :Rare,
   :name => _INTL("Rare")
 })

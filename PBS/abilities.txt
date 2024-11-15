@@ -1242,4 +1242,127 @@ Description = Resists all types when HP is full.
 [TERAFORMZERO]
 Name = Teraform Zero
 Description = Eliminates all weather and terrain.
-
+#-------------------------------
+[PACKMENTALITY]
+Name = Pack Mentality
+Description = Gets a power boost from similar allies.
+#-------------------------------
+[FROSTBITTEN]
+Name = Frostbitten
+Description = Freezes the opponent on contact.
+#-------------------------------
+[SHADOWCLOAK]
+Name = Shadow Cloak
+Description = Causes Shadow Terrain to go in effect when the Pokémon enters the battle.
+#-------------------------------
+[RESILIENCE]
+Name = Resilience
+Description = Heals somewhat if not damaged enough to KO.
+#-------------------------------
+[LIFEDRAIN]
+Name = Life Drain
+Description = Drains the opponent's health when they are poisoned.
+#-------------------------------
+[SEISMICWAVES]
+Name = Seismic Waves
+Description = Increases power and accuracy when on the ground.
+#-------------------------------
+[UPDRAFT]
+Name = Updraft
+Description = Decreases effect of opposing moves when using a Flying-type move.
+#-------------------------------
+[HATESUCKER]
+Name = Hatesucker
+Description = Powers up the more it is attacked.
+#-------------------------------
+[ANTIBODY]
+Name = Antibody
+Description = Heals when Poisoned.
+#-------------------------------
+[POSTMORTAL]
+Name = Postmortal
+Description = Fully heals the first time it is fainted.
+#-------------------------------
+[OUTSMART]
+Name = Outsmart
+Description = Lowers the foe's Special Attack stat.
+#-------------------------------
+[FLAMEABSORB]
+Name = Flame Absorb
+Description = Heals when struck by Fire-type attacks.
+#-------------------------------
+[ASTRALIZE]
+Name = Astralize
+Description = Normal-type moves become Celestial-type.
+#-------------------------------
+[INCENDIATE]
+Name = Incendiate
+Description = Normal-type moves become Fire-type.
+#-------------------------------
+[AQUILATE]
+Name = Aquilate
+Description = Normal-type moves become Water-type.
+#-------------------------------
+[VERDARIZE]
+Name = Verdarize
+Description = Normal-type moves become Grass-type.
+#-------------------------------
+[VILLAINIZE]
+Name = Villainize
+Description = Normal-type moves become Dark-type.
+#-------------------------------
+[ARCANIZE]
+Name = Arcanize
+Description = Normal-type moves become Dragon-type.
+#-------------------------------
+[SPECTRALIZE]
+Name = Spectralize
+Description = Normal-type moves become Ghost-type.
+#-------------------------------
+[QUICKPLAY]
+Name = Quickplay
+Description = Powers up initially, but loses steam the longer it fights.
+#-------------------------------
+[WILDCARD]
+Name = Wild Card
+Description = The user's stats swing from turn to turn.
+#-------------------------------
+[SPECTRALCOPY]
+Name = Spectral Copy
+Description = The user changes type based on the type of move it is struck by.
+#-------------------------------
+[GRASSYBOOST]
+Name = Grassy Boost
+Description = The user's Sp. Attack is boosted under Grassy Terrain.
+#-------------------------------
+[ARTISTSBLOCK]
+Name = Artist's Block
+Description = Prevents other Pokémon from lowering its Special stats.
+#-------------------------------
+[STARRYSURGE]
+Name = Starry Surge
+Description = The Pokémon whips up a solar storm if it appears in battle.
+#-------------------------------
+[HEROSJOURNEY]
+Name = Hero's Journey
+Description = The Pokémon's types are powered up for itself and allies each time it deals a KO.
+#-------------------------------
+[HERALDOFSPRING]
+Name = Herald of Spring
+Description = The Pokémon's aura powers up all Flying-type moves.
+#-------------------------------
+[HERALDOFSUMMER]
+Name = Herald of Summer
+Description = The Pokémon's aura powers up all Fire-type moves.
+#-------------------------------
+[HERALDOFAUTUMN]
+Name = Herald of Autumn
+Description = The Pokémon's aura powers up all Ground-type moves.
+#-------------------------------
+[HERALDOFWINTER]
+Name = Herald of Winter
+Description = The Pokémon's aura powers up all Water-type moves.
+#-------------------------------
+[PERMAFROST]
+Name = Permafrost
+Description = It's always frosty, and attacks without thawing.

@@ -238,8 +238,35 @@ GameData::Evolution.register({
   }
 })
 
+# Tediflame, Wurmple
 GameData::Evolution.register({
   :id            => :Silcoon,
+  :parameter     => Integer,
+  :level_up_proc => proc { |pkmn, parameter|
+    next pkmn.level >= parameter && (((pkmn.personalID >> 16) & 0xFFFF) % 10) < 4
+  }
+})
+
+# Tediflame, Wurmple
+GameData::Evolution.register({
+  :id            => :Cascoon,
+  :parameter     => Integer,
+  :level_up_proc => proc { |pkmn, parameter|
+    next pkmn.level >= parameter && (((pkmn.personalID >> 16) & 0xFFFF) % 10) >= 6
+  }
+})
+
+# Tediflame, Wurmple
+GameData::Evolution.register({
+  :id            => :Scalcoon,
+  :parameter     => Integer,
+  :level_up_proc => proc { |pkmn, parameter|
+    next pkmn.level >= parameter && (((pkmn.personalID >> 16) & 0xFFFF) % 10) <= 5 && (((pkmn.personalID >> 16) & 0xFFFF) % 10) >= 4
+  }
+})
+
+GameData::Evolution.register({
+  :id            => :SilcoonOld,
   :parameter     => Integer,
   :level_up_proc => proc { |pkmn, parameter|
     next pkmn.level >= parameter && (((pkmn.personalID >> 16) & 0xFFFF) % 10) < 5
@@ -247,13 +274,14 @@ GameData::Evolution.register({
 })
 
 GameData::Evolution.register({
-  :id            => :Cascoon,
+  :id            => :CascoonOld,
   :parameter     => Integer,
   :level_up_proc => proc { |pkmn, parameter|
     next pkmn.level >= parameter && (((pkmn.personalID >> 16) & 0xFFFF) % 10) >= 5
   }
 })
 
+# Nincada, Poortyp
 GameData::Evolution.register({
   :id            => :Ninjask,
   :parameter     => Integer,
@@ -262,6 +290,7 @@ GameData::Evolution.register({
   }
 })
 
+# Nincada, Poortyp
 GameData::Evolution.register({
   :id                   => :Shedinja,
   :parameter            => Integer,
@@ -358,8 +387,9 @@ GameData::Evolution.register({
   }
 })
 
+# Feebas
 GameData::Evolution.register({
-  :id            => :Beauty,   # Feebas
+  :id            => :Beauty,
   :parameter     => Integer,
   :any_level_up  => true,   # Needs any level up
   :level_up_proc => proc { |pkmn, parameter|
@@ -557,6 +587,78 @@ GameData::Evolution.register({
   }
 })
 
+GameData::Evolution.register({
+  :id            => :ItemCandy,
+  :parameter     => Integer,
+  :use_item_proc => proc { |pkmn, parameter, item|
+    next pkmn.candies_fed >= parameter
+  }
+})
+
+GameData::Evolution.register({
+  :id            => :ItemAlcremie,
+  :use_item_proc => proc { |pkmn, parameter, item|
+    sweet     = 0
+    cream     = 0
+    if PBDayNight.isRainbow?(time)
+      cream = 8
+    elsif PBDayNight.isNight?(time)
+      cream = [2,3,4,5][rand(4)]
+    else
+      cream = [1,0,6,7][rand(4)]
+    end
+    sweetArray = [:STRAWBERRYSWEET, :BERRYSWEET, :LOVESWEET, :STARSWEET, :CLOVERSWEET, :FLOWERSWEET, :RIBBONSWEET]
+    sweet = sweetArray.index(pkmn.item)
+    sweet = -1 if !sweet
+    pkmn.form = (cream * 7) + sweet
+    next sweet >= 0
+  }
+})
+
+# Alolan Forms and non-Meowth Galarian Forms
+GameData::Evolution.register({
+  :id            => :ItemRegionalForm,
+  :parameter     => :Item,
+  :use_item_proc => proc { |pkmn, parameter, item|
+    pkmn.form = 1
+    next item == parameter
+  }
+})
+
+# Galarian Meowth
+GameData::Evolution.register({
+  :id            => :ItemSecondRegionalForm,
+  :parameter     => :Item,
+  :use_item_proc => proc { |pkmn, parameter, item|
+    pkmn.form = 2
+    next item == parameter
+  }
+})
+
+# Hisuian and Verelan Forms
+GameData::Evolution.register({
+  :id            => :ItemOriginalForm,
+  :parameter     => :Item,
+  :use_item_proc => proc { |pkmn, parameter, item|
+    pkmn.form = 0
+    next item == parameter
+  }
+})
+
+# Verelan Milcery is form 63
+# Verelan Alcremie is forms 63-69
+GameData::Evolution.register({
+  :id            => :ItemVerelanAlcremie,
+  :use_item_proc => proc { |pkmn, parameter, item|
+    sweetArray = [:STRAWBERRYSWEET, :BERRYSWEET, :LOVESWEET, :STARSWEET, :CLOVERSWEET, :FLOWERSWEET, :RIBBONSWEET]
+    sweet = sweetArray.index(pkmn.item)
+    sweet = -1 if !sweet
+    pkmn.form = 63 + sweet
+    next sweet >= 0
+  }
+})
+
+
 #===============================================================================
 # Evolution methods that trigger when the Pokémon is obtained in a trade
 #===============================================================================
@@ -619,6 +721,7 @@ GameData::Evolution.register({
 #===============================================================================
 # Evolution methods that are triggered after any battle
 #===============================================================================
+# G. Farfetch'd
 GameData::Evolution.register({
   :id                => :BattleDealCriticalHit,
   :parameter         => Integer,
@@ -626,6 +729,31 @@ GameData::Evolution.register({
     next $game_temp.party_critical_hits_dealt &&
          $game_temp.party_critical_hits_dealt[party_index] &&
          $game_temp.party_critical_hits_dealt[party_index] >= parameter
+  }
+})
+
+# Stantler, H. Qwilfish, Cuttetra
+GameData::Evolution.register({
+  :id            => :ChangedForm,
+  :parameter     => Integer,
+  :in_event_proc => proc { |pkmn, parameter|
+    if pkmn.form == parameter && rand(100) < pkmn.level
+      pkmn.form = 0
+      next true
+    end
+    next false
+  }
+})
+
+# Basculin, Gemillite
+GameData::Evolution.register({
+  :id            => :Fainted,
+  :parameter     => Integer,
+  :in_event_proc => proc { |pkmn, parameter|
+    if pkmn.fainted? && pkmn.maxHP > parameter
+      next true
+    end
+    next false
   }
 })
 

@@ -26365,3 +26365,11 @@ Category = Subjugation
 Pokedex = It feeds others toxic mochi that draw out desires and capabilities. Those who eat the mochi fall under Pecharunt's control, chained to its will.
 Generation = 9
 Flags = Mythical
+#-------------------------------
+[PANGSHI]
+Name = Pangshi
+Types = GHOST,GLITCH
+BaseStats = 60,60,60,105,105,105
+GenderRatio = Female50Percent
+GrowthRate = ParabolicFast
+BaseEXP = 173
