@@ -5859,7 +5859,7 @@ Category = Coral
 Pokedex = Corsola live in warm southern seas. If the sea becomes polluted, the beautiful coral stalks become discolored and crumble away in tatters.
 Generation = 2
 WildItemUncommon = LUMINOUSMOSS
-Evolutions = CURSOLA,None,
+Evolutions = CURSOLA,None,,CORSALINE,Level,38
 #-------------------------------
 [REMORAID]
 Name = Remoraid
@@ -6997,7 +6997,7 @@ Pokedex = It sticks to tree branches and eats leaves. The thread it spits from i
 Generation = 3
 WildItemCommon = PECHABERRY
 WildItemUncommon = BRIGHTPOWDER
-Evolutions = SILCOON,Silcoon,7,CASCOON,Cascoon,7
+Evolutions = SILCOON,Silcoon,7,CASCOON,Cascoon,7,SCALCOON,Scalcoon,8
 #-------------------------------
 [SILCOON]
 Name = Silcoon
@@ -19295,7 +19295,7 @@ Category = Brutal Star
 Pokedex = It plunges the poison spike on its head into its prey. When the prey has weakened, Mareanie deals the finishing blow with its 10 tentacles.
 Generation = 7
 WildItemUncommon = POISONBARB
-Evolutions = TOXAPEX,Level,38
+Evolutions = TOXAPEX,Level,38,CROWNDRA,None,
 #-------------------------------
 [TOXAPEX]
 Name = Toxapex
