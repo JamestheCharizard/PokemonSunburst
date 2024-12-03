@@ -3,7 +3,7 @@
 [ZRING]
 Name = Z-Ring
 NamePlural = Z-Rings
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem,ZRing
 Description = A mysterious ring that enables Pokémon to use Z-Power if they are holding a compatible Z-Crystal.
@@ -11,7 +11,7 @@ Description = A mysterious ring that enables Pokémon to use Z-Power if they are
 [ZPOWERRING]
 Name = Z-Power Ring
 NamePlural = Z-Power Rings
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem,ZRing
 Description = A mysterious ring that enables Pokémon to use Z-Power if they are holding a compatible Z-Crystal.
@@ -19,7 +19,7 @@ Description = A mysterious ring that enables Pokémon to use Z-Power if they are
 [ZBOOSTER]
 Name = Z-Booster
 NamePlural = Z-Boosters
-Pocket = 7
+Pocket = 8
 Price = 4000
 BattleUse = Direct
 Flags = Fling_30,UsesAllBattleActions
@@ -28,7 +28,7 @@ Description = A crystal brimming with Z-Power. It can fully recharge your Z-Ring
 [NORMALIUMZ]
 Name = Normalium Z
 NamePlural = Normalium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -39,7 +39,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Normal-typ
 [FIGHTINIUMZ]
 Name = Fightinium Z
 NamePlural = Fightinium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -50,7 +50,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Fighting-t
 [FLYINIUMZ]
 Name = Flyinium Z
 NamePlural = Flyinium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -61,7 +61,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Flying-typ
 [POISONIUMZ]
 Name = Poisonium Z
 NamePlural = Poisonium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -72,7 +72,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Poison-typ
 [GROUNDIUMZ]
 Name = Groundium Z
 NamePlural = Groundium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -83,7 +83,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Ground-typ
 [ROCKIUMZ]
 Name = Rockium Z
 NamePlural = Rockium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -94,7 +94,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Rock-type 
 [BUGINIUMZ]
 Name = Buginium Z
 NamePlural = Buginium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -105,7 +105,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Bug-type m
 [GHOSTIUMZ]
 Name = Ghostium Z
 NamePlural = Ghostium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -116,7 +116,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Ghost-type
 [STEELIUMZ]
 Name = Steelium Z
 NamePlural = Steelium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -127,7 +127,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Steel-type
 [FIRIUMZ]
 Name = Firium Z
 NamePlural = Firium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -138,7 +138,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Fire-type 
 [WATERIUMZ]
 Name = Waterium Z
 NamePlural = Waterium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -149,7 +149,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Water-type
 [GRASSIUMZ]
 Name = Grassium Z
 NamePlural = Grassium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -160,7 +160,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Grass-type
 [ELECTRIUMZ]
 Name = Electrium Z
 NamePlural = Electrium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -171,7 +171,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Electric-t
 [PSYCHIUMZ]
 Name = Psychium Z
 NamePlural = Psychium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -182,7 +182,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Psychic-ty
 [ICIUMZ]
 Name = Icium Z
 NamePlural = Icium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -193,7 +193,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Ice-type m
 [DRAGONIUMZ]
 Name = Dragonium Z
 NamePlural = Dragonium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -204,7 +204,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Dragon-typ
 [DARKINIUMZ]
 Name = Darkinium Z
 NamePlural = Darkinium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -215,7 +215,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Dark-type 
 [FAIRIUMZ]
 Name = Fairium Z
 NamePlural = Fairium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -226,7 +226,7 @@ HeldDescription = This is a crystallized form of Z-Power. It upgrades Fairy-type
 [PIKANIUMZ]
 Name = Pikanium Z
 NamePlural = Pikanium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal,UsableByAllForms
@@ -238,7 +238,7 @@ ZCombo = VOLTTACKLE,PIKACHU
 [PIKASHUNIUMZ]
 Name = Pikashunium Z
 NamePlural = Pikashunium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -250,7 +250,7 @@ ZCombo = THUNDERBOLT,PIKACHU_8,PIKACHU_9,PIKACHU_10,PIKACHU_11,PIKACHU_12,PIKACH
 [ALORAICHIUMZ]
 Name = Aloraichium Z
 NamePlural = Aloraichium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -262,7 +262,7 @@ ZCombo = THUNDERBOLT,RAICHU_1
 [EEVIUMZ]
 Name = Eevium Z
 NamePlural = Eevium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -274,7 +274,7 @@ ZCombo = LASTRESORT,EEVEE
 [SNORLIUMZ]
 Name = Snorlium Z
 NamePlural = Snorlium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -286,7 +286,7 @@ ZCombo = GIGAIMPACT,SNORLAX
 [MEWNIUMZ]
 Name = Mewnium Z
 NamePlural = Mewnium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -298,7 +298,7 @@ ZCombo = PSYCHIC,MEW
 [DECIDIUMZ]
 Name = Decidium Z
 NamePlural = Decidium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -310,7 +310,7 @@ ZCombo = SPIRITSHACKLE,DECIDUEYE
 [INCINIUMZ]
 Name = Incinium Z
 NamePlural = Incinium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -322,7 +322,7 @@ ZCombo = DARKESTLARIAT,INCINEROAR
 [PRIMARIUMZ]
 Name = Primarium Z
 NamePlural = Primarium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -334,7 +334,7 @@ ZCombo = SPARKLINGARIA,PRIMARINA
 [LYCANIUMZ]
 Name = Lycanium Z
 NamePlural = Lycanium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal,UsableByAllForms
@@ -346,7 +346,7 @@ ZCombo = STONEEDGE,LYCANROC
 [MIMIKIUMZ]
 Name = Mimikium Z
 NamePlural = Mimikium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal,UsableByAllForms
@@ -358,7 +358,7 @@ ZCombo = PLAYROUGH,MIMIKYU
 [KOMMONIUMZ]
 Name = Kommonium Z
 NamePlural = Kommonium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -370,7 +370,7 @@ ZCombo = CLANGINGSCALES,KOMMOO
 [TAPUNIUMZ]
 Name = Tapunium Z
 NamePlural = Tapunium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -382,7 +382,7 @@ ZCombo = NATURESMADNESS,TAPUKOKO,TAPULELE,TAPUBULU,TAPUFINI
 [SOLGANIUMZ]
 Name = Solganium Z
 NamePlural = Solganium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -394,7 +394,7 @@ ZCombo = SUNSTEELSTRIKE,SOLGALEO,NECROZMA_1
 [LUNALIUMZ]
 Name = Lunalium Z
 NamePlural = Lunalium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -406,7 +406,7 @@ ZCombo = MOONGEISTBEAM,LUNALA,NECROZMA_2
 [MARSHADIUMZ]
 Name = Marshadium Z
 NamePlural = Marshadium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal
@@ -418,7 +418,7 @@ ZCombo = SPECTRALTHIEF,MARSHADOW
 [ULTRANECROZIUMZ]
 Name = Ultranecrozium Z
 NamePlural = Ultranecrozium Z
-Pocket = 9
+Pocket = 10
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem,ZCrystal

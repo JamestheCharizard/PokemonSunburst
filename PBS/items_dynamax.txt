@@ -3,7 +3,7 @@
 [DYNAMAXBAND]
 Name = Dynamax Band
 NamePlural = Dynamax Bands
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem,DynamaxBand
 Description = A Wishing Star has been affixed to it. It lets out light that allows Pokémon to Dynamax when at a Power Spot.
@@ -11,7 +11,7 @@ Description = A Wishing Star has been affixed to it. It lets out light that allo
 [WISHINGSTAR]
 Name = Wishing Star
 NamePlural = Wishing Stars
-Pocket = 7
+Pocket = 8
 Price = 4000
 BattleUse = Direct
 Flags = Fling_50,UsesAllBattleActions

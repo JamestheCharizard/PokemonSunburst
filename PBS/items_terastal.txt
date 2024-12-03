@@ -3,7 +3,7 @@
 [TERAORB]
 Name = Tera Orb
 NamePlural = Tera Orbs
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem,TeraOrb
 Description = An orb that holds the power to crystallize. When charged, it allows Pokémon to Terastallize.
@@ -200,7 +200,7 @@ Description = A perfectly hexogonal Tera Jewel. Using this can unlock any Tera T
 [RADIANTTERAJEWEL]
 Name = Radiant Tera Jewel
 NamePlural = Radiant Tera Jewels
-Pocket = 7
+Pocket = 8
 Price = 4000
 BattleUse = Direct
 Flags = Fling_50,UsesAllBattleActions
@@ -209,7 +209,7 @@ Description = A jewel glistening with Terastal energy. It can fully recharge you
 [GLIMMERINGCHARM]
 Name = Glimmering Charm
 NamePlural = Glimmering Charms
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A mysterious glimmering charm that increases the number of Tera Shards you receive from Tera Raid Battles.

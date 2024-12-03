@@ -2,7 +2,7 @@
 [MARKCHARM]
 Name = Mark Charm
 NamePlural = Mark Charms
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = Having one of these mysterious charms makes it more likely you’ll encounter a Pokémon with a mark.

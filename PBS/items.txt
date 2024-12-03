@@ -5873,7 +5873,7 @@ Description = Stationery featuring a print of a tough-looking brick pattern. Let
 [XATTACK]
 Name = X Attack
 NamePlural = X Attacks
-Pocket = 7
+Pocket = 8
 Price = 1000
 BattleUse = OnBattler
 Flags = Fling_30
@@ -5882,7 +5882,7 @@ Description = An item that sharply boosts the Attack stat of a Pokémon while it
 [XATTACK2]
 Name = X Attack 2
 NamePlural = X Attack 2s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -5891,7 +5891,7 @@ Description = It sharply raises the Attack stat of a Pokémon in battle. It wear
 [XATTACK3]
 Name = X Attack 3
 NamePlural = X Attack 3s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -5900,7 +5900,7 @@ Description = It drastically raises the Attack stat of a Pokémon in battle. It 
 [XATTACK6]
 Name = X Attack 6
 NamePlural = X Attack 6s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -5909,7 +5909,7 @@ Description = It raises the Attack stat of a Pokémon in battle immensely. It we
 [XDEFENSE]
 Name = X Defense
 NamePlural = X Defenses
-Pocket = 7
+Pocket = 8
 Price = 2000
 BattleUse = OnBattler
 Flags = Fling_30
@@ -5918,7 +5918,7 @@ Description = An item that sharply boosts the Defense of a Pokémon while it rem
 [XDEFENSE2]
 Name = X Defense 2
 NamePlural = X Defense 2s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -5927,7 +5927,7 @@ Description = It sharply raises the Defense stat of a Pokémon in battle. It wea
 [XDEFENSE3]
 Name = X Defense 3
 NamePlural = X Defense 3s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -5936,7 +5936,7 @@ Description = It drastically raises the Defense stat of a Pokémon in battle. It
 [XDEFENSE6]
 Name = X Defense 6
 NamePlural = X Defense 6s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -5945,7 +5945,7 @@ Description = It raises the Defense stat of a Pokémon in battle immensely. It w
 [XSPATK]
 Name = X Sp. Atk
 NamePlural = X Sp. Atks
-Pocket = 7
+Pocket = 8
 Price = 1000
 BattleUse = OnBattler
 Flags = Fling_30
@@ -5954,7 +5954,7 @@ Description = An item that sharply boosts the Sp. Atk stat of a Pokémon while i
 [XSPATK2]
 Name = X Sp. Atk 2
 NamePlural = X Sp. Atk 2s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -5963,7 +5963,7 @@ Description = It sharply raises the Sp. Atk stat of a Pokémon in battle. It wea
 [XSPATK3]
 Name = X Sp. Atk 3
 NamePlural = X Sp. Atk 3s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -5972,7 +5972,7 @@ Description = It drastically raises the Sp. Atk stat of a Pokémon in battle. It
 [XSPATK6]
 Name = X Sp. Atk 6
 NamePlural = X Sp. Atk 6s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -5981,7 +5981,7 @@ Description = It raises the Sp. Atk stat of a Pokémon in battle immensely. It w
 [XSPDEF]
 Name = X Sp. Def
 NamePlural = X Sp. Defs
-Pocket = 7
+Pocket = 8
 Price = 2000
 BattleUse = OnBattler
 Flags = Fling_30
@@ -5990,7 +5990,7 @@ Description = An item that sharply boosts the Sp. Def stat of a Pokémon while i
 [XSPDEF2]
 Name = X Sp. Def 2
 NamePlural = X Sp. Def 2s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -5999,7 +5999,7 @@ Description = It sharply raises the Sp. Def stat of a Pokémon in battle. It wea
 [XSPDEF3]
 Name = X Sp. Def 3
 NamePlural = X Sp. Def 3s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -6008,7 +6008,7 @@ Description = It drastically raises the Sp. Def stat of a Pokémon in battle. It
 [XSPDEF6]
 Name = X Sp. Def 6
 NamePlural = X Sp. Def 6s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -6017,7 +6017,7 @@ Description = It raises the Sp. Def stat of a Pokémon in battle immensely. It w
 [XSPEED]
 Name = X Speed
 NamePlural = X Speeds
-Pocket = 7
+Pocket = 8
 Price = 1000
 BattleUse = OnBattler
 Flags = Fling_30
@@ -6026,7 +6026,7 @@ Description = An item that sharply boosts the Speed stat of a Pokémon while it 
 [XSPEED2]
 Name = X Speed 2
 NamePlural = X Speed 2s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -6035,7 +6035,7 @@ Description = It sharply raises the Speed stat of a Pokémon in battle. It wears
 [XSPEED3]
 Name = X Speed 3
 NamePlural = X Speed 3s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -6044,7 +6044,7 @@ Description = It drastically raises the Speed stat of a Pokémon in battle. It w
 [XSPEED6]
 Name = X Speed 6
 NamePlural = X Speed 6s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -6053,7 +6053,7 @@ Description = It raises the Speed stat of a Pokémon in battle immensely. It wea
 [XACCURACY]
 Name = X Accuracy
 NamePlural = X Accuracies
-Pocket = 7
+Pocket = 8
 Price = 1000
 BattleUse = OnBattler
 Flags = Fling_30
@@ -6062,7 +6062,7 @@ Description = An item that sharply boosts the accuracy of a Pokémon while it re
 [XACCURACY2]
 Name = X Accuracy 2
 NamePlural = X Accuracy 2s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -6071,7 +6071,7 @@ Description = It sharply raises the accuracy of a Pokémon in battle. It wears o
 [XACCURACY3]
 Name = X Accuracy 3
 NamePlural = X Accuracy 3s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -6080,7 +6080,7 @@ Description = It drastically raises the accuracy of a Pokémon in battle. It wea
 [XACCURACY6]
 Name = X Accuracy 6
 NamePlural = X Accuracy 6s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -6091,7 +6091,7 @@ Name = Max Mushrooms
 NamePlural = Max Mushrooms
 PortionName = cluster of Max Mushrooms
 PortionNamePlural = clusters of Max Mushrooms
-Pocket = 7
+Pocket = 8
 Price = 8000
 BattleUse = OnBattler
 Flags = Fling_30
@@ -6100,7 +6100,7 @@ Description = Mushrooms that boost all stats of a Pokémon during battle.
 [DIREHIT]
 Name = Dire Hit
 NamePlural = Dire Hits
-Pocket = 7
+Pocket = 8
 Price = 1000
 BattleUse = OnBattler
 Flags = Fling_30
@@ -6109,7 +6109,7 @@ Description = An item that raises the critical-hit ratio greatly. It wears off i
 [DIREHIT2]
 Name = Dire Hit 2
 NamePlural = Dire Hit 2s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -6118,7 +6118,7 @@ Description = It sharply raises the critical-hit ratio. It wears off if the Pok�
 [DIREHIT3]
 Name = Dire Hit 3
 NamePlural = Dire Hit 3s
-Pocket = 7
+Pocket = 8
 Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
@@ -6127,7 +6127,7 @@ Description = It greatly raises the critical-hit ratio. It wears off if the Pok�
 [GUARDSPEC]
 Name = Guard Spec.
 NamePlural = Guard Specs.
-Pocket = 7
+Pocket = 8
 Price = 1500
 BattleUse = Direct
 Flags = Fling_30
@@ -6136,7 +6136,7 @@ Description = An item that prevents stat reduction among the Trainer's party Pok
 [RESETURGE]
 Name = Reset Urge
 NamePlural = Reset Urges
-Pocket = 7
+Pocket = 8
 Price = 0
 Flags = Fling_30
 Description = When used, it restores any stat changes of an ally Pokémon.
@@ -6144,7 +6144,7 @@ Description = When used, it restores any stat changes of an ally Pokémon.
 [ABILITYURGE]
 Name = Ability Urge
 NamePlural = Ability Urges
-Pocket = 7
+Pocket = 8
 Price = 0
 Flags = Fling_30
 Description = When used, it activates the Ability of an ally Pokémon.
@@ -6152,7 +6152,7 @@ Description = When used, it activates the Ability of an ally Pokémon.
 [ITEMURGE]
 Name = Item Urge
 NamePlural = Item Urges
-Pocket = 7
+Pocket = 8
 Price = 0
 Flags = Fling_30
 Description = When used, it causes an ally Pokémon to use its held item.
@@ -6160,7 +6160,7 @@ Description = When used, it causes an ally Pokémon to use its held item.
 [ITEMDROP]
 Name = Item Drop
 NamePlural = Item Drops
-Pocket = 7
+Pocket = 8
 Price = 0
 Flags = Fling_30
 Description = When used, it causes an ally Pokémon to drop a held item.
@@ -6168,7 +6168,7 @@ Description = When used, it causes an ally Pokémon to drop a held item.
 [BLUEFLUTE]
 Name = Blue Flute
 NamePlural = Blue Flutes
-Pocket = 7
+Pocket = 8
 Price = 20
 FieldUse = OnPokemon
 BattleUse = OnPokemon
@@ -6179,7 +6179,7 @@ Description = A blue flute made from blown glass. Its melody awakens a single Po
 [YELLOWFLUTE]
 Name = Yellow Flute
 NamePlural = Yellow Flutes
-Pocket = 7
+Pocket = 8
 Price = 20
 BattleUse = OnBattler
 Flags = Fling_30
@@ -6189,7 +6189,7 @@ Description = A yellow flute made from blown glass. Its melody snaps a single Po
 [REDFLUTE]
 Name = Red Flute
 NamePlural = Red Flutes
-Pocket = 7
+Pocket = 8
 Price = 20
 BattleUse = OnBattler
 Flags = Fling_30
@@ -6199,7 +6199,7 @@ Description = A red flute made from blown glass. Its melody snaps a single Poké
 [POKEDOLL]
 Name = Poké Doll
 NamePlural = Poké Dolls
-Pocket = 7
+Pocket = 8
 Price = 300
 BattleUse = Direct
 Flags = Fling_30
@@ -6208,7 +6208,7 @@ Description = A doll that attracts Pokémon. Use it to flee from any battle with
 [FLUFFYTAIL]
 Name = Fluffy Tail
 NamePlural = Fluffy Tails
-Pocket = 7
+Pocket = 8
 Price = 300
 BattleUse = Direct
 Flags = Fling_30
@@ -6217,7 +6217,7 @@ Description = An item that attracts Pokémon. Use it to flee from any battle wit
 [POKETOY]
 Name = Poké Toy
 NamePlural = Poké Toys
-Pocket = 7
+Pocket = 8
 Price = 300
 BattleUse = Direct
 Flags = Fling_30
@@ -6226,7 +6226,7 @@ Description = An item that attracts Pokémon. Use it to flee from any battle wit
 [BICYCLE]
 Name = Bicycle
 NamePlural = Bicycles
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
@@ -6235,7 +6235,7 @@ Description = A folding Bicycle that enables much faster movement than the Runni
 [OLDROD]
 Name = Old Rod
 NamePlural = Old Rods
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
@@ -6244,7 +6244,7 @@ Description = An old and beat-up fishing rod. Use it by any body of water to fis
 [GOODROD]
 Name = Good Rod
 NamePlural = Good Rods
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
@@ -6253,7 +6253,7 @@ Description = A new, good-quality fishing rod. Use it by any body of water to fi
 [SUPERROD]
 Name = Super Rod
 NamePlural = Super Rods
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
@@ -6262,7 +6262,7 @@ Description = An awesome, high-tech fishing rod. Use it by any body of water to 
 [ITEMFINDER]
 Name = Itemfinder
 NamePlural = Itemfinders
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
@@ -6271,7 +6271,7 @@ Description = A device used for finding items. If there is a hidden item nearby 
 [DOWSINGMACHINE]
 Name = Dowsing Machine
 NamePlural = Dowsing Machines
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
@@ -6280,7 +6280,7 @@ Description = It checks for unseen items in the area and makes noise and lights 
 [POKERADAR]
 Name = Poké Radar
 NamePlural = Poké Radars
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
@@ -6289,7 +6289,7 @@ Description = A tool that can search out Pokémon that are hiding in grass. Its 
 [TOWNMAP]
 Name = Town Map
 NamePlural = Town Maps
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
@@ -6298,7 +6298,7 @@ Description = A very convenient map that can be viewed anytime. It even shows yo
 [ESCAPEROPE]
 Name = Escape Rope
 NamePlural = Escape Ropes
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
@@ -6307,7 +6307,7 @@ Description = A long, durable rope. Use it to escape instantly from a cave or a 
 [COINCASE]
 Name = Coin Case
 NamePlural = Coin Cases
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
@@ -6316,7 +6316,7 @@ Description = A case for holding coins obtained at the Game Corner. It holds up 
 [POKEFLUTE]
 Name = Poké Flute
 NamePlural = Poké Flutes
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = OnPokemon
 BattleUse = Direct
@@ -6326,7 +6326,7 @@ Description = A flute that is said to instantly awaken any Pokémon. It has a lo
 [SOOTSACK]
 Name = Soot Sack
 NamePlural = Soot Sacks
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A sack used to gather and hold volcanic ash.
@@ -6334,7 +6334,7 @@ Description = A sack used to gather and hold volcanic ash.
 [SILPHSCOPE]
 Name = Silph Scope
 NamePlural = Silph Scopes
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A scope that makes unseeable Pokémon visible. It is made by Silph Co.
@@ -6342,7 +6342,7 @@ Description = A scope that makes unseeable Pokémon visible. It is made by Silph
 [DEVONSCOPE]
 Name = Devon Scope
 NamePlural = Devon Scopes
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A device by Devon that signals any unseeable Pokémon.
@@ -6350,7 +6350,7 @@ Description = A device by Devon that signals any unseeable Pokémon.
 [SQUIRTBOTTLE]
 Name = Squirt Bottle
 NamePlural = Squirt Bottles
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A watering can shaped like a Squirtle. It helps promote healthy growth of Berries planted in soft soil.
@@ -6358,7 +6358,7 @@ Description = A watering can shaped like a Squirtle. It helps promote healthy gr
 [SPRAYDUCK]
 Name = Sprayduck
 NamePlural = Sprayducks
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A watering can shaped like a Psyduck. It helps promote healthy growth of Berries planted in soft soil.
@@ -6366,7 +6366,7 @@ Description = A watering can shaped like a Psyduck. It helps promote healthy gro
 [WAILMERPAIL]
 Name = Wailmer Pail
 NamePlural = Wailmer Pails
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A nifty watering pail. Use it to promote strong growth in Berries planted in soft soil.
@@ -6374,7 +6374,7 @@ Description = A nifty watering pail. Use it to promote strong growth in Berries 
 [SPRINKLOTAD]
 Name = Sprinklotad
 NamePlural = Sprinklotads
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A watering can shaped like a Lotad. It helps promote the healthy growth of any Berries planted in soft soil.
@@ -6382,7 +6382,7 @@ Description = A watering can shaped like a Lotad. It helps promote the healthy g
 [GRACIDEA]
 Name = Gracidea
 NamePlural = Gracideas
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
@@ -6391,7 +6391,7 @@ Description = A flower sometimes bundled in bouquets to convey gratitude on spec
 [REVEALGLASS]
 Name = Reveal Glass
 NamePlural = Reveal Glasses
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
@@ -6400,7 +6400,7 @@ Description = A glass that reveals the truth. It is a mysterious glass that retu
 [PRISONBOTTLE]
 Name = Prison Bottle
 NamePlural = Prison Bottles
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
@@ -6409,7 +6409,7 @@ Description = A bottle believed to have been used to seal away the power of a ce
 [ROTOMCATALOG]
 Name = Rotom Catalog
 NamePlural = Rotom Catalogs
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
@@ -6418,7 +6418,7 @@ Description = A catalog of devices that Rotom like. Use the catalog to have Roto
 [ZYGARDECUBE]
 Name = Zygarde Cube
 NamePlural = Zygarde Cubes
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
@@ -6427,7 +6427,7 @@ Description = An item in which Zygarde Cores and Cells are gathered. You can als
 [DNASPLICERS]
 Name = DNA Splicers
 NamePlural = DNA Splicers
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
@@ -6436,7 +6436,7 @@ Description = A splicer that fuses Kyurem and a certain Pokémon. They are said 
 [DNASPLICERSUSED]
 Name = DNA Splicers
 NamePlural = DNA Splicers
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
@@ -6445,7 +6445,7 @@ Description = A splicer that separates Kyurem and a certain Pokémon when they h
 [NSOLARIZER]
 Name = N-Solarizer
 NamePlural = N-Solarizers
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
@@ -6454,7 +6454,7 @@ Description = A machine to fuse Necrozma, which needs light, and Solgaleo.
 [NSOLARIZERUSED]
 Name = N-Solarizer
 NamePlural = N-Solarizers
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
@@ -6463,7 +6463,7 @@ Description = A machine to separate Necrozma, which needed light, from Solgaleo.
 [NLUNARIZER]
 Name = N-Lunarizer
 NamePlural = N-Lunarizers
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
@@ -6472,7 +6472,7 @@ Description = A machine to fuse Necrozma, which needs light, and Lunala.
 [NLUNARIZERUSED]
 Name = N-Lunarizer
 NamePlural = N-Lunarizers
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
@@ -6483,7 +6483,7 @@ Name = Reins of Unity
 NamePlural = Reins of Unity
 PortionName = set of Reins of Unity
 PortionNamePlural = sets of Reins of Unity
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
@@ -6494,7 +6494,7 @@ Name = Reins of Unity
 NamePlural = Reins of Unity
 PortionName = set of Reins of Unity
 PortionNamePlural = sets of Reins of Unity
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
@@ -6503,7 +6503,7 @@ Description = Reins that people presented to the king. They separate Calyrex and
 [OVALCHARM]
 Name = Oval Charm
 NamePlural = Oval Charms
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = An oval charm said to increase the chance of Eggs being found at the Day Care.
@@ -6511,7 +6511,7 @@ Description = An oval charm said to increase the chance of Eggs being found at t
 [SHINYCHARM]
 Name = Shiny Charm
 NamePlural = Shiny Charms
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A shiny charm said to increase the chance of finding a Shiny Pokémon.
@@ -6519,7 +6519,7 @@ Description = A shiny charm said to increase the chance of finding a Shiny Poké
 [CATCHINGCHARM]
 Name = Catching Charm
 NamePlural = Catching Charms
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A charm said to increase the chance of getting a critical catch. The charm doesn't shake much.
@@ -6527,7 +6527,7 @@ Description = A charm said to increase the chance of getting a critical catch. T
 [EXPCHARM]
 Name = Exp. Charm
 NamePlural = Exp. Charms
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A charm that increases the Exp. Points that Pokémon can get. A machine-like object is inside it.
@@ -6535,7 +6535,7 @@ Description = A charm that increases the Exp. Points that Pokémon can get. A ma
 [MEGARING]
 Name = Mega Ring
 NamePlural = Mega Rings
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem,MegaRing
 Description = This ring contains an untold power that somehow enables Pokémon carrying Mega Stones to Mega Evolve.
@@ -6543,7 +6543,7 @@ Description = This ring contains an untold power that somehow enables Pokémon c
 [POKEMONBOXLINK]
 Name = Pokémon Box Link
 NamePlural = Pokémon Box Links
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A device that allows you to access the Pokémon storage system. There are some places where it won't work.
@@ -6551,7 +6551,7 @@ Description = A device that allows you to access the Pokémon storage system. Th
 [AURORATICKET]
 Name = Aurora Ticket
 NamePlural = Aurora Tickets
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A ticket required to board the ship to Doxy Island. It glows beautifully.
@@ -6559,7 +6559,7 @@ Description = A ticket required to board the ship to Doxy Island. It glows beaut
 [OLDSEAMAP]
 Name = Old Sea Map
 NamePlural = Old Sea Maps
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A faded sea chart that shows the way to a certain island.
@@ -6877,7 +6877,7 @@ Description = A large and rare bamboo shoot. It's extremely popular with a certa
 [ROTOMPHONE]
 Name = Rotom Phone
 NamePlural = Rotom Phones
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = The latest model of smartphone. A Rotom lives within it, and it can be used to run all sorts of handy apps.
@@ -6885,7 +6885,7 @@ Description = The latest model of smartphone. A Rotom lives within it, and it ca
 [SCARLETBOOK]
 Name = Scarlet Book
 NamePlural = Scarlet Books
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A record of the Heath's expedition on the Great Crater of Paldea. It has the name "Sada" written on it.
@@ -6893,7 +6893,7 @@ Description = A record of the Heath's expedition on the Great Crater of Paldea. 
 [VIOLETBOOK]
 Name = Violet Book
 NamePlural = Violet Books
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A record of the Heath's expedition on the Great Crater of Paldea. It has the name "Turo" written on it.
@@ -7030,7 +7030,7 @@ Description = A carved wooden mask to be held by Ogerpon. It allows Ogerpon to w
 [TEALMASK]
 Name = Teal Mask
 NamePlural = Teal Masks
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem,Fling_60
 Description = A teal mask patterned after the face of an ogre. Dropped by Ogerpon after visiting the Festival of Masks.
@@ -7051,7 +7051,7 @@ Description = A peculiar metal that can make certain species of Pokémon evolve.
 [INDIGODISK]
 Name = Indigo Disk
 NamePlural = Indigo Disks
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A mysterious disk with an indigo shine to it, given by the Top Champion. It seems to be tied to Area Zero.
@@ -7059,7 +7059,7 @@ Description = A mysterious disk with an indigo shine to it, given by the Top Cha
 [MYTHICALPECHABERRY]
 Name = Mythical Pecha Berry
 NamePlural = Mythical Pecha Berries
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A Pecha Berry of the highest quality. It's one of every a few years berry that carefully tended by an expert.
@@ -7067,7 +7067,7 @@ Description = A Pecha Berry of the highest quality. It's one of every a few year
 [SYNCHROMACHINE]
 Name = Synchro Machine
 NamePlural = Synchro Machines
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A device that synchronizes your mind and feelings with your Pokémon's as one. It's still a prototype—hence.
@@ -7075,7 +7075,7 @@ Description = A device that synchronizes your mind and feelings with your Pokém
 [METEORITE]
 Name = Meteorite
 NamePlural = Meteorites
-Pocket = 8
+Pocket = 9
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
@@ -7084,7 +7084,7 @@ Description = A rock that fell to earth from space. It allows a certain species 
 [BRIARSBOOK]
 Name = Briar's Book
 NamePlural = Briar's Books
-Pocket = 8
+Pocket = 9
 Price = 0
 Flags = KeyItem
 Description = A proof copy of the exploration notes, along with Briar's thoughts covering the Area Zero Underdepths.

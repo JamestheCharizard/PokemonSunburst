@@ -1,1 +1,644 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+# Gen AN-I Z-Crystals
+#-------------------------------
+[CELESTIUMZ]
+Name = Celestium Z
+NamePlural = 
+PortionName = piece of Celestium Z
+PortionNamePlural = pieces of Celestium Z
+Pocket = 10
+Price = 0
+FieldUse = OnPokemon
+Flags = KeyItem,ZCrystal
+Move = CONSTELLATIONMAKER
+Description = It converts Z-Power into crystals that upgrade Celestial-type moves to Celestial-type Z-Moves.
+#-------------------------------
+[BIRDIUMZ]
+Name = Birdium Z
+NamePlural = 
+PortionName = piece of Birdium Z
+PortionNamePlural = pieces of Birdium Z
+Pocket = 10
+Price = 0
+FieldUse = OnPokemon
+Flags = KeyItem,ZCrystal
+Move = BLUESCREENSLICE
+Description = It converts Z-Power into crystals that upgrade Glitch-type moves to Glitch-type Z-Moves.
+#-------------------------------
+[FELACIUMZ]
+Name = Felacium Z
+NamePlural = 
+PortionName = piece of Felacium Z
+PortionNamePlural = pieces of Felacium Z
+Pocket = 10
+Price = 0
+FieldUse = OnPokemon
+Flags = KeyItem,ZCrystal
+Move = SNOWSTORMPOUNCE
+Description = It converts Z-Power into crystals that upgrade Felacier's Freezing Touch to an exclusive Z-Move.
+ZCombo = FREEZINGTOUCH,FELACIER
+#-------------------------------
+[SPIKATIUMZ]
+Name = Spikatium Z
+NamePlural = 
+PortionName = piece of Spikatium Z
+PortionNamePlural = pieces of Spikatium Z
+Pocket = 10
+Price = 0
+FieldUse = OnPokemon
+Flags = KeyItem,ZCrystal
+Move = SPIRALNEEDLESLAMMER
+Description = It converts Z-Power into crystals that upgrade Spikatus's Needle Arm to an exclusive Z-Move.
+ZCombo = NEEDLEARM,SPIKATUS
+#-------------------------------
+[GLIMMORIUMZ]
+Name = Glimmorium Z
+NamePlural = 
+PortionName = piece of Glimmorium Z
+PortionNamePlural = pieces of Glimmorium Z
+Pocket = 10
+Price = 0
+FieldUse = OnPokemon
+Flags = KeyItem,ZCrystal
+Move = SIXFOLDRAILLASER
+Description = It converts Z-Power into crystals that upgrade Glimmora's Mortal Spin to an exclusive Z-Move.
+ZCombo = MORTALSPIN,GLIMMORA
+#-------------------------------
+[TINKATIUMZ]
+Name = Tinkatium Z
+NamePlural = 
+PortionName = piece of Tinkatium Z
+PortionNamePlural = pieces of Tinkatium Z
+Pocket = 10
+Price = 0
+FieldUse = OnPokemon
+Flags = KeyItem,ZCrystal
+Move = TITANICWARHEADSLAM
+Description = It converts Z-Power into crystals that upgrade Tinkaton's Gigaton Hammer to an exclusive Z-Move.
+ZCombo = GIGATONHAMMER,TINKATON
+#-------------------------------
+[TOGEKIUMZ]
+Name = Togekium Z
+NamePlural = 
+PortionName = piece of Togekium Z
+PortionNamePlural = pieces of Togekium Z
+Pocket = 10
+Price = 0
+FieldUse = OnPokemon
+Flags = KeyItem,ZCrystal
+Move = SUPERSONARGRAZE
+Description = It converts Z-Power into crystals that upgrade Togekiss's Air Slash to an exclusive Z-Move.
+ZCombo = AIRSLASH,TOGEKISS
+#-------------------------------
+[MINIORIUMZ]
+Name = Miniorium Z
+NamePlural = 
+PortionName = piece of Miniorium Z
+PortionNamePlural = pieces of Miniorium Z
+Pocket = 10
+Price = 0
+FieldUse = OnPokemon
+Flags = KeyItem,ZCrystal
+Move = CATASTROPHICMETEORICSLAM
+Description = It converts Z-Power into crystals that upgrade Minior's Power Gem to an exclusive Z-Move.
+ZCombo = POWERGEM,MINIOR
+#-------------------------------
+[VOLCARONIUMZ]
+Name = Volcaronium Z
+NamePlural = 
+PortionName = piece of Volcaronium Z
+PortionNamePlural = pieces of Volcaronium Z
+Pocket = 10
+Price = 0
+FieldUse = OnPokemon
+Flags = KeyItem,ZCrystal
+Move = BURNINGSUNSHINEDANCE
+Description = It converts Z-Power into crystals that upgrade Volcarona's Fiery Dance to an exclusive Z-Move.
+ZCombo = FIERYDANCE,VOLCARONA
+#-------------------------------
+[QURITAKIUMZ]
+Name = Quritakium Z
+NamePlural = 
+PortionName = piece of Quritakium Z
+PortionNamePlural = pieces of Quritakium Z
+Pocket = 10
+Price = 0
+FieldUse = OnPokemon
+Flags = KeyItem,ZCrystal
+Move = MEMORIALDIRGE
+Description = It converts Z-Power into crystals that upgrade Partazura, Daroseiku, and Berantegon's call moves to an exclusive Z-Move.
+ZCombo = AZURESCALL,PARTAZURA
+#-------------------------------
+# Gen AN-I Key Items
+#-------------------------------
+[ROTOMPHONE]
+Name = Rotom Phone
+NamePlural = Rotom Phones
+Pocket = 9
+Price = 0
+Flags = KeyItem
+Description = A phone designed after Rotom. Press X to use it.
+#-------------------------------
+[FAMECHECKER]
+Name = Fame Checker
+NamePlural =  Fame Checkers
+Pocket = 9
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = A machine that allows you to see who people are talking about.
+1202,TEMYSPOKEBALL,Temy's Poké Ball,Temy's Poké Balls,9,0,"A Poké Ball with a pet Onstereo inside. Return it to Nessie in Maracaleza Town!",0,0,6,
+#-------------------------------
+[CARDCASE]
+Name = Card Case
+NamePlural = Card Cases
+Pocket = 9
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = A box to hold Triple Triad trading cards.
+#-------------------------------
+[MACHETE]
+Name = Machete
+NamePlural = Machetes
+Pocket = 9
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = A sharp knife. This item allows cutting small trees and such in the field.
+#-------------------------------
+# Gen AN-I Berries
+#-------------------------------
+[NACHNABERRY]
+Name = Nachna Berry
+NamePlural = Nachna Berries
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_DARK_80
+Description = Weakens a supereffective Celestial-type attack against the holding Pokémon.
+#-------------------------------
+[GRANATCHBERRY]
+Name = Granatch Berry
+NamePlural = Granatch Berries
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_DARK_80
+Description = Weakens a supereffective Glitch-type attack against the holding Pokémon.
+#-------------------------------
+[FURANIBERRY]
+Name = Furani Berry
+NamePlural = Furani Berries
+Pocket = 5
+Price = 20
+Flags = Berry
+Description = It fully restores the holder's HP and status effects when eaten, but will also burn them.
+#-------------------------------
+[NEDAVIBERRY]
+Name = Nedavi Berry
+NamePlural = Nedavi Berries
+Pocket = 5
+Price = 20
+Flags = Berry
+Description = It fully restores the holder's HP and status effects when eaten, but will also give them frostbite.
+#-------------------------------
+[RAYONIBERRY]
+Name = Rayoni Berry
+NamePlural = Rayoni Berries
+Pocket = 5
+Price = 20
+Flags = Berry
+Description = It fully restores the holder's HP and status effects when eaten,but will also paralyze them.
+#-------------------------------
+[ASIRRIBERRY]
+Name = Asirri Berry
+NamePlural = Asirri Berries
+Pocket = 5
+Price = 20
+Flags = Berry
+Description = It fully restores the holder's HP and status effects when eaten, but will also poison them.
+#-------------------------------
+[SUENNIBERRY]
+Name = Suenni Berry
+NamePlural = Suenni Berries
+Pocket = 5
+Price = 20
+Flags = Berry
+Description = It fully restores the holder's HP and status effects when eaten, but will also put them to sleep.
+#-------------------------------
+# Gen AN-I Type-boosting Items
+#-------------------------------
+[NEBULAFRAGMENT]
+Name = Nebula Fragment
+NamePlural = Nebula Fragments
+Pocket = 1
+Price = 100
+Flags = Fling_30
+Description = An item to be held by a Pokémon. It is a cloud-shaped crystal that boosts the power of Celestial-type moves.
+#-------------------------------
+[STARRYPLATE]
+Name = Starry Plate
+NamePlural = Starry Plates
+Pocket = 1
+Price = 1000
+Flags = Fling_30
+Description = An item to be held by a Pokémon. It is a stone tablet that boosts the power of Celestial-type moves.
+#-------------------------------
+[CELESTIALGEM]
+Name = Celestial Gem
+NamePlural = Celestial Gems
+Pocket = 1
+Price = 200
+Flags = TypeGem
+Description = A gem with an astral essence. When held, it strengthens the power of a Celestial-type move only once.
+#-------------------------------
+[CELESTIALMEMORY]
+Name = Celestial Memory
+NamePlural = Celestial Memories
+Pocket = 1
+Price = 0
+Description = A memory disc that contains Celestial-type data. It changes the type of the holder if held by a certain Pokémon.
+#-------------------------------
+[CORRUPTEDDRIVE]
+Name = Corrupted Drive
+NamePlural = Corrupted Drives
+Pocket = 1
+Price = 100
+Description = An item to be held by a Pokémon. It is a hard drive that boosts the power of Glitch-type moves.
+#-------------------------------
+[NULLPLATE]
+Name = Null Plate
+NamePlural = Null Plates
+Pocket = 1
+Price = 1000
+Description = An item to be held by a Pokémon. It is a stone tablet that boosts the power of Glitch-type moves.
+#-------------------------------
+[GLITCHGEM]
+Name = Glitch Gem
+NamePlural = Glitch Gems
+Pocket = 1
+Price = 200
+Flags = TypeGem
+Description = A gem with a corrupt essence. When held, it strengthens the power of a Glitch-type move only once.
+#-------------------------------
+[GLITCHMEMORY]
+Name = Glitch Memory
+NamePlural = Glitch Memories
+Pocket = 1
+Price = 0
+Description = A memory disc that contains Glitch-type data. It changes the type of the holder if held by a certain Pokémon.
+#-------------------------------
+# Gen AN-I Other Items
+#-------------------------------
+[APUTRIGGER]
+Name = Apu's Offering
+Names = Apu's Offerings
+Pocket = 9
+Price = 0
+Description = Does nothing, because you shouldn't have this.
+#-------------------------------
+[KNOWLEDGERUNE]
+Name = Knowledge Rune
+NamePlural = Knowledge Runes
+Pocket = 1
+Price = 5000
+FieldUse = OnPokemon
+Flags = EvolutionStone
+Description = A peculiar stone that makes certain species of Pokémon evolve. It has an ancient rune embedded into the center. 
+#-------------------------------
+[JETBALL]
+Name = Jet Ball
+NamePlural = Jet Balls
+Pocket = 3
+Price = 1000
+BattleUse = OnFoe
+Flags = PokeBall
+Description = A somewhat different Poké Ball that works especially well on Flying-type and levitating Pokémon.
+#-------------------------------
+[STEAMBALL]
+Name = Steam Ball
+NamePlural = Steam Balls
+Pocket = 3
+Price = 200
+BattleUse = OnFoe
+Flags = PokeBall
+Description = An ancient device for catching wild Pokémon. It is thrown like a ball at the target Pokémon, and captures that target.
+#-------------------------------
+[STELLARBALL]
+Name = Stellar Ball
+NamePlural = Stellar Balls
+Pocket = 3
+Price = 1000
+BattleUse = OnFoe
+Flags = PokeBall
+Description = A somewhat different Poké Ball that works especially well on Paradox and Terastallizing Pokémon.
+#-------------------------------
+# Gen AN-I Stew Items
+#-------------------------------
+[GRUMPIGTENDERLOIN]
+Name = Grumpig Tenderloin
+NamePlural = Grumpig Tenderloins
+Pocket = 7
+Price = 250
+Flags = Material_Stew
+Description = A tenderloin made from a Grumpig. It's dense, so the packs are relatively small.
+#-------------------------------
+[STEAK]
+Name = Steak
+NamePlural = Steaks
+Pocket = 7
+Price = 450
+Flags = Material_Stew
+Description = A steak made using the meat of a Bouffalant. It could feed seven easily.
+#-------------------------------
+[HAMBURGER]
+Name = Hamburger
+NamePlural = Hamburgers
+Pocket = 7
+Price = 300
+Flags = Material_Stew
+Description = A serving of hamburger. Unovan stews often contain this ingredient.
+#-------------------------------
+[SAUSAGE]
+Name = Sausage
+NamePlural = Sausages
+Pocket = 7
+Price = 350
+Flags = Material_Stew
+Description = A serving of sausages. It's a common saying that there's no way to know for sure what's in it.
+#-------------------------------
+[CORINAVOBREAST]
+Name = Corinavo Breast
+NamePlural = Corinavo Breasts
+Pocket = 7
+Price = 600
+Flags = Material_Stew
+Description = While dangerous if eaten raw, it's a delicious Verelan delicacy.
+#-------------------------------
+[LUMINEONFILLET]
+Name = Lumineon Fillet
+NamePlural = Lumineon Fillets
+Pocket = 7
+Price = 800
+Flags = Material_Stew
+Description = An uncommon stew ingredient. The phospholumen glands need to be cut out before it's eaten.
+#-------------------------------
+[SHREDDEDCHEESE]
+Name = Shredded Cheese
+NamePlural = Shredded Cheese
+Pocket = 7
+Price = 450
+Flags = Material_Stew
+Description = A basic package of shredded cheese. It's usually used to ease the spiciness of stew.,serving of Shredded Cheese,servings of Shredded Cheese,
+#-------------------------------
+[CREMAVERELANA]
+Name = Crema Verelana
+NamePlural = Crema Verelana
+Pocket = 7
+Price = 480
+Flags = Material_Stew
+Description = Unovans refer to it as 'sour cream.' It's often used as a topping across south-Laurimeritan cuisine.,serving of Crema Verelana,servings of Crema Verelana,
+#-------------------------------
+[CHEESECURDS]
+Name = Cheese Curds
+NamePlural = Cheese Curds
+Pocket = 7
+Price = 780
+Flags = Material_Stew
+Description = It's more commonly used in Iradian cuisine than Verelan, but it's a strong thickening and de-spicifying agent.,serving of Cheese Curds,servings of Cheese Curds,
+#-------------------------------
+[BLAZIKENSAUCE]
+Name = Blaziken Sauce
+NamePlural = Blaziken Sauce
+Pocket = 7
+Price = 560
+Flags = Material_Stew
+Description = It's not made from actual Blaziken, but it's so spicy that it feels like it would have been.,serving of Blaziken Sauce,servings of Blaziken Sauce,
+#-------------------------------
+[PICODEGALLO]
+Name = Pico de Gallo
+NamePlural = Pico de Gallo
+Pocket = 7
+Price = 660
+Flags = Material_Stew
+Description = Orrenian cuisine often involves this salsa. It's got a strong taste, so most either hate or love it.,serving of Pico de Gallo,servings of Pico de Gallo,
+#-------------------------------
+[NOMELTAMATOSAUCE]
+Name = Nomel-Tamato Sauce
+NamePlural = Nomel-Tamato Sauce
+Pocket = 7
+Price = 430
+Flags = Material_Stew
+Description = The Nomel Berries give this sauce a somewhat sour flavor. It goes well with pork.,serving of Nomel-Tamato Sauce,servings of Nomel-Tamato Sauce,
+#-------------------------------
+[BLACKBEANS]
+Name = Black Beans
+NamePlural = Black Beans
+Pocket = 7
+Price = 350
+Flags = Material_Stew
+Description = A can of black beans. It's a good base for any stew.,serving of Black Beans,servings of Black Beans,
+#-------------------------------
+[BROWNBEANS]
+Name = Brown Beans
+NamePlural = Brown Beans
+Pocket = 7
+Price = 480
+Flags = Material_Stew
+Description = They're said to be 'painted'. They're denser than black beans, giving stew a stronger punch.,serving of Brown Beans,servings of Brown Beans,
+#-------------------------------
+[REDBEANS]
+Name = Red Beans
+NamePlural = Red Beans
+Pocket = 7
+Price = 610
+Flags = Material_Stew
+Description = The red beans have a heavier taste than their black or brown equivalents. It's the heartiest bean type.,serving of Red Beans,servings of Red Beans,
+#-------------------------------
+[WHITEBEANS]
+Name = White Beans
+NamePlural = White Beans
+PortionName = serving of White Beans
+PortionNamePlural = servings of White Beans
+Pocket = 7
+Price = 490
+Flags = Material_Stew
+Description = A can of white beans. Their bigger size makes them good for making for large groups.
+#-------------------------------
+[ONION]
+Name = Onion
+NamePlural = Onions
+Pocket = 7
+Price = 140
+Flags = Material_Stew
+Description = A stew ingredient with a very strong taste. It can be tough to balance.
+#-------------------------------
+[REDONION]
+Name = Red Onion
+NamePlural = Red Onions
+Pocket = 7
+Price = 160
+Flags = Material_Stew
+Description = A stew ingredient that, while less strong than the white onion raw, is better at leeching its flavor.
+#-------------------------------
+[SCALLION]
+Name = Scallion
+NamePlural = Scallions
+Pocket = 7
+Price = 130
+Flags = Material_Stew
+Description = A stew ingredient. Unlike white and red onions, this onion variant is relatively mild.
+#-------------------------------
+[BLACKOLIVES]
+Name = Black Olives
+NamePlural = Black Olives
+Pocket = 7
+Price = 170
+Flags = Material_Stew
+Description = A stew ingredient. They don't have much of their own flavor, but can serve as filling.,serving of Black Olives,servings of Black Olives,
+#-------------------------------
+[GREENOLIVES]
+Name = Green Olives
+NamePlural = Green Olives
+PortionName = serving of Green Olives
+PortionNamePlural = servings of Green Olives
+Pocket = 7
+Price = 180
+Flags = Material_Stew
+Description = A stew ingredient. Though its taste is powerful, Ranseleans tend to enjoy it.
+#-------------------------------
+[TOMATO]
+Name = Tomato
+NamePlural = Tomatoes
+Pocket = 7
+Price = 120
+Flags = Material_Stew
+Description = A stew ingredient. It's very juicy, so when used, it'll often become part of the sauce.
+#-------------------------------
+[POTATO]
+Name = Potato
+NamePlural = Potatoes
+Pocket = 7
+Price = 190
+Flags = Material_Stew
+Description = A stew ingredient. The skin is very tough, but its flesh is soft.
+#-------------------------------
+[AVOCADO]
+Name = Avocado
+NamePlural = Avocadoes
+Pocket = 7
+Price = 200
+Flags = Material_Stew
+Description = A stew ingredient. It's very soft, and can be whipped into a sauce.
+#-------------------------------
+[GREENPEPPER]
+Name = Green Pepper
+NamePlural = Green Peppers
+Pocket = 7
+Price = 160
+Flags = Material_Stew
+Description = A stew ingredient. It's somewhat tough, so chopping it finely is recommended.
+#-------------------------------
+[NANABPEPPER]
+Name = Nanab Pepper
+NamePlural = Nanab Peppers
+Pocket = 7
+Price = 170
+Flags = Material_Stew
+Description = A stew ingredient named due to its similar colors to a Nanab Berry. It's got a mild kick.
+#-------------------------------
+[JALAPENO]
+Name = Jalapeño
+NamePlural = Jalapeños
+Pocket = 7
+Price = 180
+Flags = Material_Stew
+Description = A stew ingredient. It's quite spicy, so often it'll be de-seeded for young children.
+#-------------------------------
+[GREENCHILES]
+Name = Green Chiles
+NamePlural = Green Chiles
+Pocket = 7
+Price = 150
+Flags = Material_Stew
+Description = A stew ingredient that's less spicy than jalapeños or other peppers, so it's less alienating.
+#-------------------------------
+[MUSHROOM]
+Name = Mushroom
+NamePlural = Mushrooms
+Pocket = 7
+Price = 190
+Flags = Material_Stew
+Description = A stew ingredient. Its fleshy, weak nature lets it take on the flavor of what it's put into.
+#-------------------------------
+[MAIZE]
+Name = Maize
+NamePlural = Maize
+Pocket = 7
+Price = 150
+Flags = Material_Stew
+Description = A stew ingredient known as 'corn' in the north. This grain has an unassuming taste.,ear of Maize,ears of Maize,
+#-------------------------------
+[GREENBEANS]
+Name = Green Beans
+NamePlural = Green Beans
+Pocket = 7
+Price = 190
+Flags = Material_Stew
+Description = A stew ingredient. It's quite stringy, so it can be an acquired taste.,serving of Green Beans,servings of Green Beans,
+#-------------------------------
+[CUCUMBER]
+Name = Cucumber
+NamePlural = Cucumbers
+Pocket = 7
+Price = 140
+Flags = Material_Stew
+Description = A stew ingredient. It's a bit dry when uncooked, and draws in water easily.
+#-------------------------------
+[RADISH]
+Name = Radish
+NamePlural = Radishes
+Pocket = 7
+Price = 170
+Flags = Material_Stew
+Description = A stew ingredient. It takes on the flavor of what it's cooked with.
+#-------------------------------
+[EGGPLANT]
+Name = Eggplant
+NamePlural = Eggplants
+Pocket = 7
+Price = 190
+Flags = Material_Stew
+Description = A stew ingredient. It's got a somewhat bitter taste.
+#-------------------------------
+[TOMATILLO]
+Name = Tomatillo
+NamePlural = Tomatillos
+Pocket = 7
+Price = 150
+Flags = Material_Stew
+Description = A stew ingredient. It's somewhat sour.
+#-------------------------------
+[CARROT]
+Name = Carrot
+NamePlural = Carrots
+Pocket = 7
+Price = 130
+Flags = Material_Stew
+Description = A stew ingredient. This vegetable is said to be good for one's eyesight.
+#-------------------------------
+[WHITERICE]
+Name = White Rice
+NamePlural = White Rice
+Pocket = 7
+Price = 110
+Flags = Material_Stew
+Description = It makes a good bed for a stew, and thus it's frequently served with them.,serving of White Rice,servings of White Rice,
+#-------------------------------
+[CILANTRO]
+Name = Cilantro
+NamePlural = Cilantro
+Pocket = 7
+Price = 180
+Flags = Material_Stew
+Description = A stew ingredient. Typically it's chopped very finely and used as a spice.,serving of Cilantro,servings of Cilantro,
