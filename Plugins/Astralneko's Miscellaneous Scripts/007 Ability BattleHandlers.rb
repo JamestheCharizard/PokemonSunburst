@@ -44,6 +44,20 @@ Battle::AbilityEffects::StatLossImmunity.add(:ARTISTSBLOCK,
 )
 
 #===============================================================================
+# MoveBlocking handlers
+#===============================================================================
+
+Battle::AbilityEffects::MoveBlocking.add(:DAMP,
+  proc { |ability, bearer, user, targets, move, battle|
+    next false if !move.explosiveMove?
+    next false if !bearer.opposes?(user)
+    ret = false
+    targets.each { |b| ret = true if b.opposes?(user) }
+    next ret
+  }
+)
+
+#===============================================================================
 # ModifyMoveBaseType handlers
 #===============================================================================
 Battle::AbilityEffects::ModifyMoveBaseType.add(:ASTRALIZE,

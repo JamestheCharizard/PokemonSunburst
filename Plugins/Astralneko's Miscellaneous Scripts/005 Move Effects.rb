@@ -3,6 +3,12 @@
 # Z-Moves are defined in Z-Move Effects.rb.
 # 
 ################################################################################
+#===============================================================================
+# Add new move flags to Battle::Move
+#===============================================================================
+class Battle::Move
+  def explosiveMove?;          return @flags.any? { |f| f[/^Explosive$/i] };                end
+end
 
 #===============================================================================
 # Life Steal
@@ -58,7 +64,7 @@ end
 # For 5 rounds, creates spirit terrain which boosts Ghost-type moves and
 # debuffs Normal-type moves. Affects non-airborne Pokémon only.
 #-------------------------------------------------------------------------------
-class Battle::Move::StartIrradiatedTerrain < Battle::Move
+class Battle::Move::StartSpiritTerrain < Battle::Move
   def pbMoveFailed?(user,targets)
     if @battle.field.terrain == :Spirit
       @battle.pbDisplay(_INTL("But it failed!"))
@@ -78,7 +84,7 @@ end
 # Target's Special Defense is used instead of its Defense for this move's
 # calculations.
 #-------------------------------------------------------------------------------
-class Battle::Move::UseTargetSpDefInsteadOfDefense < PokeBattle_Move
+class Battle::Move::UseTargetSpDefInsteadOfTargetDefense < PokeBattle_Move
   def pbGetDefenseStats(user,target)
     return target.spdef, target.stages[:SPECIAL_DEFENSE] + Battle::Battler::STAT_STAGE_MAXIMUM
   end
@@ -89,7 +95,7 @@ end
 #===============================================================================
 # Heals the first time. Deals massive damage if used again directly after.
 #-------------------------------------------------------------------------------
-class Battle::Move::ApplyOverdoseCondition < PokeBattle_Move
+class Battle::Move::HealTargetApplyOverdoseCondition < PokeBattle_Move
   def pbEffectAfterAllHits(user,target)
     if target.effects[PBEffects::Overdose]==0
       target.pbRecoverHP(((target.totalHP+1)/2.0).floor,true)
@@ -226,10 +232,10 @@ end
 # Dark Energy
 #===============================================================================
 # OHKO. Accuracy is not dependent on level.
-# User faints (if successful).
+# User faints (if successful). Considered an explosive move (handled in Damp).
 # For non-Celestial-types, this move has half accuracy.
 #-------------------------------------------------------------------------------
-class Battle::Move::OHKOSelfKO < Battle::Move::FixedDamageMove  
+class Battle::Move::UserFaintsOHKOExplosive < Battle::Move::FixedDamageMove  
   def pbFailsAgainstTarget?(user,target)
     if target.level>user.level
       @battle.pbDisplay(_INTL("{1} is unaffected!",target.pbThis))
@@ -329,15 +335,7 @@ end
 #===============================================================================
 class Battle::Move::HitThreeTimesRainBoost < PokeBattle_Move
   def multiHitMove?;           return true; end
-  def pbNumHits(user,targets)
-    hitChances = [
-      2, 2, 2, 2, 2, 2, 2,
-      3, 3, 3
-    ]
-    r = @battle.pbRandom(hitChances.length)
-    r = hitChances.length-1 if user.hasActiveAbility?(:SKILLLINK)
-    return hitChances[r]
-  end
+  def pbNumHits(user, targets); return 3;    end
     
   def successCheckPerHit?
     return @accCheckPerHit
@@ -409,7 +407,7 @@ end
 # Entry hazard. Lays ice spikes on the opposing side (max. 2 layers).
 # (Ice Spikes)
 #===============================================================================
-class Battle::Move::SetIceSpikes < Battle::Move
+class Battle::Move::AddIceSpikesToFoeSide < Battle::Move
   def pbMoveFailed?(user,targets)
     if user.pbOpposingSide.effects[PBEffects::IceSpikes]>=2
       @battle.pbDisplay(_INTL("But it failed!"))
@@ -441,7 +439,7 @@ end
 # The secondary type is used. The user must have two different types to use it.
 # Removes the user's secondary type after use.
 #===============================================================================
-class Battle::Move::UsesUserSecondaryTypeThenRemoves < Battle::Move::UsesUserSecondaryType
+class Battle::Move::UsesUserSecondaryTypeUserLosesSecondaryType < Battle::Move::UsesUserSecondaryType
   def pbMoveFailed?(user,targets)
     if !user.canChangeType? || user.pbTypes(false).length < 2
       @battle.pbDisplay(_INTL("But it failed!"))
@@ -460,10 +458,10 @@ end
 #===============================================================================
 # Starts solar winds. (Solar Storm)
 #===============================================================================
-class Battle::Move::StartSolarWindWeather < Battle::Move::WeatherMove
+class Battle::Move::StartStarstorm < Battle::Move::WeatherMove
   def initialize(battle,move)
     super
-    @weatherType = :SolarStorm
+    @weatherType = :Starstorm
   end
 end
 
@@ -472,7 +470,7 @@ end
 # prevents weather conditions. Affects non-airborne Pokémon only.
 # (Glitch City)
 #===============================================================================
-class Battle::Move::StartGlitchTerrain < Battle::Move
+class Battle::Move::StartGlitchCity < Battle::Move
   def pbMoveFailed?(user,targets)
     if @battle.field.terrain == :Glitch
       @battle.pbDisplay(_INTL("But it failed!"))
@@ -490,7 +488,7 @@ end
 # Debuffs the target if they are a foe, buffs them if they are not.
 # (Cheat Code)
 #===============================================================================
-class Battle::Move::DebuffFoeOrBuffAllyRandomly < Battle::Move
+class Battle::Move::DebuffFoeOrBuffAllyRandomStat < Battle::Move
   def pbOnStartUse(user,targets)
     @raiseStat = false
     @raiseStat = !user.opposes?(targets[0]) if targets.length>0
@@ -537,7 +535,7 @@ end
 # effectiveness of the bearer's Herald ability's aura.
 # For non-Heralds, it's a basic damaging move. (Axial Tilt)
 #===============================================================================
-class Battle::Move::TakesOnHeraldEffectiveness < Battle::Move
+class Battle::Move::HeraldTypeEffectiveness < Battle::Move
   def hitsFlyingTargets?; return true; end
   
   def pbCalcTypeModSingle(moveType,defType,user,target)
