@@ -1563,7 +1563,7 @@ Accuracy = 100
 TotalPP = 5
 Target = AllNearOthers
 FunctionCode = UserFaintsPowersUpInMistyTerrainExplosive
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Explosive
 Description = The user attacks everything around and faints upon using this move. Power increases on Misty Terrain.
 #-------------------------------
 [MOONBLAST]
@@ -2432,7 +2432,7 @@ Accuracy = 100
 TotalPP = 5
 Target = AllNearOthers
 FunctionCode = UserLosesHalfOfTotalHPExplosive
-Flags = CanProtect,CanMirrorMove,CannotMetronome
+Flags = CanProtect,CanMirrorMove,CannotMetronome,Explosive
 Description = The user attacks everything by causing its own head to explode. This also damages the user.
 #-------------------------------
 [SHELLTRAP]
@@ -4620,7 +4620,7 @@ Accuracy = 100
 TotalPP = 5
 Target = AllNearOthers
 FunctionCode = UserFaintsExplosive
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Explosive
 Description = The user explodes to inflict damage on those around it. The user faints upon using this move.
 #-------------------------------
 [SELFDESTRUCT]
@@ -4632,7 +4632,7 @@ Accuracy = 100
 TotalPP = 5
 Target = AllNearOthers
 FunctionCode = UserFaintsExplosive
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Explosive
 Description = The user blows up to inflict damage on all Pokémon in battle. The user faints upon using this move.
 #-------------------------------
 [GIGAIMPACT]
@@ -8771,7 +8771,7 @@ Accuracy = 95
 TotalPP = 5
 Target = NearOther
 FunctionCode = RecoilHalfOfTotalHP
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Explosive
 Description = The user launches its amassed chlorophyll to inflict damage on the target. This also damages the user.
 #-------------------------------
 [MOUNTAINGALE]
@@ -8833,7 +8833,7 @@ Power = 75
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-FunctionCode = LowerTargetAttack1
+FunctionCode = DoublePowerIfTargetStatusProblemFrostbiteTarget
 Flags = CanProtect,CanMirrorMove
 EffectChance = 100
 Description = The user attacks the target with spine-chilling resentment. This also lowers the target’s Attack stat.

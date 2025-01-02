@@ -11,3 +11,17 @@ Target = NearOther
 FunctionCode = CategoryDependsOnHigherDamageTera
 Flags = CanProtect,CanMirrorMove
 Description = Move type changes to match a Terastallized user's Tera Type. Deals damage based on user's higher stat.
+#-------------------------------
+[TERASTARSTORM]
+Name = Tera Starstorm
+Type = NORMAL
+Category = Special
+Power = 120
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+Priority = 0
+FunctionCode = TerapagosCategoryDependsOnHigherDamage
+Flags = CanProtect,CanMirrorMove 
+EffectChance = 0
+Description = With the power of its crystals, the user bombards and eliminates the target. When used by Terapagos in its Stellar Form, this move damages all opposing Pokémon.

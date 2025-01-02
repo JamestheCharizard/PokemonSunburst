@@ -1,1 +1,599 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
+#------------------------------
+# Gen AN Celestial-type moves
+#------------------------------##
+[STARMASH]
+Name = Star Mash
+Type = CELESTIAL
+Category = Physical
+Power = 60
+TotalPP = 15
+Target = NearOther
+FunctionCode = UseTargetSpDefInsteadOfTargetDefense
+Flags = Contact,CanProtect,CanMirrorMove,Punching 
+Description = The user, powered from the stars, punches the opponent for special damage.
+#-------------------------------
+[HYPERNOVA]
+Name = Hypernova
+Type = CELESTIAL
+Category = Special
+Power = 1
+Accuracy = 30
+Target = NearOther
+FunctionCode = OHKO
+Flags = CanProtect,CanMirrorMove 
+Description = The user creates an explosion of interstellar proportions, instantly fainting the opponent.
+#-------------------------------
+[SUPERNOVA]
+Name = Supernova
+Type = CELESTIAL
+Category = Special
+Power = 120
+TotalPP = 15
+Target = NearOther
+FunctionCode = RecoilThirdOfDamageDealt
+Flags = CanProtect,CanMirrorMove 
+Description = The user creates a small explosion to deal great damage to the opponent. The user takes some recoil.
+#-------------------------------
+[EVENTHORIZON]
+Name = Event Horizon
+Type = CELESTIAL
+TotalPP = 10
+Target = User
+FunctionCode = ProtectUserEventHorizon
+Flags = CannotMetronome 
+Description = Creating an event horizon around itself, the user protects itself from all attacks.
+#-------------------------------
+[ASTERBOLT]
+Name = Aster Bolt
+Type = CELESTIAL
+Category = Special
+Power = 55
+TotalPP = 15
+Target = NearOther
+FunctionCode = ParalyzeTarget
+Flags = CanProtect,CanMirrorMove,Bomb 
+EffectChance = 20
+Description = The user attacks the target with a bolt of astral energy. This may paralyze the target.
+#-------------------------------
+[ASTERCHARGE]
+Name = Aster Charge
+Type = CELESTIAL
+Category = Physical
+Power = 40
+TotalPP = 30
+Target = NearOther
+Priority = 1
+Flags = Contact,CanProtect,CanMirrorMove 
+Description = The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.
+#-------------------------------
+[ASTERSLAM]
+Name = Aster Slam
+Type = CELESTIAL
+Category = Physical
+Power = 60
+Accuracy = 90
+TotalPP = 15
+Target = NearOther
+FunctionCode = FlinchTarget
+Flags = TramplesMinimize,Contact,CanProtect,CanMirrorMove 
+Description = The user jumps up and tackles the target. This may trample small foes.
+#-------------------------------
+[ASTERDOWNER]
+Name = Aster Downer
+Type = CELESTIAL
+Category = Special
+Power = 60
+Accuracy = 95
+TotalPP = 15
+Target = NearOther
+FunctionCode = LowerTargetSpeed1
+Flags = CanProtect,CanMirrorMove,Pulse 
+EffectChance = 30
+Description = The user fires a wave of astral energy at the target. This may lower their Sp. Attack.
+#-------------------------------
+[ASTERBLASTER]
+Name = Aster Blaster
+Type = CELESTIAL
+Category = Special
+Power = 150
+Accuracy = 90
+Target = NearOther
+FunctionCode = AttackAndSkipNextTurn
+Flags = CanProtect,CanMirrorMove 
+Description = The foe is attacked with a powerful beam. The user must rest on the next turn to regain its energy.
+#-------------------------------
+[DARKMATTER]
+Name = Dark Matter
+Type = CELESTIAL
+TotalPP = 10
+Target = User
+Priority = -1
+FunctionCode = RaiseUserDefense1LowerUserSpeed1
+Description = The user increases the attraction of matter in the vicinity, increasing Defense but lowering Speed.
+#-------------------------------
+[DARKENERGY]
+Name = Dark Energy
+Type = CELESTIAL
+Category = Special
+Power = 1
+Accuracy = 30
+Target = AllNearOthers
+Priority = -1
+FunctionCode = UserFaintsOHKOExplosive
+Flags = Contact,CanProtect,Pulse,Explosive
+Description = The user decreases the attraction of matter in the vicinity, causing everyone to faint.
+#-------------------------------
+[HYPERDRIVE]
+Name = Hyperdrive
+Type = CELESTIAL
+Category = Physical
+Power = 70
+TotalPP = 20
+Target = NearOther
+FunctionCode = SwitchOutUserDamagingMove
+Flags = Contact,CanProtect,CanMirrorMove 
+Description = After making its attack, the user rushes back to switch places with a party Pokémon in waiting.
+#-------------------------------
+[PLANETARYCRASH]
+Name = Planetary Crash
+Type = CELESTIAL
+Category = Physical
+Power = 1
+TotalPP = 10
+Target = NearOther
+FunctionCode = PowerHigherWithUserHeavierThanTarget
+Flags = Contact,CanProtect,CanMirrorMove 
+Description = The user jumps and kicks a meteor into the target. The heavier the user, the greater the damage.
+#-------------------------------
+[PLANETARYALIGNMENT]
+Name = Planetary Alignment
+Type = CELESTIAL
+TotalPP = 10
+Target = User
+FunctionCode = RaiseUserSpAtkSpDefAccRandomly
+Description = The user gathers mystical power from the planets' alignment, sometimes increasing its Special stats.
+#-------------------------------
+[GRAVITATIONALFORCE]
+Name = Gravitational Force
+Type = CELESTIAL
+Category = Special
+Power = 50
+TotalPP = 15
+Target = AllNearOthers
+FunctionCode = StartGravity
+Flags = CanProtect,CanMirrorMove,Pulse 
+Description = The user briefly increases the power of gravity, making flying Pokémon fall to the ground when hit.
+#-------------------------------
+[SOLARSTORM]
+Name = Solar Storm
+Type = CELESTIAL
+Accuracy = 0
+Target = BothSides
+FunctionCode = StartStarstorm
+Description = The user creates a star-storm. The winds power up Celestial and Electric moves for 5 turns.
+#-------------------------------
+[AXIALTILT]
+Name = Axial Tilt
+Type = CELESTIAL
+Category = Special
+Power = 100
+Target = NearOther
+FunctionCode = HeraldTypeEffectiveness
+Description = The user draws from the power of the seasons, blasting the target with energy. It affects targets based on the aura the user brings to the field.
+#-------------------------------
+[SOLARWIND]
+Name = Solar Wind
+Type = CELESTIAL
+Category = Special
+Power = 40
+Accuracy = 90
+Target = BothSides
+FunctionCode = ChanceParalysisBreaksProtect
+Description = The user creates a star-storm. The winds power up Celestial and Electric moves for 5 turns.
+#------------------------------
+# Gen AN Glitch-type moves
+#------------------------------##
+[DOUBLEDASH]
+Name = Double Dash
+Type = GLITCH
+Category = Physical
+Power = 20
+Accuracy = 90
+TotalPP = 15
+Target = NearOther
+FunctionCode = HitTwoToFiveTimes
+Flags = Contact,CanProtect,CanMirrorMove 
+Description = The user strikes the target with a paw or hand two to five times.
+#-------------------------------
+[ACTIONREPLAY]
+Name = Action Replay
+Type = GLITCH
+Category = Special
+Power = 1
+Accuracy = 90
+TotalPP = 10
+Target = NearOther
+Priority = -2
+FunctionCode = PowerOfLastUsedMove
+Flags = CanProtect,CanMirrorMove 
+Description = The user repeats the motions from the last used move, unleashing an attack of similar power.
+#-------------------------------
+[GLITCHLEAP]
+Name = Glitch Leap
+Type = GLITCH
+Category = Physical
+Power = 64
+Accuracy = 0
+TotalPP = 15
+Target = Other
+Flags = Contact,CanProtect,CanMirrorMove 
+Description = The user jumps at the target with blinding speed. This attack never misses.
+#-------------------------------
+[GLITCHWAVE]
+Name = Glitch Wave
+Type = GLITCH
+Category = Special
+Power = 60
+TotalPP = 20
+Target = NearOther
+FunctionCode = FlinchTarget
+Flags = CanProtect,CanMirrorMove 
+EffectChance = 30
+Description = The target is bitten with viciously sharp fangs. It may make the target flinch.
+#-------------------------------
+[CHEATCODE]
+Name = Cheat Code
+Type = GLITCH
+Accuracy = 0
+TotalPP = 15
+Target = NearOther
+FunctionCode = DebuffFoeOrBuffAllyRandomStat
+Description = The user activates a cheat code, either raising an ally's stats, or lowering an opponent's stats.
+#-------------------------------
+[GLITCHCITY]
+Name = Glitch City
+Type = GLITCH
+Accuracy = 0
+TotalPP = 10
+Target = BothSides
+FunctionCode = StartGlitchCity
+Description = Nullifies the current weather and powers up all Glitch-type moves for 5 turns.
+#------------------------------
+# Gen AN OHKO moves
+#------------------------------##
+[FALLINGSKY]
+Name = Falling Sky
+Type = FLYING
+Category = Special
+Power = 1
+Accuracy = 30
+Target = NearOther
+FunctionCode = OHKO
+Flags = Contact,CanProtect,CanMirrorMove 
+Description = A vicious, tearing attack with big pincers. The target will faint instantly if this attack hits.
+#-------------------------------
+[DROWNINGWAVE]
+Name = Drowning Wave
+Type = WATER
+Category = Special
+Power = 1
+Accuracy = 30
+Target = NearOther
+FunctionCode = OHKO
+Flags = CanProtect,CanMirrorMove 
+Description = The user instantly faints the target by sinking it under water.
+#-------------------------------
+[NIGHTBERRY]
+Name = Night Berry
+Type = GRASS
+Category = Physical
+Power = 1
+Accuracy = 30
+Target = NearOther
+FunctionCode = OHKO
+Flags = CanProtect,CanMirrorMove 
+Description = The user feeds the target a berry that instantly faints them.
+#-------------------------------
+[MOONDOWNER]
+Name = Moon Downer
+Type = FAIRY
+Category = Special
+Power = 1
+Accuracy = 30
+Target = NearOther
+FunctionCode = OHKO
+Flags = CanProtect,CanMirrorMove 
+Description = The user instantly faints the target using the power of the moon.
+#-------------------------------
+# Gen AN other new moves
+#-------------------------------##
+[DRAININGDARTS]
+Name = Draining Darts
+Type = GRASS
+Category = Special
+Power = 45
+Accuracy = 95
+TotalPP = 10
+Target = Other
+FunctionCode = HitOneToThreeTimesHealUserByTwoThirdsDamageDone
+Flags = CanProtect,CanMirrorMove
+Description = "The user throws darts at the target. Landed hits drain health."
+#-------------------------------
+[LASHINGCLAWS]
+Name = Lashing Claws
+Type = FIRE
+Category = Physical
+Power = 50
+Accuracy = 95
+TotalPP = 10
+Target = NearOther
+FunctionCode = HitTwiceBurnTarget
+Contact,
+Flags = CanProtect,CanMirrorMove,ThawsUser,Slashing 
+EffectChance = 20
+Description = The user slashes at the opponent twice with claws hot enough to cause a burn.
+#-------------------------------
+[STORMINGPULSES]
+Name = Storming Pulses
+Type = WATER
+Category = Special
+Power = 40
+Accuracy = 90
+TotalPP = 10
+Target = NearOther
+FunctionCode = HitThreeTimesRainBoost
+Flags = CanProtect,CanMirrorMove,Pulse 
+Description = The user fires a couple waves at the target rapidly. Rain increases the power of the waves.
+#-------------------------------
+[JETSTREAM]
+Name = Jet Stream
+Type = FLYING
+Category = Special
+Power = 70
+Accuracy = 95
+TotalPP = 15
+Target = NearOther
+FunctionCode = SwitchOutUserDamagingMove
+Flags = CanProtect,CanMirrorMove,Wind 
+Description = The user blows a jet stream at the opponent then uses it to fly away very quickly.
+#-------------------------------
+[FLAMESLASH]
+Name = Flame Slash
+Type = FIRE
+Category = Physical
+Power = 70
+TotalPP = 15
+Target = NearOther
+Flags = Contact,CanProtect,CanMirrorMove,HighCriticalHitRate,Slashing 
+Description = The user strikes the opponent with a claw or blade made of fire. Critical hits land easier.
+#-------------------------------
+[PLAYFIGHT]
+Name = Play Fight
+Type = FAIRY
+Category = Physical
+Power = 50
+TotalPP = 10
+Target = NearOther
+FunctionCode = LowerTargetAttack1
+Flags = Contact,CanProtect,CanMirrorMove 
+EffectChance = 15
+Description = The user plays rough with the target and attacks it. This may also lower the target's Attack stat.
+#-------------------------------
+[ICYBLADE]
+Name = Icy Blade
+Type = ICE
+Category = Physical
+Power = 90
+TotalPP = 15
+Target = NearOther
+Flags = Contact,CanProtect,CanMirrorMove,HighCriticalHitRate,Slashing 
+Description = The user strikes the opponent with an icicle or frosty blade. Critical hits land easier.
+#-------------------------------
+[FREEZINGTOUCH]
+Name = Freezing Touch
+Type = ICE
+Category = Physical
+Power = 75
+Accuracy = 95
+TotalPP = 10
+Target = NearOther
+FunctionCode = FreezeTargetSuperEffectiveAgainstWater
+Flags = Contact,CanProtect,CanMirrorMove 
+EffectChance = 20
+Description = Using an ice-cold paw or hand, the user hits the target, giving them frostbite.
+#-------------------------------
+[FEVER]
+Name = Fever
+Type = POISON
+Category = Special
+Power = 40
+TotalPP = 25
+Target = NearOther
+FunctionCode = BurnTarget
+Flags = CanProtect,CanMirrorMove,ThawsUser 
+EffectChance = 20
+Description = The target is attacked with small flames. It may also leave the target with a burn.
+#-------------------------------
+[SUPERCHILL]
+Name = Superchill
+Type = ICE
+Accuracy = 60
+TotalPP = 15
+Target = NearOther
+FunctionCode = FrostbiteTarget
+Flags = CanProtect,CanMirrorMove 
+Description = The user chills down the target to give them frostbite. If they already do, it freezes them instead.
+#-------------------------------
+[OVERDOSE]
+Name = Overdose
+Type = POISON
+Category = Special
+Power = 180
+TotalPP = 15
+Target = NearOther
+FunctionCode = HealTargetApplyOverdoseCondition
+Flags = CanProtect,CanMirrorMove,CannotMetronome 
+Description = The user heals the target, but if it tries again, massive damage will be dealt instead.
+#-------------------------------
+[EARTHPILLAR]
+Name = Earth Pillar
+Type = GROUND
+Category = Physical
+Power = 80
+Accuracy = 90
+TotalPP = 15
+Target = NearOther
+FunctionCode = HitsTargetInSkyGroundsTarget
+Flags = CanProtect,CanMirrorMove 
+Description = The user creates a pillar of earth that strikes the opponent from below. This can hit airborne foes.
+#-------------------------------
+[SNOWBALL]
+Name = Snowball
+Type = ICE
+Category = Physical
+Power = 16
+Accuracy = 90
+TotalPP = 20
+Target = Other
+FunctionCode = HitTwoToFiveTimes
+Flags = CanProtect,CanMirrorMove,Bomb 
+Description = The user creates and attacks the foe with hard snow many times in succession.
+#-------------------------------
+[ICESPIKES]
+Name = Ice Spikes
+Type = ICE
+Accuracy = 0
+TotalPP = 20
+Target = FoeSide
+FunctionCode = AddIceSpikesToFoeSide
+Description = The user lays a trap of ice spikes at the foe's feet. They freeze foes that switch into battle.
+#-------------------------------
+[LIGHTSLAP]
+Name = Light Slap
+Type = FAIRY
+Category = Physical
+Power = 30
+Accuracy = 85
+TotalPP = 10
+Target = NearOther
+FunctionCode = HitOneToThreeTimes
+Flags = Contact,CanProtect,CanMirrorMove 
+Description = The target is lightly slapped repeatedly, one to three times in a row.
+#-------------------------------
+[CHROMASHINE]
+Name = Chroma Shine
+Type = NORMAL
+Category = Special
+Power = 50
+TotalPP = 15
+Target = NearOther
+FunctionCode = UsesUserSecondaryType
+Flags = CanProtect,CanMirrorMove 
+Description = The user fires a blast of energy that resonates with its type.
+#-------------------------------
+[CHROMABLAST]
+Name = Chroma Blast
+Type = NORMAL
+Category = Special
+Power = 130
+Target = NearOther
+FunctionCode = UsesUserSecondaryTypeUserLosesSecondaryType
+Flags = CanProtect,CanMirrorMove 
+Description = The user fires a huge blast of energy that resonates with its type. However, it loses its type in the process.
+#-------------------------------
+[SPARKLESPRINT]
+Name = Sparkle Sprint
+Type = FAIRY
+Category = Physical
+Power = 40
+TotalPP = 30
+Target = NearOther
+Priority = 1
+Flags = Contact,CanProtect,CanMirrorMove 
+Description = The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.
+#-------------------------------
+[BLACKOUT]
+Name = Blackout
+Type = DARK
+Category = Special
+Power = 70
+Accuracy = 90
+TotalPP = 15
+Target = NearOther
+FunctionCode = SuperEffectiveAgainstElectric
+Flags = CanProtect,CanMirrorMove 
+Description = The user suffocates the target with darkness. This is super effective on Electric types.
+#-------------------------------
+[OVERCLOCK]
+Name = Overclock
+Type = ELECTRIC
+Category = Special
+Power = 50
+TotalPP = 15
+Target = NearOther
+FunctionCode = RaiseUserSpeed1
+Flags = CanProtect,CanMirrorMove 
+EffectChance = 100
+Description = The user increases its electrical output to fire a blast at the target. This raises the user's Speed.
+#-------------------------------
+[ROCKETSPIN]
+Name = Rocket Spin
+Type = FIRE
+Category = Physical
+Power = 80
+Accuracy = 90
+TotalPP = 15
+Target = NearOther
+FunctionCode = BurnTarget
+Flags = Contact,CanProtect,CanMirrorMove,ThawsUser 
+EffectChance = 20
+Description = The user performs a roundhouse kick boosted by a rocket. This may burn the target.
+#-------------------------------
+[AZURESCALL]
+Name = Azure's Call
+Type = WATER
+Category = Physical
+Power = 100
+Target = NearOther
+FunctionCode = IncreasePowerSuperEffective
+Flags = CanProtect,CanMirrorMove 
+Description = The user recites an ancient hymn, slashing the target with watery blades. It deals additional damage if the target is weak to the move.
+#-------------------------------
+[ROSESCALL]
+Name = Rose's Call
+Type = FIRE
+Category = Special
+Power = 100
+Target = NearOther
+FunctionCode = IncreasePowerSuperEffective
+Flags = CanProtect,CanMirrorMove 
+Description = The user recalls an ancient poem, initiating a raging inferno. It deals additional damage if the target is weak to the move.
+#-------------------------------
+[SAGESCALL]
+Name = Sage's Call
+Type = GRASS
+Category = Special
+Power = 100
+Target = NearOther
+FunctionCode = IncreasePowerSuperEffective
+Flags = CanProtect,CanMirrorMove 
+Description = The user invokes an ancient curse, calling forth wicked vines. It deals additional damage if the target is weak to the move.
+#-------------------------------
+[GROUNDZERO]
+Name = Ground Zero
+Type = POISON
+Accuracy = 0
+TotalPP = 10
+Target = BothSides
+FunctionCode = StartIrradiatedTerrain
+Description = The user turns the ground irradiated for five turns. Grounded Pokémon take more damage from poison.
+#-------------------------------
+[SPIRITREALM]
+Name = Spirit Realm
+Type = GHOST
+Accuracy = 0
+TotalPP = 10
+Target = BothSides
+FunctionCode = StartSpiritTerrain
+Description = The user turns the ground irradiated for five turns. Grounded Pokémon take more damage from poison.
