@@ -44,16 +44,19 @@ end
 class Battle::Battler
   alias astaryuu_pbInitEffects pbInitEffects
   def pbInitEffects(batonPass)
+		if batonPass
+      # These effects are passed on if Baton Pass is used, but they need to be
+      # reapplied
+		else
+      # These effects are passed on if Baton Pass is used
+			@effects[PBEffects::Overdose]            = 0
+		end
     astaryuu_pbInitEffects(batonPass)
     @effects[PBEffects::ApuRevival]          = 0
     @effects[PBEffects::EventHorizon]        = false
     @effects[PBEffects::Defibrilate]         = false
     @effects[PBEffects::Magnadisk]           = false
-    @effects[PBEffects::Overdose]            = 0
     @effects[PBEffects::ResilienceDamage]    = 0
-    @effects[PBEffects::PowerShift]          = false
-    @effects[PBEffects::TraplessDamage]      = 0
-    @effects[PBEffects::TraplessDamageMove]  = nil
     @effects[PBEffects::ChromaBlast]         = false
   end
 	
@@ -85,5 +88,18 @@ class Battle::Battler
   def pbResetTypes
     astaryuu_pbResetTypes
     @effects[PBEffects::ChromaBlast] = false
+  end
+end
+
+#-------------------------------------------------------------------------------
+# Initialize new effects and values to be added to the debug menu.
+#-------------------------------------------------------------------------------
+class Battle::ActiveSide
+  attr_accessor :effects
+
+	alias astaryuu_initialize initialize
+  def initialize
+    astaryuu_initialize
+    @effects[PBEffects::IceSpikes]          = 0
   end
 end
