@@ -88,23 +88,69 @@ class Game_Follower < Game_Event
     end
   end
 
-  def fancy_moveto(new_x, new_y, leader)
-    if self.x - new_x == 1 && self.y == new_y
-      move_fancy(4)
-    elsif self.x - new_x == -1 && self.y == new_y
-      move_fancy(6)
+	def fancy_moveto(new_x, new_y, leader)
+    if self.x - new_x == 1 && (-1..1).include?(self.y - new_y)
+      # Left-Up
+      if self.y - new_y == 1 && passable?(new_x, new_y, 4)
+        move_through(7)
+        # New
+      elsif self.y - new_y == 1 && passable?(self.x, self.y, 4)
+        move_through(7)
+      # Left-Down
+      elsif self.y - new_y == -1 && passable?(new_x, self.y, 4)
+        move_through(1)
+        # New
+      elsif self.y - new_y == -1 && passable?(self.x, self.y, 4)
+        move_through(1)
+      else 
+        move_fancy(4,leader)
+      end 
+    elsif self.x - new_x == -1 && (-1..1).include?(self.y - new_y)
+      # Right-Down
+      if self.y - new_y == -1 && passable?(new_x, new_y, 6)
+        move_through(3)
+        # New
+        elsif self.y - new_y == -1 && passable?(self.x, self.y, 6)
+          move_through(3)
+      # Right-Up
+      elsif self.y - new_y == 1 && passable?(new_x, self.y, 6)
+        move_through(9)
+        # New
+        elsif self.y - new_y == 1 && passable?(self.x, self.y, 6)
+          move_through(9)
+      else 
+        move_fancy(6,leader)
+      end
     elsif self.x == new_x && self.y - new_y == 1
-      move_fancy(8)
+      move_fancy(8,leader)
     elsif self.x == new_x && self.y - new_y == -1
-      move_fancy(2)
+      move_fancy(2,leader)
     elsif self.x - new_x == 2 && self.y == new_y
       jump_fancy(4, leader)
     elsif self.x - new_x == -2 && self.y == new_y
       jump_fancy(6, leader)
+    elsif self.x - new_x == 2 && self.y == new_y + 1
+      jump_fancy(4, leader)
+    elsif self.x - new_x == -2 && self.y == new_y  + 1
+      jump_fancy(6, leader)
+    #------------------------------------------------
+    # New coordinates.
+    #------------------------------------------------
     elsif self.x == new_x && self.y - new_y == 2
       jump_fancy(8, leader)
     elsif self.x == new_x && self.y - new_y == -2
       jump_fancy(2, leader)
+    #------------------------------------------------
+    # Diagonal floors
+    #------------------------------------------------
+    elsif self.x == new_x + 1 && self.y - new_y == 2
+      move_through(7) 
+    elsif self.x == new_x + 1 && self.y - new_y == -2
+      move_through(1)
+    elsif self.x == new_x - 1 && self.y - new_y == -2
+      move_through(3)
+    elsif self.x == new_x - 1 && self.y - new_y == 2
+      move_through(9)
     elsif self.x != new_x || self.y != new_y
       moveto(new_x, new_y)
     end
