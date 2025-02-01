@@ -176,7 +176,7 @@ end
 def const_defined_nocase?(mod, const_name)
   for const in mod.constants
     next unless const.to_s.casecmp(const_name.to_s).zero?
-	return const.to_s
+    return const.to_s
   end
   return nil
 end

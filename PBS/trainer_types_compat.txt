@@ -36,10 +36,20 @@ Gender = Male
 BaseMoney = 88
 SkillLevel = 32
 #-------------------------------
+[CHANELLER]
+Name = Channeler
+Gender = Female
+BaseMoney = 32
+#-------------------------------
 [CHANNELER]
 Name = Channeler
 Gender = Female
 BaseMoney = 32
+#-------------------------------
+[CRUSHGIRL]
+Name = Crush Girl
+Gender = Female
+BaseMoney = 24
 #-------------------------------
 [CUEBALL]
 Name = Cue Ball
@@ -104,6 +114,18 @@ Name = Tuber
 Gender = Female
 BaseMoney = 4
 SkillLevel = 16
+#-------------------------------
+[SCIENTIST]
+Name = Scientist
+Gender = Male
+BaseMoney = 16
+SkillLevel = 32
+#-------------------------------
+[SUPERNERD]
+Name = Scientist
+Gender = Male
+BaseMoney = 16
+SkillLevel = 32
 #-------------------------------
 [COOLCOUPLE]
 Name = Cool Couple

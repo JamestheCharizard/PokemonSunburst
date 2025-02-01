@@ -697,7 +697,7 @@ BackSprite = 0,44
 FrontSprite = 2,9
 ShadowX = 0
 #-------------------------------
-[FROSABY]
+[YUSAGIKI]
 BackSprite = 0,44
 FrontSprite = 2,9
 ShadowX = 0

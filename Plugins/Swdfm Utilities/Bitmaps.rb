@@ -204,8 +204,8 @@ module Swd_Bitmap
     y     = bmp.height / 2 - y_gap / 2 if anch == :C
     x     = hash[:X] if hash[:X]
     y     = hash[:Y] if hash[:Y]
-    base  = hash[:Base]   || pbBase
-    shad  = hash[:Shadow] || pbShadow
+    base  = hash[:Base]   || rad_BASE
+    shad  = hash[:Shadow] || rad_SHADOW
     t_pos = [[text, x, y, align, base, shad, t]]
     pbSetSystemFont(bmp)
     bmp.font.size = size if size

@@ -1,11 +1,51 @@
 Name = Generation 9 Pack
-Version = 3.2.5
+Version = 3.2.9
 Essentials = 21.1
 Requires = v21.1 Hotfixes,1.0.9
 Website = https://www.reliccastle.com/threads/5817/
 Credits = Caruban
 
 # Change logs
+#############################################
+# 3.2.9
+#############################################
+# - Added an ice defense buff algorithm for the AI during snow
+# - Fixed a bug in the pbPartyScreen for Revival Blessing
+# - Fixed the Opportunist message to display battler.pbThis instead of user.pbThis
+# - Fixed the Triple Arrows AI move's defense stat drop score
+#############################################
+# 3.2.8
+#############################################
+# - Changed Infernal Parade burn score "b" parameter to "target"
+# - Changed Matcha Gatcha burn score "b" parameter to "target"
+# - Changed Barb Barrage poison score "b" parameter to "target"
+# - Changed Ceaseless Edge's spike score method
+# - Changed Stone Axe's stealth rock score method
+# - Changed Chilly Reception's switch out score method
+# - Changed Frostbite AI handler to FrostbiteTarget
+# - Changed @battle to battle from Neutralizing Gas ability handler (line 416)
+# - Fixed Psyblade's AI move score algorithm
+# - Fixed Syrup Bomb's AI move score method id
+# - Removed "OHKO" check from Stone Axe's MoveFailureAgainstTargetCheck handler
+# - Updated Electro Shot AI move score
+# - Updated Upper Hand AI move score
+#############################################
+# 3.2.7
+#############################################
+# - Added the missing Sharpness ability to Gallade in PBS
+# - Added the missing Tatsugiri form on creation
+# - Fixed Basculegion's forms bug when generated in the wild
+# - Fixed Supersweet Syrup ability battler name into a lowercase
+# - Fixed Tail Shed AI MoveEffectScore handler
+# - Fixed typo in Mabosstiff follower sprite's name
+#############################################
+# 3.2.6
+#############################################
+# - Fixed Trace interaction with Ability Shield
+# - Changed Doodle and Dragon Cheer Battle::AI::Handlers from using batttle.allSameSideBattlers to ai.each_same_side_battler
+# - Moved rough_damage method from Battle::AI to Battle::AI::AIMove
+# - Moved zero_to_hero_ability ShouldSwitch handler outside of Battle::AI class
+#
 #############################################
 # 3.2.5
 #############################################

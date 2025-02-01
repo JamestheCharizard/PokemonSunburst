@@ -166,33 +166,53 @@ BaseMoney = 60
 Name = Rival
 Gender = Male
 BaseMoney = 60
-176,RIVAL_Natsuki,Rival,50,ARS_Battle_Natsuki,,,Female,60,
-177,RIVAL_Sorrel,Pokémon Trainer,40,ARS_Battle_Sorrel,,,Nonbinary,60,
+IntroBGM = ARS_Cutscene_Mona's Theme
+BattleBGM = ARS_Battle_Mona
+#-------------------------------
+[RIVAL_Natsuki]
+Name = Rival
+Gender = Female
+BaseMoney = 50
+SkillLevel = 60
+IntroBGM = ARS_Cutscene_Natsuki's Theme
+BattleBGM = ARS_Battle_Natsuki
+#-------------------------------
+[RIVAL_Sorrel]
+Name = Pokémon Trainer
+Gender = Nonbinary
+BaseMoney = 40
+SkillLevel = 60
+BattleBGM = ARS_Battle_Sorrel
 #-------------------------------
 [TEAMXIBAL_Cain]
 Name = Team Xibal
 Gender = Male
 BaseMoney = 60
+BattleBGM = ARS_Battle_Team Xibal
 #-------------------------------
 [TEAMXIBAL_Abel]
 Name = Team Xibal
 Gender = Male
 BaseMoney = 60
+BattleBGM = ARS_Battle_Team Xibal
 #-------------------------------
 [TEAMXIBAL_Maria]
 Name = Team Xibal
 Gender = Female
 BaseMoney = 60
+BattleBGM = ARS_Battle_Team Xibal
 #-------------------------------
 [TEAMXIBAL_Moses]
 Name = Team Xibal
 Gender = Male
 BaseMoney = 60
+BattleBGM = ARS_Battle_Team Xibal
 #-------------------------------
 [TEAMXIBAL_Joseph]
 Name = Team Xibal
 Gender = Male
 BaseMoney = 60
+BattleBGM = ARS_Battle_Joseph Lazarn
 #-------------------------------
 [ADVENTURER_Rei]
 Name = Adventurer

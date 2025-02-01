@@ -10,7 +10,7 @@ module Swd
       ["\n", ""],
       ["\t", "    "]
     ]
-      line = line.gsub(a, b)
+      line.gsub!(a, b)
     end
     if flags.include?(:STRICT)
       line = line.before_first("#")

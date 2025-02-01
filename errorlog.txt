@@ -1,0 +1,1036 @@
+
+=================
+
+[2025-02-01 09:56:31 -0600]
+[Pokémon Essentials version 21.1]
+[v21 Hotfixes 1.0.1]
+[v21.1 Hotfixes 1.0.9]
+
+Error in Plugin: [v21.1 Hotfixes]
+Exception: NameError
+Message: undefined method `pbCheckEventTriggerAfterTurning' for class `Game_Event'
+
+Backtrace:
+[v21.1 Hotfixes] Misc bug fixes.rb:558:in `<class:Game_Event>'
+[v21.1 Hotfixes] Misc bug fixes.rb:545:in `<main>'
+005_PluginManager.rb:635:in `eval'
+005_PluginManager.rb:635:in `block (2 levels) in runPlugins'
+005_PluginManager.rb:625:in `each'
+005_PluginManager.rb:625:in `block in runPlugins'
+005_PluginManager.rb:616:in `each'
+005_PluginManager.rb:616:in `runPlugins'
+999_Main.rb:34:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+
+=================
+
+[2025-02-01 10:01:24 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Error in Plugin: [v21.1 Hotfixes]
+Exception: NameError
+Message: undefined method `pbCheckEventTriggerAfterTurning' for class `Game_Event'
+
+Backtrace:
+[v21.1 Hotfixes] Misc bug fixes.rb:558:in `<class:Game_Event>'
+[v21.1 Hotfixes] Misc bug fixes.rb:545:in `<main>'
+005_PluginManager.rb:635:in `eval'
+005_PluginManager.rb:635:in `block (2 levels) in runPlugins'
+005_PluginManager.rb:625:in `each'
+005_PluginManager.rb:625:in `block in runPlugins'
+005_PluginManager.rb:616:in `each'
+005_PluginManager.rb:616:in `runPlugins'
+999_Main.rb:34:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+
+=================
+
+[2025-02-01 10:09:15 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Error in Plugin: [[MUI] Improved Mementos]
+Exception: NameError
+Message: undefined method `editor_settings' for class `#<Class:TrainerPokemonProperty>'
+
+Backtrace:
+[[MUI] Improved Mementos] [001] PBS Files.rb:61:in `alias_method'
+[[MUI] Improved Mementos] [001] PBS Files.rb:61:in `<module:TrainerPokemonProperty>'
+[[MUI] Improved Mementos] [001] PBS Files.rb:60:in `<main>'
+005_PluginManager.rb:635:in `eval'
+005_PluginManager.rb:635:in `block (2 levels) in runPlugins'
+005_PluginManager.rb:625:in `each'
+005_PluginManager.rb:625:in `block in runPlugins'
+005_PluginManager.rb:616:in `each'
+005_PluginManager.rb:616:in `runPlugins'
+999_Main.rb:34:in `mainFunctionDebug'
+
+=================
+
+[2025-02-01 10:11:43 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Error in Plugin: [[MUI] Improved Mementos]
+Exception: NameError
+Message: undefined method `editor_settings' for class `#<Class:TrainerPokemonProperty>'
+
+Backtrace:
+[[MUI] Improved Mementos] [001] PBS Files.rb:61:in `alias_method'
+[[MUI] Improved Mementos] [001] PBS Files.rb:61:in `<module:TrainerPokemonProperty>'
+[[MUI] Improved Mementos] [001] PBS Files.rb:60:in `<main>'
+005_PluginManager.rb:635:in `eval'
+005_PluginManager.rb:635:in `block (2 levels) in runPlugins'
+005_PluginManager.rb:625:in `each'
+005_PluginManager.rb:625:in `block in runPlugins'
+005_PluginManager.rb:616:in `each'
+005_PluginManager.rb:616:in `runPlugins'
+999_Main.rb:34:in `mainFunctionDebug'
+
+=================
+
+[2025-02-01 10:14:35 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Error in Plugin: [Astralneko's Miscellaneous Scripts]
+Exception: NameError
+Message: uninitialized constant PokeBattle_Move
+
+Backtrace:
+[Astralneko's Miscellaneous Scripts] 005 Move Effects.rb:87:in `<main>'
+005_PluginManager.rb:635:in `eval'
+005_PluginManager.rb:635:in `block (2 levels) in runPlugins'
+005_PluginManager.rb:625:in `each'
+005_PluginManager.rb:625:in `block in runPlugins'
+005_PluginManager.rb:616:in `each'
+005_PluginManager.rb:616:in `runPlugins'
+999_Main.rb:34:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+
+=================
+
+[2025-02-01 10:16:10 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Error in Plugin: [Astralneko's Miscellaneous Scripts]
+Exception: NameError
+Message: uninitialized constant PokeBattle_Move
+
+Backtrace:
+[Astralneko's Miscellaneous Scripts] 005 Move Effects.rb:336:in `<main>'
+005_PluginManager.rb:635:in `eval'
+005_PluginManager.rb:635:in `block (2 levels) in runPlugins'
+005_PluginManager.rb:625:in `each'
+005_PluginManager.rb:625:in `block in runPlugins'
+005_PluginManager.rb:616:in `each'
+005_PluginManager.rb:616:in `runPlugins'
+999_Main.rb:34:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+
+=================
+
+[2025-02-01 10:21:40 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `textspeed' for nil:NilClass
+
+Backtrace:
+[DialougeSound] Main.rb:23:in `set_sound_interval'
+[DialougeSound] Main.rb:40:in `reset'
+[DialougeSound] Main.rb:77:in `pbMessageDisplay'
+011_Messages.rb:740:in `pbMessage'
+004_Compiler_MapsAndEvents.rb:80:in `import_new_maps'
+001_Compiler.rb:1061:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+
+=================
+
+[2025-02-01 10:26:41 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'
+
+=================
+
+[2025-02-01 10:26:51 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `generatePBS' for AstralnekoTrivia:Module
+
+Backtrace:
+[Astralneko's Trivia] 001 Compile Data.rb:10:in `compile'
+[Astralneko's Trivia] 001 Compile Data.rb:131:in `compile_all'
+001_Compiler.rb:1102:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+
+=================
+
+[2025-02-01 10:28:51 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'
+
+=================
+
+[2025-02-01 10:28:55 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `pure?' for 0:Integer
+
+Backtrace:
+[Swdfm Utilities] Array.rb:9:in `block in flatten'
+[Swdfm Utilities] Array.rb:8:in `each'
+[Swdfm Utilities] Array.rb:8:in `flatten'
+[Deluxe Battle Kit] [000] Compiler.rb:216:in `block (5 levels) in modify_pbs_file_contents_before_compiling'
+[Deluxe Battle Kit] [000] Compiler.rb:213:in `each'
+[Deluxe Battle Kit] [000] Compiler.rb:213:in `block (4 levels) in modify_pbs_file_contents_before_compiling'
+[Deluxe Battle Kit] [000] Compiler.rb:58:in `block in edit_and_rewrite_pbs_file_text'
+[Deluxe Battle Kit] [000] Compiler.rb:58:in `each'
+[Deluxe Battle Kit] [000] Compiler.rb:58:in `edit_and_rewrite_pbs_file_text'
+[Deluxe Battle Kit] [000] Compiler.rb:169:in `block (3 levels) in modify_pbs_file_contents_before_compiling'
+
+=================
+
+[2025-02-01 10:34:05 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'
+
+=================
+
+[2025-02-01 10:34:11 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Bad line syntax (expected syntax like XXX=YYY).
+File PBS/moves_sacred.txt, section LASHINGCLAWS
+Contact,
+
+
+
+Backtrace:
+001_Compiler.rb:119:in `block in pbEachFileSectionEx'
+001_Compiler.rb:100:in `each_line'
+001_Compiler.rb:100:in `pbEachFileSectionEx'
+001_Compiler.rb:142:in `pbEachFileSection'
+002_Compiler_CompilePBS.rb:22:in `block (2 levels) in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:16:in `open'
+002_Compiler_CompilePBS.rb:16:in `block in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:11:in `each'
+002_Compiler_CompilePBS.rb:11:in `compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:206:in `compile_moves'
+
+=================
+
+[2025-02-01 10:34:59 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'
+
+=================
+
+[2025-02-01 10:35:04 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Section name 'TERASTARSTORM' is used twice.
+File PBS/moves_terastal.txt, section TERASTARSTORM, key Description
+With the power of its crystals, the user bombards and eliminates the target. When used by Terapagos in its Stellar Form, this move damages all opposing Pokémon.
+
+
+
+Backtrace:
+002_Compiler_CompilePBS.rb:57:in `block (3 levels) in compile_PBS_file_generic'
+001_Compiler.rb:143:in `block in pbEachFileSection'
+001_Compiler.rb:134:in `pbEachFileSectionEx'
+001_Compiler.rb:142:in `pbEachFileSection'
+002_Compiler_CompilePBS.rb:22:in `block (2 levels) in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:16:in `open'
+002_Compiler_CompilePBS.rb:16:in `block in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:11:in `each'
+002_Compiler_CompilePBS.rb:11:in `compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:206:in `compile_moves'
+
+=================
+
+[2025-02-01 10:36:20 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Section name 'ROTOMPHONE' is used twice.
+File PBS/items_sacred.txt, section ROTOMPHONE, key ZCombo
+
+
+
+
+Backtrace:
+002_Compiler_CompilePBS.rb:57:in `block (3 levels) in compile_PBS_file_generic'
+001_Compiler.rb:143:in `block in pbEachFileSection'
+001_Compiler.rb:108:in `block in pbEachFileSectionEx'
+001_Compiler.rb:100:in `each_line'
+001_Compiler.rb:100:in `pbEachFileSectionEx'
+001_Compiler.rb:142:in `pbEachFileSection'
+002_Compiler_CompilePBS.rb:22:in `block (2 levels) in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:16:in `open'
+002_Compiler_CompilePBS.rb:16:in `block in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:11:in `each'
+
+=================
+
+[2025-02-01 10:37:15 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Bad line syntax (expected syntax like XXX=YYY).
+File PBS/items_sacred.txt, section FAMECHECKER
+1202,TEMYSPOKEBALL,Temy's Poké Ball,Temy's Poké Balls,9,0,"A Poké Ball with a pet Onstereo inside. Return it to Nessie in Maracaleza Town!",0,0,6,
+
+
+
+Backtrace:
+001_Compiler.rb:119:in `block in pbEachFileSectionEx'
+001_Compiler.rb:100:in `each_line'
+001_Compiler.rb:100:in `pbEachFileSectionEx'
+001_Compiler.rb:142:in `pbEachFileSection'
+002_Compiler_CompilePBS.rb:22:in `block (2 levels) in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:16:in `open'
+002_Compiler_CompilePBS.rb:16:in `block in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:11:in `each'
+002_Compiler_CompilePBS.rb:11:in `compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:236:in `compile_items'
+
+=================
+
+[2025-02-01 10:38:37 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Section name 'JETBALL' is used twice.
+File PBS/items_sacred.txt, section JETBALL, key ZCombo
+
+
+
+
+Backtrace:
+002_Compiler_CompilePBS.rb:57:in `block (3 levels) in compile_PBS_file_generic'
+001_Compiler.rb:143:in `block in pbEachFileSection'
+001_Compiler.rb:108:in `block in pbEachFileSectionEx'
+001_Compiler.rb:100:in `each_line'
+001_Compiler.rb:100:in `pbEachFileSectionEx'
+001_Compiler.rb:142:in `pbEachFileSection'
+002_Compiler_CompilePBS.rb:22:in `block (2 levels) in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:16:in `open'
+002_Compiler_CompilePBS.rb:16:in `block in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:11:in `each'
+
+=================
+
+[2025-02-01 10:39:38 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'
+
+=================
+
+[2025-02-01 10:39:44 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Section name 'GIMMIGHOULCOIN' is used twice.
+File PBS/items_tmmat.txt, section GIMMIGHOULCOIN, key ZCombo
+
+
+
+
+Backtrace:
+002_Compiler_CompilePBS.rb:57:in `block (3 levels) in compile_PBS_file_generic'
+001_Compiler.rb:143:in `block in pbEachFileSection'
+001_Compiler.rb:108:in `block in pbEachFileSectionEx'
+001_Compiler.rb:100:in `each_line'
+001_Compiler.rb:100:in `pbEachFileSectionEx'
+001_Compiler.rb:142:in `pbEachFileSection'
+002_Compiler_CompilePBS.rb:22:in `block (2 levels) in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:16:in `open'
+002_Compiler_CompilePBS.rb:16:in `block in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:11:in `each'
+
+=================
+
+[2025-02-01 10:41:08 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Undefined value  in GameData::Evolution.
+File PBS/pokemon_sacred.txt, section CELESTELL, key Evolutions
+
+
+
+
+Backtrace:
+001_Compiler.rb:454:in `checkEnumField'
+[v21.1 Hotfixes] Compiler bug fixes.rb:53:in `cast_csv_value'
+001_Compiler.rb:724:in `block (2 levels) in get_csv_record'
+001_Compiler.rb:710:in `each'
+001_Compiler.rb:710:in `block in get_csv_record'
+001_Compiler.rb:708:in `loop'
+001_Compiler.rb:708:in `get_csv_record'
+002_Compiler_CompilePBS.rb:49:in `block (4 levels) in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:31:in `each_key'
+002_Compiler_CompilePBS.rb:31:in `block (3 levels) in compile_PBS_file_generic'
+
+=================
+
+[2025-02-01 10:42:40 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'
+
+=================
+
+[2025-02-01 10:42:45 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Undefined value 12 in GameData::BodyShape.
+File PBS/pokemon_sacred.txt, section KNITRITON, key Shape
+12
+
+
+
+Backtrace:
+001_Compiler.rb:454:in `checkEnumField'
+[v21.1 Hotfixes] Compiler bug fixes.rb:53:in `cast_csv_value'
+001_Compiler.rb:724:in `block (2 levels) in get_csv_record'
+001_Compiler.rb:710:in `each'
+001_Compiler.rb:710:in `block in get_csv_record'
+001_Compiler.rb:708:in `loop'
+001_Compiler.rb:708:in `get_csv_record'
+002_Compiler_CompilePBS.rb:49:in `block (4 levels) in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:31:in `each_key'
+002_Compiler_CompilePBS.rb:31:in `block (3 levels) in compile_PBS_file_generic'
+
+=================
+
+[2025-02-01 10:44:23 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'
+
+=================
+
+[2025-02-01 10:44:29 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Form 1 for species ID 'URSALUNA' is defined twice.
+File PBS/pokemon_forms_sacred.txt, section URSALUNA,1, key CallRateSOS
+
+
+
+
+Backtrace:
+002_Compiler_CompilePBS.rb:456:in `validate_compiled_pokemon_form'
+002_Compiler_CompilePBS.rb:433:in `block (3 levels) in compile_pokemon_forms'
+001_Compiler.rb:143:in `block in pbEachFileSection'
+001_Compiler.rb:108:in `block in pbEachFileSectionEx'
+001_Compiler.rb:100:in `each_line'
+001_Compiler.rb:100:in `pbEachFileSectionEx'
+001_Compiler.rb:142:in `pbEachFileSection'
+002_Compiler_CompilePBS.rb:400:in `block (2 levels) in compile_pokemon_forms'
+002_Compiler_CompilePBS.rb:394:in `open'
+002_Compiler_CompilePBS.rb:394:in `block in compile_pokemon_forms'
+
+=================
+
+[2025-02-01 10:45:42 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Form 63 for species ID 'ALCREMIE' is defined twice.
+File PBS/pokemon_forms_sacred.txt, section ALCREMIE,63, key CallRateSOS
+
+
+
+
+Backtrace:
+002_Compiler_CompilePBS.rb:456:in `validate_compiled_pokemon_form'
+002_Compiler_CompilePBS.rb:433:in `block (3 levels) in compile_pokemon_forms'
+001_Compiler.rb:143:in `block in pbEachFileSection'
+001_Compiler.rb:108:in `block in pbEachFileSectionEx'
+001_Compiler.rb:100:in `each_line'
+001_Compiler.rb:100:in `pbEachFileSectionEx'
+001_Compiler.rb:142:in `pbEachFileSection'
+002_Compiler_CompilePBS.rb:400:in `block (2 levels) in compile_pokemon_forms'
+002_Compiler_CompilePBS.rb:394:in `open'
+002_Compiler_CompilePBS.rb:394:in `block in compile_pokemon_forms'
+
+=================
+
+[2025-02-01 10:46:33 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Form 1 for species ID 'BANETTE' is defined twice.
+File PBS/pokemon_forms_sacred.txt, section BANETTE,1, key CallRateSOS
+
+
+
+
+Backtrace:
+002_Compiler_CompilePBS.rb:456:in `validate_compiled_pokemon_form'
+002_Compiler_CompilePBS.rb:433:in `block (3 levels) in compile_pokemon_forms'
+001_Compiler.rb:143:in `block in pbEachFileSection'
+001_Compiler.rb:108:in `block in pbEachFileSectionEx'
+001_Compiler.rb:100:in `each_line'
+001_Compiler.rb:100:in `pbEachFileSectionEx'
+001_Compiler.rb:142:in `pbEachFileSection'
+002_Compiler_CompilePBS.rb:400:in `block (2 levels) in compile_pokemon_forms'
+002_Compiler_CompilePBS.rb:394:in `open'
+002_Compiler_CompilePBS.rb:394:in `block in compile_pokemon_forms'
+
+=================
+
+[2025-02-01 10:47:27 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Undefined value FROSABY in GameData::Species.
+File PBS/pokemon_forms_sacred.txt, section FROSABY,1, key SectionName
+
+
+
+
+Backtrace:
+001_Compiler.rb:454:in `checkEnumField'
+[v21.1 Hotfixes] Compiler bug fixes.rb:53:in `cast_csv_value'
+001_Compiler.rb:724:in `block (2 levels) in get_csv_record'
+001_Compiler.rb:710:in `each'
+001_Compiler.rb:710:in `block in get_csv_record'
+001_Compiler.rb:708:in `loop'
+001_Compiler.rb:708:in `get_csv_record'
+002_Compiler_CompilePBS.rb:412:in `block (4 levels) in compile_pokemon_forms'
+002_Compiler_CompilePBS.rb:409:in `each_key'
+002_Compiler_CompilePBS.rb:409:in `block (3 levels) in compile_pokemon_forms'
+
+=================
+
+[2025-02-01 10:48:10 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Undefined value FROSABY in GameData::Species.
+File PBS/pokemon_metrics_sacred.txt, section FROSABY, key SectionName
+
+
+
+
+Backtrace:
+001_Compiler.rb:454:in `checkEnumField'
+[v21.1 Hotfixes] Compiler bug fixes.rb:53:in `cast_csv_value'
+001_Compiler.rb:724:in `block (2 levels) in get_csv_record'
+001_Compiler.rb:710:in `each'
+001_Compiler.rb:710:in `block in get_csv_record'
+001_Compiler.rb:708:in `loop'
+001_Compiler.rb:708:in `get_csv_record'
+002_Compiler_CompilePBS.rb:34:in `block (4 levels) in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:31:in `each_key'
+002_Compiler_CompilePBS.rb:31:in `block (3 levels) in compile_PBS_file_generic'
+
+=================
+
+[2025-02-01 10:48:38 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'
+
+=================
+
+[2025-02-01 10:48:44 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Bad line syntax (expected syntax like XXX=YYY).
+File PBS/trainer_types_neon.txt, section FIGHTINGPIXEL_HARD4
+273,FIGHTINGPIXEL_EXTREME,Fighting Pixel,0,ARS_Fighting Pixel_Battle Tower,,,Nonbinary,120,
+
+
+
+Backtrace:
+001_Compiler.rb:119:in `block in pbEachFileSectionEx'
+001_Compiler.rb:100:in `each_line'
+001_Compiler.rb:100:in `pbEachFileSectionEx'
+001_Compiler.rb:142:in `pbEachFileSection'
+002_Compiler_CompilePBS.rb:22:in `block (2 levels) in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:16:in `open'
+002_Compiler_CompilePBS.rb:16:in `block in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:11:in `each'
+002_Compiler_CompilePBS.rb:11:in `compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:771:in `compile_trainer_types'
+
+=================
+
+[2025-02-01 10:56:11 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Bad line syntax (expected syntax like XXX=YYY).
+File PBS/trainer_types_special.txt, section RIVAL_Mona
+176,RIVAL_Natsuki,Rival,50,ARS_Battle_Natsuki,,,Female,60,
+
+
+
+Backtrace:
+001_Compiler.rb:119:in `block in pbEachFileSectionEx'
+001_Compiler.rb:100:in `each_line'
+001_Compiler.rb:100:in `pbEachFileSectionEx'
+001_Compiler.rb:142:in `pbEachFileSection'
+002_Compiler_CompilePBS.rb:22:in `block (2 levels) in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:16:in `open'
+002_Compiler_CompilePBS.rb:16:in `block in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:11:in `each'
+002_Compiler_CompilePBS.rb:11:in `compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:771:in `compile_trainer_types'
+
+=================
+
+[2025-02-01 10:57:58 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'
+
+=================
+
+[2025-02-01 10:58:04 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Undefined value STREETTHUG in GameData::TrainerType.
+File PBS/trainers_ch1.txt, section STREETTHUG,Carlito
+[STREETTHUG,Carlito]
+
+
+
+Backtrace:
+001_Compiler.rb:454:in `checkEnumField'
+[v21.1 Hotfixes] Compiler bug fixes.rb:53:in `cast_csv_value'
+001_Compiler.rb:724:in `block (2 levels) in get_csv_record'
+001_Compiler.rb:710:in `each'
+001_Compiler.rb:710:in `block in get_csv_record'
+001_Compiler.rb:708:in `loop'
+001_Compiler.rb:708:in `get_csv_record'
+002_Compiler_CompilePBS.rb:823:in `block (2 levels) in compile_trainers'
+001_Compiler.rb:244:in `block (2 levels) in pbCompilerEachPreppedLine'
+001_Compiler.rb:236:in `each_line'
+
+=================
+
+[2025-02-01 10:59:46 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'
+
+=================
+
+[2025-02-01 10:59:52 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Undefined value WORKER in GameData::TrainerType.
+File PBS/trainers_ch2.txt, section WORKER,Samuel
+[WORKER,Samuel]
+
+
+
+Backtrace:
+001_Compiler.rb:454:in `checkEnumField'
+[v21.1 Hotfixes] Compiler bug fixes.rb:53:in `cast_csv_value'
+001_Compiler.rb:724:in `block (2 levels) in get_csv_record'
+001_Compiler.rb:710:in `each'
+001_Compiler.rb:710:in `block in get_csv_record'
+001_Compiler.rb:708:in `loop'
+001_Compiler.rb:708:in `get_csv_record'
+002_Compiler_CompilePBS.rb:823:in `block (2 levels) in compile_trainers'
+001_Compiler.rb:244:in `block (2 levels) in pbCompilerEachPreppedLine'
+001_Compiler.rb:236:in `each_line'
+
+=================
+
+[2025-02-01 11:00:29 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Undefined value CRUSHGIRL in GameData::TrainerType.
+File PBS/battle_tower_trainers.txt, section 106, key Type
+CRUSHGIRL
+
+
+
+Backtrace:
+001_Compiler.rb:454:in `checkEnumField'
+[v21.1 Hotfixes] Compiler bug fixes.rb:53:in `cast_csv_value'
+001_Compiler.rb:724:in `block (2 levels) in get_csv_record'
+001_Compiler.rb:710:in `each'
+001_Compiler.rb:710:in `block in get_csv_record'
+001_Compiler.rb:708:in `loop'
+001_Compiler.rb:708:in `get_csv_record'
+002_Compiler_CompilePBS.rb:1047:in `block (3 levels) in compile_battle_tower_trainers'
+002_Compiler_CompilePBS.rb:1043:in `each_key'
+002_Compiler_CompilePBS.rb:1043:in `block (2 levels) in compile_battle_tower_trainers'
+
+=================
+
+[2025-02-01 11:01:24 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'
+
+=================
+
+[2025-02-01 11:01:30 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Undefined value SCIENTIST in GameData::TrainerType.
+File PBS/battle_tower_trainers.txt, section 174, key Type
+SCIENTIST
+
+
+
+Backtrace:
+001_Compiler.rb:454:in `checkEnumField'
+[v21.1 Hotfixes] Compiler bug fixes.rb:53:in `cast_csv_value'
+001_Compiler.rb:724:in `block (2 levels) in get_csv_record'
+001_Compiler.rb:710:in `each'
+001_Compiler.rb:710:in `block in get_csv_record'
+001_Compiler.rb:708:in `loop'
+001_Compiler.rb:708:in `get_csv_record'
+002_Compiler_CompilePBS.rb:1047:in `block (3 levels) in compile_battle_tower_trainers'
+002_Compiler_CompilePBS.rb:1043:in `each_key'
+002_Compiler_CompilePBS.rb:1043:in `block (2 levels) in compile_battle_tower_trainers'
+
+=================
+
+[2025-02-01 11:01:46 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'
+
+=================
+
+[2025-02-01 11:01:52 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Undefined value SUPERNERD in GameData::TrainerType.
+File PBS/battle_tower_trainers.txt, section 186, key Type
+SUPERNERD
+
+
+
+Backtrace:
+001_Compiler.rb:454:in `checkEnumField'
+[v21.1 Hotfixes] Compiler bug fixes.rb:53:in `cast_csv_value'
+001_Compiler.rb:724:in `block (2 levels) in get_csv_record'
+001_Compiler.rb:710:in `each'
+001_Compiler.rb:710:in `block in get_csv_record'
+001_Compiler.rb:708:in `loop'
+001_Compiler.rb:708:in `get_csv_record'
+002_Compiler_CompilePBS.rb:1047:in `block (3 levels) in compile_battle_tower_trainers'
+002_Compiler_CompilePBS.rb:1043:in `each_key'
+002_Compiler_CompilePBS.rb:1043:in `block (2 levels) in compile_battle_tower_trainers'
+
+=================
+
+[2025-02-01 11:02:54 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'
+
+=================
+
+[2025-02-01 11:03:00 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Undefined value CHANELLER in GameData::TrainerType.
+File PBS/battleparadetrainers.txt, section 126, key Type
+CHANELLER
+
+
+
+Backtrace:
+001_Compiler.rb:454:in `checkEnumField'
+[v21.1 Hotfixes] Compiler bug fixes.rb:53:in `cast_csv_value'
+001_Compiler.rb:724:in `block (2 levels) in get_csv_record'
+001_Compiler.rb:710:in `each'
+001_Compiler.rb:710:in `block in get_csv_record'
+001_Compiler.rb:708:in `loop'
+001_Compiler.rb:708:in `get_csv_record'
+002_Compiler_CompilePBS.rb:1047:in `block (3 levels) in compile_battle_tower_trainers'
+002_Compiler_CompilePBS.rb:1043:in `each_key'
+002_Compiler_CompilePBS.rb:1043:in `block (2 levels) in compile_battle_tower_trainers'
+
+=================
+
+[2025-02-01 11:03:22 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'
+
+=================
+
+[2025-02-01 11:08:56 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `move_speed_real=' for #<Game_Player>
+
+Backtrace:
+[Terrain Tag Side Stairs] 000 Script.rb:82:in `update_move'
+008_Game_Player.rb:493:in `update_move'
+006_Game_Character.rb:907:in `update'
+008_Game_Player.rb:420:in `update'
+002_Scene_Map.rb:168:in `block in update'
+002_Scene_Map.rb:166:in `loop'
+002_Scene_Map.rb:166:in `update'
+[Following Pokemon EX] Refresh.rb:178:in `update'
+002_Scene_Map.rb:238:in `block in main'
+002_Scene_Map.rb:235:in `loop'

@@ -5,8 +5,8 @@ module AstralnekoTrivia
 	# Compile Data Functions
 	#=====================================================##
 	def self.compile(mustCompile = false)
-		return if !$DEBUG || !safeIsDirectory?("PBS")
-		if !safeExists?("PBS/default_trivia.txt")
+		return if !$DEBUG || !FileTest.directory?("PBS")
+		if !FileTest.exist?("PBS/default_trivia.txt")
 			self.generatePBS()
 		end
 		

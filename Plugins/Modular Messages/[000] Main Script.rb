@@ -88,9 +88,9 @@ module Modular_Messages
     y_start = (@@hash["at_top"]) ? -@@hash["msg_window"].height : Graphics.height
     y_end = (@@hash["at_top"]) ? 0 : Graphics.height - @@hash["msg_window"].height
     @@hash["msg_window"].y = lerp(y_start, y_end,
-         @@hash["appear_duration"],
-         @@hash["appear_timer_start"],
-         System.uptime)
+       @@hash["appear_duration"],
+       @@hash["appear_timer_start"],
+       System.uptime)
     @@hash["appear_timer_start"] = nil if @@hash["msg_window"].y == y_end
   end
   

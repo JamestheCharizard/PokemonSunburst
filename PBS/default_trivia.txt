@@ -1,0 +1,135 @@
+## To place a comment, begin the line with two pound signs, like this line has.
+## You can use this to write notes in between sections, which you'll see throughout this example.
+##=================================================#
+## Location Trivia
+##=================================================#
+ID: Iono_Workplace
+Question: \xn[Leto]\rWhich city does famous influencer Iono both stream and run a Pokémon Gym from?
+Answer: Levincia
+Answer: Medali
+Answer: Lumiose
+Answer: Veriachi
+##=================================================#
+ID: Clemont_Workplace
+Question: \xn[Leto]\rWhich city does famous inventor Clemont run a Pokémon Gym from?
+Answer: Lumiose
+Answer: Hammerlocke
+Answer: Levincia
+Answer: Veriachi
+##=================================================#
+ID: RageCandyBar_Created
+Question: \xn[Leto]\rThe famous Rage Candy Bar was invented by a confectioner living where?
+Answer: Mahogany Town
+Answer: Blackthorn City
+Answer: Pewter City
+Answer: Lavender Town
+##=================================================#
+## Pokémon Trivia
+##=================================================#
+ID: Oritaria_Dexnum100
+Question: \xn[Leto]\rIn Professor Oak's Oritarian Pokédex, what is the first Pokémon whose ID number requires 3 digits to represent?
+Answer: Voltorb
+Answer: Skitty
+Answer: Tinkatink
+Answer: Pidgey
+##=================================================#
+ID: Pikaclone_Dualtypes
+Question: \xn[Leto]\rIn terms of Oritarian Pokédex number, what is the first Pikachu look-alike with two types?
+Answer: Emolga
+Answer: Dedenne
+Answer: Pachirisu
+Answer: Naruchu
+##=================================================#
+ID: HottestPokemon
+Question: \xn[Leto]\rWhat is commonly cited as the hottest Pokémon, with internal flames in excess of 10,000 degrees Fahrenheit?
+Answer: Magcargo
+Answer: Houndoom
+Answer: Flareon
+Answer: Entei
+##=================================================#
+## Character Trivia
+##=================================================#
+ID: Unova_Champions
+Question: \xn[Leto]\rOf the following, which never was either elected Unova's Champion or defeated the incumbent Unovan Champion?
+Answer: Ghetsis
+Answer: N
+Answer: Alder
+Answer: Iris
+##=================================================#
+ID: Professor_Pokedex
+Question: \xn[Leto]\rWho is commonly credited as the creator of the modern Pokédex?
+Answer: Professor Oak
+Answer: Professor Laventon
+Answer: Professor Rowan
+Answer: Professor Bamb'o
+##=================================================#
+ID: Champion_RoseCup
+Question: \xn[Leto]\rWhat place did former Chairman Rose get in the Champion Cup?
+Answer: 2nd
+Answer: 1st
+Answer: 8th
+Answer: Did not compete
+## Answer not being 1st or DNC should be explained
+##=================================================#
+ID: Verela_UniqueGymMusic
+Question: \xn[Leto]\rThe Verelan League has a lot of musicians. Which ones composed their own battle themes?
+Answer: Neka and Rivola
+## Rayann's is a cover of Rivola's that Rivola primarily wrote.
+Answer: Neka and Rayann
+## Enrique's is the standard one being played on a church organ.
+Answer: Rayann and Enrique
+## Arthur's is a chiptune version of Neka's made by a fan.
+Answer: Rivola and Arthur
+##=================================================#
+ID: Verela_BattleParade
+Question: \xn[Leto]\rAlongside former Champion Panem, who runs the Battle Parade in São Samba City?
+Answer: Rayann
+Answer: Leto
+Answer: Circense
+Answer: Rusty
+##=================================================#
+## Other Trivia
+##=================================================#
+ID: Supereffective_Berry
+Question: \xn[Leto]\rSome Berries reduce damage from certain types of move, depending on the user's type. Which one is least likely to activate?
+Answer: Haban Berry
+Answer: Chilan Berry
+## If the user picks Chilan Berry, the host should explain that Chilan Berry doesn't activate based on super-effectiveness.
+Answer: Kebia Berry
+Answer: Wacan Berry
+Answer: Roseli Berry
+## There can be a number of answers other than 4, there is nothing wrong with that.
+##=================================================#
+## Lightning Rounds
+## Format: Two choices for several questions, the player must pick the correct one
+## In this case: Answers should be alphabetical, questions should be chosen randomly
+##=================================================#
+ID: LevinciaOrLumiose1
+Question: \xn[Leto]\rWhich city does famous influencer Iono both stream and run a Pokémon Gym from?
+Answer: Levincia
+Answer: Lumiose
+##=================================================#
+ID: LevinciaOrLumiose2
+Question: \xn[Leto]\rWhich city does famous inventor Clemont run a Pokémon Gym from?
+Answer: Lumiose
+Answer: Levincia
+##=================================================#
+ID: LevinciaOrLumiose3
+Question: \xn[Leto]\rWhich city is known for a tower that shines bright like a prism?
+Answer: Lumiose
+Answer: Levincia
+##=================================================#
+ID: LevinciaOrLumiose4
+Question: \xn[Leto]\rWhich city functions as a port town?
+Answer: Levincia
+Answer: Lumiose
+##=================================================#
+ID: LevinciaOrLumiose5
+Question: \xn[Leto]\rWhich city's power grid is provided by a Pokémon?
+Answer: Levincia
+Answer: Lumiose
+##=================================================#
+ID: LevinciaOrLumiose6
+Question: \xn[Leto]\rWhich city is known for its high-end clothing stores?
+Answer: Lumiose
+Answer: Levincia

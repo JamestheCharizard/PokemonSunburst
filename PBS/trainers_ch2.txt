@@ -96,7 +96,7 @@ LoseText = "Impossible! My IQ is 165!"
 Pokemon = GLIMMET,10
 Pokemon = ASTELL,10
 #-------------------------------
-[WORKER,Samuel]
+[WORKER_M,Samuel]
 LoseText = "Ack! It's like you had a Red Card!"
 Pokemon = CRYSTODE,11
     Form = 20

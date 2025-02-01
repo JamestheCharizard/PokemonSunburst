@@ -84,7 +84,7 @@ end
 # Target's Special Defense is used instead of its Defense for this move's
 # calculations.
 #-------------------------------------------------------------------------------
-class Battle::Move::UseTargetSpDefInsteadOfTargetDefense < PokeBattle_Move
+class Battle::Move::UseTargetSpDefInsteadOfTargetDefense < Battle::Move
   def pbGetDefenseStats(user,target)
     return target.spdef, target.stages[:SPECIAL_DEFENSE] + Battle::Battler::STAT_STAGE_MAXIMUM
   end
@@ -95,7 +95,7 @@ end
 #===============================================================================
 # Heals the first time. Deals massive damage if used again directly after.
 #-------------------------------------------------------------------------------
-class Battle::Move::HealTargetApplyOverdoseCondition < PokeBattle_Move
+class Battle::Move::HealTargetApplyOverdoseCondition < Battle::Move
   def pbEffectAfterAllHits(user,target)
     if target.effects[PBEffects::Overdose]==0
       target.pbRecoverHP(((target.totalHP+1)/2.0).floor,true)
@@ -333,7 +333,7 @@ end
 # Hits three times. Power doubles in rain. (Storming Pulses)
 # An accuracy check is performed on each hit.
 #===============================================================================
-class Battle::Move::HitThreeTimesRainBoost < PokeBattle_Move
+class Battle::Move::HitThreeTimesRainBoost < Battle::Move
   def multiHitMove?;           return true; end
   def pbNumHits(user, targets); return 3;    end
     

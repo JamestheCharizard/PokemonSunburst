@@ -82,16 +82,16 @@ HiddenAbility = HUSTLE
 Generation = 10
 Flags = InheritFormWithEverStone
 #-------------------------------
-[TEDDIURSA,1]
+[TEDDIURSA,2]
 #-------------------------------
-[URSARING,1]
+[URSARING,2]
 FormName = Verelan
 Types = NORMAL,CELESTIAL
 Generation = 10
 Flags = InheritFormWithEverStone
 Evolutions = URSALUNA,Item,MOONSTONE
 #-------------------------------
-[URSALUNA,1]
+[URSALUNA,2]
 FormName = Verelan
 Types = NORMAL,CELESTIAL
 Generation = 10
@@ -160,13 +160,13 @@ Types = GHOST,GROUND
 Generation = 10
 Flags = InheritFormWithEverStone
 #-------------------------------
-[SHUPPET,1]
+[SHUPPET,2]
 FormName = Verelan
 Types = STEEL,GHOST
 Generation = 10
 Flags = InheritFormWithEverStone
 #-------------------------------
-[BANETTE,1]
+[BANETTE,2]
 FormName = Verelan
 Types = STEEL,GHOST
 Generation = 10
@@ -737,7 +737,7 @@ Types = ICE,PSYCHIC
 Color = Cyan
 Pokedex = Filler text
 #-------------------------------
-[FROSABY,1]
+[YUSAGIKI,1]
 FormName = Summer Form
 Types = ICE,WATER
 Color = Blue

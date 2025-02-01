@@ -329,8 +329,7 @@ Accuracy = 95
 TotalPP = 10
 Target = NearOther
 FunctionCode = HitTwiceBurnTarget
-Contact,
-Flags = CanProtect,CanMirrorMove,ThawsUser,Slashing 
+Flags = Contact,CanProtect,CanMirrorMove,ThawsUser,Slashing 
 EffectChance = 20
 Description = The user slashes at the opponent twice with claws hot enough to cause a burn.
 #-------------------------------

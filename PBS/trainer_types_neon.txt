@@ -8,106 +8,128 @@ Name = Arcade Star
 Gender = Female
 BaseMoney = 0
 SkillLevel = 120
+BattleBGM = ARS_Battle_Frontier Brain
 #-------------------------------
 [FRONTIERBRAIN_Kamil]
 Name = Stadium Announcer
 Gender = Male
 BaseMoney = 0
 SkillLevel = 120
+BattleBGM = ARS_Battle_Frontier Brain
 #-------------------------------
 [FRONTIERBRAIN_Trevor]
 Name = Factory Head
 Gender = Male
 BaseMoney = 0
 SkillLevel = 120
+BattleBGM = ARS_Battle_Frontier Brain
 #-------------------------------
 [FRONTIERBRAIN_Arashiko]
 Name = Valley Ranger
 Gender = Female
 BaseMoney = 0
 SkillLevel = 120
+BattleBGM = ARS_Battle_Frontier Brain
 #-------------------------------
 [FRONTIERBRAIN_Monika]
 Name = Dungeon Master
 Gender = Nonbinary
 BaseMoney = 0
 SkillLevel = 120
+BattleBGM = ARS_Battle_Frontier Brain
 #-------------------------------
 [FIGHTINGPIXEL_EASY1]
 Name = Fighting Pixel
 Gender = Nonbinary
 BaseMoney = 0
 SkillLevel = 16
+BattleBGM = ARS_Fighting Pixel_Battle Tower
 #-------------------------------
 [FIGHTINGPIXEL_EASY2]
 Name = Fighting Pixel
 Gender = Nonbinary
 BaseMoney = 0
 SkillLevel = 16
+BattleBGM = ARS_Fighting Pixel_Battle Tower
 #-------------------------------
 [FIGHTINGPIXEL_EASY3]
 Name = Fighting Pixel
 Gender = Nonbinary
 BaseMoney = 0
 SkillLevel = 16
+BattleBGM = ARS_Fighting Pixel_Battle Tower
 #-------------------------------
 [FIGHTINGPIXEL_EASY4]
 Name = Fighting Pixel
 Gender = Nonbinary
 BaseMoney = 0
 SkillLevel = 16
+BattleBGM = ARS_Fighting Pixel_Battle Tower
 #-------------------------------
 [FIGHTINGPIXEL_MEDIUM1]
 Name = Fighting Pixel
 Gender = Nonbinary
 BaseMoney = 0
 SkillLevel = 48
+BattleBGM = ARS_Fighting Pixel_Battle Tower
 #-------------------------------
 [FIGHTINGPIXEL_MEDIUM2]
 Name = Fighting Pixel
 Gender = Nonbinary
 BaseMoney = 0
 SkillLevel = 48
+BattleBGM = ARS_Fighting Pixel_Battle Tower
 #-------------------------------
 [FIGHTINGPIXEL_MEDIUM3]
 Name = Fighting Pixel
 Gender = Nonbinary
 BaseMoney = 0
 SkillLevel = 48
+BattleBGM = ARS_Fighting Pixel_Battle Tower
 #-------------------------------
 [FIGHTINGPIXEL_MEDIUM4]
 Name = Fighting Pixel
 Gender = Nonbinary
 BaseMoney = 0
 SkillLevel = 48
+BattleBGM = ARS_Fighting Pixel_Battle Tower
 #-------------------------------
 [FIGHTINGPIXEL_HARD1]
 Name = Fighting Pixel
 Gender = Nonbinary
 BaseMoney = 0
 SkillLevel = 72
+BattleBGM = ARS_Fighting Pixel_Battle Tower
 #-------------------------------
 [FIGHTINGPIXEL_HARD2]
 Name = Fighting Pixel
 Gender = Nonbinary
 BaseMoney = 0
 SkillLevel = 72
+BattleBGM = ARS_Fighting Pixel_Battle Tower
 #-------------------------------
 [FIGHTINGPIXEL_HARD3]
 Name = Fighting Pixel
 Gender = Nonbinary
 BaseMoney = 0
 SkillLevel = 72
+BattleBGM = ARS_Fighting Pixel_Battle Tower
 #-------------------------------
 [FIGHTINGPIXEL_HARD4]
 Name = Fighting Pixel
 Gender = Nonbinary
 BaseMoney = 0
 SkillLevel = 72
-273,FIGHTINGPIXEL_EXTREME,Fighting Pixel,0,ARS_Fighting Pixel_Battle Tower,,,Nonbinary,120,
+BattleBGM = ARS_Fighting Pixel_Battle Tower
+#-------------------------------
+[FIGHTINGPIXEL_EXTREME]
+Name = Fighting Pixel
+Gender = Nonbinary
+BaseMoney = 0
+SkillLevel = 120
+BattleBGM = ARS_Fighting Pixel_Battle Tower
 #-------------------------------
 # Neon Skyline
-#-------------------------------
 #-------------------------------
 [NEONSKYLINE_Red]
 Name = Neon Champion

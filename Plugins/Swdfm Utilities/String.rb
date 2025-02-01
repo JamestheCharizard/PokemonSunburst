@@ -146,10 +146,11 @@ class String
   end
   
   # eg. "Daisy's House" => "DAISYS_HOUSE"
-  def make_into_constant(used_consts = [])
+  def make_into_constant(used_consts = [], do_upcase = true)
     str = self.before_first("(")
     str = "x_#{str}" if str.starts_with_number?
-    str = str.remove_puncts.sandwich.gsub(" ", "_").upcase
+    str = str.remove_puncts.sandwich.gsub(" ", "_")
+	str = str.upcase if do_upcase
     str = "BLANK" if str == ""
     n_str = str
     count = 1
@@ -224,18 +225,18 @@ class String
   def to_alphabet_int
     ret = 0
     strs = [
-	  "8NFH", "UIVJ", "2AQZ",
-	  "0TKM", "PRXE", "O79G",
-	  "B5CD", "S41L", "63WY"
-	]
-	for s in 0...self.length
-	  c = self[s, 1]
-	  strs.each_with_index do |ss, i|
-		next unless ss.include?(c)
-		ret += i * (strs.length ** s)
-		break
-	  end
-	end
-	return ret
+      "8NFH", "UIVJ", "2AQZ",
+      "0TKM", "PRXE", "O79G",
+      "B5CD", "S41L", "63WY"
+    ]
+    for s in 0...self.length
+      c = self[s, 1]
+      strs.each_with_index do |ss, i|
+        next unless ss.include?(c)
+        ret += i * (strs.length ** s)
+        break
+      end
+    end
+    return ret
   end
 end

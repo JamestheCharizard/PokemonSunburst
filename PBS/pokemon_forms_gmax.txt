@@ -189,7 +189,7 @@ Height = 32.0
 Pokedex = Gigantamax energy has caused more hair to sprout all over its body. With the added strength, it can jump over the world's tallest building.
 GmaxMove = GMAXSNOOZE
 #-------------------------------
-[ALCREMIE,63]
+[ALCREMIE,70]
 FormName = Gigantamax
 Height = 30.0
 Pokedex = It launches swarms of missiles, each made of cream and loaded with 100,000 kilocalories. Get hit by one of these, and your head will swim.

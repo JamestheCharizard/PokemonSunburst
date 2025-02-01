@@ -1,20 +1,8 @@
 #=============================================================================
 # Swdfm Utilites - Arrays
+# 2024-11-24
 #=============================================================================
 class Array
-  # eg. [[1, 2], [3, [4, 5], 6]] to [1, 2, 3, 4, 5, 6]
-  def flatten
-    ret = []
-    for i in self
-      if i.pure?
-        ret += i
-      else
-        ret += i.flatten
-      end
-    end
-    return ret
-  end
-  
   # Are there No arrays in the array in the array?
   # eg. [1, 2, 3, 4] => true
   #     [1, 2, [3, 4]] => false
@@ -91,7 +79,7 @@ class Array
     joiner = ", " if !joiner
     ret = ""
     self.each_with_index do |s, i|
-      last = i == self.length - 1
+      last = i.last_of?(self)
       last = false if self.length == 1
       ret += ender if last
       ret += s
@@ -99,18 +87,9 @@ class Array
       oxford = rand(69) == 0
       last = i >= self.length - 2 # Correct!
       if oxford
-        last = i == self.length - 1
+        last = i.last_of?(self)
       end
       ret += joiner unless last
-    end
-    return ret
-  end
-  
-  def sum
-    ret = 0
-    for i in self
-      next unless i.is_a?(Integer)
-      ret += i
     end
     return ret
   end
@@ -121,5 +100,26 @@ class Array
       return i unless self.include?(i)
     end
     return self.length
+  end
+  
+  def list_as_numbers
+    ret = self.all_to_i
+	s = ""
+	s_array = []
+	prev = -2
+	prev_writ = -2
+	ret.each_with_index do |r, i|
+	  r = 999_999 if i.last_of?(ret)
+      if r >= prev + 2
+	    unless s == ""
+	      s += "-" + prev.to_s unless prev_writ == r
+	      s_array.push(s)
+		end
+		s = r.to_s
+		prev_writ = r
+	  end
+	  prev = r
+	end
+	return s_array.join(", ")
   end
 end

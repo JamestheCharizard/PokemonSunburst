@@ -57,4 +57,9 @@ class Integer
   def remove_rem(div)
     return quot(div) * div
   end
+  
+  def last_of?(array)
+    return self == array.length - 1
+  end
+  alias is_last? last_of?
 end

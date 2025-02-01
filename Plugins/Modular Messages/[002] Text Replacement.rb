@@ -85,9 +85,9 @@ module Modular_Messages
     @@hash["text"].gsub!(/\\[Ww]\[([^\]]*)\]/) do
       w = $1.to_s
       if w == ""
-        hash["msg_window"].windowskin = nil
+        @@hash["msg_window"].windowskin = nil
       else
-        hash["msg_window"].setSkin("Graphics/Windowskins/#{w}", false)
+        @@hash["msg_window"].setSkin("Graphics/Windowskins/#{w}", false)
       end
       next ""
     end
@@ -97,7 +97,7 @@ module Modular_Messages
 # \c[0]... etc.
   def replace_colours_id
     @@hash["text"].gsub!(/\\c\[([0-9]+)\]/i) do
-      next getSkinColor(hash["msg_window"].windowskin, $1.to_i, @@hash["dark_skin"])
+      next getSkinColor(@@hash["msg_window"].windowskin, $1.to_i, @@hash["dark_skin"])
     end
   end
   

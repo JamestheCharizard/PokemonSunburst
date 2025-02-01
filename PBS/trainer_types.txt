@@ -417,6 +417,16 @@ Name = Stoner
 Gender = Female
 BaseMoney = 48
 #-------------------------------
+[STREETTHUG]
+Name = Street Thug
+Gender = Male
+BaseMoney = 48
+#-------------------------------
+[DELINQUENT]
+Name = Delinquent
+Gender = Female
+BaseMoney = 48
+#-------------------------------
 [WORKER_M]
 Name = Worker
 Gender = Male
