@@ -75,68 +75,65 @@ class VoltseonsPauseMenu < Component
 
   # direction is either 1 (right) or -1 (left)
   def shift_cursor(direction)
-		return false if @entries.length < 2
-		@current_selection += direction
-		# keep selection within array bounds
-		@current_selection = @entries.length - 1 if @current_selection < 0
-		@current_selection = 0 if @current_selection >= @entries.length
-		# Shift array elements
-		if direction < 0
-			el = @entries.length - 1
-			temp = @entry_indices[el].clone
-			@entry_indices[el] = nil
-			e_temp = @entry_indices.clone
-			(el + 1).times { |i| @entry_indices[i + 1] = e_temp[i] }
-			@entry_indices[0] = temp
-			@entry_indices.compact!
-		else
-			ret = @entry_indices.shift
-			@entry_indices.push(ret)
-		end
-		pbSEPlay(MENU_CURSOR_SOUND)
-
-		# Reset the duration variable to a larger value to make it slower
-    duration = 100
-		case $PokemonSystem.screensize
-			when 4  # fullscreen
-			duration = 15
-		end
-
-		# Rest of the code remains unchanged
-		middle   = @disp_indices.length / 2
-		if @disp_indices.length < 3
-			recalc_icon_positions
-			duration.times do
-				Graphics.update
-				@menu.components.each { |component| component.update }
-				pbUpdateSpriteHash(@sprites)
-			end
-			return
-		end
-		duration.times do
-			Graphics.update
-			pbUpdateSpriteHash(@sprites)
-			@menu.components.each { |component| component.update }
-			pbUpdateSceneMap
-			@sprites.each do |key, sprite|
-				next if !key[/icon/]
-				total     = (direction > 0) ? @icon_offset_left[key] : @icon_offset_right[key]
-				amt2      = total / (duration * 1.0)
-				amt       = ((direction > 0) ? amt2.floor : amt2.ceil).to_i
-				amt       -= (direction * 1) if @disp_indices.length < 5
-				sprite.x  += amt
-				final_pos = (@icon_base_x[key] + total)
-				base_x    = direction > 0 ? (sprite.x <= final_pos) : (sprite.x >= final_pos)
-				sprite.x  = (@icon_base_x[key] + total) if base_x
-			end
-			@sprites["icon_#{middle}"].zoom_x -= (ACTIVE_SCALE - 1.0) / duration
-			@sprites["icon_#{middle}"].zoom_y -= (ACTIVE_SCALE - 1.0) / duration
-			mdr = middle + direction
-			mdr = mdr.clamp(0, 6)
-			@sprites["icon_#{mdr}"].zoom_x += (ACTIVE_SCALE - 1.0) / duration
-			@sprites["icon_#{mdr}"].zoom_y += (ACTIVE_SCALE - 1.0) / duration
-		end
-	end
+    return false if @entries.length < 2
+    @current_selection += direction
+    # keep selection within array bounds
+    @current_selection = @entries.length - 1 if @current_selection < 0
+    @current_selection = 0 if @current_selection >= @entries.length
+    # Shift array elements
+    if direction < 0
+      el = @entries.length - 1
+      temp = @entry_indices[el].clone
+      @entry_indices[el] = nil
+      e_temp = @entry_indices.clone
+      (el + 1).times { |i| @entry_indices[i + 1] = e_temp[i] }
+      @entry_indices[0] = temp
+      @entry_indices.compact!
+    else
+      ret = @entry_indices.shift
+      @entry_indices.push(ret)
+    end
+    pbSEPlay(MENU_CURSOR_SOUND)
+    # Animation stuff
+    duration = (8 * (Graphics.average_frame_rate / 60.0)).floor
+    middle   = @disp_indices.length / 2
+    if @disp_indices.length < 3
+      recalc_icon_positions
+      duration.times do
+        Graphics.update
+        @menu.components.each { |component| component.update }
+        pbUpdateSpriteHash(@sprites)
+      end
+      return
+    end
+    duration.times do
+      Graphics.update
+      pbUpdateSpriteHash(@sprites)
+      @menu.components.each { |component| component.update }
+      pbUpdateSceneMap
+      @sprites.each do |key, sprite|
+        next if !key[/icon/]
+        total     = (direction > 0) ? @icon_offset_left[key] : @icon_offset_right[key]
+        amt2      = total / (duration * 1.0)
+        amt       = ((direction > 0) ? amt2.floor : amt2.ceil).to_i
+        amt       -= (direction * 1) if @disp_indices.length < 5
+        sprite.x  += amt
+        final_pos = (@icon_base_x[key] + total)
+        base_x    = direction > 0 ? (sprite.x <= final_pos) : (sprite.x >= final_pos)
+        sprite.x  = (@icon_base_x[key] + total) if base_x
+      end
+      @sprites["icon_#{middle}"].zoom_x -= (ACTIVE_SCALE - 1.0) / duration
+      @sprites["icon_#{middle}"].zoom_y -= (ACTIVE_SCALE - 1.0) / duration
+      mdr = middle + direction
+      mdr = mdr.clamp(0, 6)
+      @sprites["icon_#{mdr}"].zoom_x += (ACTIVE_SCALE - 1.0) / duration
+      @sprites["icon_#{mdr}"].zoom_y += (ACTIVE_SCALE - 1.0) / duration
+    end
+    recalc_icon_positions
+    refresh_menu
+    @sprites["leftarrow"].visible  = @entries.length != 1
+    @sprites["rightarrow"].visible = @disp_indices.length > 1
+  end
 
   # Calculate indexes of sprites to be displayed
   def calc_display_index

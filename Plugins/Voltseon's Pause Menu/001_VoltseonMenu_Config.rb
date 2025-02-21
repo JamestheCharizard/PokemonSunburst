@@ -10,7 +10,7 @@
 # Made for people who dont want
 # to have ugly pause menus
 # so here's a really cool one!
-# Version: 1.8
+# Version: 2.2
 #
 #
 #-------------------------------------------------------------------------------
