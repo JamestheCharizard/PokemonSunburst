@@ -45,8 +45,8 @@ class PokemonRegionMap_Scene
 
   def showPreviewBox
     return if @lineCount == 0 || @previewBox.isShown || previewAnimation
-    if WEATHERPLUGIN
-      if BOX_TOP_LEFT
+    if WeatherPlugin
+      if BoxTopLeft
         @sprites["weatherPreview"].y = 54
         @sprites["weatherIcon"].y = 68
       else
@@ -66,7 +66,7 @@ class PokemonRegionMap_Scene
     oldPreviewY = oldNameY = 0
     if @mode == 0
       @sprites["previewBox"].y = Graphics.height - 32
-      if BOX_BOTTOM_LEFT || BOX_BOTTOM_RIGHT
+      if BoxBottomLeft || BoxBottomRight
         oldPreviewY = @sprites["buttonPreview"].y
         oldNameY = @sprites["buttonName"].y
       end
@@ -78,27 +78,27 @@ class PokemonRegionMap_Scene
           :icon => Graphics.height - 32,
           :preview => oldPreviewY,
           :name => oldNameY,
-          :arrow => (BOX_BOTTOM_LEFT && (@sprites["buttonPreview"].x + @sprites["buttonPreview"].width) > (Graphics.width / 2)) || (BOX_BOTTOM_RIGHT && @sprites["buttonPreview"].x < (Graphics.width / 2)) ? (Graphics.height - (44 + @sprites["buttonPreview"].height)) : (Graphics.height - 60),
-          :weather1 => WEATHERPLUGIN ? @sprites["weatherPreview"].y - @sprites["weatherPreview"].height : 0,
-          :weather2 => WEATHERPLUGIN ? @sprites["weatherIcon"].y - @sprites["weatherPreview"].height : 0,
+          :arrow => (BoxBottomLeft && (@sprites["buttonPreview"].x + @sprites["buttonPreview"].width) > (Graphics.width / 2)) || (BoxBottomRight && @sprites["buttonPreview"].x < (Graphics.width / 2)) ? (Graphics.height - (44 + @sprites["buttonPreview"].height)) : (Graphics.height - 60),
+          :weather1 => WeatherPlugin ? @sprites["weatherPreview"].y - @sprites["weatherPreview"].height : 0,
+          :weather2 => WeatherPlugin ? @sprites["weatherIcon"].y - @sprites["weatherPreview"].height : 0,
           :opacity => 0
         },
         :end => {
           :box => (Graphics.height - 32) - height,
-          :text => Graphics.height - (@totalHeight + UI_BORDER_HEIGHT),
-          :dash => Graphics.height - (@totalHeight + UI_BORDER_HEIGHT),
-          :icon => Graphics.height - (@totalHeight + UI_BORDER_HEIGHT),
+          :text => Graphics.height - (@totalHeight + UIBorderHeight),
+          :dash => Graphics.height - (@totalHeight + UIBorderHeight),
+          :icon => Graphics.height - (@totalHeight + UIBorderHeight),
           :preview => previewY,
           :name => nameY,
           :arrow => arrowY,
-          :weather1 => WEATHERPLUGIN ? @sprites["weatherPreview"].y : 0,
-          :weather2 => WEATHERPLUGIN ? @sprites["weatherIcon"].y : 0,
+          :weather1 => WeatherPlugin ? @sprites["weatherPreview"].y : 0,
+          :weather2 => WeatherPlugin ? @sprites["weatherIcon"].y : 0,
           :opacity => 255
         }
       }
     elsif @mode == 2 || @mode == 3
       @sprites["previewBox"].y = 32 - @sprites["previewBox"].height
-      if BOX_TOP_RIGHT
+      if BoxTopRight
         oldPreviewY = @sprites["buttonPreview"].y
         oldNameY = @sprites["buttonName"].y
       end
@@ -108,7 +108,7 @@ class PokemonRegionMap_Scene
           :text => 32 - @sprites["previewBox"].height,
           :preview => oldPreviewY,
           :name => oldNameY,
-          :arrow => (BOX_BOTTOM_LEFT && (@sprites["buttonPreview"].x + @sprites["buttonPreview"].width) > (Graphics.width / 2)) || (BOX_BOTTOM_RIGHT && @sprites["buttonPreview"].x < (Graphics.width / 2)) ? (Graphics.height - (44 + @sprites["buttonPreview"].height)) : (Graphics.height - 60),
+          :arrow => (BoxTopLeft && (@sprites["buttonPreview"].x + @sprites["buttonPreview"].width) > (Graphics.width / 2)) || (BoxTopRight && @sprites["buttonPreview"].x < (Graphics.width / 2)) ? @sprites["buttonPreview"].height : 16,
           :opacity => 0
         },
         :end => {
@@ -140,26 +140,26 @@ class PokemonRegionMap_Scene
       @previewValues = {
         :begin => {
           :box => (Graphics.height - 32) - oldHeight,
-          :text => Graphics.height - (@oldTotalHeight + UI_BORDER_HEIGHT),
-          :dash => Graphics.height - (@oldTotalHeight + UI_BORDER_HEIGHT),
-          :icon => Graphics.height - (@oldTotalHeight + UI_BORDER_HEIGHT),
+          :text => Graphics.height - (@oldTotalHeight + UIBorderHeight),
+          :dash => Graphics.height - (@oldTotalHeight + UIBorderHeight),
+          :icon => Graphics.height - (@oldTotalHeight + UIBorderHeight),
           :preview => oldPreviewY,
           :name => oldNameY,
           :arrow => oldArrowY,
-          :weather1 => WEATHERPLUGIN ? @sprites["weatherPreview"].y : 0,
-          :weather2 => WEATHERPLUGIN ? @sprites["weatherIcon"].y : 0,
+          :weather1 => WeatherPlugin ? @sprites["weatherPreview"].y : 0,
+          :weather2 => WeatherPlugin ? @sprites["weatherIcon"].y : 0,
           :opacity => 255
         },
         :end => {
           :box => (Graphics.height - 32) - newHeight,
-          :text => Graphics.height - (@totalHeight + UI_BORDER_HEIGHT),
-          :dash => Graphics.height - (@totalHeight + UI_BORDER_HEIGHT),
-          :icon => Graphics.height - (@totalHeight + UI_BORDER_HEIGHT),
+          :text => Graphics.height - (@totalHeight + UIBorderHeight),
+          :dash => Graphics.height - (@totalHeight + UIBorderHeight),
+          :icon => Graphics.height - (@totalHeight + UIBorderHeight),
           :preview => previewY,
           :name => nameY,
           :arrow => arrowY,
-          :weather1 => WEATHERPLUGIN ? @sprites["weatherPreview"].y : 0,
-          :weather2 => WEATHERPLUGIN ? @sprites["weatherIcon"].y : 0,
+          :weather1 => WeatherPlugin ? @sprites["weatherPreview"].y : 0,
+          :weather2 => WeatherPlugin ? @sprites["weatherIcon"].y : 0,
           :opacity => 0
         }
       }
@@ -194,7 +194,7 @@ class PokemonRegionMap_Scene
     oldPreviewY = oldNameY = 0
     textPos = getTextPosition
     if @mode == 0
-      if BOX_BOTTOM_LEFT || BOX_BOTTOM_RIGHT
+      if BoxBottomLeft || BoxBottomRight
         oldPreviewY = previewY
         previewY = textPos[1]
         oldNameY = nameY
@@ -203,14 +203,14 @@ class PokemonRegionMap_Scene
       @previewValues = {
         :begin => {
           :box => (Graphics.height - 32) - height,
-          :text => Graphics.height - (@totalHeight + UI_BORDER_HEIGHT),
-          :dash => Graphics.height - (@totalHeight + UI_BORDER_HEIGHT),
-          :icon => Graphics.height - (@totalHeight + UI_BORDER_HEIGHT),
+          :text => Graphics.height - (@totalHeight + UIBorderHeight),
+          :dash => Graphics.height - (@totalHeight + UIBorderHeight),
+          :icon => Graphics.height - (@totalHeight + UIBorderHeight),
           :preview => oldPreviewY,
           :name => oldNameY,
           :arrow => arrowY,
-          :weather1 => WEATHERPLUGIN ? @sprites["weatherPreview"].y : 0,
-          :weather2 => WEATHERPLUGIN ? @sprites["weatherIcon"].y : 0,
+          :weather1 => WeatherPlugin ? @sprites["weatherPreview"].y : 0,
+          :weather2 => WeatherPlugin ? @sprites["weatherIcon"].y : 0,
           :opacity => 255
         },
         :end => {
@@ -220,14 +220,14 @@ class PokemonRegionMap_Scene
           :icon => Graphics.height - 32,
           :preview => previewY,
           :name => nameY,
-          :arrow => (BOX_BOTTOM_LEFT && (@sprites["buttonPreview"].x + @sprites["buttonPreview"].width) > (Graphics.width / 2)) || (BOX_BOTTOM_RIGHT && @sprites["buttonPreview"].x < (Graphics.width / 2)) ? (Graphics.height - (44 + @sprites["buttonPreview"].height)) : (Graphics.height - 60),
-          :weather1 => WEATHERPLUGIN ? @sprites["weatherPreview"].y - @sprites["weatherPreview"].height : 0,
-          :weather2 => WEATHERPLUGIN ? @sprites["weatherIcon"].y - @sprites["weatherPreview"].height : 0,
+          :arrow => (BoxBottomLeft && (@sprites["buttonPreview"].x + @sprites["buttonPreview"].width) > (Graphics.width / 2)) || (BoxBottomRight && @sprites["buttonPreview"].x < (Graphics.width / 2)) ? (Graphics.height - (44 + @sprites["buttonPreview"].height)) : (Graphics.height - 60),
+          :weather1 => WeatherPlugin ? @sprites["weatherPreview"].y - @sprites["weatherPreview"].height : 0,
+          :weather2 => WeatherPlugin ? @sprites["weatherIcon"].y - @sprites["weatherPreview"].height : 0,
           :opacity => 255
         }
       }
     elsif @mode == 2 || @mode == 3
-      if BOX_TOP_RIGHT
+      if BoxTopRight
         oldPreviewY = previewY
         previewY = textPos[1]
         oldNameY = nameY
@@ -247,7 +247,7 @@ class PokemonRegionMap_Scene
           :text => 32 - @sprites["previewBox"].height,
           :preview => previewY,
           :name => nameY,
-          :arrow => (BOX_BOTTOM_LEFT && (@sprites["buttonPreview"].x + @sprites["buttonPreview"].width) > (Graphics.width / 2)) || (BOX_BOTTOM_RIGHT && @sprites["buttonPreview"].x < (Graphics.width / 2)) ? (Graphics.height - (44 + @sprites["buttonPreview"].height)) : (Graphics.height - 60),
+          :arrow => (BoxTopLeft && (@sprites["buttonPreview"].x + @sprites["buttonPreview"].width) > (Graphics.width / 2)) || (BoxTopRight && @sprites["buttonPreview"].x < (Graphics.width / 2)) ? @sprites["buttonPreview"].height : 16,
           :opacity => 255
         }
       }
@@ -268,13 +268,13 @@ class PokemonRegionMap_Scene
     previewY = nameY = arrowY = 0
     if @mode == 0
       arrowY = (Graphics.height - 60) - height if previewWidthDownArrowX
-      if BOX_BOTTOM_LEFT
+      if BoxBottomLeft
         previewY = (Graphics.height - (22 + @sprites["buttonPreview"].height)) - height
         nameY = -height
         if previewWidthHalfScreenSize && previewWidthDownArrowX && buttonWidthDownArrowX
           arrowY = (Graphics.height - (44 + @sprites["buttonPreview"].height)) - height
         end
-      elsif BOX_BOTTOM_RIGHT
+      elsif BoxBottomRight
         if previewWidthBiggerButtonX
           previewY = (Graphics.height - (22 + @sprites["buttonPreview"].height)) - height
           nameY = -height
@@ -285,8 +285,8 @@ class PokemonRegionMap_Scene
       end
     elsif @mode == 2 || @mode == 3
       arrowY = 16 + height if previewXUpArrowX
-      arrowY = @sprites["buttonPreview"].height + height if buttonXHalfScreenSize && BOX_TOP_RIGHT
-      if BOX_TOP_RIGHT
+      arrowY = @sprites["buttonPreview"].height + height if buttonXHalfScreenSize && BoxTopRight
+      if BoxTopRight
         previewY = 22 + height
         nameY = height
       end
@@ -297,7 +297,7 @@ class PokemonRegionMap_Scene
   def animatePreviewBox
     @sprites["previewBox"].y = lerp(@previewValues[:begin][:box], @previewValues[:end][:box], 0.2, @animDistPerFrame, System.uptime)
     @sprites["locationText"].y = lerp(@previewValues[:begin][:text], @previewValues[:end][:text], 0.2, @animDistPerFrame, System.uptime)
-    if WEATHERPLUGIN
+    if WeatherPlugin
       if @sprites["weatherPreview"].visible == true && @mode == 0
         @sprites["weatherPreview"].y = lerp(@previewValues[:begin][:weather1], @previewValues[:end][:weather1], 0.2, @animDistPerFrame, System.uptime)
         @sprites["weatherIcon"].y = lerp(@previewValues[:begin][:weather2], @previewValues[:end][:weather2], 0.2, @animDistPerFrame, System.uptime)

@@ -82,7 +82,7 @@ def pbPlaySoundEffectToLocation(event_walking,relative_x,relative_y)
 	if $scene.is_a?(Scene_Map)
 		event.each_occupied_tile do |x, y|
 			# Get this tile's sound_effect flag
-			sound_effect = $MapFactory.getTerrainTag(event.map.map_id, x, y, $PokemonGlobal.bridge > 0).sound_effect
+			sound_effect = $map_factory.getTerrainTag(event.map.map_id, x, y, $PokemonGlobal.bridge > 0).sound_effect
 			
 			sound_effect_period = 1
 			# Convert the flag into the actual values needed

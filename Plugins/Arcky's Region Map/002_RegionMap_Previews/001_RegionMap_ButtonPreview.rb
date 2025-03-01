@@ -9,8 +9,9 @@ class PokemonRegionMap_Scene
   end
 
   def getTextPosition
-    x = BOX_TOP_LEFT || BOX_BOTTOM_LEFT ? 4 : Graphics.width - (4 + @sprites["buttonPreview"].width)
-    y = BOX_TOP_LEFT || BOX_TOP_RIGHT ? 22 : Graphics.height - (22 + @sprites["buttonPreview"].height)
+    x = BoxTopLeft || BoxBottomLeft ? 4 : Graphics.width - (4 + @sprites["buttonPreview"].width)
+    y = BoxTopLeft || BoxTopRight ? 22 : Graphics.height - (22 + @sprites["buttonPreview"].height)
+
     return x, y
   end
 
@@ -27,21 +28,11 @@ class PokemonRegionMap_Scene
   def toggleButtonBox(opacityBox)
     box = createBoxObject
     if (@sprites["cursor"].x.between?(box[:startX], box[:endX]) && @sprites["cursor"].y.between?(box[:startY], box[:endY])) && @sprites["buttonName"].opacity != opacityBox
-      if ENGINE20
-        @sprites["buttonPreview"].opacity -= (255 - opacityBox) / @distPerFrame
-        @sprites["buttonName"].opacity -= (255 - opacityBox) / @distPerFrame
-      elsif ENGINE21
-        @sprites["buttonPreview"].opacity = lerp(@sprites["buttonPreview"].opacity, opacityBox, 0.5, @distPerFrame, System.uptime)
-        @sprites["buttonName"].opacity = lerp(@sprites["buttonName"].opacity, opacityBox, 0.5, @distPerFrame, System.uptime)
-      end
+      @sprites["buttonPreview"].opacity = lerp(@sprites["buttonPreview"].opacity, opacityBox, 0.5, @distPerFrame, System.uptime)
+      @sprites["buttonName"].opacity = lerp(@sprites["buttonName"].opacity, opacityBox, 0.5, @distPerFrame, System.uptime)
     elsif !(@sprites["cursor"].x.between?(box[:startX], box[:endX]) && @sprites["cursor"].y.between?(box[:startY], box[:endY])) && @sprites["buttonName"].opacity != 255
-      if ENGINE20
-        @sprites["buttonPreview"].opacity += (255 - opacityBox) / @distPerFrame
-        @sprites["buttonName"].opacity += (255 - opacityBox) / @distPerFrame
-      elsif ENGINE21
-        @sprites["buttonPreview"].opacity = lerp(@sprites["buttonPreview"].opacity, 255, 0.5, @distPerFrame, System.uptime)
-        @sprites["buttonName"].opacity = lerp(@sprites["buttonName"].opacity, 255, 0.5, @distPerFrame, System.uptime)
-      end
+      @sprites["buttonPreview"].opacity = lerp(@sprites["buttonPreview"].opacity, 255, 0.5, @distPerFrame, System.uptime)
+      @sprites["buttonName"].opacity = lerp(@sprites["buttonName"].opacity, 255, 0.5, @distPerFrame, System.uptime)
     end
   end
 
@@ -148,7 +139,7 @@ class PokemonRegionMap_Scene
     frames = ARMSettings::ButtonPreviewTimeChange * Graphics.frame_rate
     if @modeCount > 1 && !@previewBox.isExtShown
       textPos = getTextPosition
-      width = @previewBox.isShown && @mode == 2 && BOX_TOP_LEFT ? (Graphics.width - @sprites["previewBox"].width) : @sprites["buttonPreview"].width
+      width = @previewBox.isShown && @mode == 2 && BoxTopLeft ? (Graphics.width - @sprites["previewBox"].width) : @sprites["buttonPreview"].width
       x = (textPos[0] + (width / 2)) + ARMSettings::ButtonBoxTextOffsetX
       y = (textPos[1] + 14) + ARMSettings::ButtonBoxTextOffsetY
       align = 2
@@ -169,7 +160,7 @@ class PokemonRegionMap_Scene
     if avActions.any?
       selActions = avActions[@indActions % actionsLength]
       if selActions[:button]
-        button = pbGetMessageFromHash(SCRIPTTEXTS, convertButtonToString(selActions[:button]))
+        button = pbGetMessageFromHash(ScriptTexts, convertButtonToString(selActions[:button]))
         text = "#{button}: #{selActions[:text]}"
       end
       @sprites["buttonName"].bitmap.clear
@@ -196,7 +187,7 @@ class PokemonRegionMap_Scene
         order: 50
       },
       :ChangeRegion => {
-        condition: @avRegions.length >= 2 && @previewBox.isHidden && !@searchActive && !@flyMap && !@zoom && (@previewBox.isHidden || @previewBox.isShown),
+        condition: checkConnectedRegions.length >= 2 && @previewBox.isHidden && !@searchActive && !@flyMap && !@zoom && (@previewBox.isHidden || @previewBox.isShown),
         text: _INTL("Change Region"),
         button: ARMSettings::ChangeRegionButton,
         order: 60

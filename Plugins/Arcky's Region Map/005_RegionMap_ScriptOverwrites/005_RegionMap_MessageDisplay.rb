@@ -49,8 +49,9 @@ class PokemonRegionMap_Scene
         end
         @sprites["cursor"].x = 8 + (@mapX * ARMSettings::SquareWidth)
         @sprites["cursor"].y = 24 + (@mapY * ARMSettings::SquareHeight)
-        @sprites["cursor"].x -= UI_BORDER_WIDTH if ARMSettings::RegionMapBehindUI
-        @sprites["cursor"].y -= UI_BORDER_HEIGHT if ARMSettings::RegionMapBehindUI
+        @sprites["cursor"].x -= UIBorderWidth if ARMSettings::RegionMapBehindUI
+        @sprites["cursor"].y -= UIBorderHeight if ARMSettings::RegionMapBehindUI
+        changeRegionOnMapPosition
         showAndUpdateMapInfo
         centerMapOnCursor
         updateMapRange

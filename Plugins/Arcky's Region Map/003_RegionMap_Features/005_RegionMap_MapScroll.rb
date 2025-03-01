@@ -8,7 +8,7 @@ class PokemonRegionMap_Scene
 
   def centerMapX
     posX, center = getCenterMapX(@sprites["cursor"].x, true)
-    @mapOffsetX = @mapWidth < (Graphics.width - BEHIND_UI[1]) ? ((Graphics.width - BEHIND_UI[1]) - @mapWidth) / 2 : 0
+    @mapOffsetX = @mapWidth < (Graphics.width - BehindUI[1]) ? ((Graphics.width - BehindUI[1]) - @mapWidth) / 2 : 0
     if center
       @spritesMap.each do |key, value|
         @spritesMap[key].x = posX
@@ -22,13 +22,14 @@ class PokemonRegionMap_Scene
   end
 
   def getCenterMapX(cursorX, getCenter = false)
-    center = cursorX > (Settings::SCREEN_WIDTH / 2) && ((@mapWidth > Graphics.width && ARMSettings::RegionMapBehindUI) || (@mapWidth > UI_WIDTH && !ARMSettings::RegionMapBehindUI))
+    center = cursorX > (Settings::SCREEN_WIDTH / 2) && ((@mapWidth > Graphics.width && ARMSettings::RegionMapBehindUI) || (@mapWidth > UIWidth && !ARMSettings::RegionMapBehindUI))
     steps = @zoomHash[@zoomIndex][:steps]
     curCorr = @zoomHash[@zoomIndex][:curCorr]
-    mapMaxX = -1 * (@mapWidth - UI_WIDTH)
-    mapMaxX += UI_BORDER_WIDTH * 2 if ARMSettings::RegionMapBehindUI
-    mapPosX = (UI_WIDTH / 2) - cursorX
-    pos = mapPosX < mapMaxX ? mapMaxX : mapPosX
+    mapStartX = @regionLimits[:mapStartX]
+    mapMaxX = @regionLimits[:mapMaxX]
+    mapMaxX += UIBorderWidth * 2 if ARMSettings::RegionMapBehindUI
+    mapPosX = (UIWidth / 2) - cursorX
+    pos = [[mapPosX, mapMaxX].max, mapStartX].min
     posX = pos % steps != 0 ? pos + curCorr : pos
     if getCenter
       return posX, center
@@ -41,7 +42,7 @@ class PokemonRegionMap_Scene
 
   def centerMapY
     posY, center = getCenterMapY(@sprites["cursor"].y, true)
-    @mapOffsetY = @mapHeight < (Graphics.height - BEHIND_UI[3]) ? ((Graphics.height - BEHIND_UI[3]) - @mapHeight) / 2 : 0
+    @mapOffsetY = @mapHeight < (Graphics.height - BehindUI[3]) ? ((Graphics.height - BehindUI[3]) - @mapHeight) / 2 : 0
     if center
       @spritesMap.each do |key, value|
         @spritesMap[key].y = posY
@@ -55,13 +56,14 @@ class PokemonRegionMap_Scene
   end
 
   def getCenterMapY(cursorY, getCenter = false)
-    center = cursorY > (Settings::SCREEN_HEIGHT / 2) && ((@mapHeight > Graphics.height && ARMSettings::RegionMapBehindUI) || (@mapHeight > UI_HEIGHT && !ARMSettings::RegionMapBehindUI))
+    center = cursorY > (Settings::SCREEN_HEIGHT / 2) && ((@mapHeight > Graphics.height && ARMSettings::RegionMapBehindUI) || (@mapHeight > UIHeight && !ARMSettings::RegionMapBehindUI))
     steps = @zoomHash[@zoomIndex][:steps]
     curCorr = @zoomHash[@zoomIndex][:curCorr]
-    mapMaxY = -1 * (@mapHeight - UI_HEIGHT)
-    mapMaxY += UI_BORDER_HEIGHT * 2 if ARMSettings::RegionMapBehindUI
-    mapPosY = (UI_HEIGHT / 2) - cursorY
-    pos = mapPosY < mapMaxY ? mapMaxY : mapPosY
+    mapStartY = @regionLimits[:mapStartY]
+    mapMaxY = @regionLimits[:mapMaxY]
+    mapMaxY += UIBorderHeight * 2 if ARMSettings::RegionMapBehindUI
+    mapPosY = (UIHeight / 2) - cursorY
+    pos = [[mapPosY, mapMaxY].max, mapStartY].min
     posY = pos % steps != 0 ? pos + curCorr : pos
     if getCenter
       return posY, center
@@ -75,12 +77,12 @@ class PokemonRegionMap_Scene
   def addArrowSprites
     @sprites["upArrow"] = AnimatedSprite.new(findUsableUI("mapArrowUp"), 8, 28, 40, 2, @viewport)
     @sprites["upArrow"].x = (Graphics.width / 2) - 14
-    @sprites["upArrow"].y = (BOX_TOP_LEFT && (@sprites["buttonPreview"].x + @sprites["buttonPreview"].width) > (Graphics.width / 2)) || (BOX_TOP_RIGHT && @sprites["buttonPreview"].x < (Graphics.width / 2)) ? @sprites["buttonPreview"].height : 16
+    @sprites["upArrow"].y = (BoxTopLeft && (@sprites["buttonPreview"].x + @sprites["buttonPreview"].width) > (Graphics.width / 2)) || (BoxTopRight && @sprites["buttonPreview"].x < (Graphics.width / 2)) ? @sprites["buttonPreview"].height : 16
     @sprites["upArrow"].z = 35
     @sprites["upArrow"].play
     @sprites["downArrow"] = AnimatedSprite.new(findUsableUI("mapArrowDown"), 8, 28, 40, 2, @viewport)
     @sprites["downArrow"].x = (Graphics.width / 2) - 14
-    @sprites["downArrow"].y = (BOX_BOTTOM_LEFT && (@sprites["buttonPreview"].x + @sprites["buttonPreview"].width) > (Graphics.width / 2)) || (BOX_BOTTOM_RIGHT && @sprites["buttonPreview"].x < (Graphics.width / 2)) ? (Graphics.height - (44 + @sprites["buttonPreview"].height)) : (Graphics.height - 60)
+    @sprites["downArrow"].y = (BoxBottomLeft && (@sprites["buttonPreview"].x + @sprites["buttonPreview"].width) > (Graphics.width / 2)) || (BoxBottomRight && @sprites["buttonPreview"].x < (Graphics.width / 2)) ? (Graphics.height - (44 + @sprites["buttonPreview"].height)) : (Graphics.height - 60)
     @sprites["downArrow"].z = 35
     @sprites["downArrow"].play
     @sprites["leftArrow"] = AnimatedSprite.new(findUsableUI("mapArrowLeft"), 8, 40, 28, 2, @viewport)
@@ -95,22 +97,22 @@ class PokemonRegionMap_Scene
   end
 
   def updateArrows
-    @sprites["upArrow"].visible = @spritesMap["map"].y < 0 && !@previewBox.isExtShown
-    @sprites["downArrow"].visible = @spritesMap["map"].y > -1 * (@mapHeight - (Graphics.height - BEHIND_UI[3])) && !@previewBox.isExtShown
-    @sprites["leftArrow"].visible =  @spritesMap["map"].x < 0 - @cursorCorrZoom && !@previewBox.isExtShown
-    @sprites["rightArrow"].visible = @spritesMap["map"].x > -1 * (@mapWidth - (Graphics.width - BEHIND_UI[1])) + @cursorCorrZoom && !@previewBox.isExtShown
+    @sprites["upArrow"].visible = @spritesMap["map"].y < @regionLimits[:mapStartY] && !@previewBox.isExtShown
+    @sprites["downArrow"].visible = @spritesMap["map"].y > @regionLimits[:mapMaxY] && !@previewBox.isExtShown
+    @sprites["leftArrow"].visible =  @spritesMap["map"].x < @regionLimits[:mapStartX] - @cursorCorrZoom && !@previewBox.isExtShown
+    @sprites["rightArrow"].visible = @spritesMap["map"].x > @regionLimits[:mapMaxX] + @cursorCorrZoom && !@previewBox.isExtShown
   end
 
   def updateMapRange
     offset = ARMSettings::CursorMapOffset ? 16 * @zoomLevel : 0
-    mapOffsetX = ARMSettings::RegionMapBehindUI ? UI_BORDER_WIDTH / @zoomHash[@zoomIndex][:steps].ceil : 0
-    mapOffsetX += 1 if @zoomHash[@zoomIndex][:level] == 0.5 && ARMSettings::CursorMapOffset
-    mapOffsetY = ARMSettings::RegionMapBehindUI ? UI_BORDER_HEIGHT / @zoomHash[@zoomIndex][:steps].ceil : 0
+    mapOffsetX = ARMSettings::RegionMapBehindUI ? UIBorderWidth / @zoomHash[@zoomIndex][:steps].ceil : 0
+    #mapOffsetX += 1 if @zoomHash[@zoomIndex][:level] == 0.5 && ARMSettings::CursorMapOffset
+    mapOffsetY = ARMSettings::RegionMapBehindUI ? UIBorderHeight / @zoomHash[@zoomIndex][:steps].ceil : 0
     @mapRange = {
       :minX => (((@spritesMap["map"].x - offset) / (ARMSettings::SquareWidth * @zoomLevel)).abs).ceil + mapOffsetX,
-      :maxX => (((@spritesMap["map"].x + offset).abs + (UI_WIDTH - (ARMSettings::SquareWidth * @zoomLevel))) / (ARMSettings::SquareWidth * @zoomLevel)).ceil + mapOffsetX,
+      :maxX => (((@spritesMap["map"].x + offset).abs + (UIWidth - (ARMSettings::SquareWidth * @zoomLevel))) / (ARMSettings::SquareWidth * @zoomLevel)).ceil + mapOffsetX,
       :minY => (((@spritesMap["map"].y - offset) / (ARMSettings::SquareHeight * @zoomLevel)).abs).ceil + mapOffsetY,
-      :maxY => (((@spritesMap["map"].y + offset).abs + (UI_HEIGHT - (ARMSettings::SquareHeight * @zoomLevel))) / (ARMSettings::SquareHeight * @zoomLevel)).ceil + mapOffsetY
+      :maxY => (((@spritesMap["map"].y + offset).abs + (UIHeight - (ARMSettings::SquareHeight * @zoomLevel))) / (ARMSettings::SquareHeight * @zoomLevel)).ceil + mapOffsetY
     }
     if ARMSettings::CursorMapOffset
       @mapRange[:maxX] -= 2 if @spritesMap["map"].x == 0
@@ -125,39 +127,39 @@ class PokemonRegionMap_Scene
     @mapOffsetX = 0 if @mapOffsetX.nil?
     @mapOffsetY = 0 if @mapOffsetY.nil?
     minX =  if !ARMSettings::RegionMapBehindUI
-              (UI_BORDER_WIDTH + @mapOffsetX + cursorOffset) - curCorr # ok
+              (UIBorderWidth + @mapOffsetX + cursorOffset) - curCorr # ok
             else
-              if @mapWidth > UI_WIDTH
-                (UI_BORDER_WIDTH + cursorOffset) - curCorr # ok
+              if @mapWidth > UIWidth
+                (UIBorderWidth + cursorOffset) - curCorr # ok
               else
                 @mapOffsetX + cursorOffset
               end
             end
     maxX =  if !ARMSettings::RegionMapBehindUI
-              (UI_WIDTH + UI_BORDER_WIDTH) - ((width / 2) + @mapOffsetX + cursorOffset)
+              (UIWidth + UIBorderWidth) - ((width / 2) + @mapOffsetX + cursorOffset)
             else
-              if @mapWidth > UI_WIDTH
-                (UI_WIDTH + UI_BORDER_WIDTH) - ((width / 2) + cursorOffset)
+              if @mapWidth > UIWidth
+                (UIWidth + UIBorderWidth) - ((width / 2) + cursorOffset)
               else
-                UI_WIDTH - (@mapOffsetX + cursorOffset)
+                UIWidth - (@mapOffsetX + cursorOffset)
               end
             end
     minY = if !ARMSettings::RegionMapBehindUI
-              (UI_BORDER_HEIGHT + @mapOffsetY + cursorOffset) - curCorr
+              (UIBorderHeight + @mapOffsetY + cursorOffset) - curCorr
             else
-              if @mapHeight > UI_HEIGHT
-                (UI_BORDER_HEIGHT + cursorOffset) - curCorr
+              if @mapHeight > UIHeight
+                (UIBorderHeight + cursorOffset) - curCorr
               else
                 @mapOffsetY + cursorOffset
               end
             end
     maxY = if !ARMSettings::RegionMapBehindUI
-              (UI_HEIGHT + UI_BORDER_HEIGHT) - (height + @mapOffsetY + cursorOffset)
+              (UIHeight + UIBorderHeight) - (height + @mapOffsetY + cursorOffset)
             else
-              if @mapHeight > UI_HEIGHT
-                (UI_HEIGHT + UI_BORDER_HEIGHT) - (height + cursorOffset)
+              if @mapHeight > UIHeight
+                (UIHeight + UIBorderHeight) - (height + cursorOffset)
               else
-                (UI_HEIGHT + UI_BORDER_HEIGHT) - (@mapOffsetY + cursorOffset)
+                (UIHeight + UIBorderHeight) - (@mapOffsetY + cursorOffset)
               end
             end
     return {

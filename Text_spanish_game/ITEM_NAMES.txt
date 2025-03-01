@@ -1,0 +1,978 @@
+﻿# To localize this text for a particular language, please
+# translate every second line of this file.
+#-------------------------------
+[ITEM_NAMES]
+Black Augurite
+Black Augurite
+Peat Block
+Peat Block
+Linking Cord
+Linking Cord
+Adamant Crystal
+Adamant Crystal
+Lustrous Globe
+Lustrous Globe
+Legend Plate
+Legend Plate
+Blank Plate
+Blank Plate
+Hopo Berry
+Hopo Berry
+Griseous Core
+Griseous Core
+Feather Ball
+Feather Ball
+Wing Ball
+Wing Ball
+Jet Ball
+Jet Ball
+Leaden Ball
+Leaden Ball
+Gigaton Ball
+Gigaton Ball
+Origin Ball
+Origin Ball
+Strange Ball
+Strange Ball
+Auspicious Armor
+Auspicious Armor
+Malicious Armor
+Malicious Armor
+Scroll of Darkness
+Scroll of Darkness
+Scroll of Waters
+Scroll of Waters
+Leader's Crest
+Leader's Crest
+Booster Energy
+Booster Energy
+Ability Shield
+Ability Shield
+Clear Amulet
+Clear Amulet
+Mirror Herb
+Mirror Herb
+Punching Glove
+Punching Glove
+Covert Cloak
+Covert Cloak
+Loaded Dice
+Loaded Dice
+Gimmighoul Coin
+Gimmighoul Coin
+Tiny Bamboo Shoot
+Tiny Bamboo Shoot
+Big Bamboo Shoot
+Big Bamboo Shoot
+Rotom Phone
+Rotom Phone
+Scarlet Book
+Scarlet Book
+Violet Book
+Violet Book
+Health Mochi
+Health Mochi
+Muscle Mochi
+Muscle Mochi
+Resist Mochi
+Resist Mochi
+Genius Mochi
+Genius Mochi
+Clever Mochi
+Clever Mochi
+Swift Mochi
+Swift Mochi
+Fresh-Start Mochi
+Fresh-Start Mochi
+Fairy Feather
+Fairy Feather
+Syrupy Apple
+Syrupy Apple
+Unremarkable Teacup
+Unremarkable Teacup
+Masterpiece Teacup
+Masterpiece Teacup
+Wellspring Mask
+Wellspring Mask
+Hearthflame Mask
+Hearthflame Mask
+Cornerstone Mask
+Cornerstone Mask
+Teal Mask
+Teal Mask
+Metal Alloy
+Metal Alloy
+Indigo Disk
+Indigo Disk
+Mythical Pecha Berry
+Mythical Pecha Berry
+Synchro Machine
+Synchro Machine
+Meteorite
+Meteorite
+Briar's Book
+Briar's Book
+Dynamax Band
+Dynamax Band
+Wishing Star
+Wishing Star
+Dynamax Candy
+Dynamax Candy
+Dynamax Candy XL
+Dynamax Candy XL
+Max Soup
+Max Soup
+Mark Charm
+Mark Charm
+Surprise Mulch
+Surprise Mulch
+Allure Mulch
+Allure Mulch
+Rich Mulch
+Rich Mulch
+Boost Mulch
+Boost Mulch
+Amaze Mulch
+Amaze Mulch
+Celestium Z
+Celestium Z
+Birdium Z
+Birdium Z
+Felacium Z
+Felacium Z
+Spikatium Z
+Spikatium Z
+Glimmorium Z
+Glimmorium Z
+Tinkatium Z
+Tinkatium Z
+Togekium Z
+Togekium Z
+Miniorium Z
+Miniorium Z
+Volcaronium Z
+Volcaronium Z
+Quritakium Z
+Quritakium Z
+Fame Checker
+Fame Checker
+Temy's Poké Ball
+Temy's Poké Ball
+Card Case
+Card Case
+Machete
+Machete
+Nachna Berry
+Nachna Berry
+Granatch Berry
+Granatch Berry
+Furani Berry
+Furani Berry
+Nedavi Berry
+Nedavi Berry
+Rayoni Berry
+Rayoni Berry
+Asirri Berry
+Asirri Berry
+Suenni Berry
+Suenni Berry
+Nebula Fragment
+Nebula Fragment
+Starry Plate
+Starry Plate
+Celestial Gem
+Celestial Gem
+Celestial Memory
+Celestial Memory
+Corrupted Drive
+Corrupted Drive
+Null Plate
+Null Plate
+Glitch Gem
+Glitch Gem
+Glitch Memory
+Glitch Memory
+Apu's Offering
+Apu's Offering
+Knowledge Rune
+Knowledge Rune
+Steam Ball
+Steam Ball
+Stellar Ball
+Stellar Ball
+Grumpig Tenderloin
+Grumpig Tenderloin
+Steak
+Steak
+Hamburger
+Hamburger
+Sausage
+Sausage
+Corinavo Breast
+Corinavo Breast
+Lumineon Fillet
+Lumineon Fillet
+Shredded Cheese
+Shredded Cheese
+Crema Verelana
+Crema Verelana
+Cheese Curds
+Cheese Curds
+Blaziken Sauce
+Blaziken Sauce
+Pico de Gallo
+Pico de Gallo
+Nomel-Tamato Sauce
+Nomel-Tamato Sauce
+Black Beans
+Black Beans
+Brown Beans
+Brown Beans
+Red Beans
+Red Beans
+White Beans
+White Beans
+Onion
+Onion
+Red Onion
+Red Onion
+Scallion
+Scallion
+Black Olives
+Black Olives
+Green Olives
+Green Olives
+Tomato
+Tomato
+Potato
+Potato
+Avocado
+Avocado
+Green Pepper
+Green Pepper
+Nanab Pepper
+Nanab Pepper
+Jalapeño
+Jalapeño
+Green Chiles
+Green Chiles
+Mushroom
+Mushroom
+Maize
+Maize
+Green Beans
+Green Beans
+Cucumber
+Cucumber
+Radish
+Radish
+Eggplant
+Eggplant
+Tomatillo
+Tomatillo
+Carrot
+Carrot
+White Rice
+White Rice
+Cilantro
+Cilantro
+Tera Orb
+Tera Orb
+Normal Tera Shard
+Normal Tera Shard
+Fire Tera Shard
+Fire Tera Shard
+Water Tera Shard
+Water Tera Shard
+Electric Tera Shard
+Electric Tera Shard
+Grass Tera Shard
+Grass Tera Shard
+Ice Tera Shard
+Ice Tera Shard
+Fighting Tera Shard
+Fighting Tera Shard
+Poison Tera Shard
+Poison Tera Shard
+Ground Tera Shard
+Ground Tera Shard
+Flying Tera Shard
+Flying Tera Shard
+Psychic Tera Shard
+Psychic Tera Shard
+Bug Tera Shard
+Bug Tera Shard
+Rock Tera Shard
+Rock Tera Shard
+Ghost Tera Shard
+Ghost Tera Shard
+Dragon Tera Shard
+Dragon Tera Shard
+Dark Tera Shard
+Dark Tera Shard
+Steel Tera Shard
+Steel Tera Shard
+Fairy Tera Shard
+Fairy Tera Shard
+Stellar Tera Shard
+Stellar Tera Shard
+Mystery Tera Jewel
+Mystery Tera Jewel
+Master Tera Jewel
+Master Tera Jewel
+Radiant Tera Jewel
+Radiant Tera Jewel
+Glimmering Charm
+Glimmering Charm
+Ekans Fang
+Ekans Fang
+Sandshrew Claw
+Sandshrew Claw
+Vulpix Fur
+Vulpix Fur
+Oddish Leaf
+Oddish Leaf
+Venonat Fang
+Venonat Fang
+Diglett Dirt
+Diglett Dirt
+Meowth Fur
+Meowth Fur
+Psyduck Down
+Psyduck Down
+Mankey Fur
+Mankey Fur
+Growlithe Fur
+Growlithe Fur
+Poliwag Slime
+Poliwag Slime
+Bellsprout Vine
+Bellsprout Vine
+Tentacool Stinger
+Tentacool Stinger
+Geodude Fragment
+Geodude Fragment
+Slowpoke Claw
+Slowpoke Claw
+Magnemite Screw
+Magnemite Screw
+Doduo Down
+Doduo Down
+Seel Fur
+Seel Fur
+Grimer Toxin
+Grimer Toxin
+Shellder Pearl
+Shellder Pearl
+Gastly Gas
+Gastly Gas
+Drowzee Fur
+Drowzee Fur
+Voltorb Sparks
+Voltorb Sparks
+Exeggcute Shell
+Exeggcute Shell
+Koffing Gas
+Koffing Gas
+Rhyhorn Fang
+Rhyhorn Fang
+Horsea Ink
+Horsea Ink
+Scyther Claw
+Scyther Claw
+Tauros Hair
+Tauros Hair
+Magikarp Scales
+Magikarp Scales
+Lapras Teardrop
+Lapras Teardrop
+Ditto Goo
+Ditto Goo
+Eevee Fur
+Eevee Fur
+Porygon Fragment
+Porygon Fragment
+Dratini Scales
+Dratini Scales
+Sentret Fur
+Sentret Fur
+Hoothoot Feather
+Hoothoot Feather
+Spinarak Thread
+Spinarak Thread
+Chinchou Sparks
+Chinchou Sparks
+Pichu Fur
+Pichu Fur
+Cleffa Fur
+Cleffa Fur
+Igglybuff Fluff
+Igglybuff Fluff
+Mareep Wool
+Mareep Wool
+Hoppip Leaf
+Hoppip Leaf
+Aipom Hair
+Aipom Hair
+Sunkern Leaf
+Sunkern Leaf
+Yanma Spike
+Yanma Spike
+Wooper Slime
+Wooper Slime
+Murkrow Bauble
+Murkrow Bauble
+Misdreavus Tears
+Misdreavus Tears
+Girafarig Fur
+Girafarig Fur
+Pineco Husk
+Pineco Husk
+Dunsparce Scales
+Dunsparce Scales
+Gligar Fang
+Gligar Fang
+Snubbull Hair
+Snubbull Hair
+Qwilfish Spines
+Qwilfish Spines
+Heracross Claw
+Heracross Claw
+Sneasel Claw
+Sneasel Claw
+Teddiursa Claw
+Teddiursa Claw
+Slugma Lava
+Slugma Lava
+Swinub Hair
+Swinub Hair
+Delibird Parcel
+Delibird Parcel
+Skarmory Feather
+Skarmory Feather
+Houndour Fang
+Houndour Fang
+Phanpy Nail
+Phanpy Nail
+Stantler Hair
+Stantler Hair
+Smeargle Paint
+Smeargle Paint
+Tyrogue Sweat
+Tyrogue Sweat
+Elekid Fur
+Elekid Fur
+Magby Hair
+Magby Hair
+Larvitar Claw
+Larvitar Claw
+Poochyena Fang
+Poochyena Fang
+Lotad Leaf
+Lotad Leaf
+Seedot Stem
+Seedot Stem
+Wingull Feather
+Wingull Feather
+Ralts Dust
+Ralts Dust
+Surskit Syrup
+Surskit Syrup
+Shroomish Spores
+Shroomish Spores
+Slakoth Fur
+Slakoth Fur
+Makuhita Sweat
+Makuhita Sweat
+Azurill Fur
+Azurill Fur
+Nosepass Fragment
+Nosepass Fragment
+Sableye Gem
+Sableye Gem
+Meditite Sweat
+Meditite Sweat
+Plusle Fur
+Plusle Fur
+Minun Fur
+Minun Fur
+Volbeat Fluid
+Volbeat Fluid
+Illumise Fluid
+Illumise Fluid
+Gulpin Mucus
+Gulpin Mucus
+Numel Lava
+Numel Lava
+Torkoal Coal
+Torkoal Coal
+Spoink Pearl
+Spoink Pearl
+Trapinch Shell
+Trapinch Shell
+Cacnea Needle
+Cacnea Needle
+Swablu Fluff
+Swablu Fluff
+Zangoose Claw
+Zangoose Claw
+Seviper Fang
+Seviper Fang
+Barboach Slime
+Barboach Slime
+Corphish Shell
+Corphish Shell
+Feebas Scales
+Feebas Scales
+Shuppet Scrap
+Shuppet Scrap
+Duskull Fragment
+Duskull Fragment
+Tropius Leaf
+Tropius Leaf
+Snorunt Fur
+Snorunt Fur
+Luvdisc Scales
+Luvdisc Scales
+Bagon Scales
+Bagon Scales
+Beldum Claw
+Beldum Claw
+Starly Feather
+Starly Feather
+Kricketot Shell
+Kricketot Shell
+Shinx Fang
+Shinx Fang
+Cranidos Spike
+Cranidos Spike
+Shieldon Claw
+Shieldon Claw
+Combee Honey
+Combee Honey
+Pachirisu Fur
+Pachirisu Fur
+Buizel Fur
+Buizel Fur
+Shellos Mucus
+Shellos Mucus
+Drifloon Gas
+Drifloon Gas
+Chingling Fragment
+Chingling Fragment
+Stunky Fur
+Stunky Fur
+Bronzor Fragment
+Bronzor Fragment
+Bonsly Tears
+Bonsly Tears
+Happiny Dust
+Happiny Dust
+Spiritomb Fragment
+Spiritomb Fragment
+Gible Scales
+Gible Scales
+Munchlax Fang
+Munchlax Fang
+Riolu Fur
+Riolu Fur
+Hippopotas Sand
+Hippopotas Sand
+Croagunk Poison
+Croagunk Poison
+Finneon Scales
+Finneon Scales
+Snover Berries
+Snover Berries
+Rotom Sparks
+Rotom Sparks
+Blitzle Mane Hair
+Blitzle Mane Hair
+Drilbur Claw
+Drilbur Claw
+Timburr Sweat
+Timburr Sweat
+Sewaddle Leaf
+Sewaddle Leaf
+Cottonee Fluff
+Cottonee Fluff
+Petilil Leaf
+Petilil Leaf
+Basculin Fang
+Basculin Fang
+Sandile Claw
+Sandile Claw
+Scraggy Sweat
+Scraggy Sweat
+Zorua Fur
+Zorua Fur
+Minccino Fur
+Minccino Fur
+Gothita Eyelash
+Gothita Eyelash
+Solosis Gel
+Solosis Gel
+Ducklett Feather
+Ducklett Feather
+Deerling Hair
+Deerling Hair
+Foongus Spores
+Foongus Spores
+Alomomola Mucus
+Alomomola Mucus
+Joltik Thread
+Joltik Thread
+Tynamo Slime
+Tynamo Slime
+Litwick Soot
+Litwick Soot
+Axew Scales
+Axew Scales
+Cubchoo Fur
+Cubchoo Fur
+Cryogonal Ice
+Cryogonal Ice
+Mienfoo Claw
+Mienfoo Claw
+Golett Shard
+Golett Shard
+Pawniard Blade
+Pawniard Blade
+Rufflet Feather
+Rufflet Feather
+Vullaby Feather
+Vullaby Feather
+Deino Scales
+Deino Scales
+Larvesta Fuzz
+Larvesta Fuzz
+Fletchling Feather
+Fletchling Feather
+Scatterbug Powder
+Scatterbug Powder
+Litleo Tuft
+Litleo Tuft
+Flabébé Pollen
+Flabébé Pollen
+Skiddo Leaf
+Skiddo Leaf
+Espurr Fur
+Espurr Fur
+Inkay Ink
+Inkay Ink
+Skrelp Kelp
+Skrelp Kelp
+Clauncher Claw
+Clauncher Claw
+Hawlucha Down
+Hawlucha Down
+Dedenne Fur
+Dedenne Fur
+Carbink Jewel
+Carbink Jewel
+Goomy Goo
+Goomy Goo
+Klefki Key
+Klefki Key
+Phantump Twig
+Phantump Twig
+Bergmite Ice
+Bergmite Ice
+Noibat Fur
+Noibat Fur
+Pikipek Feather
+Pikipek Feather
+Yungoos Fur
+Yungoos Fur
+Grubbin Thread
+Grubbin Thread
+Crabrawler Shell
+Crabrawler Shell
+Oricorio Feather
+Oricorio Feather
+Cutiefly Powder
+Cutiefly Powder
+Rockruff Rock
+Rockruff Rock
+Mareanie Spike
+Mareanie Spike
+Mudbray Mud
+Mudbray Mud
+Dewpider Thread
+Dewpider Thread
+Fomantis Leaf
+Fomantis Leaf
+Salandit Gas
+Salandit Gas
+Bounsweet Sweat
+Bounsweet Sweat
+Comfey Flower
+Comfey Flower
+Oranguru Fur
+Oranguru Fur
+Passimian Fur
+Passimian Fur
+Sandygast Sand
+Sandygast Sand
+Minior Shell
+Minior Shell
+Komala Claw
+Komala Claw
+Mimikyu Scrap
+Mimikyu Scrap
+Bruxish Tooth
+Bruxish Tooth
+Jangmo-o Scales
+Jangmo-o Scales
+Skwovet Fur
+Skwovet Fur
+Rookidee Feather
+Rookidee Feather
+Chewtle Claw
+Chewtle Claw
+Rolycoly Coal
+Rolycoly Coal
+Applin Juice
+Applin Juice
+Silicobra Sand
+Silicobra Sand
+Cramorant Down
+Cramorant Down
+Arrokuda Scales
+Arrokuda Scales
+Toxel Sparks
+Toxel Sparks
+Sinistea Chip
+Sinistea Chip
+Hatenna Dust
+Hatenna Dust
+Impidimp Hair
+Impidimp Hair
+Milcery Cream
+Milcery Cream
+Falinks Sweat
+Falinks Sweat
+Pincurchin Spines
+Pincurchin Spines
+Snom Thread
+Snom Thread
+Stonjourner Stone
+Stonjourner Stone
+Eiscue Down
+Eiscue Down
+Indeedee Fur
+Indeedee Fur
+Morpeko Snack
+Morpeko Snack
+Cufant Tarnish
+Cufant Tarnish
+Duraludon Tarnish
+Duraludon Tarnish
+Dreepy Powder
+Dreepy Powder
+Lechonk Hair
+Lechonk Hair
+Tarountula Thread
+Tarountula Thread
+Nymble Claw
+Nymble Claw
+Pawmi Fur
+Pawmi Fur
+Tandemaus Fur
+Tandemaus Fur
+Fidough Fur
+Fidough Fur
+Smoliv Oil
+Smoliv Oil
+Squawkabilly Feather
+Squawkabilly Feather
+Nacli Salt
+Nacli Salt
+Charcadet Soot
+Charcadet Soot
+Tadbulb Mucus
+Tadbulb Mucus
+Wattrel Feather
+Wattrel Feather
+Maschiff Fang
+Maschiff Fang
+Shroodle Ink
+Shroodle Ink
+Bramblin Twig
+Bramblin Twig
+Toedscool Flaps
+Toedscool Flaps
+Klawf Claw
+Klawf Claw
+Capsakid Seed
+Capsakid Seed
+Rellor Mud
+Rellor Mud
+Flittle Down
+Flittle Down
+Tinkatink Hair
+Tinkatink Hair
+Wiglett Sand
+Wiglett Sand
+Bombirdier Feather
+Bombirdier Feather
+Finizen Mucus
+Finizen Mucus
+Varoom Fume
+Varoom Fume
+Cyclizar Scales
+Cyclizar Scales
+Orthworm Tarnish
+Orthworm Tarnish
+Glimmet Crystal
+Glimmet Crystal
+Greavard Wax
+Greavard Wax
+Flamigo Down
+Flamigo Down
+Cetoddle Grease
+Cetoddle Grease
+Veluza Fillet
+Veluza Fillet
+Dondozo Whisker
+Dondozo Whisker
+Tatsugiri Scales
+Tatsugiri Scales
+Frigibax Scales
+Frigibax Scales
+Poltchageist Powder
+Poltchageist Powder
+Pangshi Fluff
+Pangshi Fluff
+Warfurs Fur
+Warfurs Fur
+Moibelle Bell
+Moibelle Bell
+Tediflame Tuft
+Tediflame Tuft
+Furronbu Leaf
+Furronbu Leaf
+Cuttetra Scales
+Cuttetra Scales
+Amniball Orb
+Amniball Orb
+Macawk Feather
+Macawk Feather
+Onsail Fur
+Onsail Fur
+Lunavy Fur
+Lunavy Fur
+Marihush Feather
+Marihush Feather
+Claustroa Scales
+Claustroa Scales
+Aluminnow Scales
+Aluminnow Scales
+Joushrimp Claw
+Joushrimp Claw
+Frostkit Fur
+Frostkit Fur
+Marasagi Leaf
+Marasagi Leaf
+Perselfly Wing
+Perselfly Wing
+Azulin Dust
+Azulin Dust
+Rosesh Dust
+Rosesh Dust
+Lazen Sparks
+Lazen Sparks
+Pebbleak Pebble
+Pebbleak Pebble
+Dangotail Fur
+Dangotail Fur
+Nectahop Honey
+Nectahop Honey
+Gingara Fur
+Gingara Fur
+Crystode Crystal
+Crystode Crystal
+Astell Fur
+Astell Fur
+Respluma Feather
+Respluma Feather
+Pavofuego Feather
+Pavofuego Feather
+Panhali Feather
+Panhali Feather
+Z-Ring
+Z-Ring
+Z-Power Ring
+Z-Power Ring
+Z-Booster
+Z-Booster
+Normalium Z
+Normalium Z
+Fightinium Z
+Fightinium Z
+Flyinium Z
+Flyinium Z
+Poisonium Z
+Poisonium Z
+Groundium Z
+Groundium Z
+Rockium Z
+Rockium Z
+Buginium Z
+Buginium Z
+Ghostium Z
+Ghostium Z
+Steelium Z
+Steelium Z
+Firium Z
+Firium Z
+Waterium Z
+Waterium Z
+Grassium Z
+Grassium Z
+Electrium Z
+Electrium Z
+Psychium Z
+Psychium Z
+Icium Z
+Icium Z
+Dragonium Z
+Dragonium Z
+Darkinium Z
+Darkinium Z
+Fairium Z
+Fairium Z
+Pikanium Z
+Pikanium Z
+Pikashunium Z
+Pikashunium Z
+Aloraichium Z
+Aloraichium Z
+Eevium Z
+Eevium Z
+Snorlium Z
+Snorlium Z
+Mewnium Z
+Mewnium Z
+Decidium Z
+Decidium Z
+Incinium Z
+Incinium Z
+Primarium Z
+Primarium Z
+Lycanium Z
+Lycanium Z
+Mimikium Z
+Mimikium Z
+Kommonium Z
+Kommonium Z
+Tapunium Z
+Tapunium Z
+Solganium Z
+Solganium Z
+Lunalium Z
+Lunalium Z
+Marshadium Z
+Marshadium Z
+Ultranecrozium Z
+Ultranecrozium Z

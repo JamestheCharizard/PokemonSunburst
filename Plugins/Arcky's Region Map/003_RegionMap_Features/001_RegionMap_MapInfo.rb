@@ -1,18 +1,33 @@
 class PokemonRegionMap_Scene
   def getMapObject
     @mapInfo = {}
-    # v20.1.
-    @mapPoints = @map[2].map(&:dup).sort_by { |index| [index[2], index[0], index[1]] } if ENGINE20
-    # v21.1 and above.
-    @mapPoints = @map.point.map(&:dup).sort_by { |index| [index[2], index[0], index[1]] } if ENGINE21
+    if @regionData
+      @mapPoints = []
+      @regionData.each do |id, data|
+        next unless @avRegions.any? { |_, region| region == id}
+        mapData = GameData::TownMap.get(id)
+        mapPoints = mapData.point.map(&:dup).sort_by { |index| [index[2], index[0], index[1]] }
+        mapPoints.each do |point|
+          point[0] += data[:beginX]
+          point[1] += data[:beginY]
+          point[9] = id
+        end
+        @mapPoints.push(mapPoints)
+      end
+      @mapPoints = @mapPoints.flatten(1)
+    else
+      # v21.1 and above.
+      @mapPoints = @map.point.map(&:dup).sort_by { |index| [index[2], index[0], index[1]] }
+    end
     @mapPoints.each do |mapData|
       # skip locations that are invisible
       next if mapData[7] && (mapData[7] <= 0 || !$game_switches[mapData[7]])
       mapKey = mapData[2].gsub(" ", "").to_sym
+      #region = @regionData ? : @region
       @mapInfo[mapKey] ||= {
         mapname: replaceMapName(mapData[2].clone),
         realname: mapData[2],
-        region: @region,
+        region: mapData[9],
         positions: [],
         flyicons: []
       }
@@ -63,7 +78,7 @@ class PokemonRegionMap_Scene
   def replaceMapName(name)
     return name if !ARMSettings::NoUnvistedMapInfo
     repName = ARMSettings::UnvisitedMapText
-    oriName = pbGetMessageFromHash(LOCATIONNAMES, name)
+    oriName = pbGetMessageFromHash(LocationNames, name)
     maps = []
     GameData::MapMetadata.each { |gameMap| maps << gameMap if gameMap.name == oriName && (gameMap.announce_location || gameMap.outdoor_map) }
     name = maps.any? { |gameMap| $PokemonGlobal.visitedMaps[gameMap.id] } ? oriName : repName
@@ -71,20 +86,20 @@ class PokemonRegionMap_Scene
   end
 
   def replaceMapPOI(mapName, poiName)
-    return pbGetMessageFromHash(POINAMES, poiName) if poiName == "" || !ARMSettings::NoUnvistedMapInfo
+    return pbGetMessageFromHash(POINames, poiName) if poiName == "" || !ARMSettings::NoUnvistedMapInfo
     findPOI = ARMSettings::LinkPoiToMap.keys.find { |key| key.include?(poiName) }
     if findPOI
       poiName = ARMSettings::UnvisitedPoiText if $PokemonGlobal.visitedMaps[ARMSettings::LinkPoiToMap[findPOI]].nil?
     else
       poiName = ARMSettings::UnvisitedPoiText if mapName == ARMSettings::UnvisitedMapText
     end
-    return pbGetMessageFromHash(POINAMES, poiName)
+    return pbGetMessageFromHash(POINames, poiName)
   end
 
   def getMapName(x, y)
-    district = getDistrictName([@region, x, y], @map)
+    district = getDistrictName([@region, adjustPosX(x), adjustPosY(y)], @map)
     if ARMSettings::ProgressCounter && !@globalCounter[:districts].empty? && !ARMSettings::DisableProgressCounterPercentage
-      if (ENGINE20 && district == pbGetMessage(REGIONNAMES, @region)) || (ENGINE21 && district == pbGetMessageFromHash(REGIONNAMES, @map.name.to_s))
+      if (district == pbGetMessageFromHash(RegionNames, @map.name.to_s))
         district = "#{district} - #{convertIntegerOrFloat((@globalCounter[:progress].to_f / @globalCounter[:total] * 100).round(1))}%" if @mode == 0
       else
         districtData = @globalCounter[:districts][district]
@@ -102,7 +117,7 @@ class PokemonRegionMap_Scene
     replaceName = ARMSettings::UnvisitedMapText
     @spritesMap["highlight"].bitmap.clear if @spritesMap["highlight"]
     map.each do |point|
-      next if point[0] != x || point[1] != y
+      next if adjustPosX(point[0], true) != x || adjustPosY(point[1]) != y
       return "" if point[7] && (point[7] <= 0 || !$game_switches[point[7]])
       mapPoint = point[2].gsub(" ", "").to_sym
       if @mapInfo.include?(mapPoint)
@@ -134,12 +149,7 @@ class PokemonRegionMap_Scene
   end
 
   def getMapPoints
-    if ENGINE20
-      return false if !@map[2]
-      return @map[2]
-    elsif ENGINE21
-      return false if !@map.point
-      return @map.point
-    end
+    return false if !@map.point
+    return @map.point
   end
 end

@@ -15,7 +15,7 @@ class PokemonRegionMap_Scene
       next if !roamTownMapPos
       icon = getRoamingIcon(Settings::ROAMING_SPECIES[roamPos[0]][0])
       pbDrawImagePositions(@spritesMap["RoamingIcons"].bitmap,
-        [[icon, pointXtoScreenX(roamTownMapPos[1]), pointYtoScreenY(roamTownMapPos[2])]])
+        [[icon, pointXtoScreenX(adjustPosX(roamTownMapPos[1], true)), pointYtoScreenY(adjustPosY(roamTownMapPos[2], true))]])
     end
   end
 
@@ -24,7 +24,7 @@ class PokemonRegionMap_Scene
     @previewWidth = 100
     roamingInfo = []
     $PokemonGlobal.roamPosition.each do |roamPos|
-      next if getRoamingTownMapPos(roamPos)[1] != x || getRoamingTownMapPos(roamPos)[2] != y || !getActiveRoaming(roamPos)
+      next if getRoamingTownMapPos(roamPos)[1] != adjustPosX(x) || getRoamingTownMapPos(roamPos)[2] != adjustPosY(y) || !getActiveRoaming(roamPos)
       roamingInfo << roamPos
     end
     unless roamingInfo.empty?
@@ -55,7 +55,7 @@ class PokemonRegionMap_Scene
   def getRoamingIcon(species)
     speciesData = GameData::Species.try_get(species)
     return nil if !speciesData
-    path = "#{FOLDER}Icons/Roaming/map"
+    path = "#{Folder}Icons/Roaming/map"
     if speciesData.form > 0
       ret = pbResolveBitmap("#{path + speciesData.species.to_s}_#{speciesData.form}")
       return ret if ret

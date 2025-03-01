@@ -15,17 +15,17 @@ class PokemonRegionMap_Scene
             @previewBox.showIt
           else
             if mousePos[0] < @oldPosX
-              mox = -1 if @spritesMap["map"].x > -1 * (@mapWidth - (Graphics.width - BEHIND_UI[1])) + @cursorCorrZoom
+              mox = -1 if @spritesMap["map"].x > @regionLimits[:mapMaxX]
               ox = -1 if @sprites["cursor"].x > @limitCursor[:minX] && mox == -1
             elsif mousePos[0] > @oldPosX
-              mox = 1 if @spritesMap["map"].x < 0 - @cursorCorrZoom
+              mox = 1 if @spritesMap["map"].x < @regionLimits[:mapStartX] - @cursorCorrZoom
               ox = 1 if @sprites["cursor"].x < @limitCursor[:maxX] && mox == 1
             end
             if mousePos[1] < @oldPosY
-              moy = -1 if @spritesMap["map"].y > -1 * (@mapHeight - (Graphics.height - BEHIND_UI[3]))
+              moy = -1 if @spritesMap["map"].y > @regionLimits[:mapMaxY]
               oy = -1  if @sprites["cursor"].y > @limitCursor[:minY] && moy == -1
             elsif mousePos[1] > @oldPosY
-              moy = 1 if @spritesMap["map"].y < 0
+              moy = 1 if @spritesMap["map"].y < @regionLimits[:mapStartY]
               oy = 1  if @sprites["cursor"].y < @limitCursor[:maxY] && moy == 1
             end
           end
@@ -47,12 +47,12 @@ class PokemonRegionMap_Scene
             end
             @mapX = mousePos[0]
             @mapY = mousePos[1]
-            @sprites["cursor"].x = (8 +(@mapX * (ARMSettings::SquareWidth * @zoomLevel))) + @spritesMap["map"].x
-            @sprites["cursor"].x -= UI_BORDER_WIDTH if ARMSettings::RegionMapBehindUI
+            @sprites["cursor"].x = (8 + (@mapX * (ARMSettings::SquareWidth * @zoomLevel))) + @spritesMap["map"].x
+            @sprites["cursor"].x -= UIBorderWidth if ARMSettings::RegionMapBehindUI
             @sprites["cursor"].x -= 8 if @zoomLevel == 2.0
             @sprites["cursor"].x += 4 if @zoomLevel == 0.5
             @sprites["cursor"].y = (24 + (@mapY * (ARMSettings::SquareHeight * @zoomLevel))) + @spritesMap["map"].y
-            @sprites["cursor"].y -= UI_BORDER_HEIGHT if ARMSettings::RegionMapBehindUI
+            @sprites["cursor"].y -= UIBorderHeight if ARMSettings::RegionMapBehindUI
             @sprites["cursor"].y -= 8 if @zoomLevel == 2.0
             @sprites["cursor"].y += 4 if @zoomLevel == 0.5
             if @previewBox.isShown
@@ -76,7 +76,7 @@ class PokemonRegionMap_Scene
                 end
               end
             when 2
-              if QUESTPLUGIN
+              if QuestPlugin
                 choice = showQuestInformation(lastChoiceQuest)
                 if choice != -1
                   showPreviewBox
@@ -84,7 +84,7 @@ class PokemonRegionMap_Scene
                 end
               end
             when 3
-              if BERRYPLUGIN
+              if BerryPlugin
                 choice = showBerryInformation(lastChoiceBerries)
                 if choice != -1
                   showPreviewBox
@@ -103,9 +103,9 @@ class PokemonRegionMap_Scene
 
   def convertMouseToMapPos(mousePos)
     mousePos[0] -= @spritesMap["map"].x
-    mousePos[0] -= UI_BORDER_WIDTH if !ARMSettings::RegionMapBehindUI
+    mousePos[0] -= UIBorderWidth if !ARMSettings::RegionMapBehindUI
     mousePos[1] -= @spritesMap["map"].y
-    mousePos[1] -= UI_BORDER_HEIGHT if !ARMSettings::RegionMapBehindUI
+    mousePos[1] -= UIBorderHeight if !ARMSettings::RegionMapBehindUI
     mousePos[0] /= (ARMSettings::SquareWidth * @zoomLevel).round
     mousePos[1] /= (ARMSettings::SquareHeight * @zoomLevel).round
     return mousePos

@@ -1,5 +1,4 @@
 class PokemonRegionMap_Scene
-
   def refreshFlyScreen
     return if @flyMap
     mapModeSwitchInfo
@@ -10,8 +9,8 @@ class PokemonRegionMap_Scene
     showAndUpdateMapInfo
     getPreviewWeather
     @spritesMap["FlyIcons"].visible = @mode == 1
-    @spritesMap["QuestIcons"].visible = @spritesMap["QuestSelect"].visible = @mode == 2 if QUESTPLUGIN && ARMSettings::ShowQuestIcons
-    @spritesMap["BerryIcons"].visible = @mode == 3 if BERRYPLUGIN && allowShowingBerries
+    @spritesMap["QuestIcons"].visible = @spritesMap["QuestSelect"].visible = @mode == 2 if QuestPlugin && ARMSettings::ShowQuestIcons
+    @spritesMap["BerryIcons"].visible = @mode == 3 if BerryPlugin && allowShowingBerries
     @spritesMap["RoamingIcons"].visible = @mode == 4 if enableMode(ARMSettings::ShowRoamingIcons)
     @spritesMap["highlight"].bitmap.clear if @spritesMap["highlight"]
     colorCurrentLocation
@@ -34,27 +33,27 @@ class PokemonRegionMap_Scene
       @modeInfo = {
         :normal => {
           mode: 0,
-          text: pbGetMessageFromHash(SCRIPTTEXTS, "#{ARMSettings::ModeNames[:normal]}"),
+          text: pbGetMessageFromHash(ScriptTexts, "#{ARMSettings::ModeNames[:normal]}"),
           condition: true
         },
         :fly => {
           mode: 1,
-          text: pbGetMessageFromHash(SCRIPTTEXTS, "#{ARMSettings::ModeNames[:fly]}"),
-          condition: pbCanFly? && ((!@playerPos.nil? && @region == @playerPos[0]) || canFlyOtherRegion) && ARMSettings::CanFlyFromTownMap
+          text: pbGetMessageFromHash(ScriptTexts, "#{ARMSettings::ModeNames[:fly]}"),
+          condition: pbCanFly? && ((!@playerPos.nil? && @region == @playerPos[0]) || canFlyOtherRegion(@region, true)) && ARMSettings::CanFlyFromTownMap
         },
         :quest => {
           mode: 2,
-          text: pbGetMessageFromHash(SCRIPTTEXTS, "#{ARMSettings::ModeNames[:quest]}"),
-          condition: QUESTPLUGIN && enableMode(ARMSettings::ShowQuestIcons) && !@questMap.empty?
+          text: pbGetMessageFromHash(ScriptTexts, "#{ARMSettings::ModeNames[:quest]}"),
+          condition: QuestPlugin && enableMode(ARMSettings::ShowQuestIcons) && !@questMap.empty?
         },
         :berry => {
           mode: 3,
-          text: pbGetMessageFromHash(SCRIPTTEXTS, "#{ARMSettings::ModeNames[:berry]}"),
-          condition: BERRYPLUGIN && enableMode(ARMSettings::ShowBerryIcons) && !pbGetBerriesAtMapPoint(@region).empty?
+          text: pbGetMessageFromHash(ScriptTexts, "#{ARMSettings::ModeNames[:berry]}"),
+          condition: BerryPlugin && enableMode(ARMSettings::ShowBerryIcons) && !pbGetBerriesAtMapPoint(@region).empty?
         },
         :roaming => {
           mode: 4,
-          text: pbGetMessageFromHash(SCRIPTTEXTS, "#{ARMSettings::ModeNames[:roaming]}"),
+          text: pbGetMessageFromHash(ScriptTexts, "#{ARMSettings::ModeNames[:roaming]}"),
           condition: enableMode(ARMSettings::ShowRoamingIcons) && $PokemonGlobal.roamPosition.any? { |roamPos| getActiveRoaming(roamPos) && getRoamingTownMapPos(roamPos) }
         }
       }
@@ -64,6 +63,8 @@ class PokemonRegionMap_Scene
         @sprites["modeName"].bitmap.clear
         @sprites["buttonPreview"].visible = false
         return
+      else
+        @sprites["buttonPreview"].visible = true
       end
       text = @modeInfo[:normal][:text]
       @modeInfo.each do |mode, data|

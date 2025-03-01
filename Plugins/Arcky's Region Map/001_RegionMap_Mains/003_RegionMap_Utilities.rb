@@ -1,23 +1,23 @@
 class PokemonRegionMap_Scene
   def findUsableUI(image)
-    if THEMEPLUGIN
+    if ThemePlugin
       # Use Current set Theme's UI Graphics
-      return "#{FOLDER}UI/#{$PokemonSystem.pokegear}/#{image}"
+      return "#{Folder}UI/#{$PokemonSystem.pokegear}/#{image}"
     else
       folderUI = "UI/Region#{@region}/"
-      bitmap = pbResolveBitmap("#{FOLDER}#{folderUI}#{image}")
-      if bitmap && ARMSettings::ChangeUIOnRegion
+      bitmap = pbResolveBitmap("#{Folder}#{folderUI}#{image}")
+      if bitmap && RegionUI
         # Use UI Graphics for the Current Region.
-        return "#{FOLDER}#{folderUI}#{image}"
+        return "#{Folder}#{folderUI}#{image}"
       else
         # Use Default UI Graphics.
-        return "#{FOLDER}UI/#{UI_FOLDER}/#{image}"
+        return "#{Folder}UI/#{UIFolder}/#{image}"
       end
     end
   end
 
   def getTimeOfDay
-    path = "#{FOLDER}Regions/"
+    path = "#{Folder}Regions/"
     return "#{path}#{@regionFile}" if !ARMSettings::TimeBasedRegionMap
     if PBDayNight.isDay?
       time = "Day"
@@ -71,5 +71,15 @@ class PokemonRegionMap_Scene
       mapFolder = "Others"
     end
     return mapFolder
+  end
+
+  def adjustPosX(value, add = false, region = @region)
+    return value += @regionData[region][:beginX] if add
+    return value -= @regionData[region][:beginX]
+  end
+
+  def adjustPosY(value, add = false, region = @region)
+    return value += @regionData[region][:beginY] if add
+    return value -= @regionData[region][:beginY]
   end
 end

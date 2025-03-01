@@ -4,16 +4,16 @@ class PokemonRegionMap_Scene
     offset = ARMSettings::CursorMapOffset ? 1 : 0
     @zoomHash = {
       0 => {
-        :enabled => !((@mapWidth < UI_WIDTH) || (@mapHeight < UI_HEIGHT)),
+        :enabled => !((@mapWidth < UIWidth) || (@mapHeight < UIHeight)),
         :level => 0.5, #steps 32px
         :steps => 32,
         :curCorr => 16,
         :limits => createCursorLimitObject(32, 16, 0.5),
         :map => {
-          :minX => (UI_BORDER_WIDTH.to_f / 32).ceil + offset,
-          :maxX => ((@mapWidth / 16) - 1) - (UI_BORDER_WIDTH.to_f / 32).ceil - offset,
-          :minY => (UI_BORDER_HEIGHT.to_f / 32).ceil + offset,
-          :maxY => ((@mapHeight / 16) - 1) - (UI_BORDER_HEIGHT.to_f / 32).ceil - offset
+          :minX => (UIBorderWidth.to_f / 32).ceil + offset,
+          :maxX => ((@mapWidth / 16) - 1) - (UIBorderWidth.to_f / 32).ceil - offset,
+          :minY => (UIBorderHeight.to_f / 32).ceil + offset,
+          :maxY => ((@mapHeight / 16) - 1) - (UIBorderHeight.to_f / 32).ceil - offset
         }
       },
       1 => {
@@ -23,23 +23,23 @@ class PokemonRegionMap_Scene
         :curCorr => 8,
         :limits => createCursorLimitObject(16, 8, 1.0),
         :map => {
-          :minX => (UI_BORDER_WIDTH.to_f / 16).ceil + offset,
-          :maxX => ((@mapWidth / 16) - 1) - (UI_BORDER_WIDTH.to_f / 16).ceil - offset,
-          :minY => (UI_BORDER_HEIGHT.to_f / 16).ceil + offset,
-          :maxY => ((@mapHeight / 16) - 1) - (UI_BORDER_HEIGHT.to_f / 16).ceil - offset
+          :minX => (UIBorderWidth.to_f / 16).ceil + offset,
+          :maxX => ((@mapWidth / 16) - 1) - (UIBorderWidth.to_f / 16).ceil - offset,
+          :minY => (UIBorderHeight.to_f / 16).ceil + offset,
+          :maxY => ((@mapHeight / 16) - 1) - (UIBorderHeight.to_f / 16).ceil - offset
         }
       },
       2 => {
-        :enabled => (@mapWidth >= UI_WIDTH * 2.0) && (@mapHeight >= UI_HEIGHT * 2.0),
+        :enabled => (@mapWidth >= UIWidth * 2.0) && (@mapHeight >= UIHeight * 2.0),
         :level => 2.0, #steps 8px
         :steps => 8,
         :curCorr => 4,
         :limits => createCursorLimitObject(8, 4, 2.0),
         :map => {
-          :minX => (UI_BORDER_WIDTH.to_f / 8).ceil + offset,
-          :maxX => ((@mapWidth / 16) - 1) - (UI_BORDER_WIDTH.to_f / 8).ceil - offset,
-          :minY => (UI_BORDER_HEIGHT.to_f / 8).ceil + offset,
-          :maxY => ((@mapHeight / 16) - 1) - (UI_BORDER_HEIGHT.to_f / 8).ceil - offset
+          :minX => (UIBorderWidth.to_f / 8).ceil + offset,
+          :maxX => ((@mapWidth / 16) - 1) - (UIBorderWidth.to_f / 8).ceil - offset,
+          :minY => (UIBorderHeight.to_f / 8).ceil + offset,
+          :maxY => ((@mapHeight / 16) - 1) - (UIBorderHeight.to_f / 8).ceil - offset
         }
       },
     }
@@ -63,13 +63,15 @@ class PokemonRegionMap_Scene
     end
     @mapWidth = @spritesMap["map"].bitmap.width
     @mapHeight = @spritesMap["map"].bitmap.height
+    checkRegionBorderLimit
     @mapWidth /= @zoomHash[@zoomIndex][:level]
     @mapHeight /= @zoomHash[@zoomIndex][:level]
     @zoomLevel = 1.to_f / @zoomHash[@zoomIndex][:level]
     steps = @zoomHash[@zoomIndex][:steps]
     curCorr = @zoomHash[@zoomIndex][:curCorr]
-    cursorX = ((-curCorr + BEHIND_UI[0]) + steps * @mapX)
-    cursorY = ((-curCorr + BEHIND_UI[2]) + steps * @mapY)
+    cursorX = ((-curCorr + BehindUI[0]) + steps * @mapX)
+    cursorY = ((-curCorr + BehindUI[2]) + steps * @mapY)
+    checkRegionBorderLimit
     posX = getCenterMapX(cursorX)
     posY = getCenterMapY(cursorY)
     @ZoomValues = {

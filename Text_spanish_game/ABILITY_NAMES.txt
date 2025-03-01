@@ -1,0 +1,146 @@
+﻿# To localize this text for a particular language, please
+# translate every second line of this file.
+#-------------------------------
+[ABILITY_NAMES]
+Anger Shell
+Anger Shell
+Armor Tail
+Armor Tail
+Beads of Ruin
+Beads of Ruin
+Commander
+Commander
+Costar
+Costar
+Cud Chew
+Cud Chew
+Earth Eater
+Earth Eater
+Electromorphosis
+Electromorphosis
+Good as Gold
+Good as Gold
+Guard Dog
+Guard Dog
+Hadron Engine
+Hadron Engine
+Lingering Aroma
+Lingering Aroma
+Mycelium Might
+Mycelium Might
+Opportunist
+Opportunist
+Orichalcum Pulse
+Orichalcum Pulse
+Protosynthesis
+Protosynthesis
+Purifying Salt
+Purifying Salt
+Quark Drive
+Quark Drive
+Rocky Payload
+Rocky Payload
+Seed Sower
+Seed Sower
+Sharpness
+Sharpness
+Supreme Overlord
+Supreme Overlord
+Sword of Ruin
+Sword of Ruin
+Tablets of Ruin
+Tablets of Ruin
+Thermal Exchange
+Thermal Exchange
+Toxic Debris
+Toxic Debris
+Vessel of Ruin
+Vessel of Ruin
+Well-Baked Body
+Well-Baked Body
+Wind Power
+Wind Power
+Wind Rider
+Wind Rider
+Zero to Hero
+Zero to Hero
+Supersweet Syrup
+Supersweet Syrup
+Hospitality
+Hospitality
+Toxic Chain
+Toxic Chain
+Mind's Eye
+Mind's Eye
+Embody Aspect
+Embody Aspect
+Poison Puppeteer
+Poison Puppeteer
+Tera Shift
+Tera Shift
+Tera Shell
+Tera Shell
+Teraform Zero
+Teraform Zero
+Pack Mentality
+Pack Mentality
+Frostbitten
+Frostbitten
+Shadow Cloak
+Shadow Cloak
+Resilience
+Resilience
+Life Drain
+Life Drain
+Seismic Waves
+Seismic Waves
+Updraft
+Updraft
+Hatesucker
+Hatesucker
+Antibody
+Antibody
+Postmortal
+Postmortal
+Outsmart
+Outsmart
+Flame Absorb
+Flame Absorb
+Astralize
+Astralize
+Incendiate
+Incendiate
+Aquilate
+Aquilate
+Verdarize
+Verdarize
+Villainize
+Villainize
+Arcanize
+Arcanize
+Spectralize
+Spectralize
+Quickplay
+Quickplay
+Wild Card
+Wild Card
+Spectral Copy
+Spectral Copy
+Grassy Boost
+Grassy Boost
+Artist's Block
+Artist's Block
+Starry Surge
+Starry Surge
+Hero's Journey
+Hero's Journey
+Herald of Spring
+Herald of Spring
+Herald of Summer
+Herald of Summer
+Herald of Autumn
+Herald of Autumn
+Herald of Winter
+Herald of Winter
+Permafrost
+Permafrost

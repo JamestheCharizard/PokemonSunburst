@@ -1,15 +1,13 @@
 class PokemonRegionMap_Scene
   def addBerryIconSprites
-    return if !BERRYPLUGIN || !allowShowingBerries
+    return if !BerryPlugin || !allowShowingBerries
     if !@spritesMap["BerryIcons"]
       @berryIcons = {}
-      regionID = -1
-      if @region >= 0 && @playerPos && @region != @playerPos[0]
-        regionID = @region
-      elsif @playerPos
-        regionID = @playerPos[0]
+      berryPlants = []
+      @regionData.each do |region,_|
+        berryPlants << pbForceUpdateAllBerryPlants(mapOnly: true, region: region, returnArray: true)
       end
-      berryPlants = pbForceUpdateAllBerryPlants(mapOnly: true, region: regionID, returnArray: true)
+      berryPlants = berryPlants.flatten(1)
       settings = Settings::BERRIES_ON_MAP_SHOW_PRIORITY
       berryPlants.each do |plant|
         img = 999
@@ -37,7 +35,7 @@ class PokemonRegionMap_Scene
       conversion = {:NeedsWater => "mapBerryDry", :ReadyToPick => "mapBerryReady",
               :HasPests => "mapBerryPest", :HasWeeds => "mapBerryWeeds"}[settings[value]] || "mapBerry"
       pbDrawImagePositions(@spritesMap["BerryIcons"].bitmap,
-        [[pbGetBerryMapIcon(conversion), pointXtoScreenX(key[1]), pointYtoScreenY(key[2])]])
+        [[pbGetBerryMapIcon(conversion), pointXtoScreenX(adjustPosX(key[1], true, key[0])), pointYtoScreenY(adjustPosY(key[2], true, key[0]))]])
     }
   end
 
@@ -46,7 +44,7 @@ class PokemonRegionMap_Scene
     $PokemonGlobal.eventvars.each do |info|
       plant = info[1]
       next if !plant.is_a?(BerryPlantData) || plant.town_map_location.nil? || !plant.planted? || plant.town_map_location[0] != region ||
-              (!x.nil? && plant.town_map_location[1] != x) || (!y.nil? && plant.town_map_location[2] != y)
+              (!x.nil? && plant.town_map_location[1] != adjustPosX(x)) || (!y.nil? && plant.town_map_location[2] != adjustPosY(y))
       array.push(plant)
     end
     return array
@@ -96,25 +94,19 @@ class PokemonRegionMap_Scene
 
   def getBerryNameAndAmount(berry)
     amount = @berryPlants[berry][:amount]
-    if ENGINE20
-      if amount >= 2
-        value = "#{amount} #{GameData::Item.get(berry).name_plural}"
-      else
-        value = "#{amount} #{GameData::Item.get(berry).name}"
-      end
-    elsif ENGINE21
-      if amount >= 2
-        value = "#{amount} #{GameData::Item.get(berry).portion_name_plural}"
-      else
-        value = "#{amount} #{GameData::Item.get(berry).portion_name}"
-      end
+    if amount >= 2
+      value = "#{amount} #{GameData::Item.get(berry).portion_name_plural}"
+    else
+      value = "#{amount} #{GameData::Item.get(berry).portion_name}"
     end
     return value
   end
 
   def showBerryInformation(lastChoiceBerries)
-    return choice = -1 if @berryPlants.nil?
+    berryInfo = @berryIcons.select { |coords, _| coords[0..2] == [@region, adjustPosX(@mapX), adjustPosY(@mapY)] }
+    return choice = -1 if @berryPlants.nil? || berryInfo.empty?
     input, berry, choice = getCurrentBerryInfo(lastChoiceBerries)
+    @oldLineCount = @lineCount
     if input && berry
       berryInfoText = []
       name = getBerryNameAndAmount(berry)
@@ -125,13 +117,8 @@ class PokemonRegionMap_Scene
         @sprites["locationText"].visible = false
       end
       @sprites["locationText"].bitmap.clear
-      if ENGINE20
-        base = colorToRgb16(ARMSettings::BerryInfoTextBase)
-        shadow = colorToRgb16(ARMSettings::BerryInfoTextShadow)
-      elsif ENGINE21
-        base = (ARMSettings::BerryInfoTextBase).to_rgb15
-        shadow = (ARMSettings::BerryInfoTextShadow).to_rgb15
-      end
+      base = (ARMSettings::BerryInfoTextBase).to_rgb15
+      shadow = (ARMSettings::BerryInfoTextShadow).to_rgb15
       selBerry = @berryPlants[berry]
       amount = selBerry[:amount]
       selBerry[:stages].each do |stage,value|
@@ -149,19 +136,19 @@ class PokemonRegionMap_Scene
       end
       @lineCount = ARMSettings::MaxBerryLines if @lineCount > ARMSettings::MaxBerryLines
       getPreviewBox
-      @sprites["locationText"].x = Graphics.width - (@sprites["previewBox"].width + UI_BORDER_WIDTH + ARMSettings::BerryInfoTextOffsetX)
-      @sprites["locationText"].y = UI_BORDER_HEIGHT + ARMSettings::BerryInfoTextOffsetY
+      @sprites["locationText"].x = Graphics.width - (@sprites["previewBox"].width + UIBorderWidth + ARMSettings::BerryInfoTextOffsetX)
+      @sprites["locationText"].y = UIBorderHeight + ARMSettings::BerryInfoTextOffsetY
       @sprites["locationText"].z = 28
     end
     return choice
   end
 
-  def getCurrentBerryInfo(lastchoiceBerries)
+  def getCurrentBerryInfo(lastChoiceBerries)
     if @berryPlants.length >= 2
       choice = messageMap(_INTL("Which berry would you like to view info about?"),
       @berryPlants.keys.map { |berry|
-        next "#{pbGetMessageFromHash(SCRIPTTEXTS, getBerryNameAndAmount(berry))}"
-      }, -1, nil, lastchoiceBerries) { pbUpdate }
+        next "#{pbGetMessageFromHash(ScriptTexts, getBerryNameAndAmount(berry))}"
+      }, -1, nil, lastChoiceBerries) { pbUpdate }
       input = choice != -1
       berry = @berryPlants.keys[choice]
     else

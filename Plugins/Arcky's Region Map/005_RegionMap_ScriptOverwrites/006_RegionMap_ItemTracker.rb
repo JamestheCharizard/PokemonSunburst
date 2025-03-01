@@ -31,11 +31,7 @@ if ARMSettings::ProgressCounter && ARMSettings::ProgressCountItems
   # Item handler
   #===============================================================================
   def getItemInfo(item, quantity, verb)
-    if Essentials::VERSION.include?("21")
-      itemname = (quantity > 1) ? item.portion_name_plural : item.portion_name
-    elsif Essentials::VERSION.include?("20")
-      itemname = (quantity > 1) ? item.name_plural : item.name
-    end
+    itemname = (quantity > 1) ? item.portion_name_plural : item.portion_name
     pocket = item.pocket
     move = item.move
     meName = (item.is_key_item?) ? "Key item get" : "Item get"

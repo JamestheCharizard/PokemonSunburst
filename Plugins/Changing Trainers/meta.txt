@@ -1,0 +1,3 @@
+Name       = Changing Trainers
+Version    = 1.1.1
+Credits    = Atlat

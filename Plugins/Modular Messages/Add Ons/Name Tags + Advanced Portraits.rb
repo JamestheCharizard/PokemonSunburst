@@ -223,6 +223,7 @@ Modular_Messages::Controls.add("xn", {
   "both" => true,
   "before_appears" => proc { |hash, param|
     param = pbAdjustNameTag(param)
+		anSetDialogueSound(param)
     hash["windows_name"]&.dispose
     hash["windows_name"] = pbDisplayNameWindow(hash["msg_window"],
           hash["current_control"] == "dxn", param)

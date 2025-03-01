@@ -13,21 +13,31 @@ SurfBGM = Surfing
 BicycleBGM = Bicycle
 #-------------------------------
 [1]
-TrainerType = POKEMONTRAINER_Red
-WalkCharset = trainer_POKEMONTRAINER_Red
-RunCharset = boy_run
-CycleCharset = boy_bike
-SurfCharset = boy_surf
-DiveCharset = boy_surf
-FishCharset = boy_fish_offset
-SurfFishCharset = boy_fish_offset
+TrainerType = POKEMONTRAINER_Aspin
+WalkCharset = ARS_Aspin
+RunCharset = ARS_Aspin_run
+CycleCharset = ARS_Aspin_bike
+SurfCharset = ARS_Aspin_surf
+DiveCharset = ARS_Aspin_surf
+FishCharset = ARS_Aspin_fish_offset
+SurfFishCharset = ARS_Aspin_fish_offset
 #-------------------------------
 [2]
-TrainerType = POKEMONTRAINER_Leaf
-WalkCharset = trainer_POKEMONTRAINER_Leaf
-RunCharset = girl_run
-CycleCharset = girl_bike
-SurfCharset = girl_surf
-DiveCharset = girl_surf
-FishCharset = girl_fish_offset
-SurfFishCharset = girl_fish_offset
+TrainerType = POKEMONTRAINER_Lapice
+WalkCharset = ARS_Lapice
+RunCharset = ARS_Lapice_run
+CycleCharset = ARS_Lapice_bike
+SurfCharset = ARS_Lapice_surf
+DiveCharset = ARS_Lapice_surf
+FishCharset = ARS_Lapice_fish_offset
+SurfFishCharset = ARS_Lapice_fish_offset
+#-------------------------------
+[3]
+TrainerType = POKEMONTRAINER_Jasper
+WalkCharset = ARS_Jasper
+RunCharset = ARS_Jasper_run
+CycleCharset = ARS_Jasper_bike
+SurfCharset = ARS_Jasper_surf
+DiveCharset = ARS_Jasper_surf
+FishCharset = ARS_Jasper_fish_offset
+SurfFishCharset = ARS_Jasper_fish_offset

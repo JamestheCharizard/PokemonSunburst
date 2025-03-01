@@ -48,6 +48,7 @@ class Trainer
   def gender;            return GameData::TrainerType.get(self.trainer_type).gender;          end
   def male?;             return GameData::TrainerType.get(self.trainer_type).male?;           end
   def female?;           return GameData::TrainerType.get(self.trainer_type).female?;         end
+  def nonbinary?;           return GameData::TrainerType.get(self.trainer_type).nonbinary?;         end
   def skill_level;       return GameData::TrainerType.get(self.trainer_type).skill_level;     end
   def flags;             return GameData::TrainerType.get(self.trainer_type).flags;           end
   def has_flag?(flag);   return GameData::TrainerType.get(self.trainer_type).has_flag?(flag); end

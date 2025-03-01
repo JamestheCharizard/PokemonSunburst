@@ -13,23 +13,32 @@ class PokemonRegionMap_Scene
     @viewport.z       = 100001
     @viewportCursor   = Viewport.new(0, 0, Graphics.width, Graphics.height)
     @viewportCursor.z = 100000
-    @viewportMap      = Viewport.new(BEHIND_UI[0], BEHIND_UI[2], (Graphics.width - BEHIND_UI[1]), (Graphics.height - BEHIND_UI[3]))
+    @viewportMap      = Viewport.new(BehindUI[0], BehindUI[2], (Graphics.width - BehindUI[1]), (Graphics.height - BehindUI[3]))
     @viewportMap.z    = 99999
     @sprites          = {}
     @spritesMap       = {}
-    @mapData          = pbLoadTownMapData if ENGINE20
     @flyMap           = flyMap
     @mode             = flyMap ? 1 : 0
     @mapMetadata      = $game_map.metadata
     @playerPos        = (@mapMetadata) ? @mapMetadata.town_map_position : nil
     getPlayerPosition
-    @regionName = @map[0] if ENGINE20
-    @regionName = @map.name.to_s if ENGINE21
-    @regionFile = @map[1] if ENGINE20
-    @regionFile = @map.filename if ENGINE21
-    if QUESTPLUGIN && $quest_data
-      @questMap  = $quest_data.getQuestMapPositions(@map[2], @region) if ENGINE20
-      @questMap  = $quest_data.getQuestMapPositions(@map.point, @region) if ENGINE21
+    @regionName = @map.name.to_s if !@regionName
+    # v3.1.0 (v21.1 only)
+    if ARMSettings::UseRegionConnecting && !ARMSettings::RegionConnections.empty?
+      ARMSettings::RegionConnections.each do |filename, regions|
+        regions.each do |id, data|
+          if id == @region
+            @regionFile = "map#{filename.to_s}"
+            @mapX += data[:beginX]
+            @mapY += data[:beginY]
+            @regionData = regions
+            break;
+          end
+        end
+      end
+      @regionFile = @map.filename if !@regionFile
+    else
+      @regionFile = @map.filename
     end
     if !@map
       pbMessage(_INTL("The map data cannot be found."))
@@ -47,6 +56,7 @@ class PokemonRegionMap_Scene
     changeBGM
     addBackgroundAndRegionSprite
     getMapObject
+    getQuestMapData
     getFlyIconPositions
     addFlyIconSprites
     addUnvisitedMapSprites
@@ -81,37 +91,30 @@ class PokemonRegionMap_Scene
 
   def getPlayerPosition
     if ARMSettings::CenterCursorByDefault || ARMSettings::ShowPlayerOnRegion
-      @mapX      = UI_WIDTH % ARMSettings::SquareWidth != 0 ? ((UI_WIDTH / 2) + 8) / ARMSettings::SquareWidth : (UI_WIDTH / 2) / ARMSettings::SquareWidth
-      @mapY      = UI_HEIGHT % ARMSettings::SquareHeight != 0 ? ((UI_HEIGHT / 2) + 8) / ARMSettings::SquareHeight : (UI_HEIGHT / 2) / ARMSettings::SquareHeight
+      @mapX      = UIWidth % ARMSettings::SquareWidth != 0 ? ((UIWidth / 2) + 8) / ARMSettings::SquareWidth : (UIWidth / 2) / ARMSettings::SquareWidth
+      @mapY      = UIHeight % ARMSettings::SquareHeight != 0 ? ((UIHeight / 2) + 8) / ARMSettings::SquareHeight : (UIHeight / 2) / ARMSettings::SquareHeight
     else
-      @mapX      = ZERO_POINT_X
-      @mapY      = ZERO_POINT_Y
+      @mapX      = ZeroPointX
+      @mapY      = ZeroPointY
     end
     if !@playerPos
       @region    = 0
-      # v20.1.
-      @map       = @mapData[0] if ENGINE20
       # v21.1 and above.
-      @map       = GameData::TownMap.get(@region) if ENGINE21
-    elsif @region >= 0 && @region != @playerPos[0] && ((ENGINE20 && @mapData[@region]) || (ENGINE21 && GameData::TownMap.exists?(@region)))
-      # v20.1.
-      @map       = @mapData[@region] if ENGINE20
+      @map       = GameData::TownMap.get(@region)
+    elsif @region >= 0 && @region != @playerPos[0] && GameData::TownMap.exists?(@region)
       # v21.1 and above.
-      @map       = GameData::TownMap.get(@region) if ENGINE21
+      @map       = GameData::TownMap.get(@region)
     else
       @region    = @playerPos[0]
-      # v20.1.
-      @map       = @mapData[@playerPos[0]] if ENGINE20
       #v21.1 and above.
-      @map       = GameData::TownMap.get(@region) if ENGINE21
+      @map       = GameData::TownMap.get(@region)
       @mapX      = @playerPos[1]
       @mapY      = @playerPos[2]
       ARMSettings::FakeRegionLocations[$game_map.map_id]&.each do |var, keys|
         keys.each do |value, pos|
           if $game_variables[var] == value
             @region = @playerPos[0] = pos[0]
-            @map = @mapData[pos[0]] if ENGINE20
-            @map = GameData::TownMap.get(@region) if ENGINE21
+            @map = GameData::TownMap.get(@region)
             @mapX = @playerPos[1] = pos[1]
             @mapY = @playerPos[2] = pos[2]
           end
@@ -143,7 +146,7 @@ class PokemonRegionMap_Scene
     @sprites["Background"].x += (Graphics.width - @sprites["Background"].bitmap.width) / 2
     @sprites["Background"].y += (Graphics.height - @sprites["Background"].bitmap.height) / 2
     @sprites["Background"].z = 30
-    if THEMEPLUGIN
+    if ThemePlugin
       @sprites["BackgroundOver"] = IconSprite.new(0, 0, @viewport)
       @sprites["BackgroundOver"].setBitmap(findUsableUI("mapBackgroundOver"))
       @sprites["BackgroundOver"].x += (Graphics.width - @sprites["BackgroundOver"].bitmap.width) / 2
@@ -159,6 +162,10 @@ class PokemonRegionMap_Scene
     @spritesMap["map"].z = 1
     @mapWidth = @spritesMap["map"].bitmap.width
     @mapHeight = @spritesMap["map"].bitmap.height
+    if !@regionData || !ARMSettings::UseRegionConnecting || ARMSettings::RegionConnections.empty?
+      @regionData = { @region => { :beginX => 0, :endX => (@mapWidth / ARMSettings::SquareHeight) - 1, :beginY => 0, :endY => (@mapHeight / ARMSettings::SquareHeight) - 1}}
+    end
+    checkRegionBorderLimit
     ARMSettings::RegionMapExtras.each do |graphic|
       next if graphic[0] != @region || !locationShown?(graphic)
       if !@spritesMap["map2"]
@@ -169,7 +176,7 @@ class PokemonRegionMap_Scene
       end
       pbDrawImagePositions(
         @spritesMap["map2"].bitmap,
-        [["#{FOLDER}HiddenRegionMaps/#{graphic[4]}", graphic[2] * ARMSettings::SquareWidth, graphic[3] * ARMSettings::SquareHeight]]
+        [["#{Folder}HiddenRegionMaps/#{graphic[4]}", adjustPosX(graphic[2], true) * ARMSettings::SquareWidth, adjustPosY(graphic[3], true) * ARMSettings::SquareHeight]]
       )
     end
     ARMSettings::RegionMapDecoration.each do |graphic|
@@ -182,7 +189,7 @@ class PokemonRegionMap_Scene
       end
       pbDrawImagePositions(
         @spritesMap["map3"].bitmap,
-        [["#{FOLDER}Regions/Region Decorations/#{graphic[4]}", graphic[2] * ARMSettings::SquareWidth, graphic[3] * ARMSettings::SquareHeight]]
+        [["#{Folder}Regions/Region Decorations/#{graphic[4]}", adjustPosX(graphic[2], true) * ARMSettings::SquareWidth, adjustPosY(graphic[3], true) * ARMSettings::SquareHeight]]
       )
     end
   end
@@ -229,8 +236,8 @@ class PokemonRegionMap_Scene
   def addCursorSprite
     @sprites["cursor"] = AnimatedSprite.create(findUsableUI("mapCursor"), 2, 5)
     @sprites["cursor"].viewport = @viewportCursor
-    @sprites["cursor"].x        = (-8 + BEHIND_UI[0]) + ARMSettings::SquareWidth * @mapX
-    @sprites["cursor"].y        = (-8 + BEHIND_UI[2]) + ARMSettings::SquareHeight * @mapY
+    @sprites["cursor"].x        = (-8 + BehindUI[0]) + ARMSettings::SquareWidth * @mapX
+    @sprites["cursor"].y        = (-8 + BehindUI[2]) + ARMSettings::SquareHeight * @mapY
     @sprites["cursor"].play
   end
 
@@ -259,10 +266,9 @@ class PokemonRegionMap_Scene
     @zoom = false # for v2.7.0
     @limitCursor = @zoomHash[@zoomIndex][:limits]
     updateMapRange
-    @distPerFrame = 8 * 20 / Graphics.frame_rate if ENGINE20
-    @distPerFrame = System.uptime if ENGINE21
-    @uiWidth = @mapWidth < UI_WIDTH ? @mapWidth : UI_WIDTH
-    @uiHeight = @mapHeight < UI_HEIGHT ? @mapHeight : UI_HEIGHT
+    @distPerFrame = System.uptime
+    @uiWidth = @mapWidth < UIWidth ? @mapWidth : UIWidth
+    @uiHeight = @mapHeight < UIWidth ? @mapHeight : UIHeight
     @switchMode = false
     loop do
       Graphics.update
@@ -305,7 +311,7 @@ class PokemonRegionMap_Scene
         lastChoiceQuest = choice if @mode == 2
         lastChoiceBerries = choice if @mode == 3
       end
-      if Input.trigger?(Input::CTRL) && @mode == 0 && !ENGINE20 && ARMSettings::UseRegionMapZoom
+      if Input.trigger?(Input::CTRL) && @mode == 0 && ARMSettings::UseRegionMapZoom
         if !@zoom
           @zoom = true
           @sprites["modeName"].bitmap.clear
@@ -320,7 +326,7 @@ class PokemonRegionMap_Scene
           getZoomValues
           next
         end
-      elsif @zoom && !ENGINE20
+      elsif @zoom
         if Input.trigger?(Input::JUMPUP) && (@zoomIndex != 0 && @zoomHash[@zoomIndex - 1][:enabled]) # zoom in
           @zoomIndex -= 1
           @zoomTriggered = true
@@ -343,6 +349,7 @@ class PokemonRegionMap_Scene
       choice = canActivateQuickFly(lastChoiceFly, cursor) if @mode == 1
       updateCursorPosition(ox, oy, cursor) if (ox != 0 || oy != 0) && !previewAnimation
       updateMapPosition(mox, moy, map) if (mox != 0 || moy != 0) && !previewAnimation
+      changeRegionOnMapPosition
       #updatePreviewBox if @previewBox.canUpdate
       showAndUpdateMapInfo if (@mapX != cursor[:oldX] || @mapY != cursor[:oldY]) && @previewBox.isUpdateAnim || @previewBox.isHidden
       if !@wallmap
@@ -355,7 +362,7 @@ class PokemonRegionMap_Scene
           showExtendedPreview
         elsif ((Input.trigger?(Input::USE) || Input.trigger?(ARMSettings::MouseButtonSelectLocation)) && @mode == 1) || inputFly
           return @healspot if getFlyLocationAndConfirm { pbUpdate }
-        elsif Input.trigger?(ARMSettings::ShowQuestButton) && QUESTPLUGIN && @mode == 2
+        elsif Input.trigger?(ARMSettings::ShowQuestButton) && QuestPlugin && @mode == 2
           @ChangeQuestIcon = true
           choice = showQuestInformation(lastChoiceQuest)
           if choice != -1
@@ -363,7 +370,7 @@ class PokemonRegionMap_Scene
               @previewBox.updateIt
               updatePreviewBox
             else
-              @previewBox.showIt
+              @previewBox.showIt if !@previewBox.isShown
               showPreviewBox
             end
           elsif @previewBox.isShown
@@ -379,17 +386,17 @@ class PokemonRegionMap_Scene
           else
             switchMapMode
           end
-        elsif Input.trigger?(ARMSettings::ChangeRegionButton) && @previewBox.isHidden && ((ENGINE20 && @mapData.length >= 2) || (ENGINE21 && GameData::TownMap.count >= 2)) && !@flyMap && !@zoom
+        elsif Input.trigger?(ARMSettings::ChangeRegionButton) && @previewBox.isHidden && GameData::TownMap.count >= 2 && !@flyMap && !@zoom
           @ChangeQuestIcon = false if @mode == 2
           switchRegionMap
-        elsif Input.trigger?(ARMSettings::ShowBerryButton) && BERRYPLUGIN && @mode == 3
+        elsif Input.trigger?(ARMSettings::ShowBerryButton) && BerryPlugin && @mode == 3
           choice = showBerryInformation(lastChoiceBerries)
           if choice != -1
             if @previewBox.isShown && @berryPlants.length >= 2 && choice != lastChoiceBerries
               @previewBox.updateIt
               updatePreviewBox
             else
-              @previewBox.showIt
+              @previewBox.showIt if !@previewBox.isShown
               showPreviewBox
             end
           elsif @previewBox.isShown
@@ -418,44 +425,28 @@ class PokemonRegionMap_Scene
   end
 
   def updateCursor(cursor)
-    if ENGINE20
-      cursor[:offsetX] += (cursor[:offsetX] > 0) ? -@distPerFrame : (cursor[:offsetX] < 0) ? @distPerFrame : 0
-      cursor[:offsetY] += (cursor[:offsetY] > 0) ? -@distPerFrame : (cursor[:offsetY] < 0) ? @distPerFrame : 0
-      @sprites["cursor"].x = cursor[:newX] - cursor[:offsetX]
-      @sprites["cursor"].y = cursor[:newY] - cursor[:offsetY]
-    elsif ENGINE21
-      if cursor[:offsetX] != 0
-        @sprites["cursor"].x = lerp(cursor[:newX] - cursor[:offsetX], cursor[:newX], 0.1, @distPerFrame, System.uptime)
-        cursor[:offsetX] = 0 if @sprites["cursor"].x == cursor[:newX]
-      end
-      if cursor[:offsetY] != 0
-        @sprites["cursor"].y = lerp(cursor[:newY] - cursor[:offsetY], cursor[:newY], 0.1, @distPerFrame, System.uptime)
-        cursor[:offsetY] = 0 if @sprites["cursor"].y == cursor[:newY]
-      end
+    if cursor[:offsetX] != 0
+      @sprites["cursor"].x = lerp(cursor[:newX] - cursor[:offsetX], cursor[:newX], 0.1, @distPerFrame, System.uptime)
+      cursor[:offsetX] = 0 if @sprites["cursor"].x == cursor[:newX]
+    end
+    if cursor[:offsetY] != 0
+      @sprites["cursor"].y = lerp(cursor[:newY] - cursor[:offsetY], cursor[:newY], 0.1, @distPerFrame, System.uptime)
+      cursor[:offsetY] = 0 if @sprites["cursor"].y == cursor[:newY]
     end
   end
 
   def updateMap(map)
-    if ENGINE20
-      map[:offsetX] += (map[:offsetX] > 0) ? -@distPerFrame : (map[:offsetX] < 0) ? @distPerFrame : 0
-      map[:offsetY] += (map[:offsetY] > 0) ? -@distPerFrame : (map[:offsetY] < 0) ? @distPerFrame : 0
+    if map[:offsetX] != 0
       @spritesMap.each do |key, value|
-        @spritesMap[key].x = map[:newX] - map[:offsetX]
-        @spritesMap[key].y = map[:newY] - map[:offsetY]
+        @spritesMap[key].x = lerp(map[:newX] - map[:offsetX], map[:newX], 0.1, @distPerFrame, System.uptime)
       end
-    elsif ENGINE21
-      if map[:offsetX] != 0
-        @spritesMap.each do |key, value|
-          @spritesMap[key].x = lerp(map[:newX] - map[:offsetX], map[:newX], 0.1, @distPerFrame, System.uptime)
-        end
-        map[:offsetX] = 0 if @spritesMap["map"].x == map[:newX]
+      map[:offsetX] = 0 if @spritesMap["map"].x == map[:newX]
+    end
+    if map[:offsetY] != 0
+      @spritesMap.each do |key, value|
+        @spritesMap[key].y = lerp(map[:newY] - map[:offsetY], map[:newY], 0.1, @distPerFrame, System.uptime)
       end
-      if map[:offsetY] != 0
-        @spritesMap.each do |key, value|
-          @spritesMap[key].y = lerp(map[:newY] - map[:offsetY], map[:newY], 0.1, @distPerFrame, System.uptime)
-        end
-        map[:offsetY] = 0 if @spritesMap["map"].y == map[:newY]
-      end
+      map[:offsetY] = 0 if @spritesMap["map"].y == map[:newY]
     end
     updateMapRange
   end
@@ -464,18 +455,18 @@ class PokemonRegionMap_Scene
     case Input.dir8
     when 1, 2, 3
       oy = 1 if @sprites["cursor"].y < @limitCursor[:maxY]
-      moy = -1 if @spritesMap["map"].y > -1 * (@mapHeight - (Graphics.height - BEHIND_UI[3])) && oy == 0
+      moy = -1 if @spritesMap["map"].y > @regionLimits[:mapMaxY] && oy == 0
     when 7, 8, 9
       oy = -1 if @sprites["cursor"].y > @limitCursor[:minY]
-      moy = 1 if @spritesMap["map"].y < 0 && oy == 0
+      moy = 1 if @spritesMap["map"].y < @regionLimits[:mapStartY] && oy == 0
     end
     case Input.dir8
     when 1, 4, 7
       ox = -1 if @sprites["cursor"].x > @limitCursor[:minX]
-      mox = 1 if @spritesMap["map"].x < 0 - @cursorCorrZoom && ox == 0
+      mox = 1 if @spritesMap["map"].x < @regionLimits[:mapStartX] && ox == 0
     when 3, 6, 9
       ox = 1 if @sprites["cursor"].x < @limitCursor[:maxX]
-      mox = -1 if @spritesMap["map"].x > -1 * (@mapWidth - (Graphics.width - BEHIND_UI[1])) + @cursorCorrZoom && ox == 0
+      mox = -1 if @spritesMap["map"].x > @regionLimits[:mapMaxX] && ox == 0
     end
     return ox, oy, mox, moy
   end
@@ -497,7 +488,7 @@ class PokemonRegionMap_Scene
         hidePreviewBox
       end
     end
-    @distPerFrame = System.uptime if ENGINE21
+    @distPerFrame = System.uptime
   end
 
   def updateMapPosition(mox, moy, map)
@@ -516,11 +507,11 @@ class PokemonRegionMap_Scene
         hidePreviewBox
       end
     end
-    @distPerFrame = System.uptime if ENGINE21
+    @distPerFrame = System.uptime
   end
 
   def pbEndScene
-    startFade { pbUpdate }
+    #startFade { pbUpdate }
     $game_system.bgm_restore
     pbDisposeSpriteHash(@sprites)
     pbDisposeSpriteHash(@spritesMap)

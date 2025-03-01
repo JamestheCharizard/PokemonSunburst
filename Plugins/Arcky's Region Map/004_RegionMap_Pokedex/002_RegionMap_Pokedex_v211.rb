@@ -3,17 +3,17 @@
 #===============================================================================
 if Essentials::VERSION.include?("21")
   class PokemonPokedexInfo_Scene
-    UI_WIDTH = Settings::SCREEN_WIDTH - 32
-    UI_HEIGHT = Settings::SCREEN_HEIGHT - 64
-    BEHIND_UI = ARMSettings::RegionMapBehindUI ? [0, 0, 0, 0] : [16, 32, 48, 64]
-    THEMEPLUGIN = PluginManager.installed?("Lin's Pokegear Themes")
-    FOLDER = "Graphics/UI/Town Map/"
+    UIWidth = Settings::SCREEN_WIDTH - 32
+    UIHeight = Settings::SCREEN_HEIGHT - 64
+    BehindUI = ARMSettings::RegionMapBehindUI ? [0, 0, 0, 0] : [16, 32, 48, 64]
+    ThemePlugin = PluginManager.installed?("Lin's Pokegear Themes")
+    Folder = "Graphics/UI/Town Map/"
 
     alias arcky_pbStartScene pbStartScene
     def pbStartScene(*args)
       @viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
       @viewport.z = 100000
-      @viewportMap = Viewport.new(BEHIND_UI[0], BEHIND_UI[2], (Graphics.width - BEHIND_UI[1]), (Graphics.height - BEHIND_UI[3]))
+      @viewportMap = Viewport.new(BehindUI[0], BehindUI[2], (Graphics.width - BehindUI[1]), (Graphics.height - BehindUI[3]))
       @viewportMap.z = 99999
       arcky_pbStartScene(*args)
       @sprites["areamap"] = IconSprite.new(0, 0, @viewportMap)
@@ -46,22 +46,22 @@ if Essentials::VERSION.include?("21")
       end
       @mapWidth = @sprites["areamap"].bitmap.width
       @mapHeight = @sprites["areamap"].bitmap.height
-      @playerX = (-8 + BEHIND_UI[0]) + (ARMSettings::SquareWidth * mapX)
-      @playerY = (-8 + BEHIND_UI[1]) + (ARMSettings::SquareHeight * mapY)
-      @mapMaxX = -1 * (@mapWidth - (Graphics.width - BEHIND_UI[1]))
-      @mapMaxY = -1 * (@mapHeight - (Graphics.height - BEHIND_UI[3]))
-      @mapPosX = (UI_WIDTH / 2) - @playerX
-      @mapPosY = (UI_HEIGHT / 2) - @playerY
-      @mapOffsetX = @mapWidth < (Graphics.width - BEHIND_UI[1]) ? ((Graphics.width - BEHIND_UI[1]) - @mapWidth) / 2 : 0
-      @mapoffsetY = @mapHeight < (Graphics.height - BEHIND_UI[3]) ? ((Graphics.height - BEHIND_UI[3]) - @mapHeight) / 2 : 0
+      @playerX = (-8 + BehindUI[0]) + (ARMSettings::SquareWidth * mapX)
+      @playerY = (-8 + BehindUI[1]) + (ARMSettings::SquareHeight * mapY)
+      @mapMaxX = -1 * (@mapWidth - (Graphics.width - BehindUI[1]))
+      @mapMaxY = -1 * (@mapHeight - (Graphics.height - BehindUI[3]))
+      @mapPosX = (UIWidth / 2) - @playerX
+      @mapPosY = (UIHeight / 2) - @playerY
+      @mapOffsetX = @mapWidth < (Graphics.width - BehindUI[1]) ? ((Graphics.width - BehindUI[1]) - @mapWidth) / 2 : 0
+      @mapoffsetY = @mapHeight < (Graphics.height - BehindUI[3]) ? ((Graphics.height - BehindUI[3]) - @mapHeight) / 2 : 0
       pos = @mapPosX < @mapMaxX ? @mapMaxX : @mapPosX
-      if @playerX > (Settings::SCREEN_WIDTH / 2) && ((@mapWidth > Graphics.width && ARMSettings::RegionMapBehindUI) || (@mapWidth > UI_WIDTH && !ARMSettings::RegionMapBehindUI))
+      if @playerX > (Settings::SCREEN_WIDTH / 2) && ((@mapWidth > Graphics.width && ARMSettings::RegionMapBehindUI) || (@mapWidth > UIWidth && !ARMSettings::RegionMapBehindUI))
         @sprites["areamap"].x = pos % ARMSettings::SquareWidth != 0 ? pos + 8 : pos
       else
         @sprites["areamap"].x = @mapOffsetX
       end
       pos = @mapPosY < @mapMaxY ? @mapMaxY : @mapPosY
-      if @playerY > (Settings::SCREEN_HEIGHT / 2) && ((@mapHeight > Graphics.height && ARMSettings::RegionMapBehindUI) || (@mapHeight > UI_HEIGHT && !ARMSettings::RegionMapBehindUI))
+      if @playerY > (Settings::SCREEN_HEIGHT / 2) && ((@mapHeight > Graphics.height && ARMSettings::RegionMapBehindUI) || (@mapHeight > UIHeight && !ARMSettings::RegionMapBehindUI))
         @sprites["areamap"].y = pos % ARMSettings::SquareHeight != 0 ? pos + 24 : pos
       else
         @sprites["areamap"].y = @mapoffsetY
@@ -204,18 +204,18 @@ if Essentials::VERSION.include?("21")
     end
 
     def findUsableUI(image)
-      if THEMEPLUGIN
+      if ThemePlugin
         # Use Current set Theme's UI Graphics
-        return "#{FOLDER}UI/#{$PokemonSystem.pokegear}/#{image}"
+        return "#{Folder}UI/#{$PokemonSystem.pokegear}/#{image}"
       else
         folderUI = "UI/Region#{@region}/"
-        bitmap = pbResolveBitmap("#{FOLDER}#{folderUI}#{image}")
-        if bitmap && ARMSettings::ChangeUIOnRegion
+        bitmap = pbResolveBitmap("#{Folder}#{folderUI}#{image}")
+        if bitmap && RegionUI
           # Use UI Graphics for the Current Region.
-          return "#{FOLDER}#{folderUI}#{image}"
+          return "#{Folder}#{folderUI}#{image}"
         else
           # Use Default UI Graphics.
-          return "#{FOLDER}UI/Default/#{image}"
+          return "#{Folder}UI/Default/#{image}"
         end
       end
     end
@@ -355,7 +355,7 @@ if Essentials::VERSION.include?("21")
               @mapMovement = false
               dorefresh = true
             when 2   # Area
-              if !@noArea && @sprites["areamap"].bitmap.width > 480
+              if !@noArea && (@sprites["areamap"].bitmap.width > 480 || @sprites["areamap"].bitmap.height > 320)
                 pbPlayCursorSE
                 @mapMovement = true
               end

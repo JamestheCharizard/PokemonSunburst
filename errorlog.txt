@@ -1034,3 +1034,344 @@ Backtrace:
 [Following Pokemon EX] Refresh.rb:178:in `update'
 002_Scene_Map.rb:238:in `block in main'
 002_Scene_Map.rb:235:in `loop'
+
+=================
+
+[2025-02-28 01:00:26 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `tileset_id' for nil:NilClass
+
+Backtrace:
+004_Game_Map.rb:48:in `setup'
+[TDW Berry Planting Improvements] 001_BerryPlantingImprovements.rb:1094:in `setup'
+005_Game_MapFactory.rb:24:in `setup'
+005_Game_MapFactory.rb:11:in `initialize'
+001_StartGame.rb:51:in `new'
+001_StartGame.rb:51:in `start_new'
+013_UI_Load.rb:324:in `block in pbStartLoadScreen'
+013_UI_Load.rb:314:in `loop'
+013_UI_Load.rb:314:in `pbStartLoadScreen'
+999_Main.rb:6:in `main'
+
+=================
+
+[2025-02-28 01:02:57 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Script error in Common Event, map 3 (\PN's house)
+Exception: NoMethodError
+Message: undefined method `has_pokegear=' for nil:NilClass
+
+***Full script:
+pbToneChangeAll(
+  Tone.new(0, 0, 0, 0),
+  10)
+$Trainer.has_pokegear = true
+
+Backtrace:
+(eval):4:in `execute_script'
+003_Interpreter.rb:140:in `eval'
+003_Interpreter.rb:140:in `execute_script'
+004_Interpreter_Commands.rb:1177:in `command_355'
+004_Interpreter_Commands.rb:116:in `execute_command'
+003_Interpreter.rb:132:in `block in update'
+003_Interpreter.rb:86:in `loop'
+003_Interpreter.rb:86:in `update'
+[Following Pokemon EX] Refresh.rb:268:in `update'
+002_Scene_Map.rb:167:in `block in update'
+
+=================
+
+[2025-02-28 01:05:13 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Script error in Common Event, map 3 (\PN's house)
+Exception: NoMethodError
+Message: undefined method `has_pokegear=' for nil:NilClass
+
+***Full script:
+pbToneChangeAll(
+  Tone.new(0, 0, 0, 0),
+  10)
+$Trainer.has_pokegear = true
+
+Backtrace:
+(eval):4:in `execute_script'
+003_Interpreter.rb:140:in `eval'
+003_Interpreter.rb:140:in `execute_script'
+004_Interpreter_Commands.rb:1177:in `command_355'
+004_Interpreter_Commands.rb:116:in `execute_command'
+003_Interpreter.rb:132:in `block in update'
+003_Interpreter.rb:86:in `loop'
+003_Interpreter.rb:86:in `update'
+[Following Pokemon EX] Refresh.rb:268:in `update'
+002_Scene_Map.rb:167:in `block in update'
+
+=================
+
+[2025-02-28 01:07:35 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Script error in Common Event, map 3 (\PN's house)
+Exception: NoMethodError
+Message: undefined method `has_pokegear=' for nil:NilClass
+
+***Full script:
+pbToneChangeAll(
+  Tone.new(0, 0, 0, 0),
+  10)
+$Trainer.has_pokegear = true
+
+Backtrace:
+(eval):4:in `execute_script'
+003_Interpreter.rb:140:in `eval'
+003_Interpreter.rb:140:in `execute_script'
+004_Interpreter_Commands.rb:1177:in `command_355'
+004_Interpreter_Commands.rb:116:in `execute_command'
+003_Interpreter.rb:132:in `block in update'
+003_Interpreter.rb:86:in `loop'
+003_Interpreter.rb:86:in `update'
+[Following Pokemon EX] Refresh.rb:268:in `update'
+002_Scene_Map.rb:167:in `block in update'
+
+=================
+
+[2025-02-28 01:12:42 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `getTerrainTag' for nil:NilClass
+
+Backtrace:
+[Astralneko's Sounds On Step] Sounds On Step.rb:85:in `block in pbPlaySoundEffectToLocation'
+006_Game_Character.rb:105:in `block (2 levels) in each_occupied_tile'
+006_Game_Character.rb:104:in `each'
+006_Game_Character.rb:104:in `block in each_occupied_tile'
+006_Game_Character.rb:103:in `each'
+006_Game_Character.rb:103:in `each_occupied_tile'
+[Astralneko's Sounds On Step] Sounds On Step.rb:83:in `pbPlaySoundEffectToLocation'
+[Astralneko's Sounds On Step] Sounds On Step.rb:77:in `pbPlaySoundEffectEvent'
+[Astralneko's Sounds On Step] Sounds On Step.rb:59:in `block in <main>'
+005_Event_Handlers.rb:89:in `block in trigger'
+
+=================
+
+[2025-02-28 01:15:43 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Script error in event 13 (coords 24,9), map 3 (\PN's house)
+Exception: NameError
+Message: uninitialized constant QuestModule::CHAP1_Quest1
+
+***Full script:
+activateQuest(:CHAP1_Quest1)
+
+Backtrace:
+[Modern Quest System + UI] 002_Quest_Main.rb:269:in `const_get'
+[Modern Quest System + UI] 002_Quest_Main.rb:269:in `getQuestStages'
+[Modern Quest System + UI] 002_Quest_Main.rb:305:in `getMaxStagesForQuest'
+[Modern Quest System + UI] 002_Quest_Main.rb:24:in `stage='
+[Modern Quest System + UI] 002_Quest_Main.rb:15:in `initialize'
+[Modern Quest System + UI] 002_Quest_Main.rb:70:in `new'
+[Modern Quest System + UI] 002_Quest_Main.rb:70:in `activateQuest'
+[Modern Quest System + UI] 002_Quest_Main.rb:195:in `activateQuest'
+(eval):1:in `execute_script'
+003_Interpreter.rb:140:in `eval'
+
+=================
+
+[2025-02-28 01:32:31 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NameError
+Message: undefined local variable or method `__hotfixes__pbCheckEventTriggerAfterTurning' for #<Game_Event>
+
+Backtrace:
+[v21.1 Hotfixes] Misc bug fixes.rb:561:in `check_event_trigger_after_turning'
+006_Game_Character.rb:820:in `turn_generic'
+006_Game_Character.rb:825:in `turn_right'
+006_Game_Character.rb:873:in `turn_toward_player'
+006_Game_Character.rb:168:in `lock'
+003_Interpreter.rb:66:in `block in setup_starting_event'
+003_Interpreter.rb:63:in `each_value'
+003_Interpreter.rb:63:in `setup_starting_event'
+003_Interpreter.rb:128:in `block in update'
+003_Interpreter.rb:86:in `loop'
+
+=================
+
+[2025-02-28 01:55:59 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Error in Plugin: [Astralneko's Miscellaneous Scripts]
+Exception: SyntaxError
+Message: [Astralneko's Miscellaneous Scripts] 009 Player Pronouns.rb:6: syntax error, unexpected ')', expecting '}'
+
+Backtrace:
+005_PluginManager.rb:635:in `eval'
+005_PluginManager.rb:635:in `block (2 levels) in runPlugins'
+005_PluginManager.rb:625:in `each'
+005_PluginManager.rb:625:in `block in runPlugins'
+005_PluginManager.rb:616:in `each'
+005_PluginManager.rb:616:in `runPlugins'
+999_Main.rb:34:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+
+=================
+
+[2025-02-28 01:56:40 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NameError
+Message: undefined local variable or method `__hotfixes__pbCheckEventTriggerAfterTurning' for #<Game_Event>
+
+Backtrace:
+[v21.1 Hotfixes] Misc bug fixes.rb:561:in `check_event_trigger_after_turning'
+006_Game_Character.rb:820:in `turn_generic'
+006_Game_Character.rb:825:in `turn_right'
+006_Game_Character.rb:873:in `turn_toward_player'
+006_Game_Character.rb:168:in `lock'
+003_Interpreter.rb:66:in `block in setup_starting_event'
+003_Interpreter.rb:63:in `each_value'
+003_Interpreter.rb:63:in `setup_starting_event'
+003_Interpreter.rb:128:in `block in update'
+003_Interpreter.rb:86:in `loop'
+
+=================
+
+[2025-02-28 01:58:36 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `nonbinary?' for #<Player Pokémon Trainer Aspin @party=[]>
+
+Backtrace:
+[Modular Messages] [002] Text Replacement.rb:71:in `replace_player_gender'
+[Modular Messages] [002] Text Replacement.rb:24:in `replace_text'
+[Modular Messages] [000] Main Script.rb:24:in `run'
+[Modular Messages] [005] pbMessageDisplay.rb:18:in `pbMessageDisplay'
+[DialougeSound] Main.rb:80:in `pbMessageDisplay'
+011_Messages.rb:740:in `pbMessage'
+004_Interpreter_Commands.rb:205:in `command_101'
+004_Interpreter_Commands.rb:21:in `execute_command'
+003_Interpreter.rb:132:in `block in update'
+003_Interpreter.rb:86:in `loop'
+
+=================
+
+[2025-02-28 01:59:54 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `/' for nil:NilClass
+
+Backtrace:
+[Astralneko's Miscellaneous Scripts] 009 Player Pronouns.rb:3:in `block in <main>'
+[Swdfm Utilities] Other.rb:189:in `trigger_sect'
+[Modular Messages] [003] Controls Methods.rb:70:in `block in controls_on_text_chunks'
+[Modular Messages] [003] Controls Methods.rb:63:in `times'
+[Modular Messages] [003] Controls Methods.rb:63:in `controls_on_text_chunks'
+[Modular Messages] [000] Main Script.rb:26:in `run'
+[Modular Messages] [005] pbMessageDisplay.rb:18:in `pbMessageDisplay'
+[DialougeSound] Main.rb:80:in `pbMessageDisplay'
+011_Messages.rb:740:in `pbMessage'
+004_Interpreter_Commands.rb:205:in `command_101'
+
+=================
+
+[2025-02-28 02:04:33 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: TypeError
+Message: String can't be coerced into Integer
+
+Backtrace:
+[Astralneko's Miscellaneous Scripts] 009 Player Pronouns.rb:5:in `+'
+[Astralneko's Miscellaneous Scripts] 009 Player Pronouns.rb:5:in `block in <main>'
+[Swdfm Utilities] Other.rb:189:in `trigger_sect'
+[Modular Messages] [003] Controls Methods.rb:70:in `block in controls_on_text_chunks'
+[Modular Messages] [003] Controls Methods.rb:63:in `times'
+[Modular Messages] [003] Controls Methods.rb:63:in `controls_on_text_chunks'
+[Modular Messages] [000] Main Script.rb:26:in `run'
+[Modular Messages] [005] pbMessageDisplay.rb:18:in `pbMessageDisplay'
+[DialougeSound] Main.rb:80:in `pbMessageDisplay'
+011_Messages.rb:740:in `pbMessage'
+
+=================
+
+[2025-02-28 02:06:14 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `+' for nil:NilClass
+
+Backtrace:
+[Astralneko's Miscellaneous Scripts] 009 Player Pronouns.rb:5:in `block in <main>'
+[Swdfm Utilities] Other.rb:189:in `trigger_sect'
+[Modular Messages] [003] Controls Methods.rb:70:in `block in controls_on_text_chunks'
+[Modular Messages] [003] Controls Methods.rb:63:in `times'
+[Modular Messages] [003] Controls Methods.rb:63:in `controls_on_text_chunks'
+[Modular Messages] [000] Main Script.rb:26:in `run'
+[Modular Messages] [005] pbMessageDisplay.rb:18:in `pbMessageDisplay'
+[DialougeSound] Main.rb:80:in `pbMessageDisplay'
+011_Messages.rb:740:in `pbMessage'
+004_Interpreter_Commands.rb:205:in `command_101'
+
+=================
+
+[2025-02-28 02:14:16 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `gsub!' for Modular_Messages:Module
+
+Backtrace:
+[Modular Messages] [002] Text Replacement.rb:83:in `replace_player_gender'
+[Modular Messages] [002] Text Replacement.rb:24:in `replace_text'
+[Modular Messages] [000] Main Script.rb:24:in `run'
+[Modular Messages] [005] pbMessageDisplay.rb:18:in `pbMessageDisplay'
+[DialougeSound] Main.rb:80:in `pbMessageDisplay'
+011_Messages.rb:740:in `pbMessage'
+004_Interpreter_Commands.rb:205:in `command_101'
+004_Interpreter_Commands.rb:21:in `execute_command'
+003_Interpreter.rb:132:in `block in update'
+003_Interpreter.rb:86:in `loop'
+
+=================
+
+[2025-02-28 02:14:40 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NameError
+Message: undefined local variable or method `__hotfixes__pbCheckEventTriggerAfterTurning' for #<Game_Event>
+
+Backtrace:
+[v21.1 Hotfixes] Misc bug fixes.rb:561:in `check_event_trigger_after_turning'
+006_Game_Character.rb:820:in `turn_generic'
+006_Game_Character.rb:825:in `turn_right'
+006_Game_Character.rb:873:in `turn_toward_player'
+006_Game_Character.rb:168:in `lock'
+003_Interpreter.rb:66:in `block in setup_starting_event'
+003_Interpreter.rb:63:in `each_value'
+003_Interpreter.rb:63:in `setup_starting_event'
+003_Interpreter.rb:128:in `block in update'
+003_Interpreter.rb:86:in `loop'

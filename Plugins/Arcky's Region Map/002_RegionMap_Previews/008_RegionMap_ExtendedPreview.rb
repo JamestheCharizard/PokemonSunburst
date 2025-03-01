@@ -1,25 +1,25 @@
 class PokemonRegionMap_Scene
   def getExtendedPreview
     if !@sprites["previewExtMain"]
-      @sprites["previewExtMain"] = IconSprite.new(UI_BORDER_WIDTH, UI_BORDER_HEIGHT, @viewport)
+      @sprites["previewExtMain"] = IconSprite.new(UIBorderWidth, UIBorderHeight, @viewport)
       @sprites["previewExtMain"].z = 40
       @sprites["previewExtMain"].visible = false
       @sprites["previewExtMain"].setBitmap(findUsableUI("ExtendedPreview/mapExtBoxMain"))
     end
     if !@sprites["extendedText"]
-      @sprites["extendedText"] = BitmapSprite.new(UI_WIDTH, UI_HEIGHT, @viewport)
+      @sprites["extendedText"] = BitmapSprite.new(UIWidth, UIHeight, @viewport)
       pbSetSystemFont(@sprites["extendedText"].bitmap)
       @sprites["extendedText"].visible = false
       @sprites["extendedText"].z = 80
-      @sprites["extendedText"].x = UI_BORDER_WIDTH
-      @sprites["extendedText"].y = UI_BORDER_HEIGHT
+      @sprites["extendedText"].x = UIBorderWidth
+      @sprites["extendedText"].y = UIBorderHeight
     end
-    if !@sprites["previewExtTextBoxes"] && SPECIAL_UI
-      @sprites["previewExtTextBoxes"] = BitmapSprite.new(UI_WIDTH, UI_HEIGHT, @viewport)
+    if !@sprites["previewExtTextBoxes"] && SpecialUI
+      @sprites["previewExtTextBoxes"] = BitmapSprite.new(UIWidth, UIHeight, @viewport)
       @sprites["previewExtTextBoxes"].visible = false
       @sprites["previewExtTextBoxes"].z = 50
-      @sprites["previewExtTextBoxes"].x = UI_BORDER_WIDTH
-      @sprites["previewExtTextBoxes"].y = UI_BORDER_HEIGHT
+      @sprites["previewExtTextBoxes"].x = UIBorderWidth
+      @sprites["previewExtTextBoxes"].y = UIBorderHeight
     end
   end
 
@@ -142,7 +142,7 @@ class PokemonRegionMap_Scene
   end
 
   def getWildInfo(map, gameMap)
-    return 0, 0, 0, 0, ["Disabled"] if !ARMSettings::ProgressCountSpecies
+    return 0, 0, 0, 0, ["Disabled"] if !ARMSettings::ProgressCountSpecies || !ARMSettings::ProgressCounter
     unless GameData::Encounter.get(map.id, $PokemonGlobal.encounter_version).nil?
       list = getEncounterInfo(gameMap).flat_map { |_, value| value.keys }.uniq
       seen, caught, battled = 0, 0, 0
@@ -163,7 +163,7 @@ class PokemonRegionMap_Scene
   end
 
   def getTrainerInfo(map, district)
-    return 0, 0, 0, ["Disabled"] if !ARMSettings::ProgressCountTrainers
+    return 0, 0, 0, ["Disabled"] if !ARMSettings::ProgressCountTrainers || !ARMSettings::ProgressCounter
     totalTrainers = @globalCounter[:gameMaps][:trainers][map.id]
     trainers = $ArckyGlobal.trainerTracker&.dig(district, :maps, map.id) unless $ArckyGlobal.trainerTracker&.dig(district, :maps)&.empty?
     defeated = trainers.nil? ? 0 : trainers[:defeated]
@@ -180,7 +180,7 @@ class PokemonRegionMap_Scene
   end
 
   def getItemInfo(map, district)
-    return 0, 0, 0, ["Disabled"] if !ARMSettings::ProgressCountItems
+    return 0, 0, 0, ["Disabled"] if !ARMSettings::ProgressCountItems || !ARMSettings::ProgressCounter
     totalItems = @globalCounter[:gameMaps][:items][map.id] || 0
     items = $ArckyGlobal.itemTracker&.dig(district, :maps, map.id) unless $ArckyGlobal.itemTracker&.dig(district, :maps)&.empty?
     found = items.nil? ? 0 : items[:found]
@@ -234,7 +234,7 @@ class PokemonRegionMap_Scene
           end
           x = 16
           align = :left
-          if SPECIAL_UI
+          if SpecialUI
             if index2 == 0
               graphic = index == 0 ? findUsableUI("ExtendedPreview/mapTextBoxOne") : findUsableUI("ExtendedPreview/mapTextBoxTwo")
               bitmap = Bitmap.new(graphic)
@@ -275,7 +275,7 @@ class PokemonRegionMap_Scene
     else
       x = (@extWidth / 2)
       y = 4 + ((@extHeight - @fontSize) / 2)
-      if SPECIAL_UI
+      if SpecialUI
         graphic = findUsableUI("ExtendedPreview/mapTextBoxThree")
         bitmap = Bitmap.new(graphic)
         boxWidth = bitmap.width
@@ -287,7 +287,7 @@ class PokemonRegionMap_Scene
       text << ["No Data for this Location", x, y, :center, @base, @shadow]
     end
     pbDrawTextPositions(@sprites["extendedText"].bitmap, text)
-    if SPECIAL_UI
+    if SpecialUI
       pbDrawImagePositions(@sprites["previewExtTextBoxes"].bitmap, image)
       @sprites["previewExtTextBoxes"].visible = true
     end
@@ -406,7 +406,7 @@ class PokemonRegionMap_Scene
   end
 
   def getEncIcons
-    if SPECIAL_UI
+    if SpecialUI
       @sprites["previewExtTextBoxes"].bitmap.clear
     end
     @sprites["extendedText"].bitmap.clear
@@ -443,7 +443,7 @@ class PokemonRegionMap_Scene
     @encSprites = []
     @colLength = [((@list.length).to_f / @rowLength).ceil, screenHeight / (@boxHeight + @spaceY).floor].min
     maxHeight = (@colLength * (@boxHeight + @spaceY)) - @spaceY
-    @startY = UI_BORDER_HEIGHT + ((screenHeight - maxHeight) / 2)
+    @startY = UIBorderHeight + ((screenHeight - maxHeight) / 2)
     @activeIndex = @list.map.with_index do |species, index|
       speciesData = GameData::Species.get(species)
       form = !speciesData.flags.empty? ? speciesData.form : nil
@@ -452,7 +452,7 @@ class PokemonRegionMap_Scene
     index = @rowLength * @pageIndex
     @rowList[@pageIndex..(@pageIndex + (@colLength - 1))].each_with_index do |rows, j|
       maxWidth = (rows.length * (@boxWidth + @spaceX)) - @spaceX
-      @startX = UI_BORDER_WIDTH + (screenWidth - maxWidth) / 2
+      @startX = UIBorderWidth + (screenWidth - maxWidth) / 2
       rows.each_with_index do |species, i|
         speciesData = GameData::Species.get(species)
         form = !speciesData.flags.empty? || speciesData.form > 0 ? speciesData.form : nil
@@ -573,7 +573,7 @@ class PokemonRegionMap_Scene
       @sprites["TextRaster"].setBitmap(findUsableUI("ExtendedPreview/mapTextRaster"))
       @sprites["TextRaster"].z = 50
     end
-    if SPECIAL_UI
+    if SpecialUI
       @sprites["previewExtTextBoxes"].bitmap.clear
       graphic = findUsableUI("ExtendedPreview/mapTextBoxOne")
       bitmap = Bitmap.new(graphic)
@@ -591,8 +591,8 @@ class PokemonRegionMap_Scene
       @rasterY = (@extHeight / 2) + (((@extHeight / 2) - @sprites["TextRaster"].bitmap.height) / 2)
     end
     unless @encSprites[index].species.nil?
-      @sprites["TextRaster"].x = @rasterX + UI_BORDER_WIDTH
-      @sprites["TextRaster"].y = @rasterY + UI_BORDER_HEIGHT
+      @sprites["TextRaster"].x = @rasterX + UIBorderWidth
+      @sprites["TextRaster"].y = @rasterY + UIBorderHeight
       @sprites["TextRaster"].src_rect.width = @sprites["TextRaster"].bitmap.width
       @sprites["TextRaster"].src_rect.height = @sprites["TextRaster"].bitmap.height
       @sprites["TextRaster"].src_rect.x = 0
@@ -612,7 +612,7 @@ class PokemonRegionMap_Scene
     else
       @sprites["TextRaster"].visible = false
       @sprites["mapbottom"].mapname = "#{@data[:name]} #{@typeProgress}"
-      if SPECIAL_UI
+      if SpecialUI
         x = @boxWidth / 2
         y = (@boxY + (@boxHeight / 2)) - (@fontSize / 2)
       else
@@ -621,12 +621,12 @@ class PokemonRegionMap_Scene
       end
       text = [["No Data", x, y, :center, @base, @shadow]]
     end
-    if SPECIAL_UI
-      @sprites["TextRaster"].x = UI_BORDER_WIDTH + @boxX + ((@boxWidth - @sprites["TextRaster"].bitmap.width) / 2) + @sprites["TextRaster"].src_rect.x
-      @sprites["TextRaster"].y = UI_BORDER_HEIGHT + @boxY + ((@boxHeight - @sprites["TextRaster"].bitmap.height) / 2)
+    if SpecialUI
+      @sprites["TextRaster"].x = UIBorderWidth + @boxX + ((@boxWidth - @sprites["TextRaster"].bitmap.width) / 2) + @sprites["TextRaster"].src_rect.x
+      @sprites["TextRaster"].y = UIBorderHeight + @boxY + ((@boxHeight - @sprites["TextRaster"].bitmap.height) / 2)
     else
-      @sprites["TextRaster"].x = UI_BORDER_WIDTH + ((@extWidth - @sprites["TextRaster"].bitmap.width) / 2) + @sprites["TextRaster"].src_rect.x
-      @sprites["TextRaster"].y = UI_BORDER_HEIGHT + (@extHeight / 2) + (((@extHeight / 2) - @sprites["TextRaster"].bitmap.height) / 2)
+      @sprites["TextRaster"].x = UIBorderWidth + ((@extWidth - @sprites["TextRaster"].bitmap.width) / 2) + @sprites["TextRaster"].src_rect.x
+      @sprites["TextRaster"].y = UIBorderHeight + (@extHeight / 2) + (((@extHeight / 2) - @sprites["TextRaster"].bitmap.height) / 2)
     end
     pbDrawTextPositions(@sprites["extendedText"].bitmap, text) if text
   end
@@ -636,7 +636,7 @@ class PokemonRegionMap_Scene
     offsetX = ARMSettings::ExtendedSubTextOffsetX
     offsetY = ARMSettings::ExtendedSubTextOffsetY
     entryData = @tableData.values[@tableIndex][species]
-    if SPECIAL_UI
+    if SpecialUI
       x = @boxX + 6 + offsetX
       y = @boxY + ((@boxHeight - ((@lineHeight * 4) - (@lineHeight - @fontSize))) / 2) + offsetY
     else
@@ -658,7 +658,7 @@ class PokemonRegionMap_Scene
       array << txt
       widths << @sprites["extendedText"].bitmap.text_size(txt).width
     end
-    if SPECIAL_UI
+    if SpecialUI
       array = textToLines(widths, array, extra, (@boxWidth - 12))
     else
       array = textToLines(widths, array, extra, @extWidth - 32)
@@ -669,7 +669,7 @@ class PokemonRegionMap_Scene
       if txt.include?("\n")
         output = []
         y += @lineHeight + offsetY
-        if SPECIAL_UI
+        if SpecialUI
           break if y + @fontSize > @boxY + @boxHeight
         else
           break if y + @fontSize > @extHeight

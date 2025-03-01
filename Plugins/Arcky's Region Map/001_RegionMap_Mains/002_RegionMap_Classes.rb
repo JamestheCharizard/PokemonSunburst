@@ -36,12 +36,12 @@ class MapBottomSprite < Sprite
       ],
       [
         @mapdetails,
-        Graphics.width - (PokemonRegionMap_Scene::UI_BORDER_WIDTH - ARMSettings::PoiNameOffsetX), (Graphics.height - 24) + ARMSettings::PoiNameOffsetY, 1,
+        Graphics.width - (PokemonRegionMap_Scene::UIBorderWidth - ARMSettings::PoiNameOffsetX), (Graphics.height - 24) + ARMSettings::PoiNameOffsetY, 1,
         ARMSettings::PoiTextMain, ARMSettings::PoiTextShadow
       ],
       [
         @previewName,
-        Graphics.width - (@previewWidth + PokemonRegionMap_Scene::UI_BORDER_WIDTH + ARMSettings::PreviewNameOffsetX - 16), 4 + ARMSettings::PreviewNameOffsetY, 0,
+        Graphics.width - (@previewWidth + PokemonRegionMap_Scene::UIBorderWidth + ARMSettings::PreviewNameOffsetX - 16), 4 + ARMSettings::PreviewNameOffsetY, 0,
         ARMSettings::PreviewTextMain, ARMSettings::PreviewTextShadow
       ]
     ]
@@ -64,14 +64,8 @@ end
 #===============================================================================
 class RegionMapSprite
   def createRegionMap(map)
-    if Essentials::VERSION.include?("20")
-      @mapdata = pbLoadTownMapData
-      @map = @mapdata[map]
-      bitmap = AnimatedBitmap.new("Graphics/Pictures/RegionMap/Regions/#{@map[1]}").deanimate
-    else
-      townMap = GameData::TownMap.get(map)
-      bitmap = AnimatedBitmap.new("Graphics/UI/Town Map/Regions/#{townMap.filename}").deanimate
-    end
+    townMap = GameData::TownMap.get(map)
+    bitmap = AnimatedBitmap.new("Graphics/UI/Town Map/Regions/#{townMap.filename}").deanimate
     retbitmap = BitmapWrapper.new(bitmap.width / 2, bitmap.height / 2)
     retbitmap.stretch_blt(
       Rect.new(0, 0, bitmap.width / 2, bitmap.height / 2),

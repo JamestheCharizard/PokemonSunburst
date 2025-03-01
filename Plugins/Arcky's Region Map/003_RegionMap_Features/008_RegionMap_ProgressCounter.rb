@@ -85,7 +85,7 @@ class PokemonRegionMap_Scene
       gameMaps[:trainers][gameMap.id] += trainers
       districtCounters[district][:trainers][:total] += trainers
       # main maps
-      map = locations.find { |map| pbGetMessageFromHash(LOCATIONNAMES, map) == gameMap.name && gameMap.outdoor_map }
+      map = locations.find { |map| pbGetMessageFromHash(LocationNames, map) == gameMap.name && gameMap.outdoor_map }
       # check for POI map if no main map found
       if map.nil?
         findMap = ARMSettings::LinkPoiToMap.find { |name| gameMap.id == name[1] }

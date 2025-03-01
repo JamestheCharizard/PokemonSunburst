@@ -1,10 +1,10 @@
 class PokemonRegionMap_Scene
   def getPreviewWeather
-    if WEATHERPLUGIN
+    if WeatherPlugin
       if !@sprites["weatherPreview"]
         @sprites["weatherPreview"] = IconSprite.new(0, 0, @viewport)
         @sprites["weatherPreview"].setBitmap(findUsableUI("WeatherPreview/mapWeatherBox"))
-        if BOX_TOP_LEFT
+        if BoxTopLeft
           @sprites["weatherPreview"].y = 54
         else
           @sprites["weatherPreview"].y = 22
@@ -28,7 +28,7 @@ class PokemonRegionMap_Scene
   def showPreviewWeather
     if !@sprites["weatherIcon"]
       @sprites["weatherIcon"] = IconSprite.new(0, 0, @viewport)
-      if BOX_TOP_LEFT
+      if BoxTopLeft
         @sprites["weatherIcon"].y = 68
       else
         @sprites["weatherIcon"].y = 36
@@ -50,7 +50,7 @@ class PokemonRegionMap_Scene
       id = conversion[weather]
       unless id.nil?
         @sprites["weatherIcon"].visible = true
-        @sprites["weatherIcon"].setBitmap("#{FOLDER}Icons/Weather/#{id}")
+        @sprites["weatherIcon"].setBitmap("#{Folder}Icons/Weather/#{id}")
       else
         @sprites["weatherIcon"].visible = false
       end

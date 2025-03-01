@@ -40,17 +40,17 @@ class PokemonRegionMap_Scene
     # by default the Alternative Preview Box is used.
     @useAlt = "Alt"
     mapInfo = @mapInfo[@curMapLoc.gsub(" ", "").to_sym] unless @curMapLoc.nil?
-    if !mapInfo.nil? && mapInfo[:mapname] == pbGetMessageFromHash(LOCATIONNAMES, mapInfo[:realname]) && ARMSettings::CanViewInfoUnvisitedMaps
+    if !mapInfo.nil? && mapInfo[:mapname] == pbGetMessageFromHash(LocationNames, mapInfo[:realname]) && ARMSettings::CanViewInfoUnvisitedMaps
       name = mapInfo[:realname].gsub(" ", "").gsub("'", "")
       locDescr = _INTL("No information given.")
-      locDescr = pbGetMessageFromHash(SCRIPTTEXTS, locDescr)
+      locDescr = pbGetMessageFromHash(ScriptTexts, locDescr)
       @cannotExtPreview = true
-      if ARMLocationPreview.const_defined?(name)
-        @locObject = ARMLocationPreview.const_get(name)
-        key = "#{:description}_#{@mapX.round}_#{@mapY.round}".to_sym
+      if ARMLocationPreview.const_defined?(name) || ARMLocationPreview.const_defined?("#{name}_#{@region}")
+        @locObject = ARMLocationPreview.const_get(ARMLocationPreview.const_defined?("#{name}_#{@region}") ? "#{name}_#{@region}" : name)
+        key = "#{:description}_#{adjustPosX(@mapX).round}_#{adjustPosY(@mapY).round}".to_sym
         key = :description unless @locObject.key?(key)
         unless @locObject[key].nil?
-          locDescr = pbGetMessageFromHash(SCRIPTTEXTS, @locObject[key])
+          locDescr = pbGetMessageFromHash(ScriptTexts, @locObject[key])
           getExtendedInfo(true)
           @cannotExtPreview = false if ARMSettings::UseExtendedPreview && [ARMSettings::ProgressCountItems, ARMSettings::ProgressCountSpecies, ARMSettings::ProgressCountTrainers].any? { |value| value } && !(ARMSettings::ExcludeMapsWithNoData && @getData.empty?)
         end
@@ -68,16 +68,16 @@ class PokemonRegionMap_Scene
         directions = [:north, :northEast, :east, :southEast, :south, :southWest, :west, :northWest]
         locDirWidth = spriteBox.width - 20
         directions.each do |dir|
-          key = "#{dir}_#{@mapX}_#{@mapY}".to_sym
+          key = "#{dir}_#{adjustPosX(@mapX)}_#{adjustPosY(@mapY)}".to_sym
           key = dir unless @locObject.key?(key)
           loc = @locObject[key]
           name = ""
           if loc.is_a?(Array) && !loc.nil?
-            value = @mapInfo.find { |_, location| location[:positions].any? { |pos| pos[:x] == loc[0] && pos[:y] == loc[1] } }
+            value = @mapInfo.find { |_, location| location[:positions].any? { |pos| adjustPosX(pos[:x]) == loc[0] && adjustPosY(pos[:y]) == loc[1] } }
             if value
-              name = pbGetMessageFromHash(SCRIPTTEXTS, value[1][:mapname])
+              name = pbGetMessageFromHash(ScriptTexts, value[1][:mapname])
             else
-              name = pbGetMessageFromHash(SCRIPTTEXTS, _INTL("Invalid Location"))
+              name = pbGetMessageFromHash(ScriptTexts, _INTL("Invalid Location"))
             end
           else
             name = loc
@@ -104,7 +104,7 @@ class PokemonRegionMap_Scene
       end
     else
       if ARMSettings::CanViewInfoUnvisitedMaps && (name == "???" || !ARMSettings::NoUnvistedMapInfo)
-        locDescr = pbGetMessageFromHash(SCRIPTTEXTS, ARMSettings::UnvisitedMapInfoText)
+        locDescr = pbGetMessageFromHash(ScriptTexts, ARMSettings::UnvisitedMapInfoText)
         @cannotExtPreview = true
       else
         return false
@@ -115,13 +115,8 @@ class PokemonRegionMap_Scene
       xDescr = 8 + ARMSettings::DescriptionTextOffsetX
       yDescr = 8 + ARMSettings::DescriptionTextOffsetY
       maxHeight = ARMSettings::MaxIconHeight #ARMSettings::MaxDescriptionLines * ARMSettings::PreviewLineHeight
-      if ENGINE20
-        base = colorToRgb16(ARMSettings::DescriptionTextMain)
-        shadow = colorToRgb16(ARMSettings::DescriptionTextShadow)
-      elsif ENGINE21
-        base = (ARMSettings::DescriptionTextMain).to_rgb15
-        shadow = (ARMSettings::DescriptionTextShadow).to_rgb15
-      end
+      base = (ARMSettings::DescriptionTextMain).to_rgb15
+      shadow = (ARMSettings::DescriptionTextShadow).to_rgb15
       text = "<c2=#{base}#{shadow}>#{locDescr}"
       spriteText.bitmap.clear
       spriteDash.visible == false if spriteDash
@@ -172,13 +167,8 @@ class PokemonRegionMap_Scene
         xDir = 8 + ARMSettings::DirecitonTextOffsetX
         yDir = yDescr + @totalHeight + ARMSettings::DirectionTextOffsetY
         maxHeight = ARMSettings::MaxDirectionLines * ARMSettings::PreviewLineHeight
-        if ENGINE20
-          base = colorToRgb16(ARMSettings::DirectionTextBase)
-          shadow = colorToRgb16(ARMSettings::DirectionTextShadow)
-        elsif ENGINE21
-          base = (ARMSettings::DirectionTextBase).to_rgb15
-          shadow = (ARMSettings::DirectionTextShadow).to_rgb15
-        end
+        base = (ARMSettings::DirectionTextBase).to_rgb15
+        shadow = (ARMSettings::DirectionTextShadow).to_rgb15
         text = "<c2=#{base}#{shadow}>#{locDir}"
         chars = drawText(spriteText.bitmap, xDir, yDir, locDirWidth, maxHeight, text)
         count = 1 + (chars.count { |item| item[0] == "\n"})
@@ -188,7 +178,7 @@ class PokemonRegionMap_Scene
       end
       getPreviewBox
       @sprites["locationText"].x = @sprites["previewBox"].x
-      @sprites["locationText"].y = Graphics.height - (@totalHeight + UI_BORDER_HEIGHT)
+      @sprites["locationText"].y = Graphics.height - (@totalHeight + UIBorderHeight)
       if @locationDash
         @sprites["locationDash"].x = @sprites["locationText"].x
         @sprites["locationDash"].y = @sprites["locationText"].y

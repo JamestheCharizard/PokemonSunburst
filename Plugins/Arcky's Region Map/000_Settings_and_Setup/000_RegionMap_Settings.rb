@@ -13,7 +13,7 @@
 
       # true = enabled: Keeps track of visited maps, wild pokemon (seen and caught), trainers and items.
       # false = disabled: In case you would still have issues with this feature, make sure to tell me them.
-      ProgressCounter = true
+      ProgressCounter = false 
 
       # Below I've provided a setting for each counter that the Progress Counter is using.
       # If you wish to not use one or more of these, you can turn them off here (or in case you would have an issue with one of them).
@@ -179,7 +179,7 @@
 
         # true = enabled: Allows you to change the Region Name on certain parts of the Region Map
         # false = disabled.
-        UseRegionDistrictsNames = false
+        UseRegionDistrictsNames = true
 
         # - Region Number
         # - [min X, max X]; the minimum X value and the maximum X value, in squares.
@@ -209,6 +209,28 @@
           "Central Essen" => 103,
           "Central Tiall" => 104
         }
+      #========================= Region Map Connecting =========================#
+
+      # true = enabled: Region Conncting is enabled.
+      # false = disabled.
+      UseRegionConnecting = false
+
+      RegionConnections = {
+        "Region2" => {
+          0 => {
+            :beginX => 30,
+            :endX => 61,
+            :beginY => 0,
+            :endY => 25
+          },
+          1 => {
+            :beginX => 0,
+            :endX => 29,
+            :beginY => 0,
+            :endY => 25
+          }
+        }
+      }
 
     #================================ Fly Settings ================================#
 
@@ -233,33 +255,29 @@
 
       # true = enabled: The player is allowed to fly from 1 Region to another.
       # false = disabled: The player can't fly from 1 Region to another.
-      AllowFlyToOtherRegions = false
+      AllowFlyToOtherRegions = true
 
       # Set to which Regions you can fly from the current Region. (Use the name of the region)
       FlyToRegions = {
-        :Essen => [1, 2, 3], # You can fly from Essen to Tial, Kanto or Johto.
-        :Tiall => [0], # You can fly from Tial to Essen only.
-        :Kanto => [0, 3], # You can fly from Kanto to Essen and Johto.
-        :Johto => [2] # You can fly from Johto to Kanto only.
+        :Essen => [1, 3], # You can fly from Essen to Tial, Kanto or Johto.
+        :Tiall => [0, 3] # You can fly from Tial to Essen only.
       }
 
       # Set from which locations on a Region you can fly to another Region.
       # If you don't want to use this then make this eaqual to LocationFlyToOtherRegion = {}.
       LocationFlyToOtherRegion = {
         :Essen => {
-          "Route 8" => [1],
-          "Ingido Plateau" => [2, 3]
+          "Route 8" => [1, 3],
+          "Ingido Plateau" => [3]
         },
         :Tiall => {
-          "Tiall Region" => [0]
-        },
-        :Kanto => {
-          "Indigo Plateau" => [0, 3]
-        },
-        :Johto => {
-          "Indigo Plateau" => [2]
+          "Tiall Region" => [0, 3]
         }
       }
+
+      # true = enabled: When confirming the fly location, screen will fade out and in and you teleport directly to that location instead of the fly animation first.
+      # false = disabled. When confirming the fly location, fly animation will activate.
+      QuickTravelInsteadOfFly = false
 
     #================================ Mode Settings ===============================#
       # Choose which button needs to be pressed to change the map mode. ACTION is the default one in essentials.
@@ -302,7 +320,7 @@
 
         # true = enabled: Expand the Map behind the UI (most commonly used for transparent UI's).
         # false = disabled.
-        RegionMapBehindUI = true
+        RegionMapBehindUI = false
 
         # Set for each Region if you want the Player Icon to be visible (true) or invisible (false).
         ShowPlayerOnRegion = {

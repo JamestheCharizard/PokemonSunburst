@@ -64,18 +64,23 @@ module Modular_Messages
   
 #-------------------------------
 # Player Gender
-# \pg, \pog, \b, \r
+# \pg, \pog, \b, \r, \y
   def replace_player_gender
     @@hash["text"].gsub!(/\\pg/i,  "\\b") if $player&.male?
     @@hash["text"].gsub!(/\\pg/i,  "\\r") if $player&.female?
+    @@hash["text"].gsub!(/\\pg/i, "\\y") if $player&.nonbinary?
     @@hash["text"].gsub!(/\\pog/i, "\\r") if $player&.male?
     @@hash["text"].gsub!(/\\pog/i, "\\b") if $player&.female?
+    @@hash["text"].gsub!(/\\pog/i, "\\y") if $player&.nonbinary?
     @@hash["text"].gsub!(/\\pg/i,  "")
     @@hash["text"].gsub!(/\\pog/i, "")
     male_text_tag = shadowc3tag(MessageConfig::MALE_TEXT_MAIN_COLOR, MessageConfig::MALE_TEXT_SHADOW_COLOR)
     female_text_tag = shadowc3tag(MessageConfig::FEMALE_TEXT_MAIN_COLOR, MessageConfig::FEMALE_TEXT_SHADOW_COLOR)
+    nonbinary_text_tag = shadowc3tag(MessageConfig::NB_TEXT_MAIN_COLOR, MessageConfig::NB_TEXT_SHADOW_COLOR)
     @@hash["text"].gsub!(/\\b/i, male_text_tag)
     @@hash["text"].gsub!(/\\r/i, female_text_tag)
+    @@hash["text"].gsub!(/\\y/i, nonbinary_text_tag)
+		@@hash["text"].gsub!(/\\ppg\[([0-9]+)\]\[([0-9]+)\]/i) { anPlayerPronoun[$1.to_i][$2.to_i] }
   end
   
 #-------------------------------

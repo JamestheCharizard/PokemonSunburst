@@ -8,21 +8,21 @@ class PokemonRegionMap_Scene
     if @mode != 1
       image = highlight[:image]
       mapFolder = getMapFolderName(image)
-      imageName = "#{FOLDER}highlights/#{mapFolder}/#{image[:name]}"
+      imageName = "#{Folder}highlights/#{mapFolder}/#{image[:name]}"
       if !pbResolveBitmap(imageName)
         Console.echoln_li _INTL("No Higlight Image found for point '#{@mapInfo[curPos][:realname].to_s}' in PBS file: town_map.txt")
         return
       end
       pbDrawImagePositions(
         @spritesMap["highlight"].bitmap,
-        [["#{FOLDER}highlights/#{mapFolder}/#{image[:name]}", (image[:x] * ARMSettings::SquareWidth) , (image[:y] * ARMSettings::SquareHeight)]]
+        [["#{Folder}highlights/#{mapFolder}/#{image[:name]}", (image[:x] * ARMSettings::SquareWidth) , (image[:y] * ARMSettings::SquareHeight)]]
       )
     else
       flyicon = @mapInfo[curPos][:flyicons].find { |icon| icon[:originalpos].any? { |pos| pos[:x] == highlight[:x] && pos[:y] == highlight[:y] } }
       return if flyicon.nil? || flyicon[:name] == "mapFlyDis"
       pbDrawImagePositions(
         @spritesMap["highlight"].bitmap,
-        [["#{FOLDER}Icons/Fly/MapFlySel", (flyicon[:x] * ARMSettings::SquareWidth) - 8 , (flyicon[:y] * ARMSettings::SquareHeight) - 8]]
+        [["#{Folder}Icons/Fly/MapFlySel", (flyicon[:x] * ARMSettings::SquareWidth) - 8 , (flyicon[:y] * ARMSettings::SquareHeight) - 8]]
       )
     end
   end
@@ -35,4 +35,4 @@ class PokemonRegionMap_Scene
     @spritesMap["highlight"].visible = true
     @spritesMap["highlight"].z = 20
   end
-end 
+end
