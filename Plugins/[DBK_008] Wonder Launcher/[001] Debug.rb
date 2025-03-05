@@ -6,7 +6,7 @@
 # General Debug options
 #-------------------------------------------------------------------------------
 MenuHandlers.add(:debug_menu, :deluxe_mode_toggles, {
-  "name"        => _INTL("Toggle battle modes..."),
+  "name"        => _INTL("Toggle plugin battle modes..."),
   "parent"      => :deluxe_plugins_menu,
   "description" => _INTL("Toggles for various battle modes implemented by add-on plugins.")
 })
@@ -19,6 +19,18 @@ MenuHandlers.add(:debug_menu, :deluxe_wonder_launcher, {
     $game_switches[Settings::WONDER_LAUNCHER_SWITCH] = !$game_switches[Settings::WONDER_LAUNCHER_SWITCH]
     toggle = ($game_switches[Settings::WONDER_LAUNCHER_SWITCH]) ? "enabled" : "disabled"
     pbMessage(_INTL("Wonder Launcher {1}.", toggle))
+  }
+})
+
+MenuHandlers.add(:battle_rules_menu, :wonderLauncher, {
+  "name"        => "Launcher battle: [{1}]",
+  "rule"        => "wonderLauncher",
+  "order"       => 313,
+  "parent"      => :set_battle_rules,
+  "description" => _INTL("Determines whether or not the Wonder Launcher is enabled."),
+  "effect"      => proc { |menu|
+    next pbApplyBattleRule("wonderLauncher", :Boolean, nil, 
+      _INTL("Set whether the Wonder Launcher is enabled. (Trainer battles only)"))
   }
 })
 

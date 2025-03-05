@@ -4,7 +4,7 @@
 
 GameData::TerrainTag.register({
   :id                     => :SummerGrass,
-  :id_number              => 21,
+  :id_number              => 61,
   :shows_grass_rustle     => true,
   :land_wild_encounters   => true,
   :battle_environment     => :SummerGrass
@@ -12,7 +12,7 @@ GameData::TerrainTag.register({
 
 GameData::TerrainTag.register({
   :id                     => :SummerTallGrass,
-  :id_number              => 22,
+  :id_number              => 62,
   :deep_bush              => true,
   :land_wild_encounters   => true,
   :double_wild_encounters => true,
@@ -22,7 +22,7 @@ GameData::TerrainTag.register({
 
 GameData::TerrainTag.register({
   :id                     => :AutumnGrass,
-  :id_number              => 23,
+  :id_number              => 63,
   :shows_grass_rustle     => true,
   :land_wild_encounters   => true,
   :battle_environment     => :AutumnGrass
@@ -30,7 +30,7 @@ GameData::TerrainTag.register({
 
 GameData::TerrainTag.register({
   :id                     => :AutumnTallGrass,
-  :id_number              => 24,
+  :id_number              => 64,
   :deep_bush              => true,
   :land_wild_encounters   => true,
   :double_wild_encounters => true,
@@ -40,7 +40,7 @@ GameData::TerrainTag.register({
 
 GameData::TerrainTag.register({
   :id                     => :WinterGrass,
-  :id_number              => 25,
+  :id_number              => 65,
   :shows_grass_rustle     => true,
   :land_wild_encounters   => true,
   :battle_environment     => :WinterGrass
@@ -48,7 +48,7 @@ GameData::TerrainTag.register({
 
 GameData::TerrainTag.register({
   :id                     => :WinterTallGrass,
-  :id_number              => 26,
+  :id_number              => 66,
   :deep_bush              => true,
   :land_wild_encounters   => true,
   :double_wild_encounters => true,
@@ -58,7 +58,7 @@ GameData::TerrainTag.register({
 
 GameData::TerrainTag.register({
   :id                     => :SpringGrass,
-  :id_number              => 27,
+  :id_number              => 67,
   :shows_grass_rustle     => true,
   :land_wild_encounters   => true,
   :battle_environment     => :SpringGrass
@@ -66,7 +66,7 @@ GameData::TerrainTag.register({
 
 GameData::TerrainTag.register({
   :id                     => :SpringTallGrass,
-  :id_number              => 28,
+  :id_number              => 68,
   :deep_bush              => true,
   :land_wild_encounters   => true,
   :double_wild_encounters => true,

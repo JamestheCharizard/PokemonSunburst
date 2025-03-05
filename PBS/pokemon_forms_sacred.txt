@@ -25,12 +25,10 @@ FormName = Joyous Pattern
 #-------------------------------
 [SILVALLY,19]
 FormName = Type: Celestial
-Type1 = CELESTIAL
 Pokedex = Thanks to its awakened powers, it can change to the Celestial type to match the memory it has equipped.
 #-------------------------------
 [SILVALLY,20]
 FormName = Type: Glitch
-Type1 = GLITCH
 Pokedex = Thanks to its awakened powers, it can change to the Glitch type to match the memory it has equipped.
 #-------------------------------
 [AMNIBALL,1]
@@ -55,7 +53,7 @@ Generation = 10
 FormName = Verelan
 Types = ICE,FLYING
 Generation = 10
-Evolutions = SWOOBAT,Item,ICESTONE
+Evolution = SWOOBAT,Item,ICESTONE
 #-------------------------------
 [SWOOBAT,1]
 FormName = Verelan
@@ -63,22 +61,21 @@ Types = ICE,FLYING
 Generation = 10
 #-------------------------------
 [TOGEPI,1]
-Evolutions = TOGETIC,ItemOriginalForm,OVALSTONE,TOGETIC,LevelDarkInParty,2
+Evolution = TOGETIC,ItemOriginalForm,OVALSTONE
+Evolution = TOGETIC,LevelDarkInParty,2
 #-------------------------------
 [TOGETIC,1]
 FormName = Verelan
 Types = DARK,FAIRY
 Abilities = LEVITATE,SERENEGRACE
-HiddenAbility = HUSTLE
 Generation = 10
 Flags = InheritFormWithEverStone
-Evolutions = TOGEKISS,Item,MOONSTONE
+Evolution = TOGEKISS,Item,MOONSTONE
 #-------------------------------
 [TOGEKISS,1]
 FormName = Verelan
 Types = DARK,FAIRY
 Abilities = LEVITATE,SERENEGRACE
-HiddenAbility = HUSTLE
 Generation = 10
 Flags = InheritFormWithEverStone
 #-------------------------------
@@ -88,8 +85,8 @@ Flags = InheritFormWithEverStone
 FormName = Verelan
 Types = NORMAL,CELESTIAL
 Generation = 10
-Flags = InheritFormWithEverStone
-Evolutions = URSALUNA,Item,MOONSTONE
+Flags = InheritFormWithEverStone,HasGenderedSprites
+Evolution = URSALUNA,Item,MOONSTONE
 #-------------------------------
 [URSALUNA,2]
 FormName = Verelan
@@ -99,16 +96,16 @@ Flags = InheritFormWithEverStone
 #-------------------------------
 [MILCERY,63]
 FormName = Verelan
-Pokedex = Verelan Milcery were first spotted after a huge explosion 25 years ago. They are a favorite treat of Nemateiloon.
 Types = POISON
+Pokedex = Verelan Milcery were first spotted after a huge explosion 25 years ago. They are a favorite treat of Nemateiloon.
 Generation = 10
 Flags = InheritFormWithEverStone
-Evolutions = ALCREMIE,ItemVerelanAlcremie,
+Evolution = ALCREMIE,ItemVerelanAlcremie
 #-------------------------------
 [ALCREMIE,63]
 FormName = Verelan
-Pokedex = In keeping with the other variants of Alcremie, Verelan ones are sometimes referred to as "Salted Trick" or something akin to this.
 Types = POISON,FAIRY
+Pokedex = In keeping with the other variants of Alcremie, Verelan ones are sometimes referred to as "Salted Trick" or something akin to this.
 Generation = 10
 #-------------------------------
 [ALCREMIE,64]
@@ -146,7 +143,8 @@ FormName = Verelan
 Types = ICE
 BaseStats = 50,43,62,53,52,45
 Generation = 10
-Evolutions = TOXAPEX,None,,CROWNDRA,Level,38
+Evolution = TOXAPEX,None,
+Evolution = CROWNDRA,Level,38
 #-------------------------------
 [VULLABY,1]
 FormName = Verelan
@@ -192,7 +190,8 @@ FormName = Spearman Joushrimp
 Types = WATER,DARK
 BaseStats = 43,65,36,40,28,40
 EVs = ATTACK,1
-Evolutions = RAMANTILL,None,,KRILLANCE,Level,20
+Evolution = RAMANTILL,None,
+Evolution = KRILLANCE,Level,20
 #-------------------------------
 [CRYSTODE,1]
 PokedexForm = 0
@@ -254,121 +253,99 @@ PokedexForm = 0
 [CRYSTODE,20]
 FormName = Normal Body
 Types = ROCK,NORMAL
-Flags = InheritFormFromMother
-WildItemUncommon = NORMALGEM
 #-------------------------------
 [CRYSTODE,21]
 FormName = Fighting Body
 Types = ROCK,FIGHTING
-Flags = InheritFormFromMother
 WildItemUncommon = FIGHTINGGEM
 #-------------------------------
 [CRYSTODE,22]
 FormName = Flying Body
 Types = ROCK,FLYING
-Flags = InheritFormFromMother
 WildItemUncommon = FLYINGGEM
 #-------------------------------
 [CRYSTODE,23]
 FormName = Poison Body
 Types = ROCK,POISON
-Flags = InheritFormFromMother
 WildItemUncommon = POISONGEM
 #-------------------------------
 [CRYSTODE,24]
 FormName = Ground Body
 Types = ROCK,GROUND
-Flags = InheritFormFromMother
 WildItemUncommon = GROUNDGEM
 #-------------------------------
 [CRYSTODE,25]
 FormName = Bug Body
 Types = ROCK,BUG
-Flags = InheritFormFromMother
 WildItemUncommon = BUGGEM
 #-------------------------------
 [CRYSTODE,26]
 FormName = Ghost Body
 Types = ROCK,GHOST
-Flags = InheritFormFromMother
 WildItemUncommon = GHOSTGEM
 #-------------------------------
 [CRYSTODE,27]
 FormName = Steel Body
 Types = ROCK,STEEL
-Flags = InheritFormFromMother
 WildItemUncommon = STEELGEM
 #-------------------------------
 [CRYSTODE,28]
 FormName = ??? Body
 Types = ROCK,QMARKS
-Flags = InheritFormFromMother
-WildItemUncommon = NORMALGEM
 #-------------------------------
 [CRYSTODE,29]
 FormName = Fire Body
 Types = ROCK,FIRE
-Flags = InheritFormFromMother
 WildItemUncommon = FIREGEM
 #-------------------------------
 [CRYSTODE,30]
 FormName = Water Body
 Types = ROCK,WATER
-Flags = InheritFormFromMother
 WildItemUncommon = WATERGEM
 #-------------------------------
 [CRYSTODE,31]
 FormName = Grass Body
 Types = ROCK,GRASS
-Flags = InheritFormFromMother
 WildItemUncommon = GRASSGEM
 #-------------------------------
 [CRYSTODE,32]
 FormName = Electric Body
 Types = ROCK,ELECTRIC
-Flags = InheritFormFromMother
 WildItemUncommon = ELECTRICGEM
 #-------------------------------
 [CRYSTODE,33]
 FormName = Psychic Body
 Types = ROCK,PSYCHIC
-Flags = InheritFormFromMother
 WildItemUncommon = PSYCHICGEM
 #-------------------------------
 [CRYSTODE,34]
 FormName = Ice Body
 Types = ROCK,ICE
-Flags = InheritFormFromMother
 WildItemUncommon = ICEGEM
 #-------------------------------
 [CRYSTODE,35]
 FormName = Dragon Body
 Types = ROCK,DRAGON
-Flags = InheritFormFromMother
 WildItemUncommon = DRAGONGEM
 #-------------------------------
 [CRYSTODE,36]
 FormName = Dark Body
 Types = ROCK,DARK
-Flags = InheritFormFromMother
 WildItemUncommon = DARKGEM
 #-------------------------------
 [CRYSTODE,37]
 FormName = Fairy Body
 Types = ROCK,FAIRY
-Flags = InheritFormFromMother
 WildItemUncommon = FAIRYGEM
 #-------------------------------
 [CRYSTODE,38]
 FormName = Celestial Body
 Types = ROCK,CELESTIAL
-Flags = InheritFormFromMother
 WildItemUncommon = CELESTIALGEM
 #-------------------------------
 [CRYSTODE,39]
 FormName = Glitch Body
 Types = ROCK,GLITCH
-Flags = InheritFormFromMother
 WildItemUncommon = GLITCHGEM
 #-------------------------------
 [QUARTZLEM,1]
@@ -431,121 +408,99 @@ PokedexForm = 0
 [QUARTZLEM,20]
 FormName = Normal Body
 Types = ROCK,NORMAL
-Flags = InheritFormFromMother
-WildItemCommon = NORMALGEM
 #-------------------------------
 [QUARTZLEM,21]
 FormName = Fighting Body
 Types = ROCK,FIGHTING
-Flags = InheritFormFromMother
 WildItemCommon = FIGHTINGGEM
 #-------------------------------
 [QUARTZLEM,22]
 FormName = Flying Body
 Types = ROCK,FLYING
-Flags = InheritFormFromMother
 WildItemCommon = FLYINGGEM
 #-------------------------------
 [QUARTZLEM,23]
 FormName = Poison Body
 Types = ROCK,POISON
-Flags = InheritFormFromMother
 WildItemCommon = POISONGEM
 #-------------------------------
 [QUARTZLEM,24]
 FormName = Ground Body
 Types = ROCK,GROUND
-Flags = InheritFormFromMother
 WildItemCommon = GROUNDGEM
 #-------------------------------
 [QUARTZLEM,25]
 FormName = Bug Body
 Types = ROCK,BUG
-Flags = InheritFormFromMother
 WildItemCommon = BUGGEM
 #-------------------------------
 [QUARTZLEM,26]
 FormName = Ghost Body
 Types = ROCK,GHOST
-Flags = InheritFormFromMother
 WildItemCommon = GHOSTGEM
 #-------------------------------
 [QUARTZLEM,27]
 FormName = Steel Body
 Types = ROCK,STEEL
-Flags = InheritFormFromMother
 WildItemCommon = STEELGEM
 #-------------------------------
 [QUARTZLEM,28]
 FormName = ??? Body
 Types = ROCK,QMARKS
-Flags = InheritFormFromMother
-WildItemCommon = NORMALGEM
 #-------------------------------
 [QUARTZLEM,29]
 FormName = Fire Body
 Types = ROCK,FIRE
-Flags = InheritFormFromMother
 WildItemCommon = FIREGEM
 #-------------------------------
 [QUARTZLEM,30]
 FormName = Water Body
 Types = ROCK,WATER
-Flags = InheritFormFromMother
 WildItemCommon = WATERGEM
 #-------------------------------
 [QUARTZLEM,31]
 FormName = Grass Body
 Types = ROCK,GRASS
-Flags = InheritFormFromMother
 WildItemCommon = GRASSGEM
 #-------------------------------
 [QUARTZLEM,32]
 FormName = Electric Body
 Types = ROCK,ELECTRIC
-Flags = InheritFormFromMother
 WildItemCommon = ELECTRICGEM
 #-------------------------------
 [QUARTZLEM,33]
 FormName = Psychic Body
 Types = ROCK,PSYCHIC
-Flags = InheritFormFromMother
 WildItemCommon = PSYCHICGEM
 #-------------------------------
 [QUARTZLEM,34]
 FormName = Ice Body
 Types = ROCK,ICE
-Flags = InheritFormFromMother
 WildItemCommon = ICEGEM
 #-------------------------------
 [QUARTZLEM,35]
 FormName = Dragon Body
 Types = ROCK,DRAGON
-Flags = InheritFormFromMother
 WildItemCommon = DRAGONGEM
 #-------------------------------
 [QUARTZLEM,36]
 FormName = Dark Body
 Types = ROCK,DARK
-Flags = InheritFormFromMother
 WildItemCommon = DARKGEM
 #-------------------------------
 [QUARTZLEM,37]
 FormName = Fairy Body
 Types = ROCK,FAIRY
-Flags = InheritFormFromMother
 WildItemCommon = FAIRYGEM
 #-------------------------------
 [QUARTZLEM,38]
 FormName = Celestial Body
 Types = ROCK,CELESTIAL
-Flags = InheritFormFromMother
 WildItemCommon = CELESTIALGEM
 #-------------------------------
 [QUARTZLEM,39]
 FormName = Glitch Body
 Types = ROCK,GLITCH
-Flags = InheritFormFromMother
 WildItemCommon = GLITCHGEM
 #-------------------------------
 [DYODETZA,1]
@@ -608,169 +563,138 @@ PokedexForm = 0
 [DYODETZA,20]
 FormName = Normal Body
 Types = ROCK,NORMAL
-Flags = InheritFormFromMother
-WildItemCommon = NORMALGEM
 #-------------------------------
 [DYODETZA,21]
 FormName = Fighting Body
 Types = ROCK,FIGHTING
-Flags = InheritFormFromMother
 WildItemCommon = FIGHTINGGEM
 #-------------------------------
 [DYODETZA,22]
 FormName = Flying Body
 Types = ROCK,FLYING
-Flags = InheritFormFromMother
 WildItemCommon = FLYINGGEM
 #-------------------------------
 [DYODETZA,23]
 FormName = Poison Body
 Types = ROCK,POISON
-Flags = InheritFormFromMother
 WildItemCommon = POISONGEM
 #-------------------------------
 [DYODETZA,24]
 FormName = Ground Body
 Types = ROCK,GROUND
-Flags = InheritFormFromMother
 WildItemCommon = GROUNDGEM
 #-------------------------------
 [DYODETZA,25]
 FormName = Bug Body
 Types = ROCK,BUG
-Flags = InheritFormFromMother
 WildItemCommon = BUGGEM
 #-------------------------------
 [DYODETZA,26]
 FormName = Ghost Body
 Types = ROCK,GHOST
-Flags = InheritFormFromMother
 WildItemCommon = GHOSTGEM
 #-------------------------------
 [DYODETZA,27]
 FormName = Steel Body
 Types = ROCK,STEEL
-Flags = InheritFormFromMother
 WildItemCommon = STEELGEM
 #-------------------------------
 [DYODETZA,28]
 FormName = ??? Body
 Types = ROCK,QMARKS
-Flags = InheritFormFromMother
-WildItemCommon = NORMALGEM
 #-------------------------------
 [DYODETZA,29]
 FormName = Fire Body
 Types = ROCK,FIRE
-Flags = InheritFormFromMother
 WildItemCommon = FIREGEM
 #-------------------------------
 [DYODETZA,30]
 FormName = Water Body
 Types = ROCK,WATER
-Flags = InheritFormFromMother
 WildItemCommon = WATERGEM
 #-------------------------------
 [DYODETZA,31]
 FormName = Grass Body
 Types = ROCK,GRASS
-Flags = InheritFormFromMother
 WildItemCommon = GRASSGEM
 #-------------------------------
 [DYODETZA,32]
 FormName = Electric Body
 Types = ROCK,ELECTRIC
-Flags = InheritFormFromMother
 WildItemCommon = ELECTRICGEM
 #-------------------------------
 [DYODETZA,33]
 FormName = Psychic Body
 Types = ROCK,PSYCHIC
-Flags = InheritFormFromMother
 WildItemCommon = PSYCHICGEM
 #-------------------------------
 [DYODETZA,34]
 FormName = Ice Body
 Types = ROCK,ICE
-Flags = InheritFormFromMother
 WildItemCommon = ICEGEM
 #-------------------------------
 [DYODETZA,35]
 FormName = Dragon Body
 Types = ROCK,DRAGON
-Flags = InheritFormFromMother
 WildItemCommon = DRAGONGEM
 #-------------------------------
 [DYODETZA,36]
 FormName = Dark Body
 Types = ROCK,DARK
-Flags = InheritFormFromMother
 WildItemCommon = DARKGEM
 #-------------------------------
 [DYODETZA,37]
 FormName = Fairy Body
 Types = ROCK,FAIRY
-Flags = InheritFormFromMother
 WildItemCommon = FAIRYGEM
 #-------------------------------
 [DYODETZA,38]
 FormName = Celestial Body
 Types = ROCK,CELESTIAL
-Flags = InheritFormFromMother
 WildItemCommon = CELESTIALGEM
 #-------------------------------
 [DYODETZA,39]
 FormName = Glitch Body
 Types = ROCK,GLITCH
-Flags = InheritFormFromMother
 WildItemCommon = GLITCHGEM
 #-------------------------------
 [ZOKURRA,1]
 FormName = Winter Form
 Types = GRASS,ICE
 Color = Cyan
-Pokedex = Filler text
 #-------------------------------
 [SAKUMARGA,1]
 FormName = Winter Form
 Types = ICE,PSYCHIC
 Color = Cyan
-Pokedex = Filler text
 #-------------------------------
 [YUSAGIKI,1]
 FormName = Summer Form
 Types = ICE,WATER
 Color = Blue
-Pokedex = Filler text
 #-------------------------------
 [YUCONNIT,1]
 FormName = Summer Form
 Types = WATER,PSYCHIC
 Color = Blue
-Pokedex = Filler text
 #-------------------------------
 [COBRALF,1]
 FormName = Weathered Form
+BaseStats = 75,70,95,60,72,108
 Abilities = STURDY
 Weight = 18.3
-BaseStats = 75,70,95,60,72,108
-Pokedex = Filler text
 #-------------------------------
 [PARTAZURA,1]
 FormName = Hero Form
 BaseStats = 101,175,124,144,88,68
 BaseExp = 315
-Pokedex = Filler text
 #-------------------------------
 [DAROSEIKU,1]
 FormName = Teacher Form
 BaseStats = 168,68,148,88,108,120
 BaseExp = 315
-Pokedex = Filler text
 #-------------------------------
 [BERANTEGON,1]
 FormName = Monster Form
 BaseStats = 124,101,88,68,175,144
 BaseExp = 315
-Pokedex = Filler text
-#-------------------------------

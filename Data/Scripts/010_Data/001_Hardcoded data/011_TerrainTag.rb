@@ -64,6 +64,10 @@ module GameData
       @must_walk              = hash[:must_walk]              || false
       @must_walk_or_run       = hash[:must_walk_or_run]       || false
       @ignore_passability     = hash[:ignore_passability]     || false
+      @stair_type     = hash[:stair_type]     || 0
+      @is_sand               = hash[:is_sand]               || false
+      @can_climb               = hash[:can_climb]               || false
+      @sound_effect              = hash[:sound_effect]      || "Step/Default"
     end
 
     alias name real_name
@@ -393,5 +397,5 @@ GameData::TerrainTag.register({
 
 GameData::TerrainTag.register({
   :id                     => :NoEffect,
-  :id_number              => 64
+  :id_number              => 99
 })

@@ -2166,3 +2166,275 @@ Backtrace:
 [Astralneko's Sounds On Step] Sounds On Step.rb:83:in `pbPlaySoundEffectToLocation'
 [Astralneko's Sounds On Step] Sounds On Step.rb:77:in `pbPlaySoundEffectEvent'
 [Astralneko's Sounds On Step] Sounds On Step.rb:59:in `block in <main>'
+
+=================
+
+[2025-03-05 15:24:05 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Filename is nil (missing graphic).
+
+Backtrace:
+008_AnimatedBitmap.rb:6:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:144:in `new'
+[Modular Messages] Name Tags + Advanced Portraits.rb:144:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:178:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `new'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `block in <main>'
+[Swdfm Utilities] Other.rb:189:in `trigger_sect'
+[Modular Messages] [003] Controls Methods.rb:85:in `block in controls_before_appears'
+[Modular Messages] [003] Controls Methods.rb:79:in `times'
+[Modular Messages] [003] Controls Methods.rb:79:in `controls_before_appears'
+
+=================
+
+[2025-03-05 15:27:57 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Filename is nil (missing graphic).
+
+Backtrace:
+008_AnimatedBitmap.rb:6:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:144:in `new'
+[Modular Messages] Name Tags + Advanced Portraits.rb:144:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:178:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `new'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `block in <main>'
+[Swdfm Utilities] Other.rb:189:in `trigger_sect'
+[Modular Messages] [003] Controls Methods.rb:85:in `block in controls_before_appears'
+[Modular Messages] [003] Controls Methods.rb:79:in `times'
+[Modular Messages] [003] Controls Methods.rb:79:in `controls_before_appears'
+
+=================
+
+[2025-03-05 15:35:59 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Script error in event 4 (coords 12,27), map 10 (West Route 5)
+Exception: NameError
+Message: uninitialized constant PBMoveRoute::Right
+
+***Full script:
+FollowingPkmn.move_route([
+PBMoveRoute::Right,
+PBMoveRoute::Right,
+PBMoveRoute::TurnLeft
+])
+
+Backtrace:
+(eval):2:in `execute_script'
+003_Interpreter.rb:140:in `eval'
+003_Interpreter.rb:140:in `execute_script'
+004_Interpreter_Commands.rb:1177:in `command_355'
+004_Interpreter_Commands.rb:116:in `execute_command'
+003_Interpreter.rb:132:in `block in update'
+003_Interpreter.rb:86:in `loop'
+003_Interpreter.rb:86:in `update'
+[Following Pokemon EX] Refresh.rb:268:in `update'
+002_Scene_Map.rb:167:in `block in update'
+
+=================
+
+[2025-03-05 15:46:05 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: Errno::ENOENT
+Message: File Graphics/Pictures/Location/Autumn not found.
+
+Backtrace:
+001_RPG_Cache.rb:127:in `initialize'
+001_RPG_Cache.rb:127:in `initialize'
+001_RPG_Cache.rb:46:in `new'
+001_RPG_Cache.rb:46:in `load_bitmap'
+[BW Location Signposts] BW_SignPosts.rb:96:in `initialize'
+001_Overworld.rb:313:in `new'
+001_Overworld.rb:313:in `block (2 levels) in load_scripts_from_folder'
+005_Event_Handlers.rb:89:in `block in trigger'
+005_Event_Handlers.rb:89:in `each_value'
+005_Event_Handlers.rb:89:in `trigger'
+
+=================
+
+[2025-03-05 16:05:09 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Undefined value URSARING_1 in GameData::Species.
+File PBS/encounters.txt, line 55
+5,URSARING_1,28,30
+
+
+
+Backtrace:
+001_Compiler.rb:454:in `checkEnumField'
+[v21.1 Hotfixes] Compiler bug fixes.rb:53:in `cast_csv_value'
+001_Compiler.rb:724:in `block (2 levels) in get_csv_record'
+001_Compiler.rb:710:in `each'
+001_Compiler.rb:710:in `block in get_csv_record'
+001_Compiler.rb:708:in `loop'
+001_Compiler.rb:708:in `get_csv_record'
+002_Compiler_CompilePBS.rb:679:in `block (2 levels) in compile_encounters'
+001_Compiler.rb:244:in `block (2 levels) in pbCompilerEachPreppedLine'
+001_Compiler.rb:236:in `each_line'
+
+=================
+
+[2025-03-05 16:06:05 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'
+
+=================
+
+[2025-03-05 16:15:47 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `stair_type' for :None:Symbol
+
+Backtrace:
+[Terrain Tag Side Stairs] Terrain Tag Stairs.rb:193:in `move_generic'
+006_Game_Character.rb:573:in `move_left'
+008_Game_Player.rb:442:in `update_command_new'
+006_Game_Character.rb:921:in `update_command'
+006_Game_Character.rb:905:in `update'
+008_Game_Player.rb:420:in `update'
+002_Scene_Map.rb:168:in `block in update'
+002_Scene_Map.rb:166:in `loop'
+002_Scene_Map.rb:166:in `update'
+[Following Pokemon EX] Refresh.rb:178:in `update'
+
+=================
+
+[2025-03-05 16:20:41 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `stair_type' for :None:Symbol
+
+Backtrace:
+[Terrain Tag Side Stairs] Terrain Tag Stairs.rb:193:in `move_generic'
+006_Game_Character.rb:573:in `move_left'
+008_Game_Player.rb:442:in `update_command_new'
+006_Game_Character.rb:921:in `update_command'
+006_Game_Character.rb:905:in `update'
+008_Game_Player.rb:420:in `update'
+002_Scene_Map.rb:168:in `block in update'
+002_Scene_Map.rb:166:in `loop'
+002_Scene_Map.rb:166:in `update'
+[Following Pokemon EX] Refresh.rb:178:in `update'
+
+=================
+
+[2025-03-05 16:36:15 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Section name 'ARCANINE_1' is used twice.
+File PBS/pokemon_metrics_Gen_9_Pack.txt, section ARCANINE,1, key SuperShinyHue
+
+
+
+
+Backtrace:
+002_Compiler_CompilePBS.rb:57:in `block (3 levels) in compile_PBS_file_generic'
+001_Compiler.rb:143:in `block in pbEachFileSection'
+001_Compiler.rb:108:in `block in pbEachFileSectionEx'
+001_Compiler.rb:100:in `each_line'
+001_Compiler.rb:100:in `pbEachFileSectionEx'
+001_Compiler.rb:142:in `pbEachFileSection'
+002_Compiler_CompilePBS.rb:22:in `block (2 levels) in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:16:in `open'
+002_Compiler_CompilePBS.rb:16:in `block in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:11:in `each'
+
+=================
+
+[2025-03-05 16:36:38 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'
+
+=================
+
+[2025-03-05 16:36:45 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Section name 'PICHU_2' is used twice.
+File PBS/pokemon_metrics_forms.txt, section PICHU,2, key SuperShinyHue
+
+
+
+
+Backtrace:
+002_Compiler_CompilePBS.rb:57:in `block (3 levels) in compile_PBS_file_generic'
+001_Compiler.rb:143:in `block in pbEachFileSection'
+001_Compiler.rb:108:in `block in pbEachFileSectionEx'
+001_Compiler.rb:100:in `each_line'
+001_Compiler.rb:100:in `pbEachFileSectionEx'
+001_Compiler.rb:142:in `pbEachFileSection'
+002_Compiler_CompilePBS.rb:22:in `block (2 levels) in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:16:in `open'
+002_Compiler_CompilePBS.rb:16:in `block in compile_PBS_file_generic'
+002_Compiler_CompilePBS.rb:11:in `each'
+
+=================
+
+[2025-03-05 16:37:38 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Unknown exception when compiling.
+
+Backtrace:
+001_Compiler.rb:1114:in `rescue in main'
+001_Compiler.rb:1041:in `main'
+999_Main.rb:35:in `mainFunctionDebug'
+999_Main.rb:18:in `block in mainFunction'
+003_Errors.rb:79:in `pbCriticalCode'
+999_Main.rb:18:in `mainFunction'
+999_Main.rb:51:in `block (2 levels) in load_scripts_from_folder'
+999_Main.rb:50:in `loop'
+999_Main.rb:50:in `block in load_scripts_from_folder'
+Main:35:in `eval'

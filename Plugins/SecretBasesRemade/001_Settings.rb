@@ -86,15 +86,15 @@ end
 
 GameData::TerrainTag.register({
   :id                     => :SecretGroundDecor,
-  :id_number              => 26
+  :id_number              => 72
 })
 
 GameData::TerrainTag.register({
   :id                     => :SecretWall,
-  :id_number              => 27
+  :id_number              => 73
 })
 
 GameData::TerrainTag.register({
   :id                     => :SecretDecorFloor,
-  :id_number              => 28
+  :id_number              => 74
 })

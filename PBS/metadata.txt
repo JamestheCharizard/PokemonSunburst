@@ -4,11 +4,12 @@
 StartMoney = 3000
 StartItemStorage = POTION
 Home = 3,7,5,8
-StorageCreator = Bill
-WildBattleBGM = Battle wild
-TrainerBattleBGM = Battle trainer
-WildVictoryBGM = Battle victory wild
-TrainerVictoryBGM = Battle victory trainer
+StorageCreator = Levin
+WildBattleBGM = ARS_Battle_WildPokemon.ogg
+TrainerBattleBGM = Monstro-a-Monstro.ogg
+WildVictoryME = 4-20 Victory! (Wild Pokémon).mp3
+TrainerVictoryME = 4-21 Victory! (Trainer).mp3
+WildCaptureME = 59 Victory! (Team Skull).mp3
 SurfBGM = Surfing
 BicycleBGM = Bicycle
 #-------------------------------
