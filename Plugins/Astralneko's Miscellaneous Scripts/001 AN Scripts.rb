@@ -376,7 +376,7 @@ end
 
 # Sets the dialogue sound effect sound to the one for the given character (or the dummy one if none is mapped)
 def anSetDialogueSound(name)
-	if AstralnekoConfig::DIALOGUE_SFX[name]
+	if Astralneko_Config::DIALOGUE_SFX[name]
 		DialogueSound.set_sound_effect(AstralnekoConfig::DIALOGUE_SFX[name])
 	else
 		DialogueSound.set_sound_effect("boopSINE")

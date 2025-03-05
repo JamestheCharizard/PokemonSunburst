@@ -917,7 +917,7 @@ Generation = 1
 #-------------------------------
 [CLEFAIRY]
 Name = Clefairy
-Types = FAIRY
+Types = CELESTIAL,FAIRY
 BaseStats = 70,45,48,35,60,65
 GenderRatio = Female75Percent
 GrowthRate = Fast
@@ -945,7 +945,7 @@ CallRateSOS = 6
 #-------------------------------
 [CLEFABLE]
 Name = Clefable
-Types = FAIRY
+Types = CELESTIAL,FAIRY
 BaseStats = 95,70,73,60,95,90
 GenderRatio = Female75Percent
 GrowthRate = Fast
@@ -4692,7 +4692,7 @@ CallRateSOS = 15
 #-------------------------------
 [CLEFFA]
 Name = Cleffa
-Types = FAIRY
+Types = CELESTIAL,FAIRY
 BaseStats = 50,25,28,15,45,55
 GenderRatio = Female75Percent
 GrowthRate = Fast

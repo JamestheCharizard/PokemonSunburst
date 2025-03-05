@@ -1,4 +1,0 @@
-Name = Terrain Tag Side Stairs
-Version = 1.3
-Credits = Boonzeet
-Website = https://reliccastle.com/resources/397/

@@ -109,7 +109,7 @@ class Sprite_Shadow < RPG::Sprite
   def in_range?(element, object, range)
     elemScreenX = ScreenPosHelper.pbScreenX(element)
     elemScreenY = ScreenPosHelper.pbScreenY(element)
-    objScreenX  = ScreenPosHelper.pbScreenX(object)
+		objScreenX  = ScreenPosHelper.pbScreenX(object)
     objScreenY  = ScreenPosHelper.pbScreenY(object)
     x = (elemScreenX - objScreenX) * (elemScreenX - objScreenX)
     y = (elemScreenY - objScreenY) * (elemScreenY - objScreenY)
