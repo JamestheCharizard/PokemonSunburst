@@ -71,7 +71,7 @@ module Gela_Settings
 # NOTE: Apparently Gela has the windowskins
 #  in his old script, but I don't have them ~Swdfm
   DEFAULT_WINDOWSKIN = "hud white2 hf"
-  DEFAULT_WINDOWSKIN_DARK = nil # "hud black2 hf"
+  DEFAULT_WINDOWSKIN_DARK = "hud black2 hf"
 #-------------------------------
 # Set for the minimum width of the name tag window
   NAME_TAG_MIN_WIDTH = 180
@@ -83,7 +83,7 @@ module Gela_Settings
 #-------------------------------
 # The gap (px) between the top of the messagebox and
 #  the bottom of the portraits
-  PORTRAIT_GAP_HEIGHT = 0
+  PORTRAIT_GAP_HEIGHT = -18
 #-------------------------------
 # The size of the portrait window and picture
 # [width of window, height of window, width of picture, height of window]
@@ -134,8 +134,8 @@ end
 class FaceWindowVX < SpriteWindow_Base
   def initialize(face, sizes = nil)
     @sizes = sizes || [128, 128, 96, 96]
-    self.windowskin = nil
     super(0, 0, @sizes[0], @sizes[1])
+    self.setSkin("Graphics/Windowskins/empty")
     faceinfo = face.split(",")
     facefile = pbResolveBitmap("Graphics/Faces/" + faceinfo[0])
     facefile = pbResolveBitmap("Graphics/Pictures/" + faceinfo[0]) if !facefile
@@ -256,7 +256,7 @@ Modular_Messages::Controls.add("ml", {
     hash[s].y = hash["msg_window"].y - hash[s].height
     hash[s].y -= Gela_Settings::PORTRAIT_GAP_HEIGHT
     hash[s].viewport = hash["msg_window"].viewport
-    hash[s].z = hash["msg_window"].z + 10
+    hash[s].z = hash["msg_window"].z #+ 10
   },
   "during_loop" => proc { |hash, param|
     d = hash["current_control"] == "ml" ? "left" : "right"
@@ -270,7 +270,7 @@ Modular_Messages::Controls.add("ml", {
     hash[s].y = hash["msg_window"].y - hash[s].height
     hash[s].y -= Gela_Settings::PORTRAIT_GAP_HEIGHT
     hash[s].viewport = hash["msg_window"].viewport
-    hash[s].z = hash["msg_window"].z + 10
+    hash[s].z = hash["msg_window"].z #+ 10
   }
 })
 

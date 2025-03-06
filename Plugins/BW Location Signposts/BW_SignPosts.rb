@@ -2,6 +2,8 @@
 #BW signposts (original by Shiney570, updated by Shashu Greninja)
 #===============================================================================
 class LocationWindow
+  APPEAR_TIME = 0.4   # In seconds; is also the disappear time
+  LINGER_TIME = 2.0   # In seconds; time during which self is fully visible
 
   def initialize(name)
     #Original BW, B2W2 Signposts
@@ -77,7 +79,8 @@ class LocationWindow
       beach=BEACH+newarr10
     end
 
-    @frames=0
+    @timer_start = System.uptime
+    @delayed = !$game_temp.fly_destination.nil?
     @currentmap=$game_map.map_id
     name=$game_map.name
     @window=Sprite.new
@@ -217,25 +220,30 @@ class LocationWindow
     @season.dispose if @season
   end
 
+	# Updated update function to make it frame agnostic
   def update
     if @currentmap != $game_map.map_id
       dispose
     end
     return if @window.disposed?
+    #return if @window.disposed? || $game_temp.fly_destination
+    if @delayed
+      @timer_start = System.uptime
+      @delayed = false
+    end
     @window.update
     @overlay.update
-    if @frames<10
-      @window.y+= (@window.bitmap.height+0.1)/10
-      @overlay.y+= (@window.bitmap.height+0.1)/10
-      @season.y-= @season.bitmap.height/10 if @season
-    elsif @frames>=90 && @frames<=100
-      @window.y-= (@window.bitmap.height+0.1)/10
-      @overlay.y-= (@window.bitmap.height+0.1)/10
-      @season.y+= @season.bitmap.height/10 if @season
-    elsif @frames>101
-      @window.dispose; @overlay.dispose
-      @season.dispose if @season
+    if System.uptime - @timer_start >= APPEAR_TIME + LINGER_TIME
+      @window.y = lerp(0, -@window.height, APPEAR_TIME, @timer_start + APPEAR_TIME + LINGER_TIME, System.uptime)
+      @overlay.y = lerp(0, -@window.height, APPEAR_TIME, @timer_start + APPEAR_TIME + LINGER_TIME, System.uptime)
+      @season.y = lerp(Settings::SCREEN_HEIGHT-@season.bitmap.height, Settings::SCREEN_HEIGHT, APPEAR_TIME, @timer_start + APPEAR_TIME + LINGER_TIME, System.uptime)
+      @window.dispose if @window.y + @window.height <= 0
+      @overlay.dispose if @overlay.y + @overlay.height <= 0
+      @season.dispose if @season.y - @season.height >= Settings::SCREEN_HEIGHT
+    else
+      @window.y = lerp(-@window.height, 0, APPEAR_TIME, @timer_start, System.uptime)
+      @overlay.y = lerp(-@window.height, 0, APPEAR_TIME, @timer_start, System.uptime)
+      @season.y = lerp(Settings::SCREEN_HEIGHT, Settings::SCREEN_HEIGHT-@season.bitmap.height, APPEAR_TIME, @timer_start, System.uptime)
     end
-    @frames+=1
   end
 end

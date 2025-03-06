@@ -23,19 +23,19 @@ EventHandlers.add(:on_end_battle, :revert_freeze,
 
 # When the player moves to a new map, step them forward if they're coming from Map Glitch maps. (Route 4 North, Alipigra City)
 # Map Glitch: When moving onto certain maps, the map visually glitches and shows a different area for 1 frame for some bizarre reason. Can't figure out why, but this soft fix makes it not happen so
-EventHandlers.add(:on_enter_map, :map_glitch_hotfix,
-  proc { |oldMapID|
-		newMapID = $game_map.map_id
-		# Map Glitch only occurs when walking through a map connection.
-		# On load, oldMapID and newMapID are the same.
-		next if oldMapID == newMapID
-		glitchedMaps = [14, # Route 4 North
-						        33  # Alipigra City
-		]
-		next if !glitchedMaps.include?(oldMapID)
-		$game_player.move_forward
-	}
-)
+#EventHandlers.add(:on_enter_map, :map_glitch_hotfix,
+# proc { |oldMapID|
+#		newMapID = $game_map.map_id
+#		# Map Glitch only occurs when walking through a map connection.
+#		# On load, oldMapID and newMapID are the same.
+#		next if oldMapID == newMapID
+#		glitchedMaps = [14, # Route 4 North
+#						        33  # Alipigra City
+#		]
+#		next if !glitchedMaps.include?(oldMapID)
+#		$game_player.move_forward
+#	}
+#)
 # Note: This soft fix is not perfect. The player will attempt to move forward again if they enter a door on a map glitch map, because this function is called when walking into a door. Map Glitch doesn't occur in that case.
 # I might be able to use the transition flag to tell it not to run on doors. However, it's probably better to just actually find the root of the glitch and patch it.
 

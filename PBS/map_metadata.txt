@@ -2,6 +2,7 @@
 #-------------------------------
 [001]
 # Intro
+Name = Intro
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -9,6 +10,7 @@ BicycleAlways = false
 #-------------------------------
 [002]
 # Route 6
+Name = Route 6
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -19,11 +21,12 @@ MapSize = 3,100100100
 #-------------------------------
 [003]
 # \PN's house
-HealingSpot = 2,8,8
+Name = \PN's house
 MapPosition = 0,24,12
 #-------------------------------
 [004]
 # Alipigra Poké Center
+Name = Alipigra Poké Center
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -32,6 +35,7 @@ MapPosition = 0,24,12
 #-------------------------------
 [005]
 # Alipigra House
+Name = Alipigra City
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -40,6 +44,7 @@ BattleBack = field
 #-------------------------------
 [006]
 # Starview Lake
+Name = Starview Lake
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -48,6 +53,7 @@ MapPosition = 0,23,12
 #-------------------------------
 [007]
 # Starview Lake House
+Name = Starview Lake
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -56,6 +62,7 @@ MapPosition = 0,23,12
 #-------------------------------
 [008]
 # Nova Cancioba Tunnel
+Name = Nova Cancioba Tunnel
 Outdoor = false
 ShowArea = true
 Bicycle = false
@@ -65,6 +72,7 @@ SnapEdges = true
 #-------------------------------
 [009]
 # Starview Cave
+Name = Starview Cave
 Outdoor = false
 ShowArea = true
 Bicycle = false
@@ -75,6 +83,7 @@ Environment = Cave
 #-------------------------------
 [010]
 # West Route 5
+Name = West Route 5
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -86,6 +95,7 @@ Flags = PowerSpot
 #-------------------------------
 [011]
 # Maracaleza Town
+Name = Maracaleza Town
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -94,15 +104,18 @@ MapPosition = 0,30,12
 #-------------------------------
 [012]
 # Alipigra Gym
+Name = Alipigra Gym
 MapPosition = 0,24,12
 #-------------------------------
 [013]
 # Maracaleza Poké Center
+Name = Maracaleza Poké Center
 HealingSpot = 11,11,20
 MapPosition = 0,14,10
 #-------------------------------
 [014]
 # North Route 4
+Name = North Route 4
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -112,6 +125,7 @@ MapSize = 3,100100100
 #-------------------------------
 [015]
 # Fairdune Cave
+Name = Fairdune Cave
 Outdoor = false
 ShowArea = true
 Bicycle = false
@@ -121,6 +135,7 @@ Environment = Cave
 #-------------------------------
 [016]
 # Maracaleza Beach
+Name = Maracaleza Beach
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -130,6 +145,7 @@ Environment = Sand
 #-------------------------------
 [017]
 # Route 4 Poké Center
+Name = Route 4 Poké Center
 Outdoor = false
 ShowArea = true
 Bicycle = false
@@ -139,6 +155,7 @@ MapPosition = 0,27,10
 #-------------------------------
 [018]
 # South Route 4
+Name = South Route 4
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -147,6 +164,7 @@ MapSize = 3,100100110
 #-------------------------------
 [019]
 # Paragonas River
+Name = Paragonas River
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -156,6 +174,7 @@ MapSize = 3,111111000
 #-------------------------------
 [020]
 # Maracaleza Primary
+Name = Maracaleza Primary
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -163,6 +182,7 @@ MapPosition = 0,30,12
 #-------------------------------
 [021]
 # São Andres Pub
+Name = São Andres Pub
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -171,6 +191,7 @@ BattleBack = field
 #-------------------------------
 [022]
 # Rio Bossano City
+Name = Rio Bossano City
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -179,6 +200,7 @@ MapSize = 2,1111
 #-------------------------------
 [023]
 # São Samba City
+Name = São Samba City
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -187,6 +209,7 @@ MapSize = 2,1111
 #-------------------------------
 [024]
 # Candlewax Field
+Name = Candlewax Field
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -195,6 +218,7 @@ Environment = Graveyard
 #-------------------------------
 [025]
 # Pachaqucha
+Name = Pachaqucha
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -202,6 +226,7 @@ MapPosition = 0,30,8
 #-------------------------------
 [026]
 # Route 15
+Name = Route 15
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -210,6 +235,7 @@ MapSize = 6,111111000000000000000000000000000000
 #-------------------------------
 [027]
 # Rocavideo Town
+Name = Rocavideo Town
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -218,6 +244,7 @@ MapSize = 2,1010
 #-------------------------------
 [028]
 # Paragonas River
+Name = Paragonas River
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -226,6 +253,7 @@ BattleBack = field
 #-------------------------------
 [029]
 # Pachaqucha Museum
+Name = Pachaqucha Museum
 ShowArea = false
 Bicycle = false
 BicycleAlways = false
@@ -233,6 +261,7 @@ MapPosition = 0,16,8
 #-------------------------------
 [030]
 # Rio Bossano Poké Center
+Name = Rio Bossano Poké Center
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -242,6 +271,7 @@ MapPosition = 0,28,7
 #-------------------------------
 [031]
 # Rio Bossano Poké Center
+Name = Rio Bossano Poké Center
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -251,6 +281,7 @@ MapPosition = 0,28,8
 #-------------------------------
 [032]
 # Fennel's Lab
+Name = Fennel's Lab
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -259,6 +290,7 @@ MapPosition = 0,29,7
 #-------------------------------
 [033]
 # Alipigra City
+Name = Alipigra City
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -268,6 +300,7 @@ MapSize = 2,1100
 #-------------------------------
 [034]
 # Nova Cancioba City
+Name = Nova Cancioba City
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -276,6 +309,7 @@ MapSize = 2,1110
 #-------------------------------
 [035]
 # Rocavideo Poké Center
+Name = Rocavideo Poké Center
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -284,6 +318,7 @@ MapPosition = 0,21,8
 #-------------------------------
 [036]
 # Nova Cancioba Poké Center
+Name = Nova Cancioba Poké Center
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -292,6 +327,7 @@ MapPosition = 0,24,16
 #-------------------------------
 [037]
 # South Route 3
+Name = South Route 3
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -302,6 +338,7 @@ Flags = PowerSpot
 #-------------------------------
 [038]
 # Bossanova River
+Name = Bossanova River
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -311,6 +348,7 @@ MapSize = 2,1100
 #-------------------------------
 [039]
 # Bossanova River
+Name = Bossanova River
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -320,6 +358,7 @@ MapSize = 6,111111000000000000000000000000000000
 #-------------------------------
 [040]
 # North Route 3
+Name = North Route 3
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -329,6 +368,7 @@ MapSize = 2,1010
 #-------------------------------
 [041]
 # Route 1
+Name = Route 1
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -338,6 +378,7 @@ MapSize = 5,1000010000100001000010000
 #-------------------------------
 [042]
 # Pokémon Lab
+Name = Pokémon Lab
 Outdoor = false
 ShowArea = false
 Bicycle = true
@@ -346,6 +387,7 @@ MapPosition = 0,25,12
 #-------------------------------
 [043]
 # Bossanova Delta
+Name = Bossanova Delta
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -354,6 +396,7 @@ MapPosition = 0,29,6
 #-------------------------------
 [044]
 # Maracaleza House
+Name = Maracaleza Town
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -362,6 +405,7 @@ BattleBack = field
 #-------------------------------
 [045]
 # Route 2
+Name = Route 2
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -371,6 +415,7 @@ MapSize = 5,1111100000000000000000000
 #-------------------------------
 [046]
 # Route 8
+Name = Route 8
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -380,6 +425,7 @@ MapSize = 3,100100100
 #-------------------------------
 [047]
 # Tangoseiro City
+Name = Tangoseiro City
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -389,6 +435,7 @@ MapSize = 2,1100
 #-------------------------------
 [048]
 # Frenaval City
+Name = Frenaval City
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -398,6 +445,7 @@ MapSize = 2,1010
 #-------------------------------
 [049]
 # Route 7
+Name = Route 7
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -407,6 +455,7 @@ MapSize = 3,100100100
 #-------------------------------
 [050]
 # Thunderbolt Games
+Name = Thunderbolt Games
 Outdoor = false
 ShowArea = true
 Bicycle = false
@@ -415,6 +464,7 @@ MapPosition = 0,30,16
 #-------------------------------
 [051]
 # Rio Bossano Building
+Name = Rio Bossano Building
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -423,6 +473,7 @@ MapPosition = 0,23,12
 #-------------------------------
 [052]
 # Route 9
+Name = Route 9
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -432,6 +483,7 @@ MapSize = 3,111000000
 #-------------------------------
 [053]
 # Hirihopa City
+Name = Hirihopa City
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -441,6 +493,7 @@ MapSize = 2,0111
 #-------------------------------
 [054]
 # Hirihopa Bay
+Name = Hirihopa Bay
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -449,6 +502,7 @@ MapPosition = 0,25,22
 #-------------------------------
 [055]
 # Samba Seaboard
+Name = Samba Seaboard
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -458,6 +512,7 @@ MapSize = 3,111000000
 #-------------------------------
 [056]
 # Firelight Tower
+Name = Firelight Tower
 Outdoor = false
 ShowArea = true
 Bicycle = false
@@ -468,6 +523,7 @@ Flags = PowerSpot
 #-------------------------------
 [057]
 # São Samba Poké Center
+Name = São Samba Poké Center
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -477,6 +533,7 @@ MapPosition = 0,30,15
 #-------------------------------
 [058]
 # Whitepetal Forest
+Name = Whitepetal Forest
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -486,6 +543,7 @@ MapPosition = 0,19,8
 #-------------------------------
 [059]
 # Maracaleza Gym
+Name = Maracaleza Gym
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -494,6 +552,7 @@ Flags = PowerSpot
 #-------------------------------
 [060]
 # Rocavideo House
+Name = Rocavideo Town
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -501,6 +560,7 @@ BicycleAlways = false
 #-------------------------------
 [800]
 # Lauransel Ocean
+Name = Lauransel Ocean
 Outdoor = true
 ShowArea = true
 Bicycle = false
@@ -510,6 +570,7 @@ MapSize = 5,1000010000100001000010000
 #-------------------------------
 [850]
 # Jubilife Village
+Name = Jubilife Village
 Outdoor = true
 ShowArea = true
 Bicycle = false
@@ -518,6 +579,7 @@ MapPosition = 3,14,10
 #-------------------------------
 [900]
 # Mesagoza
+Name = Mesagoza
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -526,6 +588,7 @@ MapPosition = 2,9,8
 #-------------------------------
 [950]
 # Casteliopolis
+Name = Casteliopolis
 Outdoor = true
 ShowArea = true
 Bicycle = true
@@ -534,6 +597,7 @@ MapPosition = 1,13,10
 #-------------------------------
 [1000]
 # MAP1000
+Name = MAP1000
 Outdoor = false
 ShowArea = false
 Bicycle = false

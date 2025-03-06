@@ -2438,3 +2438,339 @@ Backtrace:
 999_Main.rb:50:in `loop'
 999_Main.rb:50:in `block in load_scripts_from_folder'
 Main:35:in `eval'
+
+=================
+
+[2025-03-06 02:09:29 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: TypeError
+Message: nil can't be coerced into Float
+
+Backtrace:
+[BW Location Signposts] BW_SignPosts.rb:229:in `-'
+[BW Location Signposts] BW_SignPosts.rb:229:in `update'
+008_Sprite_AnimationSprite.rb:328:in `block in update'
+008_Sprite_AnimationSprite.rb:328:in `each'
+008_Sprite_AnimationSprite.rb:328:in `update'
+[Event Indicators] 001_Script.rb:105:in `update'
+[Boon's Phenomena] 001_Script.rb:259:in `update'
+002_Scene_Map.rb:151:in `block in updateSpritesets'
+002_Scene_Map.rb:149:in `each'
+002_Scene_Map.rb:149:in `updateSpritesets'
+
+=================
+
+[2025-03-06 03:00:01 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Filename is nil (missing graphic).
+
+Backtrace:
+008_AnimatedBitmap.rb:6:in `initialize'
+010_DrawText.rb:1140:in `new'
+010_DrawText.rb:1140:in `block in pbDrawImagePositions'
+010_DrawText.rb:1139:in `each'
+010_DrawText.rb:1139:in `pbDrawImagePositions'
+[Arcky's Region Map] 001_RegionMap_Main.rb:229:in `addPlayerIconSprite'
+[Arcky's Region Map] 001_RegionMap_Main.rb:69:in `main'
+[Arcky's Region Map] 001_RegionMap_Main.rb:50:in `pbStartScene'
+[Arcky's Region Map] 002_RegionMap_Classes.rb:56:in `pbStartScreen'
+[Astralneko's Miscellaneous Scripts] 009 Menu Handlers.rb:41:in `block (2 levels) in <main>'
+
+=================
+
+[2025-03-06 03:01:54 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Filename is nil (missing graphic).
+
+Backtrace:
+008_AnimatedBitmap.rb:6:in `initialize'
+010_DrawText.rb:1140:in `new'
+010_DrawText.rb:1140:in `block in pbDrawImagePositions'
+010_DrawText.rb:1139:in `each'
+010_DrawText.rb:1139:in `pbDrawImagePositions'
+[Arcky's Region Map] 001_RegionMap_Main.rb:229:in `addPlayerIconSprite'
+[Arcky's Region Map] 001_RegionMap_Main.rb:69:in `main'
+[Arcky's Region Map] 001_RegionMap_Main.rb:50:in `pbStartScene'
+[Arcky's Region Map] 002_RegionMap_Classes.rb:56:in `pbStartScreen'
+[Astralneko's Miscellaneous Scripts] 009 Menu Handlers.rb:41:in `block (2 levels) in <main>'
+
+=================
+
+[2025-03-06 03:03:06 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: RuntimeError
+Message: Filename is nil (missing graphic).
+
+Backtrace:
+008_AnimatedBitmap.rb:6:in `initialize'
+010_DrawText.rb:1140:in `new'
+010_DrawText.rb:1140:in `block in pbDrawImagePositions'
+010_DrawText.rb:1139:in `each'
+010_DrawText.rb:1139:in `pbDrawImagePositions'
+[Arcky's Region Map] 001_RegionMap_Main.rb:229:in `addPlayerIconSprite'
+[Arcky's Region Map] 001_RegionMap_Main.rb:69:in `main'
+[Arcky's Region Map] 001_RegionMap_Main.rb:50:in `pbStartScene'
+[Arcky's Region Map] 002_RegionMap_Classes.rb:56:in `pbStartScreen'
+[Astralneko's Miscellaneous Scripts] 009 Menu Handlers.rb:41:in `block (2 levels) in <main>'
+
+=================
+
+[2025-03-06 03:13:07 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: Errno::ENOENT
+Message: File Graphics/UI/Town Map/UI/Special/LocationPreview/MiniMaps/mapAlipigraCity not found.
+
+Backtrace:
+[Arcky's Utilities] 000_Main.rb:182:in `initialize'
+[Arcky's Utilities] 000_Main.rb:182:in `new'
+[Arcky's Utilities] 000_Main.rb:182:in `getBitmapWidth'
+[Arcky's Region Map] 003_RegionMap_LocationPreview.rb:59:in `getLocationInfo'
+[Arcky's Region Map] 001_RegionMap_Main.rb:356:in `block in pbMapScene'
+[Arcky's Region Map] 001_RegionMap_Main.rb:273:in `loop'
+[Arcky's Region Map] 001_RegionMap_Main.rb:273:in `pbMapScene'
+[Arcky's Region Map] 002_RegionMap_Classes.rb:57:in `pbStartScreen'
+[Astralneko's Miscellaneous Scripts] 009 Menu Handlers.rb:41:in `block (2 levels) in <main>'
+002_MessageConfig.rb:577:in `pbFadeOutIn'
+
+=================
+
+[2025-03-06 03:15:16 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: Errno::ENOENT
+Message: File Graphics/Icons/northWest not found.
+
+Backtrace:
+[Arcky's Utilities] 000_Main.rb:182:in `initialize'
+[Arcky's Utilities] 000_Main.rb:182:in `new'
+[Arcky's Utilities] 000_Main.rb:182:in `getBitmapWidth'
+[Arcky's Region Map] 003_RegionMap_LocationPreview.rb:87:in `block in getLocationInfo'
+[Arcky's Region Map] 003_RegionMap_LocationPreview.rb:70:in `each'
+[Arcky's Region Map] 003_RegionMap_LocationPreview.rb:70:in `getLocationInfo'
+[Arcky's Region Map] 001_RegionMap_Main.rb:356:in `block in pbMapScene'
+[Arcky's Region Map] 001_RegionMap_Main.rb:273:in `loop'
+[Arcky's Region Map] 001_RegionMap_Main.rb:273:in `pbMapScene'
+[Arcky's Region Map] 002_RegionMap_Classes.rb:57:in `pbStartScreen'
+
+=================
+
+[2025-03-06 03:27:14 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `*' for nil:NilClass
+
+Backtrace:
+004_SpriteWindow.rb:472:in `privRefresh'
+004_SpriteWindow.rb:363:in `windowskin='
+[Modular Messages] Name Tags + Advanced Portraits.rb:137:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:178:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `new'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `block in <main>'
+[Swdfm Utilities] Other.rb:189:in `trigger_sect'
+[Modular Messages] [003] Controls Methods.rb:85:in `block in controls_before_appears'
+[Modular Messages] [003] Controls Methods.rb:79:in `times'
+[Modular Messages] [003] Controls Methods.rb:79:in `controls_before_appears'
+
+=================
+
+[2025-03-06 03:29:36 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `*' for nil:NilClass
+
+Backtrace:
+004_SpriteWindow.rb:472:in `privRefresh'
+004_SpriteWindow.rb:363:in `windowskin='
+[Modular Messages] Name Tags + Advanced Portraits.rb:137:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:178:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `new'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `block in <main>'
+[Swdfm Utilities] Other.rb:189:in `trigger_sect'
+[Modular Messages] [003] Controls Methods.rb:85:in `block in controls_before_appears'
+[Modular Messages] [003] Controls Methods.rb:79:in `times'
+[Modular Messages] [003] Controls Methods.rb:79:in `controls_before_appears'
+
+=================
+
+[2025-03-06 03:30:35 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `*' for nil:NilClass
+
+Backtrace:
+004_SpriteWindow.rb:472:in `privRefresh'
+004_SpriteWindow.rb:363:in `windowskin='
+[Modular Messages] Name Tags + Advanced Portraits.rb:137:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:178:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `new'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `block in <main>'
+[Swdfm Utilities] Other.rb:189:in `trigger_sect'
+[Modular Messages] [003] Controls Methods.rb:85:in `block in controls_before_appears'
+[Modular Messages] [003] Controls Methods.rb:79:in `times'
+[Modular Messages] [003] Controls Methods.rb:79:in `controls_before_appears'
+
+=================
+
+[2025-03-06 03:34:20 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `*' for nil:NilClass
+
+Backtrace:
+004_SpriteWindow.rb:472:in `privRefresh'
+004_SpriteWindow.rb:363:in `windowskin='
+[Modular Messages] Name Tags + Advanced Portraits.rb:137:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:178:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `new'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `block in <main>'
+[Swdfm Utilities] Other.rb:189:in `trigger_sect'
+[Modular Messages] [003] Controls Methods.rb:85:in `block in controls_before_appears'
+[Modular Messages] [003] Controls Methods.rb:79:in `times'
+[Modular Messages] [003] Controls Methods.rb:79:in `controls_before_appears'
+
+=================
+
+[2025-03-06 03:34:53 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `*' for nil:NilClass
+
+Backtrace:
+004_SpriteWindow.rb:472:in `privRefresh'
+004_SpriteWindow.rb:363:in `windowskin='
+[Modular Messages] Name Tags + Advanced Portraits.rb:137:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:178:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `new'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `block in <main>'
+[Swdfm Utilities] Other.rb:189:in `trigger_sect'
+[Modular Messages] [003] Controls Methods.rb:85:in `block in controls_before_appears'
+[Modular Messages] [003] Controls Methods.rb:79:in `times'
+[Modular Messages] [003] Controls Methods.rb:79:in `controls_before_appears'
+
+=================
+
+[2025-03-06 03:41:32 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `*' for nil:NilClass
+
+Backtrace:
+004_SpriteWindow.rb:472:in `privRefresh'
+004_SpriteWindow.rb:363:in `windowskin='
+[Modular Messages] Name Tags + Advanced Portraits.rb:137:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:178:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `new'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `block in <main>'
+[Swdfm Utilities] Other.rb:189:in `trigger_sect'
+[Modular Messages] [003] Controls Methods.rb:85:in `block in controls_before_appears'
+[Modular Messages] [003] Controls Methods.rb:79:in `times'
+[Modular Messages] [003] Controls Methods.rb:79:in `controls_before_appears'
+
+=================
+
+[2025-03-06 03:42:57 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `*' for nil:NilClass
+
+Backtrace:
+004_SpriteWindow.rb:472:in `privRefresh'
+004_SpriteWindow.rb:374:in `skinformat='
+004_SpriteWindow.rb:840:in `__setWindowskin'
+004_SpriteWindow.rb:863:in `setSkin'
+[Modular Messages] Name Tags + Advanced Portraits.rb:137:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:178:in `initialize'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `new'
+[Modular Messages] Name Tags + Advanced Portraits.rb:253:in `block in <main>'
+[Swdfm Utilities] Other.rb:189:in `trigger_sect'
+[Modular Messages] [003] Controls Methods.rb:85:in `block in controls_before_appears'
+
+=================
+
+[2025-03-06 03:51:28 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: Errno::ENOENT
+Message: File Graphics/UI/Town Map/UI/Special/LocationPreview/MiniMaps/mapCapoeirodaTown not found.
+
+Backtrace:
+[Arcky's Utilities] 000_Main.rb:182:in `initialize'
+[Arcky's Utilities] 000_Main.rb:182:in `new'
+[Arcky's Utilities] 000_Main.rb:182:in `getBitmapWidth'
+[Arcky's Region Map] 003_RegionMap_LocationPreview.rb:59:in `getLocationInfo'
+[Arcky's Region Map] 001_RegionMap_Main.rb:356:in `block in pbMapScene'
+[Arcky's Region Map] 001_RegionMap_Main.rb:273:in `loop'
+[Arcky's Region Map] 001_RegionMap_Main.rb:273:in `pbMapScene'
+[Arcky's Region Map] 002_RegionMap_Classes.rb:57:in `pbStartScreen'
+[Astralneko's Miscellaneous Scripts] 009 Menu Handlers.rb:41:in `block (2 levels) in <main>'
+002_MessageConfig.rb:577:in `pbFadeOutIn'
+
+=================
+
+[2025-03-06 04:06:09 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `[]' for nil:NilClass
+
+Backtrace:
+[Arcky's Region Map] 007_RegionMap_RegionSwitching.rb:14:in `switchRegionMap'
+[Arcky's Region Map] 001_RegionMap_Main.rb:391:in `block in pbMapScene'
+[Arcky's Region Map] 001_RegionMap_Main.rb:273:in `loop'
+[Arcky's Region Map] 001_RegionMap_Main.rb:273:in `pbMapScene'
+[Arcky's Region Map] 002_RegionMap_Classes.rb:57:in `pbStartScreen'
+[Astralneko's Miscellaneous Scripts] 009 Menu Handlers.rb:41:in `block (2 levels) in <main>'
+002_MessageConfig.rb:577:in `pbFadeOutIn'
+[Astralneko's Miscellaneous Scripts] 009 Menu Handlers.rb:38:in `block in <main>'
+[Voltseon's Pause Menu] 003_VoltseonMenu_Menu.rb:54:in `update'
+[Voltseon's Pause Menu] 002_VoltseonMenu_Main.rb:222:in `block in update'
+
+=================
+
+[2025-03-06 04:06:48 -0600]
+[Pokémon Essentials version 21.1]
+[v21.1 Hotfixes 1.0.9]
+
+Exception: NoMethodError
+Message: undefined method `[]' for nil:NilClass
+
+Backtrace:
+[Arcky's Region Map] 007_RegionMap_RegionSwitching.rb:14:in `switchRegionMap'
+[Arcky's Region Map] 001_RegionMap_Main.rb:391:in `block in pbMapScene'
+[Arcky's Region Map] 001_RegionMap_Main.rb:273:in `loop'
+[Arcky's Region Map] 001_RegionMap_Main.rb:273:in `pbMapScene'
+[Arcky's Region Map] 002_RegionMap_Classes.rb:57:in `pbStartScreen'
+[Astralneko's Miscellaneous Scripts] 009 Menu Handlers.rb:41:in `block (2 levels) in <main>'
+002_MessageConfig.rb:577:in `pbFadeOutIn'
+[Astralneko's Miscellaneous Scripts] 009 Menu Handlers.rb:38:in `block in <main>'
+[Voltseon's Pause Menu] 003_VoltseonMenu_Menu.rb:54:in `update'
+[Voltseon's Pause Menu] 002_VoltseonMenu_Main.rb:222:in `block in update'

@@ -13,7 +13,7 @@ module MessageConfig
   NB_TEXT_MAIN_COLOR   = Color.new(253, 243, 50)   # Used by message tag "\y"
   NB_TEXT_SHADOW_COLOR = Color.new(185, 178, 42)
   FONT_NAME                = "Truth and Ideals"
-  FONT_SIZE                = 35
+  FONT_SIZE                = 36
   FONT_Y_OFFSET            = 6
   SMALL_FONT_NAME          = "Truth and Ideals - Fighting Ideals"
   SMALL_FONT_SIZE          = 35
