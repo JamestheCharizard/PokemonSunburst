@@ -1,180 +1,46 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
-# Route 6 (2) - Alipigra City (33)
-2,North,22,33,South,0
-# South Route 4 (18) - Alipigra City (33)
-18,North,0,33,South,177
-# Starview Lake (6) - Alipigra City (33)
-6,East,24,33,West,0
-# West Route 5 (10) - Alipigra City (33)
-10,West,12,33,East,0
-# Stardew Plains (63) - Alipigra City (33)
-63,North,86,33,South,0
-# Nova Cancioba City (34) - Route 6 (2)
-34,North,0,2,South,8
-# Starview Lake (6) - Route 6 (2)
-6,South,42,2,North,0
-# West Route 5 (10) - Route 6 (2)
-10,South,0,2,North,77
-# Capoeiroda Town (73) - Route 6 (2)
-73,South,0,2,North,157
-# East Route 5 (72) - Route 6 (2)
-72,South,0,2,North,195
-# Stardew Plains (63) - Route 6 (2)
-63,East,0,2,West,0
-# Whitepetal Forest (58) - Route 6 (2)
-58,West,0,2,East,26
-# Route 7 (49) - Nova Cancioba City (34)
-49,North,20,34,South,0
-# Route 9 (52) - Route 7 (49)
-52,West,0,49,East,120
-# Hirihopa City (53) - Route 7 (49)
-53,North,24,49,South,0
-# Frenaval City (48) - Route 9 (52)
-48,West,12,52,East,0
-# Hirihopa City (53) - Route 9 (52)
-53,East,0,52,West,0
-# Hirihopa Bay (54) - Route 9 (52)
-54,East,0,52,West,64
-# Route 8 (46) - Frenaval City (48)
-46,South,0,48,North,16
-# South Route 4 (18) - Route 8 (46)
-18,East,163,46,West,0
-# Lauransel Ocean (800) - Route 8 (46)
-800,South,0,46,North,120
-# Samba Seaboard (55) - Route 8 (46)
-55,South,0,46,North,80
-# São Samba City (23) - Route 8 (46)
-23,South,0,46,North,0
-# East Route 5 (72) - Route 8 (46)
-72,East,223,46,West,0
-# Starview Lake (6) - South Route 4 (18)
-6,South,241,18,North,0
-# West Route 5 (10) - South Route 4 (18)
-10,South,122,18,North,0
-# Maracaleza Town (11) - South Route 4 (18)
-11,West,60,18,East,0
-# Capoeiroda Town (73) - South Route 4 (18)
-73,South,42,18,North,0
-# São Samba City (23) - South Route 4 (18)
-23,West,0,18,East,75
-# Candlewax Field (24) - South Route 4 (18)
-24,West,10,18,East,0
-# East Route 5 (72) - South Route 4 (18)
-72,South,4,18,North,0
-# Whitepetal Forest (58) - South Route 4 (18)
-58,East,0,18,West,26
-# Stardew Plains (63) - Starview Lake (6)
-63,North,22,6,South,0
-# Paragonas River (19) - West Route 5 (10)
-19,South,0,10,North,96
-# North Route 4 (14) - West Route 5 (10)
-14,South,0,10,North,56
-# Capoeiroda Town (73) - West Route 5 (10)
-73,West,0,10,East,0
-# Stardew Plains (63) - West Route 5 (10)
-63,North,141,10,South,0
-# Bossanova River (38) - West Route 5 (10)
-38,West,238,10,East,0
-# Maracaleza Town (11) - Paragonas River (19)
-11,North,0,19,South,86
-# North Route 4 (14) - Paragonas River (19)
-14,East,29,19,West,0
-# Capoeiroda Town (73) - Paragonas River (19)
-73,North,16,19,South,0
-# Maracaleza Beach (16) - Paragonas River (19)
-16,North,0,19,South,144
-# Lauransel Ocean (800) - Paragonas River (19)
-800,North,0,19,South,206
-# East Route 5 (72) - Paragonas River (19)
-72,North,0,19,South,22
-# Rio Bossano City (22) - Paragonas River (19)
-22,South,0,19,North,57
-# Pachaqucha (25) - Paragonas River (19)
-25,South,0,19,North,117
-# North Route 4 (14) - Maracaleza Town (11)
-14,South,126,11,North,0
-# Maracaleza Beach (16) - Maracaleza Town (11)
-16,West,0,11,East,0
-# Candlewax Field (24) - Maracaleza Town (11)
-24,North,0,11,South,0
-# East Route 5 (72) - Maracaleza Town (11)
-72,East,0,11,West,0
-# Capoeiroda Town (73) - North Route 4 (14)
-73,North,0,14,South,24
-# Maracaleza Beach (16) - North Route 4 (14)
-16,North,0,14,South,184
-# Lauransel Ocean (800) - North Route 4 (14)
-800,North,0,14,South,246
-# East Route 5 (72) - North Route 4 (14)
-72,North,0,14,South,62
-# Route 15 (26) - North Route 4 (14)
-26,South,80,14,North,0
-# Paragonas River (28) - North Route 4 (14)
-28,East,0,14,West,0
-# Stardew Plains (63) - Capoeiroda Town (73)
-63,North,221,73,South,0
-# South Route 3 (37) - Capoeiroda Town (73)
-37,East,221,73,West,0
-# Bossanova River (39) - Capoeiroda Town (73)
-39,East,246,73,West,0
-# Lauransel Ocean (800) - Maracaleza Beach (16)
-800,West,0,16,East,0
-# Samba Seaboard (55) - Maracaleza Beach (16)
-55,North,0,16,South,22
-# São Samba City (23) - Maracaleza Beach (16)
-23,North,58,16,South,0
-# Candlewax Field (24) - Maracaleza Beach (16)
-24,East,0,16,West,50
-# Samba Seaboard (55) - Lauransel Ocean (800)
-55,East,0,800,West,135
-# São Samba City (23) - Samba Seaboard (55)
-23,East,0,55,West,0
-# Candlewax Field (24) - Samba Seaboard (55)
-24,South,80,55,North,0
-# Candlewax Field (24) - São Samba City (23)
-24,South,0,23,North,0
-# East Route 5 (72) - São Samba City (23)
-72,East,135,23,West,0
-# East Route 5 (72) - Candlewax Field (24)
-72,East,50,24,West,0
-# Stardew Plains (63) - East Route 5 (72)
-63,North,259,72,South,0
-# Rio Bossano City (22) - Route 15 (26)
-22,West,13,26,East,0
-# South Route 3 (37) - Route 15 (26)
-37,South,0,26,North,56
-# Paragonas River (28) - Route 15 (26)
-28,North,0,26,South,0
-# Rocavideo Town (27) - Route 15 (26)
-27,East,0,26,West,8
-# Bossanova River (38) - Rio Bossano City (22)
-38,South,73,22,North,0
-# Route 1 (41) - Rio Bossano City (22)
-41,South,0,22,North,38
-# Bossanova Delta (43) - Rio Bossano City (22)
-43,South,0,22,North,88
-# Pachaqucha (25) - Rio Bossano City (22)
-25,West,0,22,East,50
-# South Route 3 (37) - Bossanova River (38)
-37,East,0,38,West,17
-# Bossanova River (39) - Bossanova River (38)
-39,East,8,38,West,0
-# Route 1 (41) - Bossanova River (38)
-41,West,104,38,East,0
-# Bossanova River (39) - South Route 3 (37)
-39,South,72,37,North,0
-# North Route 3 (40) - Bossanova River (39)
-40,South,0,39,North,23
-# Route 2 (45) - North Route 3 (40)
-45,South,0,40,North,28
-# Tangoseiro City (47) - Route 2 (45)
-47,West,0,45,East,0
-# Route 1 (41) - Tangoseiro City (47)
-41,West,0,47,East,8
-# Bossanova Delta (43) - Route 1 (41)
-43,West,0,41,East,116
-# Rocavideo Town (27) - Paragonas River (28)
-27,East,40,28,West,0
-# Hirihopa Bay (54) - Hirihopa City (53)
-54,North,0,53,South,0
+# Pallet Town (2) - Safari Zone outside (66)
+2,West,0,66,East,0
+# Route 8 (69) - Pallet Town (2)
+69,North,12,2,South,0
+# Cedolan City (7) - Route 6 (44)
+7,West,5,44,East,0
+# Cedolan City (7) - Lerucean Town (23)
+7,East,0,23,West,78
+# Route 7 (47) - Cedolan City (7)
+47,West,0,7,East,0
+# Route 2 (21) - Cedolan City (7)
+21,South,0,7,North,21
+# Route 2 (21) - Lerucean Town (23)
+21,East,0,23,West,1
+# Route 2 (21) - Route 7 (47)
+21,East,77,47,West,0
+# Route 3 (31) - Lerucean Town (23)
+31,South,32,23,North,0
+# Route 3 (31) - Ingido Plateau outside (35)
+31,West,0,35,East,10
+# Ingido Plateau outside (35) - Route 4 (39)
+35,West,11,39,East,0
+# Route 5 (41) - Route 4 Cycling Road (40)
+41,North,0,40,South,0
+# Route 5 (41) - Route 6 Cycling Road (45)
+41,South,6,45,North,0
+# Route 7 (47) - Battle Frontier (52)
+47,East,8,52,West,0
+# Route 8 (69) - Safari Zone outside (66)
+69,North,0,66,South,10
+# Rankine Town (22) - Route 20 (5)
+22,North,6,5,South,0
+# Metallia City (33) - Route 20 (5)
+33,South,0,5,North,18
+# Route 15 (43) - Metallia City (33)
+43,West,0,33,East,1
+# Metallia Extension (48) - Metallia City (33)
+48,South,0,33,North,0
+# Metallia Extension (48) - Route 15 (43)
+48,East,21,43,West,0
+# Monako City (76) - Route 15 (43)
+76,West,0,43,East,0
+# Route 12 (77) - Monako City (76)
+77,West,13,76,East,0

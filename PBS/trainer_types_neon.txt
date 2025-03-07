@@ -1,8 +1,5 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
-# Battle Frontier
-#-------------------------------
-#-------------------------------
 [FRONTIERBRAIN_Dahlia]
 Name = Arcade Star
 Gender = Female
@@ -128,8 +125,6 @@ Gender = Nonbinary
 BaseMoney = 0
 SkillLevel = 120
 BattleBGM = ARS_Fighting Pixel_Battle Tower
-#-------------------------------
-# Neon Skyline
 #-------------------------------
 [NEONSKYLINE_Red]
 Name = Neon Champion
