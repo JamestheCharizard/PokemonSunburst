@@ -420,3 +420,9 @@ Name = Monako City
 Outdoor = true
 ShowArea = true
 Bicycle = true
+#-------------------------------
+[077]   # Route 12
+Name = Route 12
+Outdoor = true
+ShowArea = true
+Bicycle = true
